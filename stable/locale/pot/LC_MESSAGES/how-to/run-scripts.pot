@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/run-scripts.rst:3
+msgid "Run scripts"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:5
+msgid ""
+"Run an app or a script in a temporary environment with ``pipx run``, without "
+"installing it first. pipx downloads the package, caches the environment, and "
+"runs the app."
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:10
+msgid "Run a specific version"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:12
+msgid ""
+"The ``PACKAGE`` argument is a `requirement specifier <https://packaging."
+"python.org/en/latest/glossary/#term-Requirement-Specifier>`_, so you can pin "
+"versions, ranges, or extras:"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:16
+msgid ""
+"$ pipx run mpremote==1.20.0\n"
+"$ pipx run --spec esptool==4.6.2 esptool.py\n"
+"$ pipx run --spec 'esptool>=4.5' esptool.py"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:22
+msgid "Quote any specifier that contains ``>``, ``<``, or spaces."
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:26
+msgid "Add extra dependencies"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:28
+msgid ""
+"``--with PKG`` adds packages to the temporary environment alongside the app. "
+"Repeat it to add more:"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:30
+msgid "$ pipx run --with requests --with rich my-script.py"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:36
+msgid "Pass arguments to Python"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:38
+msgid ""
+"``--python-args ARGS`` forwards arguments to the interpreter that runs the "
+"app, rather than to the app itself:"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:40
+msgid "$ pipx run --python-args \"-X dev\" my-script.py"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:46
+msgid "Run from source control"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:48
+msgid ""
+"``pipx run`` accepts source-control URLs directly, with the same syntax as "
+"``pipx install`` (see :ref:`install-from-source-control`). Using ``black`` "
+"as an example:"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:51
+msgid ""
+"$ pipx run git+https://github.com/psf/black.git\n"
+"$ pipx run git+https://github.com/psf/black.git@branch"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:56
+msgid ""
+"Use ``--spec`` when the executable name differs from the package name or "
+"when installing from an archive URL:"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:58
+msgid "$ pipx run --spec https://github.com/psf/black/archive/18.9b0.zip black"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:64
+msgid "Run from a URL"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:66
+msgid "You can run ``.py`` files hosted anywhere:"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:68
+msgid ""
+"$ pipx run https://gist.githubusercontent.com/cs01/"
+"fa721a17a326e551ede048c5088f9e0f/"
+"raw/6bdfbb6e9c1132b1c38fdd2f195d4a24c540c324/pipx-demo.py"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:76
+msgid "Run a script with dependencies (PEP 723)"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:78
+msgid ""
+"A script can declare its own dependencies with `inline script metadata "
+"<https://packaging.python.org/en/latest/specifications/inline-script-"
+"metadata/>`_. pipx reads the ``# /// script`` block and installs the listed "
+"packages before running:"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:82
+msgid ""
+"# test.py\n"
+"\n"
+"# /// script\n"
+"# dependencies = [\"requests\"]\n"
+"# ///\n"
+"\n"
+"import sys\n"
+"import requests\n"
+"\n"
+"project = sys.argv[1]\n"
+"data = requests.get(f\"https://pypi.org/pypi/{project}/json\").json()\n"
+"print(data[\"info\"][\"version\"])"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:97
+msgid ""
+"$ pipx run test.py pipx\n"
+"1.9.0"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:102
+msgid ""
+"pipx caches an environment keyed to the script's dependency list. Changing "
+"the dependencies builds a fresh one."
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:106
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:108
+msgid "$ pipx run pycowsay moo"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:112
+msgid ""
+"A successful run prints the app's own output; nothing is left installed "
+"afterward."
+msgstr ""

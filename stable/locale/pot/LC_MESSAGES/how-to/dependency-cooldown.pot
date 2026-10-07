@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/dependency-cooldown.rst:3
+msgid "Dependency cooldown"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:5
+msgid ""
+"Skip index artifacts uploaded in the last few days, so a compromised or "
+"broken release has time to be caught and yanked before your machine picks it "
+"up. Reach for this when you install or upgrade tools from a public index and "
+"can afford to lag the newest version."
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:11
+msgid "Set it per command"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:13
+msgid ""
+"``--cooldown DAYS`` works on ``install``, ``install-all``, ``inject``, "
+"``upgrade``, ``upgrade-all`` and ``run``:"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:15
+msgid "$ pipx install --cooldown 7 httpie"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:19
+msgid ""
+"pipx translates one policy for both backends: pip receives ``--uploaded-"
+"prior-to P7D`` and uv receives ``--exclude-newer P7D``. Relative cooldowns "
+"need uv 0.9.17 or newer."
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:24
+msgid "Set it for a machine"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:26
+msgid "Export ``PIPX_COOLDOWN`` so every one of those commands picks it up:"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:28
+msgid ""
+"$ export PIPX_COOLDOWN=7\n"
+"$ pipx install httpie\n"
+"$ pipx upgrade-all"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:34
+msgid ""
+"Put the export in your shell profile to make it stick across sessions. pipx "
+"has no configuration file; see :doc:`Environment variables <../reference/"
+"environment-variables>` for the full list."
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:39
+msgid "Which value pipx uses"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:45
+msgid "Rank"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:46
+msgid "Source"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:47
+msgid "Notes"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:48
+msgid "1"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:49
+msgid "``--cooldown DAYS``"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:50
+msgid ""
+"Wins over everything. ``--cooldown 0`` opts one command out of a machine-"
+"wide setting."
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:51
+msgid "2"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:52
+msgid "``PIPX_COOLDOWN``"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:53
+msgid ""
+"Applies to the commands listed above. Outranks whatever an earlier install "
+"recorded."
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:54
+msgid "3"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:55
+msgid "``cooldown_days`` in the environment's metadata"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:56
+msgid ""
+"What the environment was last installed with. See :doc:`Metadata <../"
+"reference/metadata>`."
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:58
+msgid ""
+"A locked install ignores all three: ``pylock.toml`` already pins every "
+"version. Passing ``--cooldown`` together with ``--lock`` errors, while "
+"``PIPX_COOLDOWN`` yields and the install proceeds."
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:63
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:65
+msgid "Read back the variable and the value the environment recorded:"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:67
+msgid ""
+"$ pipx environment --value PIPX_COOLDOWN\n"
+"7\n"
+"$ pipx list --output json | jq '.venvs.httpie.metadata.main_package."
+"cooldown_days'\n"
+"7"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:74
+msgid "An invalid value stops the command before it starts:"
+msgstr ""
+
+#: ../../../how-to/dependency-cooldown.rst:76
+msgid ""
+"$ PIPX_COOLDOWN=lots pipx install httpie\n"
+"PIPX_COOLDOWN must be unset or a non-negative integer, got 'lots'."
+msgstr ""
