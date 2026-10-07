@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/tool-manifest.rst:3
+msgid "Tool manifest"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:5
+msgid ""
+"Declare a set of pipx tools in one file and install, upgrade, or prune them "
+"as a unit with ``pipx manifest``."
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:9
+msgid "Write the manifest"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:11
+msgid ""
+"The manifest is a ``pipx.toml`` file. Each dependency group holds one PEP "
+"508 package requirement and names its pipx environment. Keep ``project."
+"dependencies`` empty so each group resolves on its own:"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:14
+msgid ""
+"[project]\n"
+"name = \"pipx-tools\"\n"
+"version = \"1\"\n"
+"dependencies = []\n"
+"requires-python = \">=3.10\"\n"
+"\n"
+"[dependency-groups]\n"
+"black = [\"black>=25,<26\"]\n"
+"httpie = [\"httpie\"]\n"
+"\n"
+"[tool.pipx]\n"
+"version = \"1.0\"\n"
+"\n"
+"[tool.pipx.tools.black]\n"
+"apps = [\"black\"]\n"
+"lock = \"pylock.black.toml\"\n"
+"\n"
+"[tool.pipx.tools.httpie]\n"
+"apps = [\"http\", \"https\"]"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:36
+msgid ""
+"Add a ``tool.pipx.tools`` table only when a tool needs policy beyond its "
+"package requirement. A tool table may set ``suffix``, ``apps``, ``include-"
+"dependencies``, ``include-resources-from``, ``expose``, or ``lock``. Use "
+"``include-resources-from = [\"PACKAGE\"]`` to select dependency resources; "
+"do not combine it with ``include-dependencies``. Relative ``lock`` paths "
+"start from the manifest directory. Put nab settings in ``tool.nab``."
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:41
+msgid ""
+"Use the normalized package name plus its suffix as the environment name when "
+"a tool sets a suffix:"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:43
+msgid ""
+"[dependency-groups]\n"
+"black-24 = [\"black==24.10.0\"]\n"
+"\n"
+"[tool.pipx.tools.black-24]\n"
+"suffix = \"-24\"\n"
+"apps = [\"black\"]"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:52
+msgid "Package requirements use PEP 508 syntax without environment markers."
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:56
+msgid "Lock the manifest"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:58
+msgid ""
+"`nab <https://pypi.org/project/nab/>`_ resolves each locked dependency group "
+"into a PEP 751 lock file. Install it, then generate the declared locks:"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:61
+msgid ""
+"$ pipx install nab\n"
+"$ pipx manifest lock ./pipx.toml"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:66
+msgid ""
+"``pipx manifest lock`` passes the manifest to nab once per locked dependency "
+"group, and records that group as the lock's default so installers select it. "
+"Existing locks seed their replacements, and pipx overwrites the declared "
+"files only after every resolution succeeds. Entries without ``lock`` stay "
+"unlocked."
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:72
+msgid "Apply the manifest"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:74
+msgid "$ pipx manifest sync ./pipx.toml"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:78
+msgid ""
+"``sync`` installs, upgrades, or downgrades each declared tool. The backend "
+"resolves unlocked specs on each run; locked entries install from the "
+"artifacts in their named PEP 751 files. pipx restores an existing "
+"environment and its exposed resources when a tool fails to install or lacks "
+"a required app."
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:82
+msgid "Pass ``--prune`` to uninstall environments absent from the manifest:"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:84
+msgid "$ pipx manifest sync ./pipx.toml --prune"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:88
+msgid ""
+"Without ``--prune``, sync leaves your other pipx environments alone. Pass "
+"``--global`` or ``--backend`` after ``sync`` to select the pipx store or the "
+"installation backend. pipx reads only the manifest path you supply on the "
+"command line."
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:93
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:95
+msgid "$ pipx list --short"
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:99
+msgid "Each declared tool appears at the version its group resolved to."
+msgstr ""
