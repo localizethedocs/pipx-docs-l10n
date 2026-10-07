@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../index.rst:3
 msgid "pipx"
-msgstr ""
+msgstr "pipx"
 
 #: ../../../index.rst:5
 msgid ""
@@ -30,6 +30,11 @@ msgid ""
 "for each application, so their dependencies never collide and an uninstall "
 "leaves nothing behind."
 msgstr ""
+"``pipx`` 可以在隔離環境中安裝並執行終端使用者的 Python 應用程式。它的用途與 "
+"macOS 的 ``brew``、JavaScript 的 `npx <https://docs.npmjs.com/cli/commands/"
+"npx>`_ 和 Linux 的 ``apt`` 相同。它在底層使用 pip，但不同於 pip，它會為每個應"
+"用程式建立獨立的虛擬環境，因此彼此的依賴不會互相衝突，解除安裝後也不會留下任"
+"何東西。"
 
 #: ../../../index.rst:32
 msgid "Start here"
@@ -47,7 +52,7 @@ msgstr ""
 
 #: ../../../index.rst:43
 msgid "How-to guides"
-msgstr ""
+msgstr "操作指南"
 
 #: ../../../index.rst:47
 msgid ""
@@ -86,6 +91,10 @@ msgid ""
 "clean uninstalls, zero dependency conflicts between tools, and no ``sudo pip "
 "install`` — pipx runs with regular user permissions."
 msgstr ""
+"pip 會將程式庫和應用程式都安裝到目前激活的環境中，不會隔離。pipx 只會安裝應用"
+"程式，每個應用程式各自使用一個虛擬環境，並將其命令加入到您的 ``PATH``。您可以"
+"乾淨地解除安裝、避免工具之間的依賴衝突，而且不需要 ``sudo pip install`` — "
+"pipx 以一般使用者權限執行。"
 
 #: ../../../index.rst:72
 msgid "Where apps come from"
@@ -111,16 +120,19 @@ msgid ""
 "Install CLI apps into isolated environments with ``pipx install``, so there "
 "are no dependency conflicts and uninstalls are clean."
 msgstr ""
+"使用 ``pipx install`` 將 CLI 應用程式安裝在隔離的環境中，避免依賴衝突，解除安"
+"裝時也能清除乾淨。"
 
 #: ../../../index.rst:86
 msgid "List, upgrade, and uninstall managed apps in one command."
-msgstr ""
+msgstr "一個命令即可列出、升級和解除安裝受管理的應用程式。"
 
 #: ../../../index.rst:87
 msgid ""
 "Run the latest version of any app in a temporary environment with ``pipx "
 "run``, without installing it first."
 msgstr ""
+"使用 ``pipx run`` 在臨時環境中執行任何應用程式的最新版本，無須事先安裝。"
 
 #: ../../../index.rst:91
 msgid "Testimonials"
@@ -173,50 +185,55 @@ msgid ""
 "github.com/pypa/pipx/graphs/contributors>`_. The logo was created by "
 "`@IrishMorales <https://github.com/IrishMorales>`_."
 msgstr ""
+"pipx 的靈感來自 `pipsi <https://github.com/mitsuhiko/pipsi>`_ 和 `npx "
+"<https://github.com/npm/npx>`_。它由 `Chad Smith <https://github.com/cs01/"
+">`_ 創建，並獲得許多\\ `貢獻者 <https://github.com/pypa/pipx/graphs/"
+"contributors>`_\\ 的協助。標誌由 `@IrishMorales <https://github.com/"
+"IrishMorales>`_ 設計。"
 
 #: ../../../index.rst:117
 msgid "pipx is maintained by a team of volunteers (in alphabetical order):"
-msgstr ""
+msgstr "pipx 由一群志願者共同維護（依字母順序排列）："
 
 #: ../../../index.rst:119
 msgid "`Bernát Gábor <https://github.com/gaborbernat>`_"
-msgstr ""
+msgstr "`Bernát Gábor <https://github.com/gaborbernat>`_"
 
 #: ../../../index.rst:120
 msgid "`Henry Schreiner <https://github.com/henryiii>`_"
-msgstr ""
+msgstr "`Henry Schreiner <https://github.com/henryiii>`_"
 
 #: ../../../index.rst:121
 msgid "`Jason Lam <https://github.com/dukecat0>`_"
-msgstr ""
+msgstr "`Jason Lam <https://github.com/dukecat0>`_"
 
 #: ../../../index.rst:122
 msgid "`Tzu-ping Chung <https://github.com/uranusjr>`_"
-msgstr ""
+msgstr "`Tzu-ping Chung <https://github.com/uranusjr>`_"
 
 #: ../../../index.rst:123
 msgid "`Xuan Hu <https://github.com/huxuan>`_"
-msgstr ""
+msgstr "`Xuan Hu <https://github.com/huxuan>`_"
 
 #: ../../../index.rst:125
 msgid "Emeritus maintainers, who shaped earlier releases:"
-msgstr ""
+msgstr "曾參與打造早期發行版的榮譽維護者："
 
 #: ../../../index.rst:127
 msgid "`Chad Smith <https://github.com/cs01>`_"
-msgstr ""
+msgstr "`Chad Smith <https://github.com/cs01>`_"
 
 #: ../../../index.rst:128
 msgid "`Chrysle <https://github.com/chrysle>`_"
-msgstr ""
+msgstr "`Chrysle <https://github.com/chrysle>`_"
 
 #: ../../../index.rst:129
 msgid "`Matthew Clapp <https://github.com/itsayellow>`_"
-msgstr ""
+msgstr "`Matthew Clapp <https://github.com/itsayellow>`_"
 
 #: ../../../index.rst:130
 msgid "`Robert Offner <https://github.com/gitznik>`_"
-msgstr ""
+msgstr "`Robert Offner <https://github.com/gitznik>`_"
 
 #: ../../../index.rst:132
 msgid ""

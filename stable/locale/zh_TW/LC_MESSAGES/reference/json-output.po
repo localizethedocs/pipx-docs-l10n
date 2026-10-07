@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../reference/json-output.rst:3
 msgid "JSON output"
-msgstr ""
+msgstr "JSON 輸出"
 
 #: ../../../reference/json-output.rst:5
 msgid ""
@@ -111,6 +111,14 @@ msgid ""
 "  \"errors\": []\n"
 "}"
 msgstr ""
+"{\n"
+"  \"pipx_result_version\": \"1\",\n"
+"  \"command\": [\"install\"],\n"
+"  \"status\": \"success\",\n"
+"  \"exit_code\": 0,\n"
+"  \"data\": {},\n"
+"  \"errors\": []\n"
+"}"
 
 #: ../../../reference/json-output.rst:47
 msgid ""
@@ -121,7 +129,7 @@ msgstr ""
 
 #: ../../../reference/json-output.rst:52
 msgid "Supported commands"
-msgstr ""
+msgstr "支援的命令"
 
 #: ../../../reference/json-output.rst:54
 msgid ""
@@ -157,6 +165,8 @@ msgid ""
 "$ pipx list --output json > pipx.json\n"
 "$ pipx install-all pipx.json"
 msgstr ""
+"$ pipx list --output json > pipx.json\n"
+"$ pipx install-all pipx.json"
 
 #: ../../../reference/json-output.rst:75
 msgid ""

@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../../../how-to/configure-paths.rst:38
 msgid "Variable"
-msgstr ""
+msgstr "變數"
 
 #: ../../../how-to/configure-paths.rst:39
 msgid "Holds"
@@ -51,19 +51,19 @@ msgstr ""
 
 #: ../../../how-to/configure-paths.rst:41
 msgid "``PIPX_HOME``"
-msgstr ""
+msgstr "``PIPX_HOME``"
 
 #: ../../../how-to/configure-paths.rst:42
 msgid "Virtual environments and shared libraries"
-msgstr ""
+msgstr "虛擬環境與共享程式庫"
 
 #: ../../../how-to/configure-paths.rst:43
 msgid "``~/.local/share/pipx``"
-msgstr ""
+msgstr "``~/.local/share/pipx``"
 
 #: ../../../how-to/configure-paths.rst:44
 msgid "``PIPX_BIN_DIR``"
-msgstr ""
+msgstr "``PIPX_BIN_DIR``"
 
 #: ../../../how-to/configure-paths.rst:45
 msgid "App links"
@@ -71,19 +71,19 @@ msgstr ""
 
 #: ../../../how-to/configure-paths.rst:46
 msgid "``~/.local/bin``"
-msgstr ""
+msgstr "``~/.local/bin``"
 
 #: ../../../how-to/configure-paths.rst:47
 msgid "``PIPX_MAN_DIR``"
-msgstr ""
+msgstr "``PIPX_MAN_DIR``"
 
 #: ../../../how-to/configure-paths.rst:48
 msgid "Manual page links"
-msgstr ""
+msgstr "手冊頁面連結"
 
 #: ../../../how-to/configure-paths.rst:49
 msgid "``~/.local/share/man``"
-msgstr ""
+msgstr "``~/.local/share/man``"
 
 #: ../../../how-to/configure-paths.rst:51
 msgid ""
@@ -95,7 +95,7 @@ msgstr ""
 
 #: ../../../how-to/configure-paths.rst:58
 msgid "platformdirs migration"
-msgstr ""
+msgstr "platformdirs 遷移"
 
 #: ../../../how-to/configure-paths.rst:60
 msgid ""
@@ -106,51 +106,51 @@ msgstr ""
 
 #: ../../../how-to/configure-paths.rst:67
 msgid "Old path"
-msgstr ""
+msgstr "舊路徑"
 
 #: ../../../how-to/configure-paths.rst:68
 msgid "New path"
-msgstr ""
+msgstr "新路徑"
 
 #: ../../../how-to/configure-paths.rst:69
 msgid "``~/.local/pipx/.trash``"
-msgstr ""
+msgstr "``~/.local/pipx/.trash``"
 
 #: ../../../how-to/configure-paths.rst:70
 msgid "``platformdirs.user_data_dir()/pipx/trash``"
-msgstr ""
+msgstr "``platformdirs.user_data_dir()/pipx/trash``"
 
 #: ../../../how-to/configure-paths.rst:71
 msgid "``~/.local/pipx/shared``"
-msgstr ""
+msgstr "``~/.local/pipx/shared``"
 
 #: ../../../how-to/configure-paths.rst:72
 msgid "``platformdirs.user_data_dir()/pipx/shared``"
-msgstr ""
+msgstr "``platformdirs.user_data_dir()/pipx/shared``"
 
 #: ../../../how-to/configure-paths.rst:73
 msgid "``~/.local/pipx/venvs``"
-msgstr ""
+msgstr "``~/.local/pipx/venvs``"
 
 #: ../../../how-to/configure-paths.rst:74
 msgid "``platformdirs.user_data_dir()/pipx/venvs``"
-msgstr ""
+msgstr "``platformdirs.user_data_dir()/pipx/venvs``"
 
 #: ../../../how-to/configure-paths.rst:75
 msgid "``~/.local/pipx/.cache``"
-msgstr ""
+msgstr "``~/.local/pipx/.cache``"
 
 #: ../../../how-to/configure-paths.rst:76
 msgid "``platformdirs.user_cache_dir()/pipx``"
-msgstr ""
+msgstr "``platformdirs.user_cache_dir()/pipx``"
 
 #: ../../../how-to/configure-paths.rst:77
 msgid "``~/.local/pipx/logs``"
-msgstr ""
+msgstr "``~/.local/pipx/logs``"
 
 #: ../../../how-to/configure-paths.rst:78
 msgid "``platformdirs.user_log_dir()/pipx/log``"
-msgstr ""
+msgstr "``platformdirs.user_log_dir()/pipx/log``"
 
 #: ../../../how-to/configure-paths.rst:80
 msgid ""
@@ -184,6 +184,8 @@ msgid ""
 "$ sudo pipx install --global pycowsay\n"
 "$ sudo pipx list --global"
 msgstr ""
+"$ sudo pipx install --global pycowsay\n"
+"$ sudo pipx list --global"
 
 #: ../../../how-to/configure-paths.rst:99
 msgid ""
@@ -211,6 +213,8 @@ msgid ""
 "$ sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin PIPX_MAN_DIR=/usr/"
 "local/share/man pipx install <PACKAGE>"
 msgstr ""
+"$ sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin PIPX_MAN_DIR=/usr/"
+"local/share/man pipx install <PACKAGE>"
 
 #: ../../../how-to/configure-paths.rst:114
 msgid "``--global`` is not supported on Windows."
@@ -235,7 +239,7 @@ msgstr ""
 
 #: ../../../how-to/configure-paths.rst:126
 msgid "$ pipx ensurepath --dry-run"
-msgstr ""
+msgstr "$ pipx ensurepath --dry-run"
 
 #: ../../../how-to/configure-paths.rst:132
 msgid "Point pip at an index"
@@ -259,7 +263,7 @@ msgstr ""
 
 #: ../../../how-to/configure-paths.rst:142
 msgid "$ pipx install --skip-maintenance my-package"
-msgstr ""
+msgstr "$ pipx install --skip-maintenance my-package"
 
 #: ../../../how-to/configure-paths.rst:148
 msgid "Verify it"

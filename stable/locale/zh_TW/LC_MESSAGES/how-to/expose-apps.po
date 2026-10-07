@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../../../how-to/expose-apps.rst:13
 msgid "$ pipx unexpose ansible"
-msgstr ""
+msgstr "$ pipx unexpose ansible"
 
 #: ../../../how-to/expose-apps.rst:17
 msgid ""
@@ -54,7 +54,7 @@ msgstr ""
 
 #: ../../../how-to/expose-apps.rst:24
 msgid "$ pipx expose ansible"
-msgstr ""
+msgstr "$ pipx expose ansible"
 
 #: ../../../how-to/expose-apps.rst:28
 msgid ""

@@ -34,7 +34,7 @@ msgstr ""
 
 #: ../../../contributing.rst:12
 msgid "Submitting changes"
-msgstr ""
+msgstr "提交變更"
 
 #: ../../../contributing.rst:14
 msgid "Fork `the GitHub repository <https://github.com/pypa/pipx>`_."
@@ -158,10 +158,12 @@ msgid ""
 "$ python -m pip install -e .\n"
 "$ python -m pipx --version"
 msgstr ""
+"$ python -m pip install -e .\n"
+"$ python -m pipx --version"
 
 #: ../../../contributing.rst:123
 msgid "Running Tests"
-msgstr ""
+msgstr "執行測試"
 
 #: ../../../contributing.rst:126
 msgid "Setup"
@@ -195,7 +197,7 @@ msgstr ""
 
 #: ../../../contributing.rst:141
 msgid "$ tox list"
-msgstr ""
+msgstr "$ tox list"
 
 #: ../../../contributing.rst:145
 msgid "At the time of this writing, the output looks like this"
@@ -233,7 +235,7 @@ msgstr ""
 
 #: ../../../contributing.rst:174
 msgid "Unit Tests"
-msgstr ""
+msgstr "單元測試"
 
 #: ../../../contributing.rst:176
 msgid "To run unit tests in Python 3.12, you can run"
@@ -241,7 +243,7 @@ msgstr ""
 
 #: ../../../contributing.rst:178
 msgid "$ tox run -e 3.12"
-msgstr ""
+msgstr "$ tox run -e 3.12"
 
 #: ../../../contributing.rst:184
 msgid ""
@@ -251,7 +253,7 @@ msgstr ""
 
 #: ../../../contributing.rst:186
 msgid "$ tox run -e 3.10 -- -k EXPRESSION"
-msgstr ""
+msgstr "$ tox run -e 3.10 -- -k EXPRESSION"
 
 #: ../../../contributing.rst:190
 msgid "``EXPRESSION`` can be a test name, such as"
@@ -259,7 +261,7 @@ msgstr ""
 
 #: ../../../contributing.rst:192
 msgid "$ tox run -e 3.10 -- -k test_uninstall"
-msgstr ""
+msgstr "$ tox run -e 3.10 -- -k test_uninstall"
 
 #: ../../../contributing.rst:196
 msgid ""
@@ -268,7 +270,7 @@ msgstr ""
 
 #: ../../../contributing.rst:199
 msgid "Running Unit Tests Offline"
-msgstr ""
+msgstr "離線執行單元測試"
 
 #: ../../../contributing.rst:201
 msgid ""
@@ -299,7 +301,7 @@ msgstr ""
 
 #: ../../../contributing.rst:214
 msgid "$ tox run -e lint"
-msgstr ""
+msgstr "$ tox run -e lint"
 
 #: ../../../contributing.rst:218
 msgid ""
@@ -382,7 +384,7 @@ msgstr ""
 
 #: ../../../contributing.rst:260
 msgid "Building Documentation"
-msgstr ""
+msgstr "建置文件"
 
 #: ../../../contributing.rst:262
 msgid ""
@@ -396,7 +398,7 @@ msgstr ""
 
 #: ../../../contributing.rst:266
 msgid "$ tox run -e docs"
-msgstr ""
+msgstr "$ tox run -e docs"
 
 #: ../../../contributing.rst:270
 msgid ""
@@ -408,7 +410,7 @@ msgstr ""
 
 #: ../../../contributing.rst:276
 msgid "Releasing New ``pipx`` Versions"
-msgstr ""
+msgstr "發行新的 ``pip`` 版本"
 
 #: ../../../contributing.rst:278
 msgid ""

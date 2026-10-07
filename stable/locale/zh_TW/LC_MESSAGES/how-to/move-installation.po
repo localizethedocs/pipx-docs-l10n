@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../how-to/move-installation.rst:3
 msgid "Move installation"
-msgstr ""
+msgstr "移動安裝"
 
 #: ../../../how-to/move-installation.rst:5
 msgid ""
@@ -43,11 +43,11 @@ msgstr ""
 
 #: ../../../how-to/move-installation.rst:17
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: ../../../how-to/move-installation.rst:19
 msgid "Current default location: ``~/Library/Application Support/pipx``."
-msgstr ""
+msgstr "當前默認位置：``~/Library/Application Support/pipx``。"
 
 #: ../../../how-to/move-installation.rst:21
 msgid ""
@@ -60,14 +60,22 @@ msgid ""
 "mkdir -p \"$NEW_LOCATION\" && mv \"$home_dir\" \"$NEW_LOCATION\"\n"
 "pipx reinstall-all"
 msgstr ""
+"cache_dir=$(pipx environment --value PIPX_VENV_CACHEDIR)\n"
+"logs_dir=$(pipx environment --value PIPX_LOG_DIR)\n"
+"trash_dir=$(pipx environment --value PIPX_TRASH_DIR)\n"
+"home_dir=$(pipx environment --value PIPX_HOME)\n"
+"NEW_LOCATION='~/Library/Application Support/pipx'\n"
+"rm -rf \"$cache_dir\" \"$logs_dir\" \"$trash_dir\"\n"
+"mkdir -p \"$NEW_LOCATION\" && mv \"$home_dir\" \"$NEW_LOCATION\"\n"
+"pipx reinstall-all"
 
 #: ../../../how-to/move-installation.rst:34
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../../how-to/move-installation.rst:36
 msgid "Current default location: ``~/.local/share``."
-msgstr ""
+msgstr "當前默認位置：``~/.local/share``。"
 
 #: ../../../how-to/move-installation.rst:38
 msgid ""
@@ -80,14 +88,22 @@ msgid ""
 "mkdir -p \"$NEW_LOCATION\" && mv \"$home_dir\" \"$NEW_LOCATION\"\n"
 "pipx reinstall-all"
 msgstr ""
+"cache_dir=$(pipx environment --value PIPX_VENV_CACHEDIR)\n"
+"logs_dir=$(pipx environment --value PIPX_LOG_DIR)\n"
+"trash_dir=$(pipx environment --value PIPX_TRASH_DIR)\n"
+"home_dir=$(pipx environment --value PIPX_HOME)\n"
+"NEW_LOCATION=\"${XDG_DATA_HOME:-$HOME/.local/share}\"\n"
+"rm -rf \"$cache_dir\" \"$logs_dir\" \"$trash_dir\"\n"
+"mkdir -p \"$NEW_LOCATION\" && mv \"$home_dir\" \"$NEW_LOCATION\"\n"
+"pipx reinstall-all"
 
 #: ../../../how-to/move-installation.rst:51
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../../how-to/move-installation.rst:53
 msgid "Current default location: ``~/pipx``."
-msgstr ""
+msgstr "當前默認位置：``~/pipx``。"
 
 #: ../../../how-to/move-installation.rst:55
 msgid ""
@@ -122,6 +138,8 @@ msgid ""
 "$ pipx environment --value PIPX_HOME\n"
 "$ pipx list"
 msgstr ""
+"$ pipx environment --value PIPX_HOME\n"
+"$ pipx list"
 
 #: ../../../how-to/move-installation.rst:82
 msgid ""

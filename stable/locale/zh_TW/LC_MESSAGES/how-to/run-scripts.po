@@ -62,7 +62,7 @@ msgstr ""
 
 #: ../../../how-to/run-scripts.rst:30
 msgid "$ pipx run --with requests --with rich my-script.py"
-msgstr ""
+msgstr "$ pipx run --with requests --with rich my-script.py"
 
 #: ../../../how-to/run-scripts.rst:36
 msgid "Pass arguments to Python"
@@ -76,7 +76,7 @@ msgstr ""
 
 #: ../../../how-to/run-scripts.rst:40
 msgid "$ pipx run --python-args \"-X dev\" my-script.py"
-msgstr ""
+msgstr "$ pipx run --python-args \"-X dev\" my-script.py"
 
 #: ../../../how-to/run-scripts.rst:46
 msgid "Run from source control"
@@ -94,6 +94,8 @@ msgid ""
 "$ pipx run git+https://github.com/psf/black.git\n"
 "$ pipx run git+https://github.com/psf/black.git@branch"
 msgstr ""
+"$ pipx run git+https://github.com/psf/black.git\n"
+"$ pipx run git+https://github.com/psf/black.git@branch"
 
 #: ../../../how-to/run-scripts.rst:56
 msgid ""
@@ -104,6 +106,7 @@ msgstr ""
 #: ../../../how-to/run-scripts.rst:58
 msgid "$ pipx run --spec https://github.com/psf/black/archive/18.9b0.zip black"
 msgstr ""
+"$ pipx run --spec https://github.com/psf/black/archive/18.9b0.zip black"
 
 #: ../../../how-to/run-scripts.rst:64
 msgid "Run from a URL"
