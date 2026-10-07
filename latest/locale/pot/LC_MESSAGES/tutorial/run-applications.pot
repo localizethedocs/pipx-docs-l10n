@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../tutorial/run-applications.rst:3
+msgid "Running applications"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:5
+msgid ""
+"``pipx run`` downloads and runs a Python application in a one-time, "
+"temporary environment, then leaves your system untouched. Reach for it to "
+"scaffold a new project, check an app's help text, or try a tool without "
+"committing to an install."
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:11
+msgid "Basic usage"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:13
+msgid "$ pipx run pycowsay moo"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:17
+msgid ""
+"pipx installs the package in an isolated, temporary directory and invokes "
+"the app:"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:19
+msgid ""
+"$ pipx run pycowsay moo\n"
+"  ---\n"
+"< moo >\n"
+"  ---\n"
+"   \\   ^__^\n"
+"    \\  (oo)\\_______\n"
+"       (__)\\       )\\/\\\n"
+"           ||----w |\n"
+"           ||     ||"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:31
+msgid "Arguments after the app name pass straight through to it:"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:33
+msgid "$ pipx run pycowsay these arguments all go to pycowsay"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:39
+msgid "Ambiguous arguments"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:41
+msgid ""
+"pipx can swallow an argument meant for the app when it looks like one of "
+"pipx's own options:"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:43
+msgid ""
+"$ pipx run pycowsay --py\n"
+"pipx run: error: ambiguous option: --py could match --python-args, --"
+"pypackages, --python"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:48
+msgid "Put ``--`` before the app name to forward everything after it verbatim:"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:50
+msgid "$ pipx run -- pycowsay --py"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:56
+msgid "When the app name differs"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:58
+msgid ""
+"Some packages expose an app under a different name, or expose several. Use "
+"``--spec`` to name the package and the app separately:"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:61
+msgid "$ pipx run --spec PACKAGE APP"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:65
+msgid ""
+"`esptool <https://github.com/espressif/esptool>`_, for example, lists its "
+"executables when you guess wrong:"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:67
+msgid ""
+"$ pipx run esptool\n"
+"'esptool' executable script not found in package 'esptool'.\n"
+"Available executable scripts:\n"
+"    esptool.py - usage: 'pipx run --spec esptool esptool.py [arguments?]'\n"
+"    espefuse.py - usage: 'pipx run --spec esptool espefuse.py [arguments?]'"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:75
+msgid "Run the one you want with ``--spec``:"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:77
+msgid "$ pipx run --spec esptool esptool.py"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:81
+msgid ""
+"Package authors can remove this requirement by declaring a :doc:`pipx.run "
+"entry point <../explanation/making-packages-compatible>` in their metadata."
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:88
+msgid "Run cache"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:90
+msgid ""
+"pipx caches each ``pipx run`` environment for a few days so repeated runs "
+"start instantly. After the cache expires, the next run fetches the latest "
+"version."
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:109
+msgid ""
+"Force a rebuild before the cache expires with ``--refresh``, which replaces "
+"that app's cached environment and keeps the replacement:"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:112
+msgid "$ pipx run --refresh APP"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:116
+msgid ""
+"``--no-cache`` also rebuilds, but marks the new environment for cleanup by a "
+"later run. The two options are mutually exclusive."
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:119
+msgid "Inspect or clear every cached run environment:"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:121
+msgid ""
+"$ pipx cache dir\n"
+"$ pipx cache purge"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:126
+msgid ""
+"For how pipx decides what to cache and when, see :doc:`How pipx works <../"
+"explanation/how-pipx-works>`."
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:130
+msgid "Learn more"
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:132
+msgid ""
+":doc:`Use the uv backend <../how-to/use-uv-backend>`: run with uv, which "
+"keeps its own ephemeral cache."
+msgstr ""
+
+#: ../../../tutorial/run-applications.rst:133
+msgid ""
+":doc:`../reference/cli`: every ``pipx run`` flag, including ``--python-"
+"args`` and ``--with``."
+msgstr ""

@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/exit-codes.rst:3
+msgid "Exit codes"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:5
+msgid ""
+"pipx returns ``0`` on success and ``1`` on failure. A command that raises an "
+"unexpected error, is interrupted, or hits an argument-parsing problem also "
+"exits non-zero. The named codes below come from ``pipx.constants``; each "
+"maps to one of those two process exit values."
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:9
+msgid ""
+"``reinstall-all`` exits with ``1`` if any environment could not be "
+"reinstalled, including when its selected Python interpreter belongs to that "
+"environment. With ``--output json``, failed environments appear in "
+"``errors`` and only successfully reinstalled environments appear in ``data."
+"environments``."
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:18
+msgid "Code"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:19
+msgid "Name"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:20
+msgid "Meaning"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:21 ../../../reference/exit-codes.rst:24
+msgid "``0``"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:22
+msgid "``EXIT_CODE_OK``"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:23
+msgid "Command completed successfully."
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:25
+msgid "``EXIT_CODE_INSTALL_VENV_EXISTS``"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:26
+msgid ""
+"Install skipped because the environment already exists; not treated as a "
+"failure."
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:27 ../../../reference/exit-codes.rst:30
+#: ../../../reference/exit-codes.rst:33 ../../../reference/exit-codes.rst:36
+#: ../../../reference/exit-codes.rst:39 ../../../reference/exit-codes.rst:42
+#: ../../../reference/exit-codes.rst:45 ../../../reference/exit-codes.rst:48
+msgid "``1``"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:28
+msgid "``EXIT_CODE_INJECT_ERROR``"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:29
+msgid "``inject`` failed to install one or more packages."
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:31
+msgid "``EXIT_CODE_UNINJECT_ERROR``"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:32
+msgid "``uninject`` failed to remove one or more packages."
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:34
+msgid "``EXIT_CODE_LIST_PROBLEM``"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:35
+msgid "``list`` found an environment it could not read."
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:37
+msgid "``EXIT_CODE_UNINSTALL_VENV_NONEXISTENT``"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:38
+msgid "``uninstall`` targeted an environment that does not exist."
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:40
+msgid "``EXIT_CODE_UNINSTALL_ERROR``"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:41
+msgid "``uninstall`` failed to remove the environment."
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:43
+msgid "``EXIT_CODE_REINSTALL_VENV_NONEXISTENT``"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:44
+msgid "``reinstall`` targeted an environment that does not exist."
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:46
+msgid "``EXIT_CODE_REINSTALL_INVALID_PYTHON``"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:47
+msgid "``reinstall`` was given a Python interpreter it could not use."
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:49
+msgid "``EXIT_CODE_SPECIFIED_PYTHON_EXECUTABLE_NOT_FOUND``"
+msgstr ""
+
+#: ../../../reference/exit-codes.rst:50
+msgid "The interpreter passed to ``--python`` was not found."
+msgstr ""

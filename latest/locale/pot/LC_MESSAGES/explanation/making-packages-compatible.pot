@@ -1,0 +1,352 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../explanation/making-packages-compatible.rst:3
+msgid "Making packages compatible"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:7
+msgid "Developing for pipx"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:9
+msgid "If you are a developer and want users to be able to run"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:11
+msgid "$ pipx install MY_PACKAGE"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:15
+msgid ""
+"make sure you include ``scripts`` in your main table [#main-table]_ in "
+"``pyproject.toml`` or its legacy equivalents for ``setup.cfg`` and ``setup."
+"py``. pipx also exposes ``gui-scripts`` entry points, which are useful for "
+"GUI applications on Windows (they launch without opening a console window)."
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:0
+msgid "pyproject.toml"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:23
+msgid ""
+"[project.scripts]\n"
+"foo = \"my_package.some_module:main_func\"\n"
+"bar = \"other_module:some_func\"\n"
+"\n"
+"[project.gui-scripts]\n"
+"baz = \"my_package_gui:start_func\""
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:0
+msgid "setup.cfg"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:34
+msgid ""
+"[options.entry_points]\n"
+"console_scripts =\n"
+"    foo = my_package.some_module:main_func\n"
+"    bar = other_module:some_func\n"
+"gui_scripts =\n"
+"    baz = my_package_gui:start_func"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:0
+msgid "setup.py"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:45
+msgid ""
+"setup(\n"
+"    # other arguments here...\n"
+"    entry_points={\n"
+"        \"console_scripts\": [\n"
+"            \"foo = my_package.some_module:main_func\",\n"
+"            \"bar = other_module:some_func\",\n"
+"        ],\n"
+"        \"gui_scripts\": [\n"
+"            \"baz = my_package_gui:start_func\",\n"
+"        ],\n"
+"    },\n"
+")"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:60
+msgid ""
+"Here ``foo`` and ``bar`` (and ``baz`` on Windows) become applications that "
+"pipx exposes after installing the package, invoking their corresponding "
+"entry point functions."
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:83
+msgid "The ``pipx.run`` entry point group"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:85
+msgid ""
+"When a user runs ``pipx run PACKAGE``, pipx looks for a console script "
+"matching the package name. If the package name and script name differ, the "
+"user has to write ``pipx run --spec PACKAGE SCRIPT``, which is less "
+"convenient."
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:88
+msgid ""
+"Package authors can declare a ``pipx.run`` entry point group to tell pipx "
+"which function to invoke for ``pipx run``. This entry point takes priority "
+"over console scripts when present."
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:95
+msgid ""
+"[project.entry-points.\"pipx.run\"]\n"
+"my-package = \"my_package.cli:main\""
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:102
+msgid ""
+"[options.entry_points]\n"
+"pipx.run =\n"
+"    my-package = my_package.cli:main"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:108
+msgid ""
+"With this declaration, ``pipx run my-package`` invokes ``my_package.cli:"
+"main`` even if no console script named ``my-package`` exists. The `build "
+"<https://github.com/pypa/build>`_ package uses this pattern so that ``pipx "
+"run build`` works even though build's console script is named ``pyproject-"
+"build``."
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:113
+msgid "Detect a pipx installation"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:115
+msgid ""
+"pipx records the environment name in ``pipx_metadata.json`` for packages "
+"installed with ``pipx install``. Package code can read this name when it "
+"needs to give pipx-specific recovery instructions:"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:118
+msgid ""
+"import json\n"
+"import sys\n"
+"from pathlib import Path\n"
+"\n"
+"\n"
+"def pipx_environment() -> str | None:\n"
+"    try:\n"
+"        metadata = json.loads((Path(sys.prefix) / \"pipx_metadata.json\")."
+"read_text(encoding=\"utf-8\"))\n"
+"    except (json.JSONDecodeError, OSError):\n"
+"        return None\n"
+"    environment = metadata.get(\"environment\") if isinstance(metadata, "
+"dict) else None\n"
+"    return environment if isinstance(environment, str) else None"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:133
+msgid ""
+"Use the returned name as the target for commands such as ``pipx inject "
+"ENVIRONMENT 'mytool[feature]'``. pipx records the extra on the main package, "
+"so reinstalling the environment retains it."
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:136
+msgid ""
+"``pipx run`` may create internal metadata without setting ``environment``, "
+"so check the field value. Treat other keys as internal pipx state. If the "
+"function returns ``None``, show the package's usual installer-neutral advice."
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:140
+msgid "Manual pages"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:142
+msgid ""
+"To provide documentation via ``man`` pages on UNIX-like systems, ship them "
+"as data files. pipx exposes them the same way it exposes apps."
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:0
+msgid "setuptools"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:149
+msgid ""
+"# pyproject.toml\n"
+"[tool.setuptools.data-files]\n"
+"\"share/man/man1\" = [\n"
+"  \"manpage.1\",\n"
+"]"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:157
+msgid ""
+"# setup.cfg\n"
+"[options.data_files]\n"
+"share/man/man1 =\n"
+"    manpage.1"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:164
+msgid ""
+"# setup.py\n"
+"setup(\n"
+"    # other arguments here...\n"
+"    data_files=[(\"share/man/man1\", [\"manpage.1\"])],\n"
+")"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:174
+msgid ""
+"The ``data-files`` keyword is \"discouraged\" in the `setuptools "
+"documentation <https://setuptools.pypa.io/en/latest/userguide/"
+"pyproject_config.html#setuptools-specific-configuration>`_, but there is no "
+"alternative when ``man`` pages are a requirement."
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:0
+msgid "pdm-backend"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:180
+msgid ""
+"# pyproject.toml\n"
+"[tool.pdm.build]\n"
+"source-includes = [\"share\"]\n"
+"\n"
+"[tool.pdm.build.wheel-data]\n"
+"data = [\n"
+"  { path = \"share/man/man1/*\", relative-to = \".\" },\n"
+"]"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:191
+msgid ""
+"The manual page ``manpage.1`` can then be read with ``man manpage`` after "
+"installing the package. For a real-world example, see `pycowsay's setup.py "
+"<https://github.com/cs01/pycowsay/blob/master/setup.py>`_."
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:195
+msgid "Shell completions"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:197
+msgid ""
+"A package can ship the completion script for its own command the same way it "
+"ships a man page. pipx picks up the three directories a wheel installs "
+"completion scripts into and links each one under ``PIPX_COMPLETION_DIR`` "
+"(default ``~/.local/share``), so the completions arrive with the package and "
+"leave with it."
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:205
+msgid "Shipped by the package"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:206
+msgid "Exposed to"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:207
+msgid "Loaded by"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:208
+msgid "``share/bash-completion/completions/``"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:209
+msgid "``~/.local/share/bash-completion/completions/``"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:210
+msgid "bash"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:211
+msgid "``share/fish/vendor_completions.d/``"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:212
+msgid "``~/.local/share/fish/vendor_completions.d/``"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:213
+msgid "fish"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:214
+msgid "``share/zsh/site-functions/``"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:215
+msgid "``~/.local/share/zsh/site-functions/``"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:216
+msgid "zsh (with the directory on ``fpath``)"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:218
+msgid ""
+"Declare them through the data files of your build backend, exactly as with "
+"man pages:"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:220
+msgid ""
+"setup(\n"
+"    name=\"your-tool\",\n"
+"    data_files=[\n"
+"        (\"share/bash-completion/completions\", [\"completions/your-"
+"tool\"]),\n"
+"        (\"share/zsh/site-functions\", [\"completions/_your-tool\"]),\n"
+"        (\"share/fish/vendor_completions.d\", [\"completions/your-tool."
+"fish\"]),\n"
+"    ],\n"
+")"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:231
+msgid ""
+"See :doc:`../how-to/shell-completions` for how each shell loads these "
+"directories."
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:233
+msgid ""
+"You can read more about entry points in the `setuptools quickstart <https://"
+"setuptools.pypa.io/en/latest/userguide/quickstart.html#entry-points-and-"
+"automatic-script-creation>`_."
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:238
+msgid ""
+"This is often the ``[project]`` table, but it might be named differently. "
+"Read more in the `PyPUG <https://packaging.python.org/en/latest/guides/"
+"writing-pyproject-toml/#writing-your-pyproject-toml>`_."
+msgstr ""
