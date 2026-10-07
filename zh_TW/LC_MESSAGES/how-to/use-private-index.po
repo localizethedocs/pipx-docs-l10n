@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/use-private-index.rst:3
+msgid "Use a private index"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:5
+msgid ""
+"Install from a private index, behind a proxy, or offline by forwarding index "
+"options to the backend."
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:9
+msgid "Set the index for one command"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:11
+msgid ""
+"Pass ``--index-url`` directly, or forward pip options with ``--pip-args``:"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:13
+msgid ""
+"$ pipx install my-package --index-url https://my-index.example.com/simple/\n"
+"$ pipx install my-package --pip-args=\"--extra-index-url https://my-index."
+"example.com/simple/\""
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:18
+msgid ""
+"Quote ``--pip-args`` and use an ``=`` sign so pipx passes the whole string "
+"through. Add trusted hosts and other pip flags the same way:"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:21
+msgid ""
+"$ pipx install my-package --pip-args=\"--index-url https://my-index.example."
+"com/simple/ --trusted-host my-index.example.com\""
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:27
+msgid "Set it for every command"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:29
+msgid ""
+"pipx forwards ``PIP_*`` environment variables to every pip invocation, "
+"including shared-library upgrades. Set them in your shell profile or pip's "
+"own config file for a permanent default:"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:32
+msgid ""
+"$ export PIP_INDEX_URL=https://my-index.example.com/simple/\n"
+"$ export PIP_TRUSTED_HOST=my-index.example.com\n"
+"$ pipx install my-private-package"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:38
+msgid ""
+"See the `pip configuration docs <https://pip.pypa.io/en/stable/topics/"
+"configuration/>`_ for the config-file form."
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:42
+msgid "Install offline"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:44
+msgid ""
+"Point pip at a local directory of wheels and stop it reaching the network:"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:46
+msgid ""
+"$ pipx install my-package --pip-args=\"--no-index --find-links /path/to/"
+"wheels\""
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:50
+msgid ""
+"Pass ``--skip-maintenance`` to keep the bundled pip instead of downloading a "
+"shared-library upgrade during the install."
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:54
+msgid ""
+"Under the uv backend, pipx translates only a subset of ``--pip-args``: ``--"
+"index-url`` (``-i``), ``--extra-index-url``, ``--find-links`` (``-f``), ``--"
+"trusted-host``, ``--no-binary``, ``--only-binary``, ``--pre``, ``--upgrade`` "
+"(``-U``), and ``--no-cache-dir``. Any other flag raises an error rather than "
+"being silently dropped. Use ``--backend pip`` when you need a flag uv cannot "
+"translate. See :doc:`use-uv-backend`."
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:61
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:63
+msgid "$ pipx list --short"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:67
+msgid ""
+"The package installs at the version your index serves. For a private index "
+"that pipx must also use for its own shared libraries, set the ``PIP_*`` "
+"variables before the first install."
+msgstr ""

@@ -1,0 +1,471 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/cli.rst:3
+msgid "CLI reference"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"\n"
+"Install and execute apps from Python packages.\n"
+"\n"
+"Binaries can either be installed globally into isolated Virtual "
+"Environments\n"
+"or run directly in a temporary Virtual Environment.\n"
+"\n"
+"Virtual Environment location is /opt/pipx/venvs.\n"
+"Symlinks to apps are placed in /opt/pipx_bin.\n"
+"Symlinks to manual pages are placed in /home/runner/.local/share/man.\n"
+"\n"
+"optional environment variables:\n"
+"  PIPX_HOME              Overrides default pipx location. Virtual "
+"Environments\n"
+"                        will be installed to $PIPX_HOME/venvs.\n"
+"  PIPX_GLOBAL_HOME       Used instead of PIPX_HOME when the `--global` "
+"option\n"
+"                        is given.\n"
+"  PIPX_BIN_DIR           Overrides location of app installations. Apps are\n"
+"                        symlinked or copied here.\n"
+"  PIPX_GLOBAL_BIN_DIR    Used instead of PIPX_BIN_DIR when the `--global`\n"
+"                        option is given.\n"
+"  PIPX_MAN_DIR           Overrides location of manual pages installations.\n"
+"                        Manual pages are symlinked or copied here.\n"
+"  PIPX_GLOBAL_MAN_DIR    Used instead of PIPX_MAN_DIR when the `--global`\n"
+"                        option is given.\n"
+"  PIPX_COMPLETION_DIR    Overrides location of shell completion "
+"installations.\n"
+"                        Completion scripts are symlinked or copied here.\n"
+"  PIPX_GLOBAL_COMPLETION_DIR\n"
+"                        Used instead of PIPX_COMPLETION_DIR when the\n"
+"                        `--global` option is given.\n"
+"  PIPX_DEFAULT_PYTHON    Overrides default python used for commands.\n"
+"  PIPX_DEFAULT_BACKEND   Overrides which backend (`pip` or `uv`) is used "
+"for\n"
+"                        new venvs.\n"
+"  PIPX_COOLDOWN          Default `--cooldown` in days for the commands that\n"
+"                        accept it.\n"
+"  PIPX_DISABLE_SHARED_LIBS_AUTO_UPGRADE\n"
+"                        Skips automatic shared library upgrades.\n"
+"  PIPX_USE_EMOJI         Overrides emoji behavior. Default value varies "
+"based\n"
+"                        on platform."
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx [-h] [--version]\n"
+"     {install,install-all,uninject,inject,expose,unexpose,pin,unpin,upgrade,"
+"upgrade-all,upgrade-shared,uninstall,uninstall-all,reset,reinstall,reinstall-"
+"all,health,repair,list,interpreter,cache,manifest,run,exec,runpip,ensurepath,"
+"environment,completions,help} ..."
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"The install command is the preferred way to globally install apps\n"
+"from Python packages and PEP 723 scripts. It creates an isolated virtual\n"
+"environment for the source, then ensures its apps are\n"
+"accessible on your $PATH. The package's manual pages installed in\n"
+"share/man/man[1-9] can be viewed with man on an operating system where\n"
+"it is available and the path in the environment variable `PIPX_MAN_DIR`\n"
+"(default: /home/runner/.local/share/man) is in the man search path\n"
+"($MANPATH).\n"
+"\n"
+"The result: apps you can run from anywhere, located in packages\n"
+"you can cleanly upgrade or uninstall. Guaranteed to not have\n"
+"dependency version conflicts or interfere with your OS's python\n"
+"packages. 'sudo' is not required to do this.\n"
+"\n"
+"pipx install PACKAGE_SPEC ...\n"
+"pipx install --python PYTHON PACKAGE_SPEC\n"
+"pipx install VCS_URL\n"
+"pipx install ./LOCAL_PATH\n"
+"pipx install ./SCRIPT.py\n"
+"pipx install ZIP_FILE\n"
+"pipx install TAR_GZ_FILE\n"
+"\n"
+"Package specs are passed to the selected backend. PEP 723 scripts are\n"
+"installed with their declared dependencies.\n"
+"\n"
+"Virtual Environments will be installed to `$PIPX_HOME/venvs`.\n"
+"The default pipx home location is /home/runner/.local/share/pipx and can\n"
+"be overridden by setting the environment variable `PIPX_HOME`.\n"
+"If the `--global` option is used, the default pipx home location\n"
+"instead is /opt/pipx and can be overridden\n"
+"by setting the environment variable `PIPX_GLOBAL_HOME`.\n"
+"\n"
+"The default app location is /home/runner/.local/bin and can be\n"
+"overridden by setting the environment variable `PIPX_BIN_DIR`.\n"
+"If the `--global` option is used, the default app location instead\n"
+"is /usr/local/bin and can be overridden by\n"
+"setting the environment variable `PIPX_GLOBAL_BIN_DIR`.\n"
+"\n"
+"The default manual pages location is /home/runner/.local/share/man and\n"
+"can be overridden by setting the environment variable `PIPX_MAN_DIR`.\n"
+"If the `--global` option is used, the default manual pages location\n"
+"instead is /usr/local/share/man and can be overridden\n"
+"by setting the environment variable `PIPX_GLOBAL_MAN_DIR`.\n"
+"\n"
+"The default python executable used to install a package is\n"
+"/home/runner/work/pipx-docs-l10n/pipx-docs-l10n/.conda/bin/python3.14 and "
+"can be overridden\n"
+"by setting the environment variable `PIPX_DEFAULT_PYTHON`."
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx install [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] [--"
+"include-deps |\n"
+"             --include-resources-from PACKAGE] [--force] [--upgrade]\n"
+"             [--upgrade-strategy {only-if-needed,eager}] [--suffix SUFFIX] "
+"[--python PYTHON]\n"
+"             [--fetch-python {always,missing,never} | --fetch-missing-"
+"python]\n"
+"             [--preinstall PREINSTALL] [--app APP] [--lock LOCK] [--system-"
+"site-packages]\n"
+"             [--index-url INDEX_URL] [--editable] [--pip-args PIP_ARGS] [--"
+"cooldown DAYS]\n"
+"             [--backend {pip,uv}] [--output {human,json}]\n"
+"             package_spec [package_spec ...]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx install-all [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] "
+"[--force]\n"
+"                 [--python PYTHON] [--fetch-python {always,missing,never} |\n"
+"                 --fetch-missing-python] [--system-site-packages] [--index-"
+"url INDEX_URL]\n"
+"                 [--editable] [--pip-args PIP_ARGS] [--cooldown DAYS] [--"
+"backend {pip,uv}]\n"
+"                 spec_metadata_file"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx uninject [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] [--"
+"leave-deps]\n"
+"              [--output {human,json}]\n"
+"              ENVIRONMENT dependencies [dependencies ...]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx inject [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] [-r "
+"file]\n"
+"            [--include-apps] [--include-deps | --include-resources-from "
+"PACKAGE]\n"
+"            [--system-site-packages] [--index-url INDEX_URL] [--editable]\n"
+"            [--pip-args PIP_ARGS] [--cooldown DAYS] [--force] [--with-"
+"suffix]\n"
+"            [--backend {pip,uv}] [--output {human,json}]\n"
+"            ENVIRONMENT [dependencies ...]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx expose [-h] [--quiet] [--verbose] [--skip-maintenance] [--global]\n"
+"            [--output {human,json}]\n"
+"            ENVIRONMENT"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx unexpose [-h] [--quiet] [--verbose] [--skip-maintenance] [--global]\n"
+"              [--output {human,json}]\n"
+"              ENVIRONMENT"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx pin [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] [--"
+"injected-only]\n"
+"         [--skip SKIP [SKIP ...]] [--output {human,json}]\n"
+"         ENVIRONMENT"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx unpin [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] [--"
+"output {human,json}]\n"
+"           ENVIRONMENT"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx upgrade [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] [--"
+"include-injected]\n"
+"             [--force] [--system-site-packages] [--index-url INDEX_URL] [--"
+"editable]\n"
+"             [--pip-args PIP_ARGS] [--cooldown DAYS] [--install] [--python "
+"PYTHON]\n"
+"             [--fetch-python {always,missing,never} | --fetch-missing-"
+"python]\n"
+"             [--backend {pip,uv}] [--output {human,json}]\n"
+"             packages [packages ...]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx upgrade-all [-h] [--quiet] [--verbose] [--skip-maintenance] [--global]\n"
+"                 [--include-injected] [--skip SKIP [SKIP ...]] [--force]\n"
+"                 [--system-site-packages] [--index-url INDEX_URL] [--"
+"editable]\n"
+"                 [--pip-args PIP_ARGS] [--cooldown DAYS] [--backend {pip,"
+"uv}]\n"
+"                 [--output {human,json}]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx upgrade-shared [-h] [--quiet] [--verbose] [--skip-maintenance] [--"
+"global]\n"
+"                    [--pip-args PIP_ARGS] [--output {human,json}]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx uninstall [-h] [--quiet] [--verbose] [--skip-maintenance] [--global]\n"
+"               [--output {human,json}]\n"
+"               ENVIRONMENT"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx uninstall-all [-h] [--quiet] [--verbose] [--skip-maintenance] [--"
+"global]\n"
+"                   [--output {human,json}]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx reset [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] [--"
+"yes] [--dry-run]\n"
+"           [--output {human,json}]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"Reinstalls a package.\n"
+"\n"
+"Package is uninstalled, then installed with pipx install PACKAGE\n"
+"with the same options used in the original install of PACKAGE."
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx reinstall [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] [--"
+"python PYTHON]\n"
+"               [--fetch-python {always,missing,never} | --fetch-missing-"
+"python]\n"
+"               [--backend {pip,uv}] [--output {human,json}]\n"
+"               ENVIRONMENT"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"Reinstalls all packages.\n"
+"\n"
+"Packages are uninstalled, then installed with pipx install PACKAGE\n"
+"with the same options used in the original install of PACKAGE.\n"
+"This is useful if you upgraded to a new version of Python and want\n"
+"all your packages to use the latest as well."
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx reinstall-all [-h] [--quiet] [--verbose] [--skip-maintenance] [--"
+"global]\n"
+"                   [--python PYTHON] [--fetch-python {always,missing,never} "
+"|\n"
+"                   --fetch-missing-python] [--skip SKIP [SKIP ...]] [--"
+"backend {pip,uv}]\n"
+"                   [--output {human,json}]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx health [-h] [--quiet] [--verbose] [--skip-maintenance] [--global]\n"
+"            [--output {human,json}]\n"
+"            [packages ...]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx repair [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] [--"
+"python PYTHON]\n"
+"            [--fetch-python {always,missing,never} | --fetch-missing-"
+"python]\n"
+"            [--backend {pip,uv}] [--output {human,json}]\n"
+"            [packages ...]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx list [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] [--"
+"include-injected]\n"
+"          [--outdated] [--short | --pinned] [--output {human,json} | --"
+"json]\n"
+"          [packages ...]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx interpreter [-h] [--quiet] [--verbose] [--skip-maintenance] [--global]\n"
+"                 {list,prune,upgrade} ..."
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx interpreter list [-h] [--quiet] [--verbose] [--skip-maintenance] [--"
+"global]\n"
+"                      [--output {human,json}]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx interpreter prune [-h] [--quiet] [--verbose] [--skip-maintenance] [--"
+"global]\n"
+"                       [--output {human,json}]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx interpreter upgrade [-h] [--quiet] [--verbose] [--skip-maintenance] [--"
+"global]\n"
+"                         [--output {human,json}]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx cache [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] {dir,"
+"purge} ..."
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx cache dir [-h] [--quiet] [--verbose] [--skip-maintenance] [--global]\n"
+"               [--output {human,json}]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx cache purge [-h] [--quiet] [--verbose] [--skip-maintenance] [--global]\n"
+"                 [--output {human,json}]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx manifest [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] "
+"{lock,sync} ..."
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx manifest lock [-h] [--quiet] [--verbose] [--skip-maintenance] [--"
+"global]\n"
+"                   [--output {human,json}]\n"
+"                   manifest"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx manifest sync [-h] [--quiet] [--verbose] [--skip-maintenance] [--"
+"global] [--prune]\n"
+"                   [--backend {pip,uv}] [--output {human,json}]\n"
+"                   manifest"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"Download the latest version of a package to a temporary virtual "
+"environment,\n"
+"then run an app from it. The environment will be cached\n"
+"and reused for up to 14 days. This\n"
+"means subsequent calls to 'run' for the same package will be faster\n"
+"since they can reuse the cached Virtual Environment.\n"
+"\n"
+"In support of PEP 582 'run' will use apps found in a local __pypackages__\n"
+"directory, if present. Please note that this behavior is experimental,\n"
+"and acts as a companion tool to pythonloc. It may be modified or\n"
+"removed in the future. See https://github.com/cs01/pythonloc."
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx run [-h] [--quiet] [--verbose] [--skip-maintenance] [--global]\n"
+"         [--no-cache | --refresh] [--no-path-check]\n"
+"         [--python-args ARGS] [--path] [--pypackages] [--with WITH_]\n"
+"         [--spec SPEC] [--python PYTHON]\n"
+"         [--fetch-python {always,missing,never} |\n"
+"         --fetch-missing-python] [--system-site-packages]\n"
+"         [--index-url INDEX_URL] [--editable] [--pip-args PIP_ARGS]\n"
+"         [--cooldown DAYS] [--backend {pip,uv}]\n"
+"         app ..."
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx exec [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] "
+"ENVIRONMENT APP ..."
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx runpip [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] "
+"package ..."
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx ensurepath [-h] [--quiet] [--verbose] [--skip-maintenance] [--global] "
+"[--prepend]\n"
+"                [--force] [--all-shells] [--dry-run]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"Prints the names and current values of environment variables used by pipx,\n"
+"followed by internal pipx variables which are derived from the environment\n"
+"variables and platform specific default values.\n"
+"\n"
+"Available variables:\n"
+"PIPX_HOME, PIPX_GLOBAL_HOME, PIPX_BIN_DIR, PIPX_GLOBAL_BIN_DIR,\n"
+"PIPX_MAN_DIR, PIPX_COMPLETION_DIR, PIPX_GLOBAL_MAN_DIR,\n"
+"PIPX_GLOBAL_COMPLETION_DIR, PIPX_SHARED_LIBS, PIPX_DEFAULT_PYTHON,\n"
+"PIPX_DEFAULT_BACKEND, PIPX_COOLDOWN, PIPX_FETCH_MISSING_PYTHON,\n"
+"PIPX_FETCH_PYTHON, PIPX_DISABLE_SHARED_LIBS_AUTO_UPGRADE,\n"
+"PIPX_USE_EMOJI, PIPX_MAX_LOGS"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx environment [-h] [--quiet] [--verbose] [--skip-maintenance] [--global]\n"
+"                 [--value VARIABLE]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid ""
+"pipx completions [-h] [--quiet] [--verbose] [--skip-maintenance] [--global]"
+msgstr ""
+
+#: ../../../reference/cli.rst:-1
+msgid "pipx help [-h] [--quiet] [--verbose] [--skip-maintenance] [--global]"
+msgstr ""
