@@ -1,0 +1,2277 @@
+<!doctype html>
+<html class="no-js" lang="en-US" data-content_root="./">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Changelog" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://pipx.pypa.io/latest/changelog.html" />
+<meta property="og:site_name" content="pipx" />
+<meta property="og:description" content="All notable changes to this project will be documented in this file. The format is based on Keep a Changelog, and this project adheres to Semantic Versioning. This project uses towncrier for keepin..." />
+<meta name="description" content="All notable changes to this project will be documented in this file. The format is based on Keep a Changelog, and this project adheres to Semantic Versioning. This project uses towncrier for keepin..." />
+
+    <meta name="description" content="All notable changes to this project will be documented in this file." /><link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="prev" title="Contributing" href="contributing.html">
+        <link rel="canonical" href="https://projects.localizethedocs.org/pipx-docs-l10n/changelog.html">
+        <link rel="prefetch" href="_static/logo.svg" as="image">
+
+    <link rel="shortcut icon" href="_static/logo.svg"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
+        <title>Changelog - pipx</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_argparse_cli.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-codeautolink.css?v=b2176991" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=845a0197" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style>
+
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">pipx</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/logo.svg" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorial/index.html">Tutorials</a><input aria-label="Toggle navigation of Tutorials" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/install-applications.html">Installing applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial/run-applications.html">Running applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="how-to/index.html">How-to guides</a><input aria-label="Toggle navigation of How-to guides" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="how-to/install-pipx.html">Install pipx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/upgrade-pipx.html">Upgrade pipx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/manage-installed-apps.html">Manage installed apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/run-scripts.html">Run scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/inject-packages.html">Inject packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/pin-packages.html">Pin packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/expose-apps.html">Expose apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/tool-manifest.html">Tool manifest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/configure-paths.html">Configure paths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/shell-completions.html">Shell completions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/move-installation.html">Move installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/standalone-python.html">Standalone Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/dependency-cooldown.html">Dependency cooldown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/use-private-index.html">Use a private index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/use-uv-backend.html">Use the uv backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/use-with-pre-commit.html">Use with pre-commit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to/troubleshoot.html">Troubleshoot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="reference/index.html">Reference</a><input aria-label="Toggle navigation of Reference" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli.html">CLI reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/environment-variables.html">Environment variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/exit-codes.html">Exit codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/json-output.html">JSON output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/metadata.html">On-disk metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/programs-to-try.html">Programs to try</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="explanation/index.html">Explanation</a><input aria-label="Toggle navigation of Explanation" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="explanation/how-pipx-works.html">How pipx works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explanation/scope.html">Project scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explanation/comparisons.html">Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explanation/making-packages-compatible.html">Making packages compatible</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Changelog</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/changelog.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">¶</a></h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a class="reference external" href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>, and this project adheres to
+<a class="reference external" href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<p>This project uses <a class="reference external" href="https://towncrier.readthedocs.io/">towncrier</a> for keeping the changelog. DO NOT commit any changes
+to this file.</p>
+<section id="unreleased-2026-10-07">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/Unreleased">Unreleased</a> - 2026-10-07<a class="headerlink" href="#unreleased-2026-10-07" title="Link to this heading">¶</a></h2>
+<p>No significant changes.</p>
+</section>
+<section id="id2">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.17.11">1.17.11</a> - 2026-10-03<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<section id="improved-documentation">
+<h3>Improved Documentation<a class="headerlink" href="#improved-documentation" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Hide the extra documentation TOC toggle on narrow screens. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2064">#2064</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id4">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.17.10">1.17.10</a> - 2026-10-02<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<section id="bugfixes">
+<h3>Bugfixes<a class="headerlink" href="#bugfixes" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Remove an environment that has no pipx metadata and an interpreter that no longer runs, instead of crashing
+<cite>pipx uninstall</cite> and <cite>pipx uninstall-all</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2059">#2059</a>)</p></li>
+<li><p>Derive local script command names from the filename when parent directories contain <cite>#</cite>. A script installed by an
+earlier release under its directory’s name no longer upgrades; uninstall it and install it again. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2060">#2060</a>)</p></li>
+<li><p>Install a local PEP 723 script from its file when the path reads as a PyPI name (<cite>pipx install bare.py</cite>), contains <cite>[</cite>,
+or starts with a quoted <cite>~</cite>, and stop the upgrade hint from suggesting a PyPI reinstall for a script. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2062">#2062</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id6">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.17.9">1.17.9</a> - 2026-10-01<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<section id="id7">
+<h3>Bugfixes<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Stop adding ` -E` to an app script’s shebang when the longer line would exceed the kernel’s limit, which made the script
+fail on macOS with <cite>Exec format error</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2058">#2058</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id9">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.17.8">1.17.8</a> - 2026-09-29<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h2>
+<section id="id10">
+<h3>Bugfixes<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Remove leftover shell completion scripts when running <cite>pipx uninject</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2055">#2055</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id12">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.17.7">1.17.7</a> - 2026-09-28<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h2>
+<section id="id13">
+<h3>Bugfixes<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Prevent <cite>pipx run</cite> from sharing cached environments across different requirement lists or argument boundaries. This
+changes cache keys; run <cite>pipx cache purge</cite> to remove old entries. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2053">#2053</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id15">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.17.6">1.17.6</a> - 2026-09-22<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h2>
+<section id="id16">
+<h3>Bugfixes<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Record each tool’s dependency group as its lock’s default so <cite>pipx manifest sync</cite> installs what <cite>pipx manifest lock</cite>
+wrote. Run <cite>pipx manifest lock</cite> again to fix existing locks. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2049">#2049</a>)</p></li>
+</ul>
+</section>
+<section id="id17">
+<h3>Improved Documentation<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix the argument order in the combined inject command example. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2044">#2044</a>)</p></li>
+<li><p>Use direct URL requirements for the Git install example with extras. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2045">#2045</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id19">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.17.5">1.17.5</a> - 2026-09-20<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h2>
+<section id="id20">
+<h3>Bugfixes<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Report failed environments when running <cite>pipx reinstall-all</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2042">#2042</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id22">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.17.4">1.17.4</a> - 2026-09-18<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h2>
+<section id="id23">
+<h3>Bugfixes<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><cite>pipx upgrade</cite> of a package installed from a local path, wheel, or VCS URL no longer reports “already at latest
+version”. It now says the package is unchanged because it is installed from a local source and that no package index was
+checked, and suggests reinstalling by package name to track index releases. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2040">#2040</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id25">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.17.3">1.17.3</a> - 2026-09-16<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h2>
+<section id="id26">
+<h3>Bugfixes<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Report a clear error when PIPX_MAX_LOGS is not a non-negative integer, instead of crashing on every pipx command. Empty
+or whitespace-only values fall back to the default everywhere, including log setup. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2029">#2029</a>)</p></li>
+<li><p>Split <cite>–pip-args</cite> the way a shell would, so a quoted path with spaces such as <cite>–find-links ‘/tmp/foo bar’</cite> reaches pip
+intact instead of failing to parse. On Windows pipx now drops the quotes around each argument and keeps backslashes as
+path separators. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2033">#2033</a>)</p></li>
+<li><p>Stop <cite>pipx runpip</cite> from printing uv DEBUG logs on the uv backend. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2035">#2035</a>)</p></li>
+</ul>
+</section>
+<section id="id27">
+<h3>Improved Documentation<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>List every <cite>–pip-args</cite> flag the uv backend translates instead of only four. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2037">#2037</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id29">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.17.2">1.17.2</a> - 2026-09-01<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h2>
+<section id="id30">
+<h3>Bugfixes<a class="headerlink" href="#id30" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix <cite>KeyError</cite> stderr noise when installing packages in Python3.15. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2026">#2026</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id32">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.17.1">1.17.1</a> - 2026-08-30<a class="headerlink" href="#id32" title="Link to this heading">¶</a></h2>
+<section id="id33">
+<h3>Bugfixes<a class="headerlink" href="#id33" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><cite>pipx environment</cite> now reports <cite>PIPX_MAX_LOGS</cite>, and <cite>pipx environment –value PIPX_MAX_LOGS</cite> no longer exits with
+<cite>invalid choice</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2024">#2024</a>)</p></li>
+</ul>
+</section>
+<section id="miscellaneous-internal-changes">
+<h3>Miscellaneous internal changes<a class="headerlink" href="#miscellaneous-internal-changes" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/pypa/pipx/issues/2021">#2021</a>, <a class="reference external" href="https://github.com/pypa/pipx/issues/2025">#2025</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id35">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.17.0">1.17.0</a> - 2026-08-29<a class="headerlink" href="#id35" title="Link to this heading">¶</a></h2>
+<section id="features">
+<h3>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <cite>PIPX_COOLDOWN</cite>, a default for <cite>–cooldown</cite> on <cite>install</cite>, <cite>install-all</cite>, <cite>inject</cite>, <cite>upgrade</cite>, <cite>upgrade-all</cite> and
+<cite>run</cite>, so one release-age policy covers every command. An explicit <cite>–cooldown</cite> still wins, <cite>–cooldown 0</cite> opts a single
+command out, and a locked install ignores the variable rather than failing. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2014">#2014</a>)</p></li>
+</ul>
+</section>
+<section id="id36">
+<h3>Bugfixes<a class="headerlink" href="#id36" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Require <cite>packaging&gt;=26</cite>. Earlier releases serialize a direct reference as <cite>name&#64; url</cite> rather than PEP 508’s
+<cite>name &#64; url</cite>, so the specifier pipx recorded in <cite>pipx_metadata.json</cite> and passed to the backend depended on which
+<cite>packaging</cite> happened to be installed. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2015">#2015</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id38">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.16.8">1.16.8</a> - 2026-08-25<a class="headerlink" href="#id38" title="Link to this heading">¶</a></h2>
+<section id="id39">
+<h3>Bugfixes<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><cite>pipx run –spec &lt;spec&gt; &lt;app&gt;</cite> on the uv backend builds a pipx-managed venv when <cite>&lt;app&gt;</cite> differs from the spec’s
+normalized distribution name, or when the spec carries no name at all, so pipx honors the package’s <cite>[pipx.run]</cite> entry
+point. An <cite>&lt;app&gt;</cite> that matches the name still runs through <cite>uv tool run</cite>, which sees console scripts only. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2004">#2004</a>)</p></li>
+</ul>
+</section>
+<section id="id40">
+<h3>Improved Documentation<a class="headerlink" href="#id40" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>The CLI reference in the documentation now shows <cite>pipx run</cite> instead of <cite>sphinx-build run</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2005">#2005</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id42">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.16.7">1.16.7</a> - 2026-08-13<a class="headerlink" href="#id42" title="Link to this heading">¶</a></h2>
+<section id="id43">
+<h3>Bugfixes<a class="headerlink" href="#id43" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix pipx not being able to discover packages in separated platlib directories. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1999">#1999</a>)</p></li>
+<li><p>Retry transient failures when fetching the python-build-standalone release index and downloading interpreter archives,
+resuming an interrupted archive download from the bytes already received instead of starting over. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2001">#2001</a>)</p></li>
+</ul>
+</section>
+<section id="id44">
+<h3>Improved Documentation<a class="headerlink" href="#id44" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Correct the documented Windows default for <cite>PIPX_HOME</cite>, which resolves to <cite>%LOCALAPPDATA%pipxpipx</cite> rather than
+<cite>%LOCALAPPDATA%pipx</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/2002">#2002</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id46">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.16.6">1.16.6</a> - 2026-08-04<a class="headerlink" href="#id46" title="Link to this heading">¶</a></h2>
+<section id="id47">
+<h3>Bugfixes<a class="headerlink" href="#id47" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Stop appending a second <cite>.exe</cite> on Windows to the app name <cite>pipx run</cite> infers. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1189">#1189</a>)</p></li>
+<li><p>Run the console script a package declares when <cite>pipx run</cite> infers the app name from a VCS URL, a local path, or a name it
+normalized, instead of passing a guess to <cite>uv tool run</cite>. Reusing that venv no longer reinstalls the package on every
+run. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1994">#1994</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id49">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.16.5">1.16.5</a> - 2026-07-29<a class="headerlink" href="#id49" title="Link to this heading">¶</a></h2>
+<section id="id50">
+<h3>Bugfixes<a class="headerlink" href="#id50" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Honor the version specifier when <cite>pipx upgrade –install</cite> installs a missing package. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1987">#1987</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id52">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.16.4">1.16.4</a> - 2026-07-29<a class="headerlink" href="#id52" title="Link to this heading">¶</a></h2>
+<section id="id53">
+<h3>Bugfixes<a class="headerlink" href="#id53" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Bundle <cite>colorama</cite> and <cite>tomli</cite> in the zipapp so the single <cite>pipx.pyz</cite> works on Windows and on Python 3.10. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1978">#1978</a>, <a class="reference external" href="https://github.com/pypa/pipx/issues/1984">#1984</a>)</p></li>
+<li><p>Fix the Release Notes link published in package metadata. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1980">#1980</a>)</p></li>
+<li><p><cite>PIPX_MAX_LOGS=0</cite> now prunes the log files instead of keeping all of them. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1988">#1988</a>)</p></li>
+</ul>
+</section>
+<section id="id54">
+<h3>Improved Documentation<a class="headerlink" href="#id54" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix the documentation links that 404 after the Sphinx move, including the PyPI Release Notes link. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1980">#1980</a>)</p></li>
+</ul>
+</section>
+<section id="id55">
+<h3>Miscellaneous internal changes<a class="headerlink" href="#id55" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/pypa/pipx/issues/1989">#1989</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id57">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.16.3">1.16.3</a> - 2026-07-26<a class="headerlink" href="#id57" title="Link to this heading">¶</a></h2>
+<section id="id58">
+<h3>Bugfixes<a class="headerlink" href="#id58" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Allow read-only global list commands when venv lock files are inaccessible. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1974">#1974</a>)</p></li>
+</ul>
+</section>
+<section id="id59">
+<h3>Improved Documentation<a class="headerlink" href="#id59" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Direct Linux users to PEP 668-compatible installation methods. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1976">#1976</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id61">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.16.2">1.16.2</a> - 2026-07-21<a class="headerlink" href="#id61" title="Link to this heading">¶</a></h2>
+<section id="id62">
+<h3>Bugfixes<a class="headerlink" href="#id62" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Stop venv inspection from crashing on Python 3.15 when a <cite>dist-info</cite> directory has no <cite>Name</cite> metadata field.
+<cite>importlib.metadata</cite> now raises <cite>KeyError</cite> for missing metadata keys instead of returning <cite>None</cite>; such distributions are
+skipped again, as on earlier Python versions. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1971">#1971</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id64">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.16.1">1.16.1</a> - 2026-07-20<a class="headerlink" href="#id64" title="Link to this heading">¶</a></h2>
+<section id="id65">
+<h3>Bugfixes<a class="headerlink" href="#id65" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Stop <cite>install</cite> and <cite>list</cite> from crashing when the pipx bin directory contains an executable pipx did not create. Scanning
+for launcher ownership decoded arbitrary binary content as an interpreter path, which raised <cite>UnicodeDecodeError</cite> on
+Windows, or <cite>ValueError</cite> for a path holding a NUL byte. Such a file is now treated as not owned by the venv. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1965">#1965</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id67">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.16.0">1.16.0</a> - 2026-07-15<a class="headerlink" href="#id67" title="Link to this heading">¶</a></h2>
+<section id="id68">
+<h3>Features<a class="headerlink" href="#id68" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <cite>pipx list –outdated</cite> and JSON output. (<a class="reference external" href="https://github.com/pypa/pipx/issues/149">#149</a>)</p></li>
+<li><p>Honour the <cite>requires-python</cite> a package declares. When the default interpreter fails it, pipx looks for one on the system
+that satisfies it and builds the environment there, so <cite>pipx install mytool</cite> no longer needs the user to work out the
+right <cite>–python</cite>. Pass <cite>–fetch-python=missing</cite> to let pipx download a matching interpreter when the system carries
+none, and name <cite>–python</cite> yourself to keep the last word. (<a class="reference external" href="https://github.com/pypa/pipx/issues/387">#387</a>)</p></li>
+<li><p>Normalize inferred <cite>pipx run</cite> package names. (<a class="reference external" href="https://github.com/pypa/pipx/issues/618">#618</a>)</p></li>
+<li><p>Allow <cite>pipx list</cite> to select installed packages by name. (<a class="reference external" href="https://github.com/pypa/pipx/issues/640">#640</a>)</p></li>
+<li><p>Add <cite>–output</cite> to structured commands. (<a class="reference external" href="https://github.com/pypa/pipx/issues/828">#828</a>)</p></li>
+<li><p>Freeze the structured result envelope at <cite>pipx_result_version</cite> 1. Every <cite>–output json</cite> document now carries the command
+as a list of CLI tokens, a <cite>status</cite> of <cite>success</cite>, <cite>partial</cite>, or <cite>error</cite>, the process <cite>exit_code</cite>, the command <cite>data</cite>,
+and a top-level <cite>errors</cite> list whose entries each have a stable <cite>code</cite> and <cite>message</cite> alongside the <cite>environment</cite> and
+<cite>package</cite> they concern. A failure that stops a command before it builds a result renders the same envelope. (<a class="reference external" href="https://github.com/pypa/pipx/issues/828">#828</a>)</p></li>
+<li><p>Add quiet and JSON output for package maintenance. (<a class="reference external" href="https://github.com/pypa/pipx/issues/828">#828</a>)</p></li>
+<li><p>Give <cite>pipx reinstall</cite> and <cite>pipx reinstall-all</cite> the structured output the other commands carry. They printed straight to
+the terminal, so <cite>–quiet</cite> left <cite>uninstalled NAME!</cite> behind and no <cite>–output json</cite> existed to read the result from a
+script. Both now report through the shared renderer. (<a class="reference external" href="https://github.com/pypa/pipx/issues/828">#828</a>)</p></li>
+<li><p>Give <cite>pipx cache</cite>, <cite>pipx interpreter</cite>, <cite>pipx upgrade-shared</cite>, <cite>pipx manifest lock</cite> and <cite>pipx manifest sync</cite> the
+structured output the other commands carry, so <cite>–quiet</cite> silences them and <cite>–output json</cite> hands a script the result.
+The <cite>cache</cite> and <cite>interpreter</cite> subcommands take <cite>–quiet</cite> and <cite>–verbose</cite> for the first time, since the shared options
+had passed them by. <cite>pipx ensurepath</cite> goes on printing its guidance, because its job is to tell a person what to add to
+a shell profile. (<a class="reference external" href="https://github.com/pypa/pipx/issues/828">#828</a>)</p></li>
+<li><p>Add <cite>–output json</cite> to <cite>pipx inject</cite> and <cite>pipx uninject</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/828">#828</a>)</p></li>
+<li><p>Infer the app name when running packages from VCS URLs. (<a class="reference external" href="https://github.com/pypa/pipx/issues/854">#854</a>)</p></li>
+<li><p>Stream installer output during verbose installs. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1069">#1069</a>)</p></li>
+<li><p>Draw the download progress bar of <cite>pip</cite> and <cite>uv</cite> during a plain <cite>pipx install</cite>, in place of the pipx spinner. pipx hands
+the installer a pseudo-terminal, which is the only way <cite>uv</cite> reports progress, and asks <cite>uv</cite> for its default output
+rather than the quiet one. A redirected stream keeps the previous behaviour. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1069">#1069</a>)</p></li>
+<li><p>Allow commands to skip shared-library maintenance. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1278">#1278</a>)</p></li>
+<li><p>Install PEP 723 scripts as persistent applications. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1388">#1388</a>)</p></li>
+<li><p>Point library install errors to <cite>inject</cite> and <cite>–preinstall</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1411">#1411</a>)</p></li>
+<li><p>Add commands to diagnose and repair broken environment interpreters. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1442">#1442</a>)</p></li>
+<li><p>Add explicit tool manifests with separate PEP 751 locks. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1506">#1506</a>)</p></li>
+<li><p>Add <cite>pipx install –upgrade</cite> to reconcile apps with package specs. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1572">#1572</a>)</p></li>
+<li><p>Expose the shell completion scripts a package ships, the way pipx already exposes its man pages. A wheel that installs
+into <cite>share/bash-completion/completions</cite>, <cite>share/zsh/site-functions</cite> or <cite>share/fish/vendor_completions.d</cite> gets those
+files linked under <cite>PIPX_COMPLETION_DIR</cite>, which defaults to <cite>~/.local/share</cite>. <cite>bash</cite> and <cite>fish</cite> read those locations on
+their own; <cite>zsh</cite> needs the site-functions directory on its <cite>fpath</cite>. Uninstalling the package takes the links away. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1604">#1604</a>)</p></li>
+<li><p>Add <cite>pipx reset</cite>, which uninstalls every pipx-managed package and removes the shared libraries, the caches, the
+standalone interpreters, the logs and the trash, so pipx starts over from a fresh install. It asks before it removes
+anything, <cite>–yes</cite> answers for a script, and <cite>–dry-run</cite> lists what would go. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1606">#1606</a>)</p></li>
+<li><p>Add Python interpreter arguments to <cite>pipx run</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1613">#1613</a>)</p></li>
+<li><p>Add commands to hide and restore resources exposed from an environment. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1645">#1645</a>)</p></li>
+<li><p>Install the generated pipx manual page from wheels. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1657">#1657</a>)</p></li>
+<li><p>Add <cite>pipx cache</cite> and <cite>pipx run –refresh</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1681">#1681</a>)</p></li>
+<li><p>Add <cite>–include-apps-from</cite> for selected dependencies. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1725">#1725</a>)</p></li>
+<li><p>Add <cite>pipx exec ENVIRONMENT APPLICATION</cite> for installed environments. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1726">#1726</a>)</p></li>
+<li><p>Support injecting extras into a main package. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1805">#1805</a>)</p></li>
+<li><p>Install from PEP 751 lock files. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1807">#1807</a>)</p></li>
+<li><p>Add dependency cooldowns. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1811">#1811</a>)</p></li>
+<li><p>Validate requested apps and restore prior environments on failure. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1908">#1908</a>)</p></li>
+<li><p>Default <cite>PIPX_HOME</cite> to the platform data directory on macOS and Windows again, which restores
+<cite>~/Library/Application Support/pipx</cite> on macOS. <cite>platformdirs</cite> reads <cite>XDG_DATA_HOME</cite> and <cite>XDG_CACHE_HOME</cite> on macOS, so
+exporting those moves the pipx directories. A pipx home from an earlier release keeps working as a fallback. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1946">#1946</a>)</p></li>
+<li><p>Group the manifest commands under <cite>pipx manifest</cite>: use <cite>pipx manifest lock</cite> and <cite>pipx manifest sync</cite> in place of the
+top-level <cite>pipx lock</cite> and <cite>pipx sync</cite>. Keeping both verbs under one noun matches <cite>pipx cache</cite> and <cite>pipx interpreter</cite> and
+leaves the top-level command list about the manifest rather than two loose verbs.</p></li>
+<li><p>Keep <cite>–json</cite> only on <cite>pipx list</cite>, where it prints the versioned package snapshot that <cite>install-all</cite> reads back. Every
+other command dropped the <cite>–json</cite> alias in favour of <cite>–output json</cite>, so the snapshot format and the result envelope no
+longer share a flag.</p></li>
+<li><p>Name the existing-environment argument <cite>ENVIRONMENT</cite> across <cite>inject</cite>, <cite>uninject</cite>, <cite>expose</cite>, <cite>unexpose</cite>, <cite>pin</cite>, <cite>unpin</cite>,
+<cite>uninstall</cite>, <cite>reinstall</cite>, and <cite>exec</cite>, and fix the <cite>uninject</cite> help, which described the argument as the environment to
+inject into rather than uninject from.</p></li>
+<li><p>Record the interpreter and backend in the structured <cite>install</cite>, <cite>upgrade</cite>, and <cite>upgrade-all</cite> results, list
+<cite>PIPX_GLOBAL_COMPLETION_DIR</cite> in <cite>pipx environment</cite>, and show the shell-completion directory in <cite>pipx list</cite>. Completions
+had a global override that pipx honoured but never surfaced, and the records omitted which Python and backend produced a
+venv.</p></li>
+<li><p>Rename <cite>–include-apps-from</cite> to <cite>–include-resources-from</cite> and the manifest key to match. The option always exposed
+manual pages and shell completions alongside apps, so the new name describes what it does; <cite>–include-apps</cite> keeps its
+name. A venv recorded under the old key is migrated on read.</p></li>
+</ul>
+</section>
+<section id="id69">
+<h3>Bugfixes<a class="headerlink" href="#id69" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Check a candidate interpreter’s real patch version against <cite>requires-python</cite>. pipx matched only on the minor version, so
+it rejected an installed <cite>3.13.7</cite> for <cite>&gt;=3.13.5</cite> and accepted <cite>3.14.6</cite> for <cite>&lt;3.14.1</cite>. It now queries each resolved
+interpreter and keeps the first whose full version satisfies the constraint. (<a class="reference external" href="https://github.com/pypa/pipx/issues/387">#387</a>)</p></li>
+<li><p>Keep existing exposed files when copy-based environments provide the same resource name. (<a class="reference external" href="https://github.com/pypa/pipx/issues/540">#540</a>)</p></li>
+<li><p>Recover custom paths when pipx manages its own installation on Unix. (<a class="reference external" href="https://github.com/pypa/pipx/issues/774">#774</a>)</p></li>
+<li><p>Keep install failures in JSON with the correct environment. (<a class="reference external" href="https://github.com/pypa/pipx/issues/828">#828</a>)</p></li>
+<li><p>Show injected apps in <cite>pipx list</cite> on systems that copy launchers. (<a class="reference external" href="https://github.com/pypa/pipx/issues/997">#997</a>)</p></li>
+<li><p>Serialize shared-library maintenance across pipx processes. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1056">#1056</a>)</p></li>
+<li><p>Wait for an installation before listing its environment. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1056">#1056</a>)</p></li>
+<li><p>Draw the installer progress bar while the download runs. pipx reads the installer output over a pipe, which hid the
+terminal from <cite>pip</cite>, so <cite>pip</cite> held its bar back and printed a finished one once the download had ended. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1069">#1069</a>)</p></li>
+<li><p>Preserve symlinks in <cite>PIPX_HOME</cite> when creating environments. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1327">#1327</a>)</p></li>
+<li><p>Create Windows launchers for PEP 723 scripts. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1388">#1388</a>)</p></li>
+<li><p>Preserve the terminal encoding for applications started by <cite>pipx run</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1423">#1423</a>)</p></li>
+<li><p>Make <cite>ensurepath –global</cite> update the system PATH configuration instead of root’s shell profiles. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1452">#1452</a>)</p></li>
+<li><p>Refresh <cite>pipx_metadata.json</cite> after <cite>pipx runpip … install</cite> replaces the main package, so future <cite>upgrade</cite> and
+<cite>reinstall</cite> commands stop following a stale editable source path. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1473">#1473</a>)</p></li>
+<li><p>Accept bare local Git and Mercurial URLs such as <cite>git+file:///path/to/repository&#64;revision</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1583">#1583</a>)</p></li>
+<li><p>Recreate the shared environment when pip cannot run. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1606">#1606</a>)</p></li>
+<li><p>Resolve local <cite>–find-links</cite> paths before pipx changes the working directory. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1637">#1637</a>)</p></li>
+<li><p>Keep pipx startup usable when locked files prevent trash cleanup. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1847">#1847</a>)</p></li>
+<li><p>Fix <cite>pipx run –with</cite> being silently dropped for PEP 723 scripts on the pip backend; the extra packages are now
+installed into the temporary venv. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1850">#1850</a>)</p></li>
+<li><p>Fix <cite>pipx uninject</cite> leaving the injected package’s man page symlinks behind. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1853">#1853</a>)</p></li>
+<li><p>Preserve <cite>–editable</cite> when installing a local package after a non-local package. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Emit path warnings after logging setup for the active local or global context. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Treat empty values for pipx path environment variables as unset. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Apply a 30-second timeout to standalone Python index and archive network requests. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Enforce pip’s minimum supported version when shared-library upgrades include a user pin. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Remove exposed apps that use a venv suffix when uninjecting packages. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Report corrupt venv metadata as missing without aborting list and bulk commands. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Return user-set values for the advertised <cite>pipx environment –value</cite> choices. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Keep existing venv metadata when pipx cannot write its replacement. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Keep trash cleanup non-fatal during directory races and failed moves. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>List only packages whose pin state changed during <cite>pipx unpin</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Reject both Windows path separators in package names. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Resolve relative paths in attached <cite>-c</cite> and <cite>-f</cite> pip arguments before invoking pip. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Support standalone Python downloads on Windows ARM64. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Avoid import crashes when stderr or its encoding is unavailable. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Keep Windows uninject working while an exposed app runs. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Translate pip binary and trusted-host options to valid uv run arguments, and reject <cite>–no-deps</cite> before invoking uv. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Validate members before extracting a standalone Python archive on Python 3.10.0-3.10.11, which predate tarfile’s data
+filter. pipx now refuses any entry whose path or link target would escape the download directory instead of falling back
+to an unfiltered extraction. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Return a resolution error when standalone Python lacks a build for the current platform. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Prevent <cite>install –force</cite> from saving its internal <cite>–force-reinstall</cite> option in package metadata. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Continue bulk interpreter upgrades after finding a corrupt standalone interpreter. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Skip shared-library maintenance for no-op installs. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Compare metadata versions by parsed release components when selecting shared libraries. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Wait for the animation thread to stop before clearing its final frame. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Preserve standalone archive extraction on Python 3.10 releases without the tar filter API. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Preserve noncanonical package prefixes when completing names of installed virtual environments. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Preserve stored pip arguments for injected packages during <cite>pipx upgrade –include-injected</cite>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Preserve caller-owned pip arguments when creating the shared-library environment. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Use tar’s data filter when extracting standalone Python archives for consistent safety. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Skip cache tag files when removing expired <cite>pipx run</cite> environments. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Allow forced installs in existing uv environments. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1924">#1924</a>)</p></li>
+<li><p>Store the venv cache and the logs in the platform cache and log directories on every platform, and keep them out of a
+pipx home that only exists for backwards compatibility. Setting <cite>PIPX_HOME</cite> still keeps both inside it. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1946">#1946</a>)</p></li>
+<li><p>Retry fetching a standalone Python build when GitHub’s release CDN returns a transient error, so a momentary <cite>5xx</cite> or
+rate-limit response no longer fails the install. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1960">#1960</a>)</p></li>
+<li><p>Apply <cite>pipx manifest lock</cite> as all-or-nothing. When a manifest declares locks for several tools, pipx wrote the
+regenerated files one at a time, so a failure partway left some locks new and others old. Each target is now backed up
+before it is replaced and every applied lock is rolled back if any replacement fails.</p></li>
+<li><p>Apply a 30-second timeout and a 10 MiB size limit when downloading a remote <cite>pipx run</cite> or <cite>pipx install</cite> script, so a
+stalled or oversized URL can no longer hang pipx or exhaust memory. <cite>pipx run</cite> also accepts a script URL with a query
+string, such as <cite>tool.py?raw=1</cite>, by matching on the URL path.</p></li>
+<li><p>Gate a PyPI release on the test suite and validate the built artifacts before publishing. The release workflow now runs
+the full test matrix for the tagged commit, checks the distributions with <cite>twine</cite>, and confirms the built version
+matches the tag, so a broken build or a mismatched tag cannot reach PyPI.</p></li>
+<li><p>Honour a script’s PEP 723 <cite>requires-python</cite> on the pip-backed <cite>pipx run</cite>. Without an explicit <cite>–python</cite>, pipx now picks
+an interpreter that satisfies the constraint, matching what the uv backend already does; with an explicit <cite>–python</cite>
+that fails the constraint it reports a clear error instead of running on an unsupported interpreter. A malformed inline
+metadata block now produces a readable message rather than a traceback.</p></li>
+<li><p>Include <cite>pipx run –with</cite> packages in the run-cache key. Because they were absent, <cite>pipx run TOOL</cite> and
+<cite>pipx run –with EXTRA TOOL</cite> shared one cached environment, so extras injected by one invocation leaked into later runs
+that asked for none. Each distinct set of extras now gets its own environment, and the extras are injected only when
+that environment is first built.</p></li>
+<li><p>Keep the backups that <cite>install –force</cite> and <cite>reinstall</cite> take while replacing an environment in pipx’s trash rather than
+beside the live environments. A backup placed in the venvs directory was picked up as a broken environment by a
+concurrent <cite>list</cite> or <cite>reinstall-all</cite>; the trash shares the home’s filesystem, so restoring a backup is still an atomic
+rename.</p></li>
+<li><p>Make a standalone Python upgrade atomic. pipx used to delete the existing interpreter before downloading its
+replacement, so a failed download or unpack left no interpreter at all. The new build is now staged beside the old one
+and swapped in only once it is complete, and a failed swap restores the previous build.</p></li>
+<li><p>Make the expired-cache sweep that runs before <cite>pipx run</cite> non-blocking. pipx used to wait for a lock on every other
+cached environment, so a concurrent <cite>pipx run</cite> whose install held one of those locks stalled the new run, a stall that
+lasted the whole install on Windows. The sweep now skips any environment another run is holding.</p></li>
+<li><p>Probe a <cite>uv</cite> found on <cite>PATH</cite> before using it, and bound every <cite>uv –version</cite> call with a timeout. A broken or hanging
+<cite>uv</cite> on <cite>PATH</cite> previously slipped past discovery and stalled the next command; pipx now skips such a binary and reports
+a clear error instead of hanging.</p></li>
+<li><p>Reject a <cite>–suffix</cite> that contains anything but letters, digits, and the characters <cite>.</cite> <cite>_</cite> <cite>-</cite> <cite>+</cite> <cite>&#64;</cite>. A suffix is
+spliced straight into the names of the links pipx writes into <cite>PIPX_BIN_DIR</cite> and <cite>PIPX_MAN_DIR</cite>, so a value such as
+<cite>/../../owned</cite> could previously place those links outside pipx’s own directories.</p></li>
+<li><p>Remove a dropped app or man page during upgrade only when pipx still owns the exposed file, so a command a user or
+another package replaced is left in place.</p></li>
+<li><p>Report <cite>pipx expose</cite> as a partial or failed operation when a resource cannot be linked because a foreign file already
+occupies its target name. The command previously claimed success while silently leaving those apps or manual pages
+unexposed; it now lists each conflict in the structured result and exits non-zero.</p></li>
+<li><p>Stop forcing <cite>UV_NO_PROGRESS=1</cite> on every uv call. The override silenced uv’s progress bar even when pipx asked to draw
+one, and it ignored a <cite>UV_NO_PROGRESS</cite> already set in the environment. pipx now suppresses the bar only in quiet, JSON,
+and non-interactive runs, and defers to the caller’s <cite>UV_NO_PROGRESS</cite> when it does want progress shown.</p></li>
+<li><p>Track exposed shell completions through the full environment lifecycle. Stale-resource cleanup during install, upgrade,
+and reinstall, the repair relink check, and the ownership filter now include completions alongside apps and manual
+pages, so a completion a package stops shipping is removed instead of lingering.</p></li>
+</ul>
+</section>
+<section id="performance">
+<h3>Performance<a class="headerlink" href="#performance" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Check upgrades in parallel and skip installs for current packages. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1353">#1353</a>)</p></li>
+<li><p>Index installed distributions during environment inspection. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Cache each managed environment’s site-packages path. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Read environment metadata once per interpreter upgrade. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Cache shared-library validity checks within each pipx process. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>List managed environments only when shell completion requests them. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Cache resolved pipx context paths. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Compute only the requested <cite>pipx environment –value</cite> entry. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Reuse the <cite>pipx run</cite> PATH lookup when warning about an existing app. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Resolve the default Python interpreter on first use instead of import. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+<li><p>Inspect legacy environments once during uninstall and reinstall. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1856">#1856</a>)</p></li>
+</ul>
+</section>
+<section id="id70">
+<h3>Improved Documentation<a class="headerlink" href="#id70" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Document the pipx application scope and feature boundaries. (<a class="reference external" href="https://github.com/pypa/pipx/issues/177">#177</a>)</p></li>
+</ul>
+</section>
+<section id="deprecations-and-removals">
+<h3>Deprecations and Removals<a class="headerlink" href="#deprecations-and-removals" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Remove the <cite>PIPX_HOME_ALLOW_SPACE</cite> environment variable and the warning about spaces in the pipx home path. <cite>pip</cite> and
+<cite>uv</cite> both write a <cite>/bin/sh</cite> wrapper as the shebang when the interpreter path contains a space, so applications installed
+into such a path run. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1946">#1946</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id72">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.15.0">1.15.0</a> - 2026-06-24<a class="headerlink" href="#id72" title="Link to this heading">¶</a></h2>
+<section id="id73">
+<h3>Features<a class="headerlink" href="#id73" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add a <code class="docutils literal notranslate"><span class="pre">--dry-run</span></code> flag to <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">ensurepath</span></code> that reports which directories would be added to <code class="docutils literal notranslate"><span class="pre">PATH</span></code> without
+modifying <code class="docutils literal notranslate"><span class="pre">PATH</span></code> or any shell configuration file. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1014">#1014</a>)</p></li>
+</ul>
+</section>
+<section id="id74">
+<h3>Bugfixes<a class="headerlink" href="#id74" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">uninject</span></code> for uv-backed environments, where uv lacks pip’s <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">--not-required</span></code> option. Both backends
+now derive the not-required set from installed distribution metadata, so they behave identically, and a dependency
+pulled in only by another package’s extra is kept instead of being treated as removable. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1841">#1841</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id76">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.14.1">1.14.1</a> - 2026-06-17<a class="headerlink" href="#id76" title="Link to this heading">¶</a></h2>
+<section id="id77">
+<h3>Bugfixes<a class="headerlink" href="#id77" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Restore the original package if <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">reinstall-all</span></code> is interrupted during reinstall. (<a class="reference external" href="https://github.com/pypa/pipx/issues/966">#966</a>)</p></li>
+<li><p>Allow importing <code class="docutils literal notranslate"><span class="pre">pipx.util</span></code> before <code class="docutils literal notranslate"><span class="pre">pipx.paths</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1333">#1333</a>)</p></li>
+<li><p>Ensure <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">inject</span> <span class="pre">--force</span></code> reinstalls injected packages without persisting the force-reinstall option in package
+metadata. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1545">#1545</a>)</p></li>
+<li><p>Preserve installer errors when package-name detection fails during local package installs. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1567">#1567</a>)</p></li>
+<li><p>Expose manual pages for editable local package installs. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1793">#1793</a>)</p></li>
+<li><p>Fixed <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">pin</span> <span class="pre">&lt;app&gt;</span> <span class="pre">--injected-only</span></code> so it can pin injected packages when the main app is already pinned.
+(<a class="reference external" href="https://github.com/pypa/pipx/issues/1835">#1835</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id79">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.14.0">1.14.0</a> - 2026-06-04<a class="headerlink" href="#id79" title="Link to this heading">¶</a></h2>
+<section id="id80">
+<h3>Features<a class="headerlink" href="#id80" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">--no-path-check</span></code> to <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> to skip the warning when the app is already on <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. Useful for shim
+scripts that wrap <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">&lt;app&gt;</span></code> under the same name as the app. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1824">#1824</a>)</p></li>
+</ul>
+</section>
+<section id="id81">
+<h3>Bugfixes<a class="headerlink" href="#id81" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add regression coverage for <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">inject</span></code> accepting <code class="docutils literal notranslate"><span class="pre">--force</span></code> before or after injected dependencies.
+(<a class="reference external" href="https://github.com/pypa/pipx/issues/1444">#1444</a>)</p></li>
+</ul>
+</section>
+<section id="id82">
+<h3>Improved Documentation<a class="headerlink" href="#id82" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Use the bootstrap pipx executable when adding PATH in self-managed installs. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1481">#1481</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id84">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.13.0">1.13.0</a> - 2026-05-30<a class="headerlink" href="#id84" title="Link to this heading">¶</a></h2>
+<section id="id85">
+<h3>Features<a class="headerlink" href="#id85" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">PIPX_DISABLE_SHARED_LIBS_AUTO_UPGRADE</span></code> to skip automatic shared library upgrades. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1650">#1650</a>)</p></li>
+<li><p>Update the error message in get-pipx.py; it is obsoleted, not deprecated. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1813">#1813</a>)</p></li>
+</ul>
+</section>
+<section id="id86">
+<h3>Bugfixes<a class="headerlink" href="#id86" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Install app scripts with shebangs that ignore <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1584">#1584</a>)</p></li>
+<li><p>Refresh cached standalone Python indexes written by older pipx versions before using <code class="docutils literal notranslate"><span class="pre">--fetch-missing-python</span></code>.
+(<a class="reference external" href="https://github.com/pypa/pipx/issues/1774">#1774</a>)</p></li>
+</ul>
+</section>
+<section id="id87">
+<h3>Improved Documentation<a class="headerlink" href="#id87" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Document how to clear cache warnings from <code class="docutils literal notranslate"><span class="pre">runpip</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1802">#1802</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id89">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.12.0">1.12.0</a> - 2026-05-06<a class="headerlink" href="#id89" title="Link to this heading">¶</a></h2>
+<section id="id90">
+<h3>Features<a class="headerlink" href="#id90" title="Link to this heading">¶</a></h3>
+<ul>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">--fetch-python</span></code> and <code class="docutils literal notranslate"><span class="pre">PIPX_FETCH_PYTHON</span></code> to control standalone Python downloads, with values <code class="docutils literal notranslate"><span class="pre">always</span></code>,
+<code class="docutils literal notranslate"><span class="pre">missing</span></code>, or <code class="docutils literal notranslate"><span class="pre">never</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1663">#1663</a>)</p></li>
+<li><p>Add an opt-in <code class="docutils literal notranslate"><span class="pre">uv</span></code> backend. Install <code class="docutils literal notranslate"><span class="pre">pipx[uv]</span></code> (or put <code class="docutils literal notranslate"><span class="pre">uv</span></code> on <code class="docutils literal notranslate"><span class="pre">PATH</span></code>) and pipx will create venvs with
+<code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">venv</span></code>, manage packages with <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">pip</span></code>, and run ephemeral apps via <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">run</span></code>.</p>
+<p><strong>Default change:</strong> when <code class="docutils literal notranslate"><span class="pre">uv</span></code> is reachable, pipx uses it for <strong>new</strong> venvs by default. Existing venvs keep their
+recorded backend; flipping a venv requires <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">reinstall</span> <span class="pre">NAME</span> <span class="pre">--backend</span> <span class="pre">X</span></code>. Set <code class="docutils literal notranslate"><span class="pre">PIPX_DEFAULT_BACKEND=pip</span></code> to
+force pip even when uv is available, or pass <code class="docutils literal notranslate"><span class="pre">--backend</span> <span class="pre">pip</span></code> per command. <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">pip</span></code> always picks the pip
+backend (uv venvs have no pip).</p>
+<p>Selection precedence: <code class="docutils literal notranslate"><span class="pre">--backend</span></code> &gt; recorded venv metadata &gt; <code class="docutils literal notranslate"><span class="pre">PIPX_DEFAULT_BACKEND</span></code> &gt; auto-detect. The env var
+sits <em>below</em> metadata so setting <code class="docutils literal notranslate"><span class="pre">PIPX_DEFAULT_BACKEND=uv</span></code> does not silently retarget existing pip-backed venvs; the
+recorded backend wins until you flip it explicitly. <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">environment</span></code> exposes the resolved backend and its source
+as <code class="docutils literal notranslate"><span class="pre">PIPX_RESOLVED_BACKEND</span></code> and <code class="docutils literal notranslate"><span class="pre">PIPX_BACKEND_SOURCE</span></code>.</p>
+<p><strong>Metadata version bump:</strong> the venv metadata file format moves from <code class="docutils literal notranslate"><span class="pre">0.5</span></code> to <code class="docutils literal notranslate"><span class="pre">0.6</span></code> to record the chosen backend.
+Running this pipx version against an existing venv rewrites its metadata to <code class="docutils literal notranslate"><span class="pre">0.6</span></code> on the next install/upgrade. If
+you downgrade pipx after that, the older version raises <code class="docutils literal notranslate"><span class="pre">Unknown</span> <span class="pre">metadata</span> <span class="pre">version</span> <span class="pre">0.6</span></code> and you’ll need to reinstall
+the affected venvs from the older pipx (<code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">reinstall</span> <span class="pre">NAME</span></code>). (<a class="reference external" href="https://github.com/pypa/pipx/issues/1808">#1808</a>)</p>
+</li>
+</ul>
+</section>
+<section id="id91">
+<h3>Deprecations and Removals<a class="headerlink" href="#id91" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Deprecate <code class="docutils literal notranslate"><span class="pre">--fetch-missing-python</span></code> and <code class="docutils literal notranslate"><span class="pre">PIPX_FETCH_MISSING_PYTHON</span></code>; both are now aliases for
+<code class="docutils literal notranslate"><span class="pre">--fetch-python=missing</span></code> / <code class="docutils literal notranslate"><span class="pre">PIPX_FETCH_PYTHON=missing</span></code>. <code class="docutils literal notranslate"><span class="pre">PIPX_FETCH_MISSING_PYTHON=0</span></code> (and other falsy values)
+now disables fetching, where previously any value enabled it. The <code class="docutils literal notranslate"><span class="pre">pipx.interpreter.find_python_interpreter</span></code>
+keyword <code class="docutils literal notranslate"><span class="pre">fetch_missing_python:</span> <span class="pre">bool</span></code> is replaced by <code class="docutils literal notranslate"><span class="pre">fetch_python:</span> <span class="pre">FetchPythonOptions</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1663">#1663</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id93">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.11.2">1.11.2</a> - 2026-05-05<a class="headerlink" href="#id93" title="Link to this heading">¶</a></h2>
+<section id="id94">
+<h3>Features<a class="headerlink" href="#id94" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">help</span></code> and <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">help</span> <span class="pre">&lt;command&gt;</span></code> aliases for existing help output. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1535">#1535</a>)</p></li>
+<li><p>Drop support for Python 3.9. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1786">#1786</a>)</p></li>
+<li><p>Replace if/elif command dispatch in main.py with argparse set_defaults. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1794">#1794</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id96">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.11.1">1.11.1</a> - 2026-03-31<a class="headerlink" href="#id96" title="Link to this heading">¶</a></h2>
+<section id="id97">
+<h3>Bugfixes<a class="headerlink" href="#id97" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Ignore <code class="docutils literal notranslate"><span class="pre">PIP_TARGET</span></code> environment variable to prevent pip from installing outside the venv. (<a class="reference external" href="https://github.com/pypa/pipx/issues/735">#735</a>)</p></li>
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span></code> failing on Windows when the username contains non-Latin characters (e.g. cyrillic, Chinese).
+(<a class="reference external" href="https://github.com/pypa/pipx/issues/780">#780</a>)</p></li>
+<li><p>Show installed version and suggest <code class="docutils literal notranslate"><span class="pre">upgrade</span></code> when <code class="docutils literal notranslate"><span class="pre">install</span></code> detects an existing installation. (<a class="reference external" href="https://github.com/pypa/pipx/issues/795">#795</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--verbose</span></code> and <code class="docutils literal notranslate"><span class="pre">--quiet</span></code> flags before the subcommand are no longer silently ignored. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1282">#1282</a>)</p></li>
+<li><p>Remove dependency app symlinks when uninjecting a package that was injected with <code class="docutils literal notranslate"><span class="pre">--include-deps</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1364">#1364</a>)</p></li>
+<li><p>Remove <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> from shared libs to prevent version conflicts when app venvs use a different Python.
+(<a class="reference external" href="https://github.com/pypa/pipx/issues/1539">#1539</a>)</p></li>
+<li><p>Prevent <code class="docutils literal notranslate"><span class="pre">uninject</span></code> from removing dependencies still needed by other packages in the venv. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1672">#1672</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id99">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.11.0">1.11.0</a> - 2026-03-23<a class="headerlink" href="#id99" title="Link to this heading">¶</a></h2>
+<section id="id100">
+<h3>Features<a class="headerlink" href="#id100" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">PIPX_MAX_LOGS</span></code> environment variable to configure the maximum number of log files to keep. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1570">#1570</a>)</p></li>
+</ul>
+</section>
+<section id="id101">
+<h3>Bugfixes<a class="headerlink" href="#id101" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Allow <code class="docutils literal notranslate"><span class="pre">--pip-args</span></code> to be passed to <code class="docutils literal notranslate"><span class="pre">upgrade-all</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1503">#1503</a>)</p></li>
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">--pip-args='-c</span> <span class="pre">&lt;url&gt;'</span></code> breaking when constraint target is a URL instead of a local path. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1582">#1582</a>)</p></li>
+<li><p>Enable keyring authentication for private package indexes by setting <code class="docutils literal notranslate"><span class="pre">PIP_KEYRING_PROVIDER=subprocess</span></code> (<a class="reference external" href="https://github.com/pypa/pipx/issues/1603">#1603</a>)</p></li>
+<li><p>Added error handling for <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code> command failures (<a class="reference external" href="https://github.com/pypa/pipx/issues/1698">#1698</a>)</p></li>
+</ul>
+</section>
+<section id="id102">
+<h3>Improved Documentation<a class="headerlink" href="#id102" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Remove outdated “experimental” note from <code class="docutils literal notranslate"><span class="pre">--suffix</span></code> help text. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1621">#1621</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id104">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.10.1">1.10.1</a> - 2026-03-20<a class="headerlink" href="#id104" title="Link to this heading">¶</a></h2>
+<section id="id105">
+<h3>Bugfixes<a class="headerlink" href="#id105" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Use stored pip_args from install metadata when running <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">upgrade</span></code> without explicit <code class="docutils literal notranslate"><span class="pre">--pip-args</span></code> (<a class="reference external" href="https://github.com/pypa/pipx/issues/1441">#1441</a>)</p></li>
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">--global</span></code> flag being silently ignored when placed before the subcommand (<a class="reference external" href="https://github.com/pypa/pipx/issues/1443">#1443</a>)</p></li>
+<li><p>Respect <code class="docutils literal notranslate"><span class="pre">--quiet</span></code> flag in <code class="docutils literal notranslate"><span class="pre">install</span></code> and suppress animations and success messages (<a class="reference external" href="https://github.com/pypa/pipx/issues/1508">#1508</a>)</p></li>
+<li><p>Catch missing Python interpreter in <code class="docutils literal notranslate"><span class="pre">upgrade</span></code> and show helpful error instead of crashing (<a class="reference external" href="https://github.com/pypa/pipx/issues/1602">#1602</a>)</p></li>
+<li><p>Prevent data loss by rejecting relative paths in <code class="docutils literal notranslate"><span class="pre">uninstall</span></code>, <code class="docutils literal notranslate"><span class="pre">reinstall</span></code>, and other package-name arguments
+(<a class="reference external" href="https://github.com/pypa/pipx/issues/1718">#1718</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id107">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.10.0">1.10.0</a> - 2026-03-18<a class="headerlink" href="#id107" title="Link to this heading">¶</a></h2>
+<section id="id108">
+<h3>Features<a class="headerlink" href="#id108" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">--with</span></code> flag to <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> to allow injecting dependencies (<a class="reference external" href="https://github.com/pypa/pipx/issues/1607">#1607</a>)</p></li>
+<li><p>add more specific directions in the logs towards a resolution if you have a space in the PIX_HOME path (<a class="reference external" href="https://github.com/pypa/pipx/issues/1634">#1634</a>)</p></li>
+</ul>
+</section>
+<section id="id109">
+<h3>Bugfixes<a class="headerlink" href="#id109" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fixed upgrade command failing when package name includes extras (e.g., <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">upgrade</span> <span class="pre">&quot;coverage[toml]&quot;</span></code>).
+(<a class="reference external" href="https://github.com/pypa/pipx/issues/925">#925</a>)</p></li>
+<li><p>Fix run command with bash substitution (e.g. <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">&lt;(pbpaste)</span></code>) (<a class="reference external" href="https://github.com/pypa/pipx/issues/1293">#1293</a>)</p></li>
+<li><p>Allow <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">runpip</span></code> to split single string arguments. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1520">#1520</a>)</p></li>
+<li><p>Fix handling of shared libraries when the original Python interpreter is removed on Windows by detecting stale venv
+references and recreating the shared libraries with the current Python. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1723">#1723</a>)</p></li>
+</ul>
+</section>
+<section id="misc">
+<h3>Misc<a class="headerlink" href="#misc" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/pypa/pipx/issues/1638">#1638</a>, <a class="reference external" href="https://github.com/pypa/pipx/issues/1731">#1731</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id111">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.9.0">1.9.0</a> - 2026-03-17<a class="headerlink" href="#id111" title="Link to this heading">¶</a></h2>
+<section id="id112">
+<h3>Features<a class="headerlink" href="#id112" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add completion choices for <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">environment</span> <span class="pre">--value</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1498">#1498</a>)</p></li>
+</ul>
+</section>
+<section id="id113">
+<h3>Bugfixes<a class="headerlink" href="#id113" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Ignore recursive symlink loops in PIPX_BIN_DIR. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1592">#1592</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">reinstall</span></code>: An exception will now be raised if package is pinned. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1611">#1611</a>)</p></li>
+<li><p>Stop <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> from leaving bad temporary venvs when first installation was unsuccessful. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1709">#1709</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id115">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.8.0">1.8.0</a> - 2025-09-30<a class="headerlink" href="#id115" title="Link to this heading">¶</a></h2>
+<section id="id116">
+<h3>Features<a class="headerlink" href="#id116" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Rename environmental variable <code class="docutils literal notranslate"><span class="pre">USE_EMOJI</span></code> to <code class="docutils literal notranslate"><span class="pre">PIPX_USE_EMOJI</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1395">#1395</a>)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">--all-shells</span></code> flag to <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">ensurepath</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1585">#1585</a>)</p></li>
+<li><p>Add support for Python 3.13 (<a class="reference external" href="https://github.com/pypa/pipx/issues/1647">#1647</a>)</p></li>
+</ul>
+</section>
+<section id="id117">
+<h3>Bugfixes<a class="headerlink" href="#id117" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>On Windows, no longer overwrite existing files on upgrade if source and destination are the same (<a class="reference external" href="https://github.com/pypa/pipx/issues/683">#683</a>)</p></li>
+<li><p>Update the logic of finding python interpreter such that <code class="docutils literal notranslate"><span class="pre">--fetch-missing-python</span></code> works on Windows (<a class="reference external" href="https://github.com/pypa/pipx/issues/1521">#1521</a>)</p></li>
+<li><p>Fix no message displayed when no packages are upgraded with <code class="docutils literal notranslate"><span class="pre">upgrade-all</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1565">#1565</a>)</p></li>
+<li><p>Fix incorrect order of flags when using <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">upgrade</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1610">#1610</a>)</p></li>
+<li><p>Update the archive name of build of Python for Windows (<a class="reference external" href="https://github.com/pypa/pipx/issues/1630">#1630</a>)</p></li>
+<li><p>Set up standalone python fetching to use checksums directly from the GitHub API. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1652">#1652</a>)</p></li>
+<li><p>Fix running a script with explicitly empty <code class="docutils literal notranslate"><span class="pre">dependencies</span> <span class="pre">=</span> <span class="pre">[]</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1658">#1658</a>)</p></li>
+</ul>
+</section>
+<section id="id118">
+<h3>Improved Documentation<a class="headerlink" href="#id118" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">/changelog/</span></code> and <code class="docutils literal notranslate"><span class="pre">/contributing/</span></code> docs URLs (<a class="reference external" href="https://github.com/pypa/pipx/issues/1540">#1540</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id120">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.7.1">1.7.1</a> - 2024-08-23<a class="headerlink" href="#id120" title="Link to this heading">¶</a></h2>
+<section id="id121">
+<h3>Bugfixes<a class="headerlink" href="#id121" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Use minimum supported Python to build zipapp in release action such that <code class="docutils literal notranslate"><span class="pre">tomli</span></code> is included in it. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1514">#1514</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id123">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.7.0">1.7.0</a> - 2024-08-22<a class="headerlink" href="#id123" title="Link to this heading">¶</a></h2>
+<section id="id124">
+<h3>Features<a class="headerlink" href="#id124" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add a <code class="docutils literal notranslate"><span class="pre">--prepend</span></code> option to the <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">ensurepath</span></code> command to allow prepending <code class="docutils literal notranslate"><span class="pre">pipx</span></code>’s location to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>
+rather than appending to it. This is useful when you want to prioritize <code class="docutils literal notranslate"><span class="pre">pipx</span></code>’s executables over other executables
+in your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1451">#1451</a>)</p></li>
+<li><p>List <code class="docutils literal notranslate"><span class="pre">PIPX_GLOBAL_[HOME|BIN_DIR|MAN_DIR]</span></code> in <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">environment</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1492">#1492</a>)</p></li>
+</ul>
+</section>
+<section id="id125">
+<h3>Bugfixes<a class="headerlink" href="#id125" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Introduce <code class="docutils literal notranslate"><span class="pre">PIPX_HOME_ALLOW_SPACE</span></code> environment variable, to silence the spaces in pipx home path warning
+(<a class="reference external" href="https://github.com/pypa/pipx/issues/1320">#1320</a>)</p></li>
+<li><p>Fix passing constraints file path into <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span></code> operation via <code class="docutils literal notranslate"><span class="pre">pip</span></code> args (<a class="reference external" href="https://github.com/pypa/pipx/issues/1389">#1389</a>)</p></li>
+<li><p>Add help messages for <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">pin</span></code> and <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">unpin</span></code> commands. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1438">#1438</a>)</p></li>
+<li><p>Stop <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">--global</span></code> from installing files in <code class="docutils literal notranslate"><span class="pre">~/.local</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1475">#1475</a>)</p></li>
+<li><p>Fix installation abortion on multiple packages when one or more are already installed. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1509">#1509</a>)</p></li>
+</ul>
+</section>
+<section id="id126">
+<h3>Improved Documentation<a class="headerlink" href="#id126" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Move all documentation files to the <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1479">#1479</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id128">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.6.0">1.6.0</a> - 2024-06-01<a class="headerlink" href="#id128" title="Link to this heading">¶</a></h2>
+<section id="id129">
+<h3>Features<a class="headerlink" href="#id129" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">install-all</span></code> command to install packages according to spec metadata file. (<a class="reference external" href="https://github.com/pypa/pipx/issues/687">#687</a>)</p></li>
+<li><p>Introduce <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">pin</span></code> and <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">unpin</span></code> commands, which can be used to pin or unpin the version of an installed
+package, so it will not be upgraded by <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">upgrade</span></code> or <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">upgrade-all</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/891">#891</a>)</p></li>
+<li><p>Add a new option <code class="docutils literal notranslate"><span class="pre">--pinned</span></code> to <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span></code> command for listing pinned packages only. (<a class="reference external" href="https://github.com/pypa/pipx/issues/891">#891</a>)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">interpreter</span> <span class="pre">upgrade</span></code> command to upgrade local standalone python in micro/patch level (<a class="reference external" href="https://github.com/pypa/pipx/issues/1249">#1249</a>)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">--requirement</span></code> option to <code class="docutils literal notranslate"><span class="pre">inject</span></code> command to read list of packages from a text file. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1252">#1252</a>)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">upgrade-shared</span></code> command, to create/upgrade shared libraries as a standalone command. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1316">#1316</a>)</p></li>
+<li><p>Allow <code class="docutils literal notranslate"><span class="pre">upgrade</span></code> command to accept multiple packages as arguments. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1336">#1336</a>)</p></li>
+<li><p>Support Python version for <code class="docutils literal notranslate"><span class="pre">--python</span></code> arg when py launcher is not available (<a class="reference external" href="https://github.com/pypa/pipx/issues/1342">#1342</a>)</p></li>
+<li><p>Make <code class="docutils literal notranslate"><span class="pre">install-all</span></code> gather errors in batch (<a class="reference external" href="https://github.com/pypa/pipx/issues/1348">#1348</a>)</p></li>
+</ul>
+</section>
+<section id="id130">
+<h3>Bugfixes<a class="headerlink" href="#id130" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Resolve the <code class="docutils literal notranslate"><span class="pre">DEFAULT_PYTHON</span></code> to the actual absolute path (<a class="reference external" href="https://github.com/pypa/pipx/issues/965">#965</a>)</p></li>
+<li><p>Fix error log overwrite for “-all” batch operations. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1132">#1132</a>)</p></li>
+<li><p>Do not reinstall already injected packages without <code class="docutils literal notranslate"><span class="pre">--force</span></code> being passed. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1300">#1300</a>)</p></li>
+<li><p>Only show <code class="docutils literal notranslate"><span class="pre">--python</span></code> and <code class="docutils literal notranslate"><span class="pre">--force</span></code> flag warning if both flags are present (<a class="reference external" href="https://github.com/pypa/pipx/issues/1304">#1304</a>)</p></li>
+<li><p>Don’t allow paths to be passed into <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">reinstall</span></code>, as this might wreak havoc. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1324">#1324</a>)</p></li>
+<li><p>Make the Python <code class="docutils literal notranslate"><span class="pre">venv</span></code> module arguments work with <code class="docutils literal notranslate"><span class="pre">upgrade</span> <span class="pre">--install</span></code> (<a class="reference external" href="https://github.com/pypa/pipx/issues/1344">#1344</a>)</p></li>
+<li><p>Fix version check for standalone python (<a class="reference external" href="https://github.com/pypa/pipx/issues/1349">#1349</a>)</p></li>
+<li><p>Validate package(s) argument should not be path(s). (<a class="reference external" href="https://github.com/pypa/pipx/issues/1354">#1354</a>)</p></li>
+<li><p>Validate whether a package is an URL correctly. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1355">#1355</a>)</p></li>
+<li><p>Support python3.8 for standalone python builds (<a class="reference external" href="https://github.com/pypa/pipx/issues/1375">#1375</a>)</p></li>
+<li><p>Install specified version of <code class="docutils literal notranslate"><span class="pre">--preinstall</span></code> dependency instead of latest version (<a class="reference external" href="https://github.com/pypa/pipx/issues/1377">#1377</a>)</p></li>
+<li><p>Move <code class="docutils literal notranslate"><span class="pre">--global</span></code> option into shared parser, such that it can be passed after the subcommand, for example
+<code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">ensurepath</span> <span class="pre">--global</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1397">#1397</a>)</p></li>
+<li><p>Fix discovery of a <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> entry point if a local path was given as package. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1422">#1422</a>)</p></li>
+</ul>
+</section>
+<section id="id131">
+<h3>Improved Documentation<a class="headerlink" href="#id131" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Create a dedicated section for manual pages and add an example with <code class="docutils literal notranslate"><span class="pre">pdm-backend</span></code>. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1312">#1312</a>)</p></li>
+<li><p>Add example, test and cli help description how to install multiple packages with the –preinstall flag (<a class="reference external" href="https://github.com/pypa/pipx/issues/1321">#1321</a>)</p></li>
+<li><p>Refine docs generation script and template. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1325">#1325</a>)</p></li>
+<li><p>Add a note about sourcing the shell config file for <code class="docutils literal notranslate"><span class="pre">ensure_path</span></code> (<a class="reference external" href="https://github.com/pypa/pipx/issues/1346">#1346</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id133">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.5.0">1.5.0</a> - 2024-03-29<a class="headerlink" href="#id133" title="Link to this heading">¶</a></h2>
+<section id="id134">
+<h3>Features<a class="headerlink" href="#id134" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">--global</span></code> option to <code class="docutils literal notranslate"><span class="pre">pipx</span></code> commands.</p>
+<ul>
+<li><p>This will run the action in a global scope and affect environment for all system users. (<a class="reference external" href="https://github.com/pypa/pipx/issues/754">#754</a>)</p></li>
+</ul>
+</li>
+<li><p>Add a <code class="docutils literal notranslate"><span class="pre">--fetch-missing-python</span></code> flag to all commands that accept a <code class="docutils literal notranslate"><span class="pre">--python</span></code> flag.</p>
+<ul>
+<li><p>When combined, this will automatically download a standalone copy of the requested python version if it’s not
+already available on the user’s system. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1242">#1242</a>)</p></li>
+</ul>
+</li>
+<li><p>Add commands to list and prune standalone interpreters (<a class="reference external" href="https://github.com/pypa/pipx/issues/1248">#1248</a>)</p></li>
+<li><p>Revert platform-specific directories on MacOS and Windows</p>
+<ul>
+<li><p>They were leading to a lot of issues with Windows sandboxing and spaces in shebangs on MacOS. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1257">#1257</a>)</p></li>
+</ul>
+</li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">--install</span></code> option to <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">upgrade</span></code> command.</p>
+<ul>
+<li><p>This will install the package given as argument if it is not already installed. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1262">#1262</a>)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id135">
+<h3>Bugfixes<a class="headerlink" href="#id135" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Correctly resolve home directory in pipx directory environment variables. (<a class="reference external" href="https://github.com/pypa/pipx/issues/94">#94</a>)</p></li>
+<li><p>Pass through <code class="docutils literal notranslate"><span class="pre">pip</span></code> arguments when upgrading shared libraries. (<a class="reference external" href="https://github.com/pypa/pipx/issues/964">#964</a>)</p></li>
+<li><p>Fix installation issues when files in the working directory interfere with venv creation process. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1091">#1091</a>)</p></li>
+<li><p>Report correct filename in tracebacks with <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">&lt;scriptname&gt;</span></code> (<a class="reference external" href="https://github.com/pypa/pipx/issues/1191">#1191</a>)</p></li>
+<li><p>Let self-managed pipx uninstall itself on windows again. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1203">#1203</a>)</p></li>
+<li><p>Fix path resolution for python executables looked up in PATH on windows. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1205">#1205</a>)</p></li>
+<li><p>Display help message when <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span></code> is run without arguments. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1266">#1266</a>)</p></li>
+<li><p>Fix crashes due to superfluous <code class="docutils literal notranslate"><span class="pre">-q</span></code> flags by discarding exceeding values (<a class="reference external" href="https://github.com/pypa/pipx/issues/1283">#1283</a>)</p></li>
+</ul>
+</section>
+<section id="id136">
+<h3>Improved Documentation<a class="headerlink" href="#id136" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Update the completion instructions for zipapp users. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1072">#1072</a>)</p></li>
+<li><p>Update the example for running scripts with dependencies. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1227">#1227</a>)</p></li>
+<li><p>Update the docs for package developers on the use of configuration using pyproject.toml (<a class="reference external" href="https://github.com/pypa/pipx/issues/1229">#1229</a>)</p></li>
+<li><p>Add installation instructions for Fedora (<a class="reference external" href="https://github.com/pypa/pipx/issues/1239">#1239</a>)</p></li>
+<li><p>Update the examples for installation from local dir (<a class="reference external" href="https://github.com/pypa/pipx/issues/1277">#1277</a>)</p></li>
+<li><p>Fix inconsistent wording in <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span></code> command description. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1307">#1307</a>)</p></li>
+</ul>
+</section>
+<section id="id137">
+<h3>Deprecations and Removals<a class="headerlink" href="#id137" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Deprecate <code class="docutils literal notranslate"><span class="pre">--skip-maintenance</span></code> flag of <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span></code>; maintenance is now never executed there (<a class="reference external" href="https://github.com/pypa/pipx/issues/1256">#1256</a>)</p></li>
+</ul>
+</section>
+<section id="id138">
+<h3>Misc<a class="headerlink" href="#id138" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/pypa/pipx/issues/1296">#1296</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id140">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.4.3">1.4.3</a> - 2024-01-16<a class="headerlink" href="#id140" title="Link to this heading">¶</a></h2>
+<section id="id141">
+<h3>Bugfixes<a class="headerlink" href="#id141" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Autofix python version for pylauncher, when version is provided prefixed with <code class="docutils literal notranslate"><span class="pre">python</span></code> (<a class="reference external" href="https://github.com/pypa/pipx/issues/1150">#1150</a>)</p></li>
+<li><p>Support building pipx wheels with setuptools-scm&lt;7, such as on FreeBSD. (<a class="reference external" href="https://github.com/pypa/pipx/issues/1208">#1208</a>)</p></li>
+</ul>
+</section>
+<section id="id142">
+<h3>Improved Documentation<a class="headerlink" href="#id142" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Provide useful error messages when unresolvable python version is passed (<a class="reference external" href="https://github.com/pypa/pipx/issues/1150">#1150</a>)</p></li>
+<li><p>Introduce towncrier for managing the changelog (<a class="reference external" href="https://github.com/pypa/pipx/issues/1161">#1161</a>)</p></li>
+<li><p>Add workaround for using pipx applications in shebang under macOS (<a class="reference external" href="https://github.com/pypa/pipx/issues/1198">#1198</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="id144">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.4.2">1.4.2</a><a class="headerlink" href="#id144" title="Link to this heading">¶</a></h2>
+<section id="id145">
+<h3>Features<a class="headerlink" href="#id145" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Allow skipping maintenance tasks during list command</p></li>
+<li><p>Raise more user friendly error when provided <code class="docutils literal notranslate"><span class="pre">--python</span></code> version is not found</p></li>
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> on scripts using <code class="docutils literal notranslate"><span class="pre">///</span> <span class="pre">script</span></code> and no <code class="docutils literal notranslate"><span class="pre">run</span></code> table following the updated version of PEP 723
+(#1180)</p></li>
+</ul>
+</section>
+<section id="id146">
+<h3>Bugfixes<a class="headerlink" href="#id146" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Include <code class="docutils literal notranslate"><span class="pre">tomli</span></code> into <code class="docutils literal notranslate"><span class="pre">pipx.pyz</span></code> (zipapp) so that it can be executed with Python 3.10 or earlier (#1142)</p></li>
+<li><p>Fix resolving the python executable path on linux</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code>: Verify whether the script name provided is a file before running it</p></li>
+<li><p>Avoid repeated exception logging in a few rare cases (#1192)</p></li>
+</ul>
+</section>
+</section>
+<section id="id148">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.4.1">1.4.1</a><a class="headerlink" href="#id148" title="Link to this heading">¶</a></h2>
+<section id="id149">
+<h3>Bugfixes<a class="headerlink" href="#id149" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Set default logging level to WARNING, so debug log messages won’t be shown without passing additional flags such as
+<code class="docutils literal notranslate"><span class="pre">--verbose</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="id151">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.4.0">1.4.0</a><a class="headerlink" href="#id151" title="Link to this heading">¶</a></h2>
+<section id="id152">
+<h3>Features<a class="headerlink" href="#id152" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">--quiet</span></code> and <code class="docutils literal notranslate"><span class="pre">--verbose</span></code> options for the <code class="docutils literal notranslate"><span class="pre">pipx</span></code> subcommands</p></li>
+<li><p>Add ability to install multiple packages at once</p></li>
+<li><p>Delete directories directly instead of spawning rmdir on Windows</p></li>
+</ul>
+</section>
+<section id="id153">
+<h3>Improved Documentation<a class="headerlink" href="#id153" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add Scoop installation instructions</p></li>
+</ul>
+</section>
+<section id="id154">
+<h3>Bugfixes<a class="headerlink" href="#id154" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>“Failed to delete” error when using Microsoft Store Python</p></li>
+<li><p>“No pyvenv.cfg file” error when using Microsoft Store Python (#1164)</p></li>
+</ul>
+</section>
+</section>
+<section id="id156">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.3.3">1.3.3</a><a class="headerlink" href="#id156" title="Link to this heading">¶</a></h2>
+<section id="id157">
+<h3>Improved Documentation<a class="headerlink" href="#id157" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Make the logo more visible in dark mode</p></li>
+</ul>
+</section>
+</section>
+<section id="id159">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.3.2">1.3.2</a><a class="headerlink" href="#id159" title="Link to this heading">¶</a></h2>
+<section id="id160">
+<h3>Features<a class="headerlink" href="#id160" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>The project version number is now dynamic and generated from the VCS at build time</p></li>
+</ul>
+</section>
+<section id="id161">
+<h3>Improved Documentation<a class="headerlink" href="#id161" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add additional example for –pip-args option, to docs/examples.md</p></li>
+</ul>
+</section>
+</section>
+<section id="id163">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.3.1">1.3.1</a><a class="headerlink" href="#id163" title="Link to this heading">¶</a></h2>
+<section id="id164">
+<h3>Bugfixes<a class="headerlink" href="#id164" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix combining of –editable and –force flag</p></li>
+</ul>
+</section>
+</section>
+<section id="id166">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.3.0">1.3.0</a><a class="headerlink" href="#id166" title="Link to this heading">¶</a></h2>
+<section id="id167">
+<h3>Features<a class="headerlink" href="#id167" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Allow running <code class="docutils literal notranslate"><span class="pre">pip</span></code> with <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code></p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">--with-suffix</span></code> for <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">inject</span></code> command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span></code>: emit a warning when <code class="docutils literal notranslate"><span class="pre">--force</span></code> and <code class="docutils literal notranslate"><span class="pre">--python</span></code> were passed at the same time</p></li>
+<li><p>Add explicit 3.12 support</p></li>
+<li><p>Make usage message in <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> show <code class="docutils literal notranslate"><span class="pre">package_or_url</span></code>, so extra will be printed out as well</p></li>
+<li><p>Use the py launcher, if available, to select Python version with the <code class="docutils literal notranslate"><span class="pre">--python</span></code> option</p></li>
+<li><p>add pre-commit hook support</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">--preinstall</span></code> to support preinstalling build requirements</p></li>
+<li><p>Return an error message when directory can’t be added to PATH successfully</p></li>
+<li><p>Expose manual pages included in an application installed with <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span></code></p></li>
+<li><p>Check whether pip module exists in shared lib before performing any actions, such as <code class="docutils literal notranslate"><span class="pre">reinstall-all</span></code>.</p></li>
+<li><p>Drop <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> and <code class="docutils literal notranslate"><span class="pre">wheel</span></code> from the shared libraries. This results in less time consumption when the libraries
+are automatically upgraded.</p></li>
+<li><p>Support <a class="reference external" href="https://packaging.python.org/en/latest/specifications/inline-script-metadata/">inline script metadata</a> in <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code>.</p></li>
+<li><p>Imply <code class="docutils literal notranslate"><span class="pre">--include-apps</span></code> when running <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">inject</span> <span class="pre">--include-deps</span></code></p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">--force-reinstall</span></code> to pip arguments when <code class="docutils literal notranslate"><span class="pre">--force</span></code> was passed</p></li>
+<li><p>Support including requirements in scripts run using <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> (#916)</p></li>
+<li><p>Pass <code class="docutils literal notranslate"><span class="pre">pip_args</span></code> to <code class="docutils literal notranslate"><span class="pre">shared_libs.upgrade()</span></code></p></li>
+<li><p>Fallback to user’s log path if the default log path (<code class="docutils literal notranslate"><span class="pre">$PIPX_HOME/logs</span></code>) is not writable to aid with pipx being used
+for multi-user (e.g. system-wide) installs of applications</p></li>
+<li><p>Don’t show escaped backslashes for paths in console output</p></li>
+<li><p>Move <code class="docutils literal notranslate"><span class="pre">pipx</span></code> paths to ensure compatibility with the platform-specific user directories</p></li>
+<li><p>Pass <code class="docutils literal notranslate"><span class="pre">--no-input</span></code> to pip when output is not piped to parent stdout</p></li>
+<li><p>Print all environment variables in <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">environment</span></code></p></li>
+</ul>
+</section>
+<section id="id168">
+<h3>Improved Documentation<a class="headerlink" href="#id168" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add more examples for <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code></p></li>
+<li><p>Add subsection to make README easier to read</p></li>
+</ul>
+</section>
+<section id="id169">
+<h3>Deprecations and Removals<a class="headerlink" href="#id169" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Drop support for Python 3.7</p></li>
+</ul>
+</section>
+<section id="id170">
+<h3>Bugfixes<a class="headerlink" href="#id170" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix wrong interpreter usage when injecting local pip-installable dependencies into venvs</p></li>
+<li><p>Fix program name in generated manual page</p></li>
+</ul>
+</section>
+</section>
+<section id="id172">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.2.1">1.2.1</a><a class="headerlink" href="#id172" title="Link to this heading">¶</a></h2>
+<section id="id173">
+<h3>Bugfixes<a class="headerlink" href="#id173" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix compatibility to packaging 23.2+ by removing reliance on packaging’s requirement validation logic and detecting a
+URL-based requirement in pipx. (#1070)</p></li>
+</ul>
+</section>
+</section>
+<section id="id175">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.2.0">1.2.0</a><a class="headerlink" href="#id175" title="Link to this heading">¶</a></h2>
+<section id="id176">
+<h3>Features<a class="headerlink" href="#id176" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">uninject</span></code> command (#820)</p></li>
+<li><p>Ship a <a class="reference external" href="https://docs.python.org/3/library/zipapp.html">zipapp</a> of pipx</p></li>
+<li><p>Match pip’s behaviour when package name ends with archive extension (treat it as a path)</p></li>
+<li><p>Change the program name to <code class="docutils literal notranslate"><span class="pre">path/to/python</span> <span class="pre">-m</span> <span class="pre">pipx</span></code> when running as <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pipx</span></code></p></li>
+<li><p>Improve the detection logic for MSYS2 to avoid entering infinite loop (#908) (#938)</p></li>
+<li><p>Remove extra trailing quote from exception message</p></li>
+<li><p>Fix EncodingWarning in <code class="docutils literal notranslate"><span class="pre">pipx_metadata_file</span></code>.</p></li>
+</ul>
+</section>
+<section id="id177">
+<h3>Improved Documentation<a class="headerlink" href="#id177" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add an example for installation from source with extras</p></li>
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> examples and update Python versions used by <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span></code> examples</p></li>
+</ul>
+</section>
+<section id="id178">
+<h3>Bugfixes<a class="headerlink" href="#id178" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add test for pip module in <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">reinstall</span></code> to fix an issue with <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">reinstall-all</span></code> (#935)</p></li>
+</ul>
+</section>
+</section>
+<section id="id180">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.1.0">1.1.0</a><a class="headerlink" href="#id180" title="Link to this heading">¶</a></h2>
+<section id="id181">
+<h3>Features<a class="headerlink" href="#id181" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">environment</span></code> command (#793)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">--short</span></code> option to list only package names (#804)</p></li>
+<li><p>Improve the behaviour of <code class="docutils literal notranslate"><span class="pre">shlex.split</span></code> on Windows, so paths on Windows can be handled properly when they are passed
+in <code class="docutils literal notranslate"><span class="pre">--pip-args</span></code>. (#794)</p></li>
+<li><p>[dev] Change github action job names</p></li>
+<li><p>Add additional examples for installation from git repos</p></li>
+<li><p>[packaging] Switch to <a class="reference external" href="https://www.python.org/dev/peps/pep-0621/">PEP 621</a></p></li>
+<li><p>Add a CACHEDIR.TAG to the cache directory to prevent it from being included in archives and backups. For more
+information about cache directory tags, see <a class="reference external" href="https://bford.info/cachedir">https://bford.info/cachedir</a></p></li>
+</ul>
+</section>
+<section id="id182">
+<h3>Bugfixes<a class="headerlink" href="#id182" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix encoding issue on Windows when pip fails to install a package</p></li>
+</ul>
+</section>
+<section id="id183">
+<h3>Improved Documentation<a class="headerlink" href="#id183" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add more examples</p></li>
+<li><p>Fix the command for <a class="reference external" href="https://pipx.pypa.io/stable/installation/#install-pipx-development-versions">installing development version</a>. (#801)</p></li>
+<li><p>Fix test status badge in readme file</p></li>
+</ul>
+</section>
+</section>
+<section id="id185">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/1.0.0">1.0.0</a><a class="headerlink" href="#id185" title="Link to this heading">¶</a></h2>
+<section id="id186">
+<h3>Features<a class="headerlink" href="#id186" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support <a class="reference external" href="https://pypi.org/project/argcomplete/2.0.0">argcomplete 2.0.0</a> (#790)</p></li>
+<li><p>Include machinery to build a manpage for pipx with <a class="reference external" href="https://pypi.org/project/argparse-manpage/">argparse-manpage</a>.</p></li>
+<li><p>Add better handling for ‘app not found’ when a single app is present in the project, and an improved error message
+(#733)</p></li>
+</ul>
+</section>
+<section id="id187">
+<h3>Bugfixes<a class="headerlink" href="#id187" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fixed animations sending output to stdout, which can break JSON output. (#769)</p></li>
+<li><p>Fix typo in <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">upgrade-all</span></code> output</p></li>
+</ul>
+</section>
+</section>
+<section id="id189">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.17.0">0.17.0</a><a class="headerlink" href="#id189" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Support <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> with version constraints and extras. (#697)</p></li>
+</ul>
+</section>
+<section id="id191">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.16.5">0.16.5</a><a class="headerlink" href="#id191" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span></code> output phrasing to convey that python version displayed is the one with which package was
+installed.</p></li>
+<li><p>Fixed <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span></code> to provide return code 0 if venv already exists, similar to pip’s behavior. (#736)</p></li>
+<li><p>[docs] Update ansible’s install command in <a class="reference external" href="https://pipx.pypa.io/stable/programs-to-try/#ansible">Programs to Try document</a> to work with Ansible 2.10+ (#742)</p></li>
+</ul>
+</section>
+<section id="id193">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.16.4">0.16.4</a><a class="headerlink" href="#id193" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix to <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">ensurepath</span></code> to fix behavior in user locales other than UTF-8, to fix #644. The internal change is to
+use userpath v1.6.0 or greater. (#700)</p></li>
+<li><p>Fix virtual environment inspection for Python releases that uses an int for its release serial number. (#706)</p></li>
+<li><p>Fix PermissionError in windows when pipx manages itself. (#718)</p></li>
+</ul>
+</section>
+<section id="id195">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.16.3">0.16.3</a><a class="headerlink" href="#id195" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Organization: pipx is extremely pleased to now be a project of the Python Packaging Authority (PyPA)! Note that our
+github URL has changed to <a class="reference external" href="https://github.com/pypa/pipx">pypa/pipx</a></p></li>
+<li><p>Fixed <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span> <span class="pre">--json</span></code> to return valid json with no venvs installed. Previously would return an empty string to
+stdout. (#681)</p></li>
+<li><p>Changed <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">ensurepath</span></code> bash behavior so that only one of {<code class="docutils literal notranslate"><span class="pre">~/.profile</span></code>, <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>} is modified with
+the extra pipx paths, not both. Previously, if a <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> file was created where one didn’t exist, it could
+cause problems, e.g. #456. The internal change is to use userpath v1.5.0 or greater. (#684)</p></li>
+<li><p>Changed default nox tests, Github Workflow tests, and pytest behavior to use local pypi server with fixed lists of
+available packages. This allows greater test isolation (no network pypi access needed) and determinism (fixed
+available dependencies.) It also allows running the tests offline with some extra preparation beforehand (See
+<a class="reference external" href="https://pipx.pypa.io/stable/contributing/#running-unit-tests-offline">Running Unit Tests Offline</a>). The old style
+tests that use the internet to access pypi.org are still available using <code class="docutils literal notranslate"><span class="pre">nox</span> <span class="pre">-s</span> <span class="pre">tests_internet</span></code> or
+<code class="docutils literal notranslate"><span class="pre">pytest</span> <span class="pre">--net-pypiserver</span> <span class="pre">tests</span></code>. (#686)</p></li>
+<li><p>Colorama is now only installed on Windows. (#691)</p></li>
+</ul>
+</section>
+<section id="id197">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.16.2.1">0.16.2.1</a><a class="headerlink" href="#id197" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Changed non-venv-info warnings and notices from <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span></code> to print to stderr. This especially prevents
+<code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span> <span class="pre">--json</span></code> from printing invalid json to stdout. (#680)</p></li>
+<li><p>Fixed bug that could cause uninstall on Windows with injected packages to uninstall too many apps from the local
+binary directory. (#679)</p></li>
+</ul>
+</section>
+<section id="id199">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.16.2.0">0.16.2.0</a><a class="headerlink" href="#id199" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed bug #670 where uninstalling a venv could erroneously uninstall other apps from the local binary directory.
+(#672)</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">--json</span></code> switch to <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span></code> to output rich json-metadata for all venvs.</p></li>
+<li><p>Ensured log files are utf-8 encoded to prevent Unicode encoding errors from occurring with emojis. (#646)</p></li>
+<li><p>Fixed issue which made pipx incorrectly list apps as part of a venv when they were not installed by pipx. (#650)</p></li>
+<li><p>Fixed old regression that would prevent pipx uninstall from cleaning up linked binaries if the venv was old and did
+not have pipx metadata. (#651)</p></li>
+<li><p>Fixed bugs with suffixed-venvs on Windows. Now properly summarizes install, and actually uninstalls associated
+binaries for suffixed-venvs. (#653)</p></li>
+<li><p>Changed venv minimum python version to 3.6, removing python 3.5 which is End of Life. (#666)</p></li>
+</ul>
+</section>
+<section id="id201">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.16.1.0">0.16.1.0</a><a class="headerlink" href="#id201" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Introduce the <code class="docutils literal notranslate"><span class="pre">pipx.run</span></code> entry point group as an alternative way to declare an application for <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code>.</p></li>
+<li><p>Fix cursor show/hide to work with older versions of Windows. (#610)</p></li>
+<li><p>Support text colors on Windows. (#612)</p></li>
+<li><p>Better platform unicode detection to avoid errors and allow showing emojis when possible. (#614)</p></li>
+<li><p>Don’t emit show cursor or hide cursor codes if STDERR is not a tty. (#620)</p></li>
+<li><p>Sped up <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span></code> (#624).</p></li>
+<li><p>pip errors no longer stream to the shell when pip fails during a pipx install. pip’s output is now saved to a log
+file. In the shell, pipx will tell you the location of the log file and attempt to summarize why pip failed. (#625)</p></li>
+<li><p>For <code class="docutils literal notranslate"><span class="pre">reinstall-all</span></code>, fixed bug where missing python executable would cause error. (#634)</p></li>
+<li><p>Fix regression which prevented pipx from working with pythonloc (and <code class="docutils literal notranslate"><span class="pre">__pypackages__</span></code> folder). (#636)</p></li>
+</ul>
+</section>
+<section id="id203">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.16.0.0">0.16.0.0</a><a class="headerlink" href="#id203" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>New venv inspection! The code that pipx uses to examine and determine metadata in an installed venv has been made
+faster, better, and more reliable. It now uses modern python libraries like <code class="docutils literal notranslate"><span class="pre">packaging</span></code> and <code class="docutils literal notranslate"><span class="pre">importlib.metadata</span></code>
+to examine installed venvs. It also now properly handles installed package extras. In addition, some problems pipx
+has had with certain characters (like periods) in package names should be remedied.</p></li>
+<li><p>Added reinstall command for reinstalling a single venv.</p></li>
+<li><p>Changed <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> on non-Windows systems to actually replace pipx process with the app process instead of running
+it as a subprocess. (Now using python’s <code class="docutils literal notranslate"><span class="pre">os.exec*</span></code>)</p></li>
+<li><p>[bugfix] Fixed bug with reinstall-all command when package have been installed using a specifier. Now the initial
+specifier is used.</p></li>
+<li><p>[bugfix] Override display of <code class="docutils literal notranslate"><span class="pre">PIPX_DEFAULT_PYTHON</span></code> value when generating web documentation for <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span></code> #523</p></li>
+<li><p>[bugfix] Wrap help documentation for environment variables.</p></li>
+<li><p>[bugfix] Fixed uninstall crash that could happen on Windows for certain packages</p></li>
+<li><p>[feature] Venv package name arguments now do not have to match exactly as pipx has them stored, but can be specified
+in any python-package-name-equivalent way. (i.e. case does not matter, and <code class="docutils literal notranslate"><span class="pre">.</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">_</span></code> characters are
+interchangeable.)</p></li>
+<li><p>[change] Venvs with a suffix: A suffix can contain any characters, but for purposes of uniqueness, python package
+name rules apply–upper- and lower-case letters are equivalent, and any number of <code class="docutils literal notranslate"><span class="pre">.</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, or <code class="docutils literal notranslate"><span class="pre">_</span></code> characters
+in a row are equivalent. (e.g. if you have a suffixed venv <code class="docutils literal notranslate"><span class="pre">pylint_1.0A</span></code> you could not add another suffixed venv
+called <code class="docutils literal notranslate"><span class="pre">pylint--1-0a</span></code>, as it would not be a unique name.)</p></li>
+<li><p>[implementation detail] Pipx shared libraries (providing pip, setuptools, wheel to pipx) are no longer installed
+using pip arguments taken from the last regular pipx install. If you need to apply pip arguments to pipx’s use of pip
+for its internal shared libraries, use <code class="docutils literal notranslate"><span class="pre">PIP_*</span></code> environment variables.</p></li>
+<li><p>[feature] Autocomplete for venv names is no longer restricted to an exact match to the literal venv name, but will
+autocomplete any logically-similar python package name (i.e. case does not matter, and <code class="docutils literal notranslate"><span class="pre">.</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">_</span></code> characters
+are all equivalent.)</p></li>
+<li><p>pipx now reinstall its internal shared libraries when the user executes <code class="docutils literal notranslate"><span class="pre">reinstall-all</span></code>.</p></li>
+<li><p>Made sure shell exit codes from every pipx command are correct. In the past some (like from <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">upgrade</span></code>) were
+wrong. The exit code from <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">runpip</span></code> is now the exit code from the <code class="docutils literal notranslate"><span class="pre">pip</span></code> command run. The exit code from
+<code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span></code> will be 1 if one or more venvs have problems that need to be addressed.</p></li>
+<li><p>pipx now writes a log file for each pipx command executed to <code class="docutils literal notranslate"><span class="pre">$PIPX_HOME/logs</span></code>, typically <code class="docutils literal notranslate"><span class="pre">~/.local/pipx/logs</span></code>.
+pipx keeps the most recent 10 logs and deletes others.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">upgrade</span></code> and <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">upgrade-all</span></code> now have a <code class="docutils literal notranslate"><span class="pre">--upgrade-injected</span></code> option which directs pipx to also upgrade
+injected packages.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span></code> now detects, identifies, and suggests a remedy for venvs with old-internal data (internal venv names)
+that need to be updated.</p></li>
+<li><p>Added a “Troubleshooting” page to the pipx web documentation for common problems pipx users may encounter.</p></li>
+<li><p>pipx error, warning, and other messages now word-wrap so words are not split across lines. Their appearance is also
+now more consistent.</p></li>
+</ul>
+</section>
+<section id="id205">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.15.6.0">0.15.6.0</a><a class="headerlink" href="#id205" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>[docs] Update license</p></li>
+<li><p>[docs] Display a more idiomatic command for registering completions on fish.</p></li>
+<li><p>[bugfix] Fixed regression in list, inject, upgrade, reinstall-all commands when suffixed packages are used.</p></li>
+<li><p>[bugfix] Do not reset package url during upgrade when main package is <code class="docutils literal notranslate"><span class="pre">pipx</span></code></p></li>
+<li><p>Updated help text to show description for <code class="docutils literal notranslate"><span class="pre">ensurepath</span></code> and <code class="docutils literal notranslate"><span class="pre">completions</span></code> help</p></li>
+<li><p>Added support for user-defined default python interpreter via new <code class="docutils literal notranslate"><span class="pre">PIPX_DEFAULT_PYTHON</span></code>. Helpful for use with pyenv
+among other uses.</p></li>
+<li><p>[bugfix] Fixed bug where extras were ignored with a PEP 508 package specification with a URL.</p></li>
+</ul>
+</section>
+<section id="id207">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.15.5.1">0.15.5.1</a><a class="headerlink" href="#id207" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>[bugfix] Fixed regression of 0.15.5.0 which erroneously made installing from a local path with package extras not
+possible.</p></li>
+</ul>
+</section>
+<section id="id209">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.15.5.0">0.15.5.0</a><a class="headerlink" href="#id209" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>pipx now parses package specification before install. It removes (with warning) the <code class="docutils literal notranslate"><span class="pre">--editable</span></code> install option for
+any package specification that is not a local path. It also removes (with warning) any environment markers.</p></li>
+<li><p>Disabled animation when we cannot determine terminal size or if the number of columns is too small. (Fixes #444)</p></li>
+<li><p>[feature] Version of each injected package is now listed after name for <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span> <span class="pre">--include-injected</span></code></p></li>
+<li><p>Change metadata recorded from version-specified install to allow upgrades in future. Adds pipx dependency on
+<code class="docutils literal notranslate"><span class="pre">packaging</span></code> package.</p></li>
+<li><p>[bugfix] Prevent python error in case where package has no pipx metadata and advise user how to fix.</p></li>
+<li><p>[feature] <code class="docutils literal notranslate"><span class="pre">ensurepath</span></code> now also ensures that pip user binary path containing pipx itself is in user’s PATH if pipx
+was installed using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span></code>.</p></li>
+<li><p>[bugfix] For <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span></code>, fixed failure to install if user has <code class="docutils literal notranslate"><span class="pre">PIP_USER=1</span></code> or <code class="docutils literal notranslate"><span class="pre">user=true</span></code> in pip.conf.
+(#110)</p></li>
+<li><p>[bugfix] Requiring userpath v1.4.1 or later so ensure Windows bug is fixed for <code class="docutils literal notranslate"><span class="pre">ensurepath</span></code> (#437)</p></li>
+<li><p>[feature] log pipx version (#423)</p></li>
+<li><p>[feature] <code class="docutils literal notranslate"><span class="pre">--suffix</span></code> option for <code class="docutils literal notranslate"><span class="pre">install</span></code> to allow multiple versions of same tool to be installed (#445)</p></li>
+<li><p>[feature] pipx can now be used with the Windows embeddable Python distribution</p></li>
+</ul>
+</section>
+<section id="id211">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.15.4.0">0.15.4.0</a><a class="headerlink" href="#id211" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>[feature] <code class="docutils literal notranslate"><span class="pre">list</span></code> now has a new option <code class="docutils literal notranslate"><span class="pre">--include-injected</span></code> to show the injected packages in the main apps</p></li>
+<li><p>[bugfix] Fixed bug that can cause crash when installing an app</p></li>
+</ul>
+</section>
+<section id="id213">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.15.3.1">0.15.3.1</a><a class="headerlink" href="#id213" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>[bugfix] Workaround multiprocessing issues on certain platforms (#229)</p></li>
+</ul>
+</section>
+<section id="id215">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.15.3.0">0.15.3.0</a><a class="headerlink" href="#id215" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>[feature] Use symlinks on Windows when symlinks are available</p></li>
+</ul>
+</section>
+<section id="id217">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.15.2.0">0.15.2.0</a><a class="headerlink" href="#id217" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>[bugfix] Improved error reporting during venv metadata inspection.</p></li>
+<li><p>[bugfix] Fixed incompatibility with pypy as venv interpreter (#372).</p></li>
+<li><p>[bugfix] Replaced implicit dependency on setuptools with an explicit dependency on packaging (#339).</p></li>
+<li><p>[bugfix] Continue reinstalling packages after failure</p></li>
+<li><p>[bugfix] Hide cursor while pipx runs</p></li>
+<li><p>[feature] Add environment variable <code class="docutils literal notranslate"><span class="pre">USE_EMOJI</span></code> to allow enabling/disabling emojis (#376)</p></li>
+<li><p>[refactor] Moved all commands to separate files within the commands module (#255).</p></li>
+<li><p>[bugfix] Ignore system shared libraries when installing shared libraries pip, wheel, and setuptools. This also fixes
+an incompatibility with Debian/Ubuntu’s version of pip (#386).</p></li>
+</ul>
+</section>
+<section id="id219">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.15.1.3">0.15.1.3</a><a class="headerlink" href="#id219" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>[bugfix] On Windows, pipx now lists correct Windows apps (#217)</p></li>
+<li><p>[bugfix] Fixed a <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span></code> bug causing incorrect python binary to be used when using the optional –python
+argument in certain situations, such as running pipx from a Framework python on macOS and specifying a non-Framework
+python.</p></li>
+</ul>
+</section>
+<section id="id221">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.15.1.2">0.15.1.2</a><a class="headerlink" href="#id221" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>[bugfix] Fix recursive search of dependencies’ apps so no apps are missed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upgrade-all</span></code> now skips editable packages, because pip disallows upgrading editable packages.</p></li>
+</ul>
+</section>
+<section id="id223">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.15.1.1">0.15.1.1</a><a class="headerlink" href="#id223" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>[bugfix] fix regression that caused installing with –editable flag to fail package name determination.</p></li>
+</ul>
+</section>
+<section id="id225">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.15.1.0">0.15.1.0</a><a class="headerlink" href="#id225" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Add Python 3.8 to PyPI classifier and travis test matrix</p></li>
+<li><p>[feature] auto-upgrade shared libraries, including pip, if older than one month. Hide all pip warnings that a new
+version is available. (#264)</p></li>
+<li><p>[bugfix] pass pip arguments to pip when determining package name (#320)</p></li>
+</ul>
+</section>
+<section id="id227">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.15.0.0">0.15.0.0</a><a class="headerlink" href="#id227" title="Link to this heading">¶</a></h2>
+<p>Upgrade instructions: When upgrading to 0.15.0.0 or above from a pre-0.15.0.0 version, you must re-install all packages
+to take advantage of the new persistent pipx metadata files introduced in this release. These metadata files store pip
+specification values, injected packages, any custom pip arguments, and more in each main package’s venv. You can do this
+by running <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">reinstall-all</span></code> or <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">uninstall-all</span></code>, then reinstalling manually.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">install</span></code> now has no <code class="docutils literal notranslate"><span class="pre">--spec</span></code> option. You may specify any valid pip specification for <code class="docutils literal notranslate"><span class="pre">install</span></code>’s main argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inject</span></code> will now accept pip specifications for dependency arguments</p></li>
+<li><p>Metadata is now stored for each application installed, including install options like <code class="docutils literal notranslate"><span class="pre">--spec</span></code>, and injected
+packages. This information allows upgrade, upgrade-all and reinstall-all to work properly even with non-pypi installed
+packages. (#222)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upgrade</span></code> options <code class="docutils literal notranslate"><span class="pre">--spec</span></code> and <code class="docutils literal notranslate"><span class="pre">--include-deps</span></code> were removed. Pipx now uses the original options used to install
+each application instead. (#222)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upgrade-all</span></code> options <code class="docutils literal notranslate"><span class="pre">--include-deps</span></code>, <code class="docutils literal notranslate"><span class="pre">--system-site-packages</span></code>, <code class="docutils literal notranslate"><span class="pre">--index-url</span></code>, <code class="docutils literal notranslate"><span class="pre">--editable</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">--pip-args</span></code> were removed. Pipx now uses the original options used to install each application instead. (#222)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reinstall-all</span></code> options <code class="docutils literal notranslate"><span class="pre">--include-deps</span></code>, <code class="docutils literal notranslate"><span class="pre">--system-site-packages</span></code>, <code class="docutils literal notranslate"><span class="pre">--index-url</span></code>, <code class="docutils literal notranslate"><span class="pre">--editable</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">--pip-args</span></code> were removed. Pipx now uses the original options used to install each application instead. (#222)</p></li>
+<li><p>Handle missing interpreters more gracefully (#146)</p></li>
+<li><p>Change <code class="docutils literal notranslate"><span class="pre">reinstall-all</span></code> to use system python by default for apps. Now use <code class="docutils literal notranslate"><span class="pre">--python</span></code> option to specify a different
+python version.</p></li>
+<li><p>Remove the PYTHONPATH environment variable when executing any command to prevent conflicts between pipx dependencies
+and package dependencies when pipx is installed via homebrew. Homebrew can use PYTHONPATH manipulation instead of
+virtual environments. (#233)</p></li>
+<li><p>Add printed summary after successful call to <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">inject</span></code></p></li>
+<li><p>Support associating apps with Python 3.5</p></li>
+<li><p>Improvements to animation status text</p></li>
+<li><p>Make <code class="docutils literal notranslate"><span class="pre">--python</span></code> argument in <code class="docutils literal notranslate"><span class="pre">reinstall-all</span></code> command optional</p></li>
+<li><p>Use threads on OS’s without support for semaphores</p></li>
+<li><p>Stricter parsing when passing <code class="docutils literal notranslate"><span class="pre">--</span></code> argument as delimiter</p></li>
+</ul>
+</section>
+<section id="id229">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.14.0.0">0.14.0.0</a><a class="headerlink" href="#id229" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Speed up operations by using shared venv for <code class="docutils literal notranslate"><span class="pre">pip</span></code>, <code class="docutils literal notranslate"><span class="pre">setuptools</span></code>, and <code class="docutils literal notranslate"><span class="pre">wheel</span></code>. You can see more detail in the
+‘how pipx works’ section of the documentation. (#164, &#64;pfmoore)</p></li>
+<li><p>Breaking change: for the <code class="docutils literal notranslate"><span class="pre">inject</span></code> command, change <code class="docutils literal notranslate"><span class="pre">--include-binaries</span></code> to <code class="docutils literal notranslate"><span class="pre">--include-apps</span></code></p></li>
+<li><p>Change all terminology from <code class="docutils literal notranslate"><span class="pre">binary</span></code> to <code class="docutils literal notranslate"><span class="pre">app</span></code> or <code class="docutils literal notranslate"><span class="pre">application</span></code></p></li>
+<li><p>Improve argument parsing for <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> and <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">runpip</span></code></p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">--force</span></code> is passed, remove existing files in PIPX_BIN_DIR</p></li>
+<li><p>Move animation to start of line, hide cursor when animating</p></li>
+</ul>
+</section>
+<section id="id231">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.13.2.3">0.13.2.3</a><a class="headerlink" href="#id231" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix regression when installing a package that doesn’t have any entry points</p></li>
+</ul>
+</section>
+<section id="id233">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.13.2.2">0.13.2.2</a><a class="headerlink" href="#id233" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Remove unnecessary and sometimes incorrect check after <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">inject</span></code> (#195)</p></li>
+<li><p>Make status text/animation reliably disappear before continuing</p></li>
+<li><p>Update animation symbols</p></li>
+</ul>
+</section>
+<section id="id235">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.13.2.1">0.13.2.1</a><a class="headerlink" href="#id235" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Remove virtual environment if installation did not complete. For example, if it was interrupted by ctrl+c or if an
+exception occurred for any reason. (#193)</p></li>
+</ul>
+</section>
+<section id="id237">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.13.2.0">0.13.2.0</a><a class="headerlink" href="#id237" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Add shell autocompletion. Also add <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">completions</span></code> command to print instructions on how to add pipx completions
+to your shell.</p></li>
+<li><p>Un-deprecate <code class="docutils literal notranslate"><span class="pre">ensurepath</span></code>. Use <code class="docutils literal notranslate"><span class="pre">userpath</span></code> internally instead of instructing users to run the <code class="docutils literal notranslate"><span class="pre">userpath</span></code> cli
+command.</p></li>
+<li><p>Improve detection of PIPX_BIN_DIR not being on PATH</p></li>
+<li><p>Improve error message when an existing symlink exists in PIPX_BIN_DIR and points to the wrong location</p></li>
+<li><p>Improve handling of unexpected files in PIPX_HOME (&#64;uranusjr)</p></li>
+<li><p>swap out of order logic in order to correctly recommend –include-deps (&#64;joshuarli)</p></li>
+<li><p>[dev] Migrate from tox to nox</p></li>
+</ul>
+</section>
+<section id="id239">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.13.1.1">0.13.1.1</a><a class="headerlink" href="#id239" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Do not raise bare exception if no binaries found (#150)</p></li>
+<li><p>Update pipsi migration script</p></li>
+</ul>
+</section>
+<section id="id241">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.13.1.0">0.13.1.0</a><a class="headerlink" href="#id241" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Deprecate <code class="docutils literal notranslate"><span class="pre">ensurepath</span></code> command. Use <code class="docutils literal notranslate"><span class="pre">userpath</span> <span class="pre">append</span> <span class="pre">~/.local/bin</span></code></p></li>
+<li><p>Support redirects and proxies when downloading python files (i.e. <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">http://url/file.py</span></code>)</p></li>
+<li><p>Use tox for document generation and CI testing (CI tests are now functional rather than static tests on style and
+formatting!)</p></li>
+<li><p>Use mkdocs for documentation</p></li>
+<li><p>Change default cache duration for <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> from 2 to 14 days</p></li>
+</ul>
+</section>
+<section id="id243">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.13.0.1">0.13.0.1</a><a class="headerlink" href="#id243" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix upgrade-all and reinstall-all regression</p></li>
+</ul>
+</section>
+<section id="id245">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.13.0.0">0.13.0.0</a><a class="headerlink" href="#id245" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">runpip</span></code> command to run arbitrary pip commands in pipx-managed virtual environments</p></li>
+<li><p>Do not raise error when running <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">PACKAGE</span></code> and the package has already been installed by pipx (#125).
+This is the cause of the major version change from 0.12 to 0.13.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">--skip</span></code> argument to <code class="docutils literal notranslate"><span class="pre">upgrade-all</span></code> and <code class="docutils literal notranslate"><span class="pre">reinstall-all</span></code> commands, to let the user skip particular packages</p></li>
+</ul>
+</section>
+<section id="id247">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.12.3.3">0.12.3.3</a><a class="headerlink" href="#id247" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Update logic in determining a package’s binaries during installation. This removes spurious binaries from the
+installation. (#104)</p></li>
+<li><p>Improve compatibility with Debian distributions by using <code class="docutils literal notranslate"><span class="pre">shutil.which</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">distutils.spawn.find_executable</span></code> (#102)</p></li>
+</ul>
+</section>
+<section id="id249">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.12.3.2">0.12.3.2</a><a class="headerlink" href="#id249" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix infinite recursion error when installing package such as <code class="docutils literal notranslate"><span class="pre">cloudtoken==0.1.84</span></code> (#103)</p></li>
+<li><p>Fix windows type errors (#96, #98)</p></li>
+</ul>
+</section>
+<section id="id251">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.12.3.1">0.12.3.1</a><a class="headerlink" href="#id251" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix “WindowsPath is not iterable” bug</p></li>
+</ul>
+</section>
+<section id="id253">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.12.3.0">0.12.3.0</a><a class="headerlink" href="#id253" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">--include-deps</span></code> argument to include binaries of dependent packages when installing with pipx. This improves
+compatibility with packages that depend on other installed packages, such as <code class="docutils literal notranslate"><span class="pre">jupyter</span></code>.</p></li>
+<li><p>Speed up <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span></code> output (by running multiple processes in parallel) and by collecting all metadata in a single
+subprocess call</p></li>
+<li><p>More aggressive cache directory removal when <code class="docutils literal notranslate"><span class="pre">--no-cache</span></code> is passed to <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code></p></li>
+<li><p>[dev] Move inline text passed to subprocess calls to their own files to enable autoformatting, linting, unit testing</p></li>
+</ul>
+</section>
+<section id="id255">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.12.2.0">0.12.2.0</a><a class="headerlink" href="#id255" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Add support for PEP 582’s <code class="docutils literal notranslate"><span class="pre">__pypackages__</span></code> (experimental). <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">BINARY</span></code> will first search in
+<code class="docutils literal notranslate"><span class="pre">__pypackages__</span></code> for binary, then fallback to installing from PyPI. <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">--pypackages</span> <span class="pre">BINARY</span></code> will raise an
+error if the binary is not found in <code class="docutils literal notranslate"><span class="pre">__pypackages__</span></code>.</p></li>
+<li><p>Fix regression when installing with <code class="docutils literal notranslate"><span class="pre">--editable</span></code> flag (#93)</p></li>
+<li><p>[dev] improve unit tests</p></li>
+</ul>
+</section>
+<section id="id257">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.12.1.0">0.12.1.0</a><a class="headerlink" href="#id257" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Cache and reuse temporary Virtual Environments created with <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> (#61)</p></li>
+<li><p>Update binary discovery logic to find “scripts” like awscli (#91)</p></li>
+<li><p>Forward <code class="docutils literal notranslate"><span class="pre">--pip-args</span></code> to the pip upgrade command (previously the args were forwarded to install/upgrade commands for
+packages) (#77)</p></li>
+<li><p>When using environment variable PIPX_HOME, Virtual Environments will now be created at <code class="docutils literal notranslate"><span class="pre">$PIPX_HOME/venvs</span></code> rather
+than at <code class="docutils literal notranslate"><span class="pre">$PIPX_HOME</span></code>.</p></li>
+<li><p>[dev] refactor into multiple files, add more unit tests</p></li>
+</ul>
+</section>
+<section id="id259">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.12.0.4">0.12.0.4</a><a class="headerlink" href="#id259" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix parsing bug in pipx run</p></li>
+</ul>
+</section>
+<section id="id261">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.12.0.3">0.12.0.3</a><a class="headerlink" href="#id261" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>list python2 as supported language so that pip installs with python2 will no longer install the pipx on PyPI from the
+original pipx owner. Running pipx with python2 will fail, but at least it will not be as confusing as running the pipx
+package from the original owner.</p></li>
+</ul>
+</section>
+<section id="id263">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.12.0.2">0.12.0.2</a><a class="headerlink" href="#id263" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>forward arguments to run command correctly #90</p></li>
+</ul>
+</section>
+<section id="id265">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.12.0.1">0.12.0.1</a><a class="headerlink" href="#id265" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>stop using unverified context #89</p></li>
+</ul>
+</section>
+<section id="id267">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.12.0.0">0.12.0.0</a><a class="headerlink" href="#id267" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Change installation instructions to use <code class="docutils literal notranslate"><span class="pre">pipx</span></code> PyPI name</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">ensurepath</span></code> command</p></li>
+</ul>
+</section>
+<section id="id269">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.11.0.2">0.11.0.2</a><a class="headerlink" href="#id269" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>add version argument parsing back in (fixes regression)</p></li>
+</ul>
+</section>
+<section id="id271">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.11.0.1">0.11.0.1</a><a class="headerlink" href="#id271" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>add version check, command check, fix printed version update installation instructions</p></li>
+</ul>
+</section>
+<section id="id273">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.11.0.0">0.11.0.0</a><a class="headerlink" href="#id273" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Replace <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">BINARY</span></code> with <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">BINARY</span></code> to run a binary in an ephemeral environment. This is a breaking API
+change so the major version has been incremented. (Issue #69)</p></li>
+<li><p>upgrade pip when upgrading packages (Issue #72)</p></li>
+<li><p>support –system-site-packages flag (Issue #64)</p></li>
+</ul>
+</section>
+<section id="id275">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.10.4.1">0.10.4.1</a><a class="headerlink" href="#id275" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix version printed when <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">--version</span></code> is run</p></li>
+</ul>
+</section>
+<section id="id277">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.10.4.0">0.10.4.0</a><a class="headerlink" href="#id277" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Add –index-url, –editable, and –pip-args flags</p></li>
+<li><p>Updated README with pipsi migration instructions</p></li>
+</ul>
+</section>
+<section id="id279">
+<h2><a class="reference external" href="https://github.com/pypa/pipx/tree/0.10.3.0">0.10.3.0</a><a class="headerlink" href="#id279" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Display python version in list</p></li>
+<li><p>Do not reinstall package if already installed (added <code class="docutils literal notranslate"><span class="pre">--force</span></code> flag to override)</p></li>
+<li><p>When upgrading all packages, print message only when package is updated</p></li>
+<li><p>Avoid accidental execution of <code class="docutils literal notranslate"><span class="pre">pipx.__main__</span></code></p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          <a class="prev-page" href="contributing.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Contributing</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2026, pipx contributors
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#unreleased-2026-10-07">Unreleased - 2026-10-07</a></li>
+<li><a class="reference internal" href="#id2">1.17.11 - 2026-10-03</a><ul>
+<li><a class="reference internal" href="#improved-documentation">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">1.17.10 - 2026-10-02</a><ul>
+<li><a class="reference internal" href="#bugfixes">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">1.17.9 - 2026-10-01</a><ul>
+<li><a class="reference internal" href="#id7">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">1.17.8 - 2026-09-29</a><ul>
+<li><a class="reference internal" href="#id10">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12">1.17.7 - 2026-09-28</a><ul>
+<li><a class="reference internal" href="#id13">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id15">1.17.6 - 2026-09-22</a><ul>
+<li><a class="reference internal" href="#id16">Bugfixes</a></li>
+<li><a class="reference internal" href="#id17">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id19">1.17.5 - 2026-09-20</a><ul>
+<li><a class="reference internal" href="#id20">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id22">1.17.4 - 2026-09-18</a><ul>
+<li><a class="reference internal" href="#id23">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id25">1.17.3 - 2026-09-16</a><ul>
+<li><a class="reference internal" href="#id26">Bugfixes</a></li>
+<li><a class="reference internal" href="#id27">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id29">1.17.2 - 2026-09-01</a><ul>
+<li><a class="reference internal" href="#id30">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id32">1.17.1 - 2026-08-30</a><ul>
+<li><a class="reference internal" href="#id33">Bugfixes</a></li>
+<li><a class="reference internal" href="#miscellaneous-internal-changes">Miscellaneous internal changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id35">1.17.0 - 2026-08-29</a><ul>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#id36">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id38">1.16.8 - 2026-08-25</a><ul>
+<li><a class="reference internal" href="#id39">Bugfixes</a></li>
+<li><a class="reference internal" href="#id40">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id42">1.16.7 - 2026-08-13</a><ul>
+<li><a class="reference internal" href="#id43">Bugfixes</a></li>
+<li><a class="reference internal" href="#id44">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id46">1.16.6 - 2026-08-04</a><ul>
+<li><a class="reference internal" href="#id47">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id49">1.16.5 - 2026-07-29</a><ul>
+<li><a class="reference internal" href="#id50">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id52">1.16.4 - 2026-07-29</a><ul>
+<li><a class="reference internal" href="#id53">Bugfixes</a></li>
+<li><a class="reference internal" href="#id54">Improved Documentation</a></li>
+<li><a class="reference internal" href="#id55">Miscellaneous internal changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id57">1.16.3 - 2026-07-26</a><ul>
+<li><a class="reference internal" href="#id58">Bugfixes</a></li>
+<li><a class="reference internal" href="#id59">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id61">1.16.2 - 2026-07-21</a><ul>
+<li><a class="reference internal" href="#id62">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id64">1.16.1 - 2026-07-20</a><ul>
+<li><a class="reference internal" href="#id65">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id67">1.16.0 - 2026-07-15</a><ul>
+<li><a class="reference internal" href="#id68">Features</a></li>
+<li><a class="reference internal" href="#id69">Bugfixes</a></li>
+<li><a class="reference internal" href="#performance">Performance</a></li>
+<li><a class="reference internal" href="#id70">Improved Documentation</a></li>
+<li><a class="reference internal" href="#deprecations-and-removals">Deprecations and Removals</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id72">1.15.0 - 2026-06-24</a><ul>
+<li><a class="reference internal" href="#id73">Features</a></li>
+<li><a class="reference internal" href="#id74">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id76">1.14.1 - 2026-06-17</a><ul>
+<li><a class="reference internal" href="#id77">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id79">1.14.0 - 2026-06-04</a><ul>
+<li><a class="reference internal" href="#id80">Features</a></li>
+<li><a class="reference internal" href="#id81">Bugfixes</a></li>
+<li><a class="reference internal" href="#id82">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id84">1.13.0 - 2026-05-30</a><ul>
+<li><a class="reference internal" href="#id85">Features</a></li>
+<li><a class="reference internal" href="#id86">Bugfixes</a></li>
+<li><a class="reference internal" href="#id87">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id89">1.12.0 - 2026-05-06</a><ul>
+<li><a class="reference internal" href="#id90">Features</a></li>
+<li><a class="reference internal" href="#id91">Deprecations and Removals</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id93">1.11.2 - 2026-05-05</a><ul>
+<li><a class="reference internal" href="#id94">Features</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id96">1.11.1 - 2026-03-31</a><ul>
+<li><a class="reference internal" href="#id97">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id99">1.11.0 - 2026-03-23</a><ul>
+<li><a class="reference internal" href="#id100">Features</a></li>
+<li><a class="reference internal" href="#id101">Bugfixes</a></li>
+<li><a class="reference internal" href="#id102">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id104">1.10.1 - 2026-03-20</a><ul>
+<li><a class="reference internal" href="#id105">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id107">1.10.0 - 2026-03-18</a><ul>
+<li><a class="reference internal" href="#id108">Features</a></li>
+<li><a class="reference internal" href="#id109">Bugfixes</a></li>
+<li><a class="reference internal" href="#misc">Misc</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id111">1.9.0 - 2026-03-17</a><ul>
+<li><a class="reference internal" href="#id112">Features</a></li>
+<li><a class="reference internal" href="#id113">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id115">1.8.0 - 2025-09-30</a><ul>
+<li><a class="reference internal" href="#id116">Features</a></li>
+<li><a class="reference internal" href="#id117">Bugfixes</a></li>
+<li><a class="reference internal" href="#id118">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id120">1.7.1 - 2024-08-23</a><ul>
+<li><a class="reference internal" href="#id121">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id123">1.7.0 - 2024-08-22</a><ul>
+<li><a class="reference internal" href="#id124">Features</a></li>
+<li><a class="reference internal" href="#id125">Bugfixes</a></li>
+<li><a class="reference internal" href="#id126">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id128">1.6.0 - 2024-06-01</a><ul>
+<li><a class="reference internal" href="#id129">Features</a></li>
+<li><a class="reference internal" href="#id130">Bugfixes</a></li>
+<li><a class="reference internal" href="#id131">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id133">1.5.0 - 2024-03-29</a><ul>
+<li><a class="reference internal" href="#id134">Features</a></li>
+<li><a class="reference internal" href="#id135">Bugfixes</a></li>
+<li><a class="reference internal" href="#id136">Improved Documentation</a></li>
+<li><a class="reference internal" href="#id137">Deprecations and Removals</a></li>
+<li><a class="reference internal" href="#id138">Misc</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id140">1.4.3 - 2024-01-16</a><ul>
+<li><a class="reference internal" href="#id141">Bugfixes</a></li>
+<li><a class="reference internal" href="#id142">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id144">1.4.2</a><ul>
+<li><a class="reference internal" href="#id145">Features</a></li>
+<li><a class="reference internal" href="#id146">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id148">1.4.1</a><ul>
+<li><a class="reference internal" href="#id149">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id151">1.4.0</a><ul>
+<li><a class="reference internal" href="#id152">Features</a></li>
+<li><a class="reference internal" href="#id153">Improved Documentation</a></li>
+<li><a class="reference internal" href="#id154">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id156">1.3.3</a><ul>
+<li><a class="reference internal" href="#id157">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id159">1.3.2</a><ul>
+<li><a class="reference internal" href="#id160">Features</a></li>
+<li><a class="reference internal" href="#id161">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id163">1.3.1</a><ul>
+<li><a class="reference internal" href="#id164">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id166">1.3.0</a><ul>
+<li><a class="reference internal" href="#id167">Features</a></li>
+<li><a class="reference internal" href="#id168">Improved Documentation</a></li>
+<li><a class="reference internal" href="#id169">Deprecations and Removals</a></li>
+<li><a class="reference internal" href="#id170">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id172">1.2.1</a><ul>
+<li><a class="reference internal" href="#id173">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id175">1.2.0</a><ul>
+<li><a class="reference internal" href="#id176">Features</a></li>
+<li><a class="reference internal" href="#id177">Improved Documentation</a></li>
+<li><a class="reference internal" href="#id178">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id180">1.1.0</a><ul>
+<li><a class="reference internal" href="#id181">Features</a></li>
+<li><a class="reference internal" href="#id182">Bugfixes</a></li>
+<li><a class="reference internal" href="#id183">Improved Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id185">1.0.0</a><ul>
+<li><a class="reference internal" href="#id186">Features</a></li>
+<li><a class="reference internal" href="#id187">Bugfixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id189">0.17.0</a></li>
+<li><a class="reference internal" href="#id191">0.16.5</a></li>
+<li><a class="reference internal" href="#id193">0.16.4</a></li>
+<li><a class="reference internal" href="#id195">0.16.3</a></li>
+<li><a class="reference internal" href="#id197">0.16.2.1</a></li>
+<li><a class="reference internal" href="#id199">0.16.2.0</a></li>
+<li><a class="reference internal" href="#id201">0.16.1.0</a></li>
+<li><a class="reference internal" href="#id203">0.16.0.0</a></li>
+<li><a class="reference internal" href="#id205">0.15.6.0</a></li>
+<li><a class="reference internal" href="#id207">0.15.5.1</a></li>
+<li><a class="reference internal" href="#id209">0.15.5.0</a></li>
+<li><a class="reference internal" href="#id211">0.15.4.0</a></li>
+<li><a class="reference internal" href="#id213">0.15.3.1</a></li>
+<li><a class="reference internal" href="#id215">0.15.3.0</a></li>
+<li><a class="reference internal" href="#id217">0.15.2.0</a></li>
+<li><a class="reference internal" href="#id219">0.15.1.3</a></li>
+<li><a class="reference internal" href="#id221">0.15.1.2</a></li>
+<li><a class="reference internal" href="#id223">0.15.1.1</a></li>
+<li><a class="reference internal" href="#id225">0.15.1.0</a></li>
+<li><a class="reference internal" href="#id227">0.15.0.0</a></li>
+<li><a class="reference internal" href="#id229">0.14.0.0</a></li>
+<li><a class="reference internal" href="#id231">0.13.2.3</a></li>
+<li><a class="reference internal" href="#id233">0.13.2.2</a></li>
+<li><a class="reference internal" href="#id235">0.13.2.1</a></li>
+<li><a class="reference internal" href="#id237">0.13.2.0</a></li>
+<li><a class="reference internal" href="#id239">0.13.1.1</a></li>
+<li><a class="reference internal" href="#id241">0.13.1.0</a></li>
+<li><a class="reference internal" href="#id243">0.13.0.1</a></li>
+<li><a class="reference internal" href="#id245">0.13.0.0</a></li>
+<li><a class="reference internal" href="#id247">0.12.3.3</a></li>
+<li><a class="reference internal" href="#id249">0.12.3.2</a></li>
+<li><a class="reference internal" href="#id251">0.12.3.1</a></li>
+<li><a class="reference internal" href="#id253">0.12.3.0</a></li>
+<li><a class="reference internal" href="#id255">0.12.2.0</a></li>
+<li><a class="reference internal" href="#id257">0.12.1.0</a></li>
+<li><a class="reference internal" href="#id259">0.12.0.4</a></li>
+<li><a class="reference internal" href="#id261">0.12.0.3</a></li>
+<li><a class="reference internal" href="#id263">0.12.0.2</a></li>
+<li><a class="reference internal" href="#id265">0.12.0.1</a></li>
+<li><a class="reference internal" href="#id267">0.12.0.0</a></li>
+<li><a class="reference internal" href="#id269">0.11.0.2</a></li>
+<li><a class="reference internal" href="#id271">0.11.0.1</a></li>
+<li><a class="reference internal" href="#id273">0.11.0.0</a></li>
+<li><a class="reference internal" href="#id275">0.10.4.1</a></li>
+<li><a class="reference internal" href="#id277">0.10.4.0</a></li>
+<li><a class="reference internal" href="#id279">0.10.3.0</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=eae9e474"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=a56c686a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>

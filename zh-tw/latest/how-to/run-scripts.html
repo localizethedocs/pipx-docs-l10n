@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="no-js" data-content_root="../" lang="zh-TW">
+<head><meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="light dark" name="color-scheme"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Run scripts" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://pipx.pypa.io/latest/how-to/run-scripts.html" property="og:url"/>
+<meta content="pipx" property="og:site_name"/>
+<meta content="Run an app or a script in a temporary environment with pipx run, without installing it first. pipx downloads the package, caches the environment, and runs the app. Run a specific version: The PACKA..." property="og:description"/>
+<meta content="Run an app or a script in a temporary environment with pipx run, without installing it first. pipx downloads the package, caches the environment, and runs the app. Run a specific version: The PACKA..." name="description"/>
+<meta content="Run an app or a script in a temporary environment with pipx run, without installing it first. pipx downloads the package, caches the environment, and runs the…" name="description"/><link href="../genindex.html" rel="index" title="索引"/><link href="../search.html" rel="search" title="搜尋"/><link href="inject-packages.html" rel="next" title="Inject packages"/><link href="manage-installed-apps.html" rel="prev" title="管理已安裝的應用程式"/>
+<link href="https://projects.localizethedocs.org/pipx-docs-l10n/how-to/run-scripts.html" rel="canonical"/>
+<link as="image" href="../_static/logo.svg" rel="prefetch"/>
+<link href="../_static/logo.svg" rel="shortcut icon"/><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
+<title>Run scripts - pipx</title>
+<link href="../_static/pygments.css?v=d111a655" rel="stylesheet" type="text/css"/>
+<link href="../_static/styles/furo.css?v=7bdb33bb" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx_argparse_cli.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="../_static/copybutton.css?v=76b2166b" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-design.min.css?v=95c83b7e" rel="stylesheet" type="text/css"/>
+<link href="../_static/styles/furo-extensions.css?v=8dab3a3b" rel="stylesheet" type="text/css"/>
+<link href="../_static/custom.css?v=845a0197" rel="stylesheet" type="text/css"/>
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style>
+<script src="../ltd-provenance.js" type="text/javascript"></script>
+<script src="../ltd-current.js" type="text/javascript"></script>
+<script src="../../../ltd-config.js" type="text/javascript"></script>
+<script src="../../../ltd-flyout.js" type="text/javascript"></script>
+</head>
+<body>
+<script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="svg-toc" viewbox="0 0 24 24">
+<title>Contents</title>
+<svg fill="currentColor" stroke="currentColor" stroke-width="0" viewbox="0 0 1024 1024">
+<path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"></path>
+</svg>
+</symbol>
+<symbol id="svg-menu" viewbox="0 0 24 24">
+<title>Menu</title>
+<svg class="feather-menu" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<line x1="3" x2="21" y1="12" y2="12"></line>
+<line x1="3" x2="21" y1="6" y2="6"></line>
+<line x1="3" x2="21" y1="18" y2="18"></line>
+</svg>
+</symbol>
+<symbol id="svg-arrow-right" viewbox="0 0 24 24">
+<title>Expand</title>
+<svg class="feather-chevron-right" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<polyline points="9 18 15 12 9 6"></polyline>
+</svg>
+</symbol>
+<symbol id="svg-sun" viewbox="0 0 24 24">
+<title>Light mode</title>
+<svg class="feather-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="5"></circle>
+<line x1="12" x2="12" y1="1" y2="3"></line>
+<line x1="12" x2="12" y1="21" y2="23"></line>
+<line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+<line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+<line x1="1" x2="3" y1="12" y2="12"></line>
+<line x1="21" x2="23" y1="12" y2="12"></line>
+<line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+<line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+</svg>
+</symbol>
+<symbol id="svg-moon" viewbox="0 0 24 24">
+<title>Dark mode</title>
+<svg class="icon-tabler-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+<path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+</svg>
+</symbol>
+<symbol id="svg-sun-with-moon" viewbox="0 0 24 24">
+<title>Auto light/dark, in light mode</title>
+<svg class="icon-custom-derived-from-feather-sun-and-tabler-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z" style="opacity: 50%"></path>
+<line x1="14.5" x2="14.5" y1="3.25" y2="1.25"></line>
+<line x1="14.5" x2="14.5" y1="15.85" y2="17.85"></line>
+<line x1="10.044" x2="8.63" y1="5.094" y2="3.68"></line>
+<line x1="19" x2="20.414" y1="14.05" y2="15.464"></line>
+<line x1="8.2" x2="6.2" y1="9.55" y2="9.55"></line>
+<line x1="20.8" x2="22.8" y1="9.55" y2="9.55"></line>
+<line x1="10.044" x2="8.63" y1="14.006" y2="15.42"></line>
+<line x1="19" x2="20.414" y1="5.05" y2="3.636"></line>
+<circle cx="14.5" cy="9.55" r="3.6"></circle>
+</svg>
+</symbol>
+<symbol id="svg-moon-with-sun" viewbox="0 0 24 24">
+<title>Auto light/dark, in dark mode</title>
+<svg class="icon-custom-derived-from-feather-sun-and-tabler-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"></path>
+<line style="opacity: 50%" x1="18" x2="18" y1="3.705" y2="2.5"></line>
+<line style="opacity: 50%" x1="18" x2="18" y1="11.295" y2="12.5"></line>
+<line style="opacity: 50%" x1="15.316" x2="14.464" y1="4.816" y2="3.964"></line>
+<line style="opacity: 50%" x1="20.711" x2="21.563" y1="10.212" y2="11.063"></line>
+<line style="opacity: 50%" x1="14.205" x2="13.001" y1="7.5" y2="7.5"></line>
+<line style="opacity: 50%" x1="21.795" x2="23" y1="7.5" y2="7.5"></line>
+<line style="opacity: 50%" x1="15.316" x2="14.464" y1="10.184" y2="11.036"></line>
+<line style="opacity: 50%" x1="20.711" x2="21.563" y1="4.789" y2="3.937"></line>
+<circle cx="18" cy="7.5" r="2.169" style="opacity: 50%"></circle>
+</svg>
+</symbol>
+<symbol id="svg-pencil" viewbox="0 0 24 24">
+<svg class="icon-tabler-pencil-code" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"></path>
+<path d="M13.5 6.5l4 4"></path>
+<path d="M20 21l2 -2l-2 -2"></path>
+<path d="M17 17l-2 2l2 2"></path>
+</svg>
+</symbol>
+<symbol id="svg-eye" viewbox="0 0 24 24">
+<svg class="icon-tabler-eye-code" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+<path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+<path d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008"></path>
+<path d="M20 21l2 -2l-2 -2"></path>
+<path d="M17 17l-2 2l2 2"></path>
+</svg>
+</symbol>
+</svg>
+<input aria-label="Toggle site navigation sidebar" class="sidebar-toggle" id="__navigation" name="__navigation" type="checkbox"/>
+<input aria-label="Toggle table of contents sidebar" class="sidebar-toggle" id="__toc" name="__toc" type="checkbox"/>
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+<div class="page">
+<header class="mobile-header">
+<div class="header-left">
+<label class="nav-overlay-icon" for="__navigation">
+<span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+</label>
+</div>
+<div class="header-center">
+<a href="../index.html"><div class="brand">pipx</div></a>
+</div>
+<div class="header-right">
+<div class="theme-toggle-container theme-toggle-header">
+<button aria-label="Toggle Light / Dark / Auto color theme" class="theme-toggle">
+<svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+<svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+<svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+<svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+</button>
+</div>
+<label class="toc-overlay-icon toc-header-icon" for="__toc">
+<span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+</label>
+</div>
+</header>
+<aside class="sidebar-drawer">
+<div class="sidebar-container">
+<div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+<div class="sidebar-logo-container">
+<img alt="Logo" class="sidebar-logo" src="../_static/logo.svg"/>
+</div>
+</a><form action="../search.html" class="sidebar-search-container" method="get" role="search">
+<input aria-label="搜尋" class="sidebar-search" name="q" placeholder="搜尋"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorial/index.html">Tutorials</a><input aria-label="Toggle navigation of Tutorials" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/install-applications.html">Installing applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/run-applications.html">Running applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">操作指南</a><input aria-label="Toggle navigation of 操作指南" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="install-pipx.html">Install pipx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade-pipx.html">Upgrade pipx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-installed-apps.html">管理已安裝的應用程式</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Run scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inject-packages.html">Inject packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pin-packages.html">Pin packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expose-apps.html">Expose apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tool-manifest.html">Tool manifest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configure-paths.html">Configure paths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell-completions.html">Shell completions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="move-installation.html">移動安裝</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standalone-python.html">Standalone Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dependency-cooldown.html">Dependency cooldown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use-private-index.html">Use a private index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use-uv-backend.html">Use the uv backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use-with-pre-commit.html">Use with pre-commit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshoot.html">Troubleshoot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">Reference</a><input aria-label="Toggle navigation of Reference" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/cli.html">CLI reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/environment-variables.html">Environment variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/exit-codes.html">Exit codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/json-output.html">JSON 輸出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/metadata.html">On-disk metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/programs-to-try.html">Programs to try</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../explanation/index.html">Explanation</a><input aria-label="Toggle navigation of Explanation" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../explanation/how-pipx-works.html">How pipx works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../explanation/scope.html">Project scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../explanation/comparisons.html">Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../explanation/making-packages-compatible.html">Making packages compatible</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">變更日誌</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<div class="main">
+<div class="content">
+<div class="article-container">
+<a class="back-to-top muted-link" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+</svg>
+<span>Back to top</span>
+</a>
+<div class="content-icon-container">
+<div class="view-this-page">
+<a class="muted-link" href="../_sources/how-to/run-scripts.rst.txt" title="View this page">
+<svg><use href="#svg-eye"></use></svg>
+<span class="visually-hidden">View this page</span>
+</a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+<button aria-label="Toggle Light / Dark / Auto color theme" class="theme-toggle">
+<svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+<svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+<svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+<svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+</button>
+</div>
+<label class="toc-overlay-icon toc-content-icon" for="__toc">
+<span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+</label>
+</div>
+<article id="furo-main-content" role="main">
+<section id="run-scripts">
+<h1>Run scripts<a class="headerlink" href="#run-scripts" title="連結到這個標頭">¶</a></h1>
+<p>Run an app or a script in a temporary environment with <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code>, without installing it first. pipx downloads the
+package, caches the environment, and runs the app.</p>
+<section id="run-a-specific-version">
+<h2>Run a specific version<a class="headerlink" href="#run-a-specific-version" title="連結到這個標頭">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">PACKAGE</span></code> argument is a <a class="reference external" href="https://packaging.python.org/en/latest/glossary/#term-Requirement-Specifier">requirement specifier</a>, so you can pin versions, ranges, or
+extras:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pipx<span class="w"> </span>run<span class="w"> </span><span class="nv">mpremote</span><span class="o">==</span><span class="m">1</span>.20.0
+<span class="gp">$ </span>pipx<span class="w"> </span>run<span class="w"> </span>--spec<span class="w"> </span><span class="nv">esptool</span><span class="o">==</span><span class="m">4</span>.6.2<span class="w"> </span>esptool.py
+<span class="gp">$ </span>pipx<span class="w"> </span>run<span class="w"> </span>--spec<span class="w"> </span><span class="s1">'esptool&gt;=4.5'</span><span class="w"> </span>esptool.py
+</pre></div>
+</div>
+<p>Quote any specifier that contains <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, or spaces.</p>
+</section>
+<section id="add-extra-dependencies">
+<h2>Add extra dependencies<a class="headerlink" href="#add-extra-dependencies" title="連結到這個標頭">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">--with</span> <span class="pre">PKG</span></code> adds packages to the temporary environment alongside the app. Repeat it to add more:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pipx<span class="w"> </span>run<span class="w"> </span>--with<span class="w"> </span>requests<span class="w"> </span>--with<span class="w"> </span>rich<span class="w"> </span>my-script.py
+</pre></div>
+</div>
+</section>
+<section id="pass-arguments-to-python">
+<h2>Pass arguments to Python<a class="headerlink" href="#pass-arguments-to-python" title="連結到這個標頭">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">--python-args</span> <span class="pre">ARGS</span></code> forwards arguments to the interpreter that runs the app, rather than to the app itself:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pipx<span class="w"> </span>run<span class="w"> </span>--python-args<span class="w"> </span><span class="s2">"-X dev"</span><span class="w"> </span>my-script.py
+</pre></div>
+</div>
+</section>
+<section id="run-from-source-control">
+<h2>Run from source control<a class="headerlink" href="#run-from-source-control" title="連結到這個標頭">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> accepts source-control URLs directly, with the same syntax as <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span></code> (see
+<a class="reference internal" href="install-pipx.html#install-from-source-control"><span class="std std-ref">從來源碼控制安裝</span></a>). Using <code class="docutils literal notranslate"><span class="pre">black</span></code> as an example:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pipx<span class="w"> </span>run<span class="w"> </span>git+https://github.com/psf/black.git
+<span class="gp">$ </span>pipx<span class="w"> </span>run<span class="w"> </span>git+https://github.com/psf/black.git@branch
+</pre></div>
+</div>
+<p>Use <code class="docutils literal notranslate"><span class="pre">--spec</span></code> when the executable name differs from the package name or when installing from an archive URL:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pipx<span class="w"> </span>run<span class="w"> </span>--spec<span class="w"> </span>https://github.com/psf/black/archive/18.9b0.zip<span class="w"> </span>black
+</pre></div>
+</div>
+</section>
+<section id="run-from-a-url">
+<h2>Run from a URL<a class="headerlink" href="#run-from-a-url" title="連結到這個標頭">¶</a></h2>
+<p>You can run <code class="docutils literal notranslate"><span class="pre">.py</span></code> files hosted anywhere:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pipx<span class="w"> </span>run<span class="w"> </span>https://gist.githubusercontent.com/cs01/fa721a17a326e551ede048c5088f9e0f/raw/6bdfbb6e9c1132b1c38fdd2f195d4a24c540c324/pipx-demo.py
+</pre></div>
+</div>
+</section>
+<section id="run-a-script-with-dependencies-pep-723">
+<span id="run-pep-723"></span><h2>Run a script with dependencies (PEP 723)<a class="headerlink" href="#run-a-script-with-dependencies-pep-723" title="連結到這個標頭">¶</a></h2>
+<p>A script can declare its own dependencies with <a class="reference external" href="https://packaging.python.org/en/latest/specifications/inline-script-metadata/">inline script metadata</a>. pipx reads the <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">///</span> <span class="pre">script</span></code> block
+and installs the listed packages before running:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># test.py</span>
+
+<span class="c1"># /// script</span>
+<span class="c1"># dependencies = ["requests"]</span>
+<span class="c1"># ///</span>
+
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/sys.html#module-sys"><span class="nn">sys</span></a>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+<span class="n">project</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/sys.html#sys.argv"><span class="n">sys</span><span class="o">.</span><span class="n">argv</span></a><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">"https://pypi.org/pypi/</span><span class="si">{</span><span class="n">project</span><span class="si">}</span><span class="s2">/json"</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/functions.html#print"><span class="nb">print</span></a><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"info"</span><span class="p">][</span><span class="s2">"version"</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pipx<span class="w"> </span>run<span class="w"> </span>test.py<span class="w"> </span>pipx
+<span class="go">1.9.0</span>
+</pre></div>
+</div>
+<p>pipx caches an environment keyed to the script's dependency list. Changing the dependencies builds a fresh one.</p>
+</section>
+<section id="verify-it">
+<h2>Verify it<a class="headerlink" href="#verify-it" title="連結到這個標頭">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pipx<span class="w"> </span>run<span class="w"> </span>pycowsay<span class="w"> </span>moo
+</pre></div>
+</div>
+<p>A successful run prints the app's own output; nothing is left installed afterward.</p>
+</section>
+</section>
+</article>
+</div>
+<footer>
+<div class="related-pages">
+<a class="next-page" href="inject-packages.html">
+<div class="page-info">
+<div class="context">
+<span>Next</span>
+</div>
+<div class="title">Inject packages</div>
+</div>
+<svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+</a>
+<a class="prev-page" href="manage-installed-apps.html">
+<svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+<div class="page-info">
+<div class="context">
+<span>Previous</span>
+</div>
+<div class="title">管理已安裝的應用程式</div>
+</div>
+</a>
+</div>
+<div class="bottom-of-page">
+<div class="left-details">
+<div class="copyright">
+                Copyright © 2026, pipx contributors
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+</div>
+<div class="right-details">
+</div>
+</div>
+</footer>
+</div>
+<aside class="toc-drawer">
+<div class="toc-sticky toc-scroll">
+<div class="toc-title-container">
+<span class="toc-title">
+            On this page
+          </span>
+</div>
+<div class="toc-tree-container">
+<div class="toc-tree">
+<ul>
+<li><a class="reference internal" href="#">Run scripts</a><ul>
+<li><a class="reference internal" href="#run-a-specific-version">Run a specific version</a></li>
+<li><a class="reference internal" href="#add-extra-dependencies">Add extra dependencies</a></li>
+<li><a class="reference internal" href="#pass-arguments-to-python">Pass arguments to Python</a></li>
+<li><a class="reference internal" href="#run-from-source-control">Run from source control</a></li>
+<li><a class="reference internal" href="#run-from-a-url">Run from a URL</a></li>
+<li><a class="reference internal" href="#run-a-script-with-dependencies-pep-723">Run a script with dependencies (PEP 723)</a></li>
+<li><a class="reference internal" href="#verify-it">Verify it</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div><script src="../_static/documentation_options.js?v=2ba18680"></script>
+<script src="../_static/doctools.js?v=fd6eb6e6"></script>
+<script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+<script src="../_static/scripts/furo.js?v=46bd48cc"></script>
+<script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+<script src="../_static/copybutton.js?v=a56c686a"></script>
+<script src="../_static/translations.js?v=cbf116e0"></script>
+<script src="../_static/design-tabs.js?v=f930bc37"></script>
+</body>
+</html>

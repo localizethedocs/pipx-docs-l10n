@@ -1,0 +1,74 @@
+# Use the uv backend
+
+Make pipx use [uv](https://github.com/astral-sh/uv) to create virtual environments and install packages in place of
+pip and venv. The CLI surface stays the same.
+
+For why uv is faster and how pipx compares to Astral’s standalone `uv tool`, see [Comparisons](../explanation/comparisons.html.md).
+
+## Make uv available
+
+Install pipx with the `uv` extra so it ships the bundled binary:
+
+```console
+$ pipx install pipx[uv]
+```
+
+Or install uv however you like (`brew install uv`, `cargo install uv`) and put it on `PATH`; pipx picks it up
+automatically. New venvs then default to uv. Existing venvs keep their recorded backend.
+
+## How pipx picks a backend
+
+## Choose a backend explicitly
+
+```console
+$ pipx install black --backend pip
+$ pipx install ruff --backend uv
+$ PIPX_DEFAULT_BACKEND=uv pipx install ruff
+$ pipx environment --value PIPX_RESOLVED_BACKEND
+```
+
+`install`, `install-all`, `inject`, `upgrade`, `upgrade-all`, `reinstall`, `reinstall-all`, and `run`
+all accept `--backend`. Switch an installed venv with `pipx reinstall NAME --backend uv`.
+
+## What changes under uv
+
+- pipx creates venvs with `uv venv`. The venv contains no `pip` and no `pipx_shared.pth` file.
+- `pipx runpip` runs `uv pip <args> --python <venv>/bin/python`. uv rejects flags it does not understand rather than
+  dropping them silently.
+- `pipx run` execs `uv tool run`; its cache lives in uv’s cache directory. Pass `--no-cache` to skip it or
+  `--refresh` to rebuild the cached environment.
+- `pipx run script.py` execs `uv run --script script.py` for PEP 723 inline scripts.
+- `--cooldown DAYS` (or `PIPX_COOLDOWN`) maps to uv’s `--exclude-newer P{DAYS}D`. Relative cooldowns need uv 0.9.17 or newer. See [Dependency cooldown](dependency-cooldown.html.md).
+
+## Limitations
+
+- `pipx install pip --backend uv` errors: a uv venv has no pip. Use `--backend pip`.
+- `pipx run --backend uv` honors `[pipx.run]` entry points only where it builds a venv, which with `--spec`
+  means an `<app>` that differs from the spec’s normalized distribution name, or a spec carrying no name at all.
+  An `<app>` matching that name goes to `uv tool run`, which reads console scripts only, so reach for
+  `--backend pip` to override a console script of the same name.
+- Some `--pip-args` values have no `uv tool run` equivalent (`--editable`, `--no-build-isolation`); pipx errors
+  instead of dropping them. See [Use a private index](use-private-index.html.md) for which flags uv translates.
+- `pipx run --backend uv` against URL or named-pipe scripts falls back to a pipx-managed venv, because `uv run
+  --script` reads PEP 723 metadata off disk and runtime-fetched content has no on-disk path. pipx logs a warning.
+- `pipx run` falls back to a pipx-managed venv when it has to infer the script name: from a VCS URL, a local project
+  path, or a name it normalizes (`pipx run pip_search` installs `pip-search`). `uv tool run` takes that name up
+  front and would guess it from the package, so pipx installs the package first and runs the script it declares. Pass
+  `pipx run --spec <spec> <normalized-name>` to keep uv’s cache when the package declares a matching console script.
+  A spec with no distribution name (a path, a URL, a direct reference) is installed twice, once to learn its name and
+  once into the run venv.
+
+## Cache layout
+
+Under the uv backend, `pipx run` caches in `UV_CACHE_DIR` instead of `PIPX_VENV_CACHEDIR`. Switching the default
+backend on a host that already used `pipx run` leaves the old pipx cache behind. Find it with `pipx cache dir` and
+remove its environments with `pipx cache purge`. The 14-day expiry sweep pipx applies to its own cache does not extend
+to uv’s cache, which uv manages on its own schedule (`uv cache clean`).
+
+## Verify it
+
+```console
+$ pipx environment --value PIPX_RESOLVED_BACKEND
+```
+
+It prints `uv` when pipx will use the uv backend for new venvs.

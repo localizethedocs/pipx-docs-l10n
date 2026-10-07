@@ -1,0 +1,753 @@
+<!doctype html>
+<html class="no-js" lang="en-US" data-content_root="../">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Comparisons" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://pipx.pypa.io/latest/explanation/comparisons.html" />
+<meta property="og:site_name" content="pipx" />
+<meta property="og:description" content="pipx vs pip: pip is a general Python package installer. It can install libraries or CLI applications with entry points., pipx is a specialized package installer. It can only install packages with C..." />
+<meta name="description" content="pipx vs pip: pip is a general Python package installer. It can install libraries or CLI applications with entry points., pipx is a specialized package installer. It can only install packages with C..." />
+
+    <meta name="description" content="pip is a general Python package installer. It can install libraries or CLI applications with entry points." /><link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Making packages compatible" href="making-packages-compatible.html"><link rel="prev" title="Project scope" href="scope.html">
+        <link rel="canonical" href="https://projects.localizethedocs.org/pipx-docs-l10n/explanation/comparisons.html">
+        <link rel="prefetch" href="../_static/logo.svg" as="image">
+
+    <link rel="shortcut icon" href="../_static/logo.svg"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
+        <title>Comparisons - pipx</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_argparse_cli.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-codeautolink.css?v=b2176991" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=845a0197" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style>
+
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">pipx</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/logo.svg" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorial/index.html">Tutorials</a><input aria-label="Toggle navigation of Tutorials" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/getting-started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/install-applications.html">Installing applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/run-applications.html">Running applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../how-to/index.html">How-to guides</a><input aria-label="Toggle navigation of How-to guides" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/install-pipx.html">Install pipx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/upgrade-pipx.html">Upgrade pipx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/manage-installed-apps.html">Manage installed apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/run-scripts.html">Run scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/inject-packages.html">Inject packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/pin-packages.html">Pin packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/expose-apps.html">Expose apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/tool-manifest.html">Tool manifest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/configure-paths.html">Configure paths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/shell-completions.html">Shell completions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/move-installation.html">Move installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/standalone-python.html">Standalone Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/dependency-cooldown.html">Dependency cooldown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/use-private-index.html">Use a private index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/use-uv-backend.html">Use the uv backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/use-with-pre-commit.html">Use with pre-commit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how-to/troubleshoot.html">Troubleshoot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">Reference</a><input aria-label="Toggle navigation of Reference" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/cli.html">CLI reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/environment-variables.html">Environment variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/exit-codes.html">Exit codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/json-output.html">JSON output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/metadata.html">On-disk metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/programs-to-try.html">Programs to try</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Explanation</a><input aria-label="Toggle navigation of Explanation" checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="how-pipx-works.html">How pipx works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scope.html">Project scope</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Comparisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="making-packages-compatible.html">Making packages compatible</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/explanation/comparisons.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="comparisons">
+<h1>Comparisons<a class="headerlink" href="#comparisons" title="Link to this heading">¶</a></h1>
+<section id="pipx-vs-pip">
+<h2>pipx vs pip<a class="headerlink" href="#pipx-vs-pip" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>pip is a general Python package installer. It can install libraries or CLI applications with entry points.</p></li>
+<li><p>pipx is a specialized package installer. It can only install packages with CLI entry points.</p></li>
+<li><p>pipx and pip both install packages from PyPI (or locally).</p></li>
+<li><p>pipx relies on pip (and venv).</p></li>
+<li><p>pipx replaces a subset of pip’s functionality: it installs CLI applications but not libraries that you import in your
+code.</p></li>
+<li><p>You can install pipx with pip.</p></li>
+</ul>
+<p>Example: install pipx with pip, <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">pipx</span></code>.</p>
+</section>
+<section id="pipx-vs-uv-tool">
+<h2>pipx vs uv tool<a class="headerlink" href="#pipx-vs-uv-tool" title="Link to this heading">¶</a></h2>
+<p>Both <a class="reference external" href="https://docs.astral.sh/uv/concepts/tools/">uv tool</a> and pipx install a Python tool into its own virtual
+environment and expose the tool’s console scripts on <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. Both have a one-shot run mode (<code class="docutils literal notranslate"><span class="pre">uvx</span></code> and <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code>);
+<code class="docutils literal notranslate"><span class="pre">uvx</span></code> is <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">run</span></code>. They differ in where state lives, which extra commands they ship, and how they handle managed
+Python.</p>
+<p>pipx keeps the same CLI across pip and uv backends; <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">pipx[uv]</span></code> opts you into uv-speed venv creation
+without changing any commands. <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span></code> ships a smaller per-tool surface, then reuses the rest of <code class="docutils literal notranslate"><span class="pre">uv</span></code> for free:
+managed Python, content-addressed cache, lockfiles, PEP 723 script handling.</p>
+<section id="where-state-lives">
+<h3>Where state lives<a class="headerlink" href="#where-state-lives" title="Link to this heading">¶</a></h3>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24.0%" />
+<col style="width: 38.0%" />
+<col style="width: 38.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>State</p></th>
+<th class="head"><p>pipx</p></th>
+<th class="head"><p>uv tool</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Per-tool venvs</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">$PIPX_HOME/venvs/&lt;name&gt;</span></code> (<code class="docutils literal notranslate"><span class="pre">PIPX_HOME</span></code>)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">$UV_TOOL_DIR/&lt;name&gt;</span></code> (<code class="docutils literal notranslate"><span class="pre">UV_TOOL_DIR</span></code>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Exposed binaries</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">$PIPX_BIN_DIR</span></code> (default <code class="docutils literal notranslate"><span class="pre">~/.local/bin</span></code>)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">$UV_TOOL_BIN_DIR</span></code> (default same)</p></td>
+</tr>
+<tr class="row-even"><td><p>Man pages</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">$PIPX_MAN_DIR</span></code> (default <code class="docutils literal notranslate"><span class="pre">~/.local/share/man</span></code>)</p></td>
+<td><p><em>not exposed</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>Shared pip/setuptools/wheel</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">$PIPX_HOME/shared</span></code> (pip backend only)</p></td>
+<td><p><em>none; uv venvs ship without pip</em></p></td>
+</tr>
+<tr class="row-even"><td><p>Ephemeral run cache</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">$PIPX_HOME/.cache</span></code> (TTL 14 days)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">$UV_CACHE_DIR</span></code> (no TTL; <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">cache</span> <span class="pre">prune</span></code>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Standalone Python</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">$PIPX_HOME/py</span></code> (<code class="docutils literal notranslate"><span class="pre">PIPX_FETCH_PYTHON</span></code>)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">$UV_PYTHON_INSTALL_DIR</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>System-wide install</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">--global</span></code>, <code class="docutils literal notranslate"><span class="pre">PIPX_GLOBAL_*</span></code></p></td>
+<td><p><em>not supported</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">PIPX_BIN_DIR</span></code> and <code class="docutils literal notranslate"><span class="pre">UV_TOOL_BIN_DIR</span></code> both default to <code class="docutils literal notranslate"><span class="pre">~/.local/bin</span></code> on Unix, so installing the same tool with both
+managers writes the same filename. Each manager refuses to overwrite a binary the other one wrote without <code class="docutils literal notranslate"><span class="pre">--force</span></code>.
+Use <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">--suffix=...</span></code> to keep two copies side-by-side; uv has no equivalent.</p>
+</section>
+<section id="subcommand-mapping">
+<h3>Subcommand mapping<a class="headerlink" href="#subcommand-mapping" title="Link to this heading">¶</a></h3>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26.0%" />
+<col style="width: 37.0%" />
+<col style="width: 37.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Task</p></th>
+<th class="head"><p>pipx</p></th>
+<th class="head"><p>uv tool</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Install from PyPI</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">ruff</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">install</span> <span class="pre">ruff</span></code> (or <code class="docutils literal notranslate"><span class="pre">uvx</span> <span class="pre">ruff</span></code> for one-off)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Install from a git URL</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">'git+https://…'</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">install</span> <span class="pre">'git+https://…'</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Install editable from path</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">./mypkg</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">./mypkg</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>One-off run (no install)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">black</span> <span class="pre">.</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uvx</span> <span class="pre">black</span> <span class="pre">.</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Refresh one-off run</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">--refresh</span> <span class="pre">black</span> <span class="pre">.</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uvx</span> <span class="pre">--refresh</span> <span class="pre">black</span> <span class="pre">.</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Show ephemeral cache</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">cache</span> <span class="pre">dir</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">cache</span> <span class="pre">dir</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Purge ephemeral cache</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">cache</span> <span class="pre">purge</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">cache</span> <span class="pre">clean</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>One-off run with extra dep</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">--with</span> <span class="pre">mkdocs-material</span> <span class="pre">mkdocs</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uvx</span> <span class="pre">--with</span> <span class="pre">mkdocs-material</span> <span class="pre">mkdocs</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Pinned-version one-off</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">--spec</span> <span class="pre">'ruff==0.6.0'</span> <span class="pre">ruff</span> <span class="pre">check</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uvx</span> <span class="pre">ruff&#64;0.6.0</span> <span class="pre">check</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Add a dep to existing tool</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">inject</span> <span class="pre">mkdocs</span> <span class="pre">mkdocs-material</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">install</span> <span class="pre">mkdocs</span> <span class="pre">--with</span> <span class="pre">mkdocs-material</span></code> (rebuilds)</p></td>
+</tr>
+<tr class="row-even"><td><p>Remove an injected dep</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">uninject</span> <span class="pre">mkdocs</span> <span class="pre">mkdocs-material</span></code></p></td>
+<td><p><em>rebuild without</em> <code class="docutils literal notranslate"><span class="pre">--with</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Upgrade one</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">upgrade</span> <span class="pre">ruff</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">upgrade</span> <span class="pre">ruff</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Upgrade all</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">upgrade-all</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">upgrade</span> <span class="pre">--all</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>List installed or outdated</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span></code> (<code class="docutils literal notranslate"><span class="pre">--outdated</span></code>, <code class="docutils literal notranslate"><span class="pre">--output</span> <span class="pre">json</span></code>)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">list</span></code> (<code class="docutils literal notranslate"><span class="pre">--show-with</span></code>, <code class="docutils literal notranslate"><span class="pre">--outdated</span></code>, …)</p></td>
+</tr>
+<tr class="row-even"><td><p>Diagnose broken environments</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">health</span></code></p></td>
+<td><p><em>no equivalent</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>Repair broken environments</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">repair</span> <span class="pre">ruff</span></code> / <code class="docutils literal notranslate"><span class="pre">repair</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">install</span> <span class="pre">ruff</span></code> / <em>no bulk equivalent</em></p></td>
+</tr>
+<tr class="row-even"><td><p>Reinstall any environment</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">reinstall</span> <span class="pre">ruff</span></code> / <code class="docutils literal notranslate"><span class="pre">reinstall-all</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">upgrade</span> <span class="pre">--reinstall</span> <span class="pre">ruff</span></code> / <code class="docutils literal notranslate"><span class="pre">--all</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Run pip inside a venv</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">runpip</span> <span class="pre">&lt;tool&gt;</span> <span class="pre">--</span> <span class="pre">pip</span> <span class="pre">...</span></code></p></td>
+<td><p><em>not supported (no pip in uv venvs)</em></p></td>
+</tr>
+<tr class="row-even"><td><p>PATH setup</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">ensurepath</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">update-shell</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Show resolved env</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">environment</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">dir</span></code>, <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">dir</span> <span class="pre">--bin</span></code>, <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">cache</span> <span class="pre">dir</span></code>, <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">python</span> <span class="pre">dir</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>PEP 723 inline script</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">script.py</span></code> (with uv backend uses <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span></code>)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span> <span class="pre">--script</span> <span class="pre">script.py</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="only-in-pipx">
+<h3>Only in pipx<a class="headerlink" href="#only-in-pipx" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">inject</span></code> / <code class="docutils literal notranslate"><span class="pre">uninject</span></code> add or remove a package in place. <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">install</span> <span class="pre">--with</span></code> reaches the same end
+state by rebuilding the venv.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">runpip</span> <span class="pre">&lt;venv&gt;</span> <span class="pre">--</span> <span class="pre">...</span></code> runs pip inside a tool’s venv. uv venvs have no pip.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--include-deps</span></code> exposes entry points from every dependency. uv requires you to enumerate dep packages with
+<code class="docutils literal notranslate"><span class="pre">--with-executables-from</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--suffix</span></code> keeps two copies of the same tool side-by-side.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--global</span></code> and the <code class="docutils literal notranslate"><span class="pre">PIPX_GLOBAL_*</span></code> variables drive a system-wide install.</p></li>
+<li><p>Manual pages get symlinked under <code class="docutils literal notranslate"><span class="pre">$PIPX_MAN_DIR</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">manifest</span> <span class="pre">sync</span> <span class="pre">&lt;manifest&gt;</span></code> applies an explicit desired set; <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">manifest</span> <span class="pre">lock</span> <span class="pre">&lt;manifest&gt;</span></code> writes one PEP
+751 lock per selected tool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install-all</span> <span class="pre">&lt;spec.json&gt;</span></code> rebuilds every venv from a <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">list</span> <span class="pre">--output</span> <span class="pre">json</span></code> snapshot for cross-machine
+migration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[project.entry-points.&quot;pipx.run&quot;]</span></code> declares pipx-specific runtime extras in the package metadata.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">environment</span></code> prints every variable and its resolved value in one place.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--cooldown</span> <span class="pre">DAYS</span></code> provides the same release-age policy through pip and uv.</p></li>
+</ul>
+</section>
+<section id="only-in-uv-tool">
+<h3>Only in uv tool<a class="headerlink" href="#only-in-uv-tool" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">list</span></code> toggles columns via <code class="docutils literal notranslate"><span class="pre">--show-with</span></code>, <code class="docutils literal notranslate"><span class="pre">--show-paths</span></code>, <code class="docutils literal notranslate"><span class="pre">--show-version-specifiers</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--show-extras</span></code>, <code class="docutils literal notranslate"><span class="pre">--show-python</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uvx</span> <span class="pre">--with-editable</span> <span class="pre">PATH</span></code> adds editable extras for a one-off run.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">upgrade</span> <span class="pre">--all</span> <span class="pre">-p</span> <span class="pre">3.13</span></code> re-pins every tool to a different Python in one shot.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">python</span> <span class="pre">install/list/find/pin/upgrade/uninstall</span></code> integrates managed Python; uv auto-fetches when the requested
+Python isn’t installed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--torch-backend</span></code> and <code class="docutils literal notranslate"><span class="pre">--isolated</span></code> add controls that pipx does not expose.</p></li>
+<li><p>The content-addressed cache spans <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">pip</span></code>, <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span></code>, <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span></code>, and <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">venv</span></code>. Wheels downloaded once get
+reused everywhere.</p></li>
+</ul>
+</section>
+<section id="gotchas">
+<h3>Gotchas<a class="headerlink" href="#gotchas" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">uvx</span></code> reuses cached envs across invocations until you prune the cache (<code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">cache</span> <span class="pre">clean</span></code>), pin a new version
+(<code class="docutils literal notranslate"><span class="pre">uvx</span> <span class="pre">black&#64;latest</span></code>), or pass <code class="docutils literal notranslate"><span class="pre">--refresh</span></code>. <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code> caches for 14 days and accepts <code class="docutils literal notranslate"><span class="pre">--refresh</span></code> for an early
+replacement.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uvx</span></code> prefers a persistent install when one exists. After <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">install</span> <span class="pre">ruff</span></code>, plain <code class="docutils literal notranslate"><span class="pre">uvx</span> <span class="pre">ruff</span></code> reuses that
+env instead of building an ephemeral one. Pass <code class="docutils literal notranslate"><span class="pre">--isolated</span></code> to bypass.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span></code> ignores project-local <code class="docutils literal notranslate"><span class="pre">.python-version</span></code> files. <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span></code> honors them; tool envs do not. pipx never
+reads them; pass <code class="docutils literal notranslate"><span class="pre">--python</span></code> or set <code class="docutils literal notranslate"><span class="pre">PIPX_DEFAULT_PYTHON</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">python</span> <span class="pre">upgrade</span></code> only bumps patch versions. To move a tool from 3.12 to 3.13 run <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span> <span class="pre">upgrade</span> <span class="pre">--all</span> <span class="pre">-p</span>
+<span class="pre">3.13</span></code>. pipx’s equivalent is <code class="docutils literal notranslate"><span class="pre">reinstall-all</span> <span class="pre">--python</span> <span class="pre">python3.13</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span> <span class="pre">--script</span></code> needs a real on-disk path. When <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">script.py</span></code> content arrives via URL or named pipe, the
+uv backend falls back to building a venv.</p></li>
+</ul>
+</section>
+<section id="picking-one">
+<h3>Picking one<a class="headerlink" href="#picking-one" title="Link to this heading">¶</a></h3>
+<p>pipx wins when you need its tool-specific extras: <code class="docutils literal notranslate"><span class="pre">inject</span></code>/<code class="docutils literal notranslate"><span class="pre">uninject</span></code>, <code class="docutils literal notranslate"><span class="pre">--global</span></code>, <code class="docutils literal notranslate"><span class="pre">--suffix</span></code>, manual pages, or
+<code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install-all</span></code> for migration. Install <code class="docutils literal notranslate"><span class="pre">pipx[uv]</span></code> to keep that surface and pick up uv-speed venv creation. Reach
+for <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">tool</span></code> when you already drive uv for managed Python or <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span> <span class="pre">--script</span></code> and want one binary for everything.
+Running both is fine; the only collision point is the shared bin dir, and both sides refuse to overwrite without
+<code class="docutils literal notranslate"><span class="pre">--force</span></code>.</p>
+</section>
+</section>
+<section id="pipx-vs-poetry-and-pipenv">
+<h2>pipx vs poetry and pipenv<a class="headerlink" href="#pipx-vs-poetry-and-pipenv" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>pipx is used solely for application consumption: you install CLI apps with it.</p></li>
+<li><p>pipenv and poetry are CLI apps used to develop applications and libraries.</p></li>
+<li><p>All three tools wrap pip and virtual environments for more convenient workflows.</p></li>
+</ul>
+<p>Example: install poetry with pipx, <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">poetry</span></code>; run poetry without installing it, <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">poetry</span>
+<span class="pre">--help</span></code>.</p>
+</section>
+<section id="pipx-vs-venv">
+<h2>pipx vs venv<a class="headerlink" href="#pipx-vs-venv" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>venv is part of Python’s standard library in Python 3.2 and above.</p></li>
+<li><p>venv creates “virtual environments”, which are sandboxed Python installations.</p></li>
+<li><p>pipx relies heavily on the venv package.</p></li>
+</ul>
+<p>Example: pipx installs packages into environments created with venv, <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">install</span> <span class="pre">black</span> <span class="pre">--verbose</span></code>.</p>
+</section>
+<section id="pipx-vs-pyenv">
+<h2>pipx vs pyenv<a class="headerlink" href="#pipx-vs-pyenv" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>pyenv manages Python versions on your system. It helps you install versions like Python 3.11, 3.12, and so on.</p></li>
+<li><p>pipx installs packages in virtual environments and exposes their entry points on your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>.</p></li>
+</ul>
+<p>Example: install a Python interpreter with pyenv, then install a package with pipx using that interpreter, <code class="docutils literal notranslate"><span class="pre">pipx</span>
+<span class="pre">install</span> <span class="pre">black</span> <span class="pre">--python=python3.11</span></code> where <code class="docutils literal notranslate"><span class="pre">python3.11</span></code> was installed by pyenv.</p>
+</section>
+<section id="pipx-vs-pipsi">
+<h2>pipx vs pipsi<a class="headerlink" href="#pipx-vs-pipsi" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>pipx and pipsi both install packages in a similar way.</p></li>
+<li><p>pipx is under active development; pipsi is no longer maintained.</p></li>
+<li><p>pipx always makes sure you’re using the latest version of pip.</p></li>
+<li><p>pipx can run an app in one line, leaving your system unchanged after it finishes (<code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span> <span class="pre">APP</span></code>); pipsi cannot.</p></li>
+<li><p>pipx can recursively install binaries from dependent packages.</p></li>
+<li><p>pipx has more CLI options such as <code class="docutils literal notranslate"><span class="pre">upgrade-all</span></code>, <code class="docutils literal notranslate"><span class="pre">reinstall-all</span></code>, and <code class="docutils literal notranslate"><span class="pre">uninstall-all</span></code>.</p></li>
+<li><p>pipx is more modern. It requires Python 3.10+ and uses the standard-library <code class="docutils literal notranslate"><span class="pre">venv</span></code> package.</p></li>
+<li><p>pipx works with Python homebrew installations while pipsi does not.</p></li>
+<li><p>pipx lets you see each command it runs by passing <code class="docutils literal notranslate"><span class="pre">--verbose</span></code>.</p></li>
+</ul>
+<section id="migrating-to-pipx-from-pipsi">
+<h3>Migrating to pipx from pipsi<a class="headerlink" href="#migrating-to-pipx-from-pipsi" title="Link to this heading">¶</a></h3>
+<p>After you have installed pipx, run <a class="reference external" href="https://raw.githubusercontent.com/pypa/pipx/main/scripts/migrate_pipsi_to_pipx.py">migrate_pipsi_to_pipx.py</a>. You can do this with pipx itself:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pipx<span class="w"> </span>run<span class="w"> </span>https://raw.githubusercontent.com/pypa/pipx/main/scripts/migrate_pipsi_to_pipx.py
+</pre></div>
+</div>
+</section>
+</section>
+<section id="pipx-vs-brew">
+<h2>pipx vs brew<a class="headerlink" href="#pipx-vs-brew" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Both brew and pipx install CLI tools.</p></li>
+<li><p>They install from different sources: brew uses a curated repository specific to brew, and pipx generally uses PyPI.</p></li>
+</ul>
+<p>Example: brew can install pipx, but the two generally do not interact much.</p>
+</section>
+<section id="pipx-vs-npx">
+<h2>pipx vs npx<a class="headerlink" href="#pipx-vs-npx" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Both can run CLI tools. npx searches <code class="docutils literal notranslate"><span class="pre">node_modules</span></code> and otherwise runs in a temporary environment; <code class="docutils literal notranslate"><span class="pre">pipx</span> <span class="pre">run</span></code>
+searches <code class="docutils literal notranslate"><span class="pre">__pypackages__</span></code> and otherwise runs in a temporary environment.</p></li>
+<li><p>npx works with JavaScript and pipx works with Python.</p></li>
+<li><p>Both make running executables written in a dynamic language as easy as possible.</p></li>
+<li><p>pipx can also install tools globally; npx cannot.</p></li>
+</ul>
+<p>Example: none. These tools work for different languages.</p>
+</section>
+<section id="pipx-vs-pip-run">
+<h2>pipx vs pip-run<a class="headerlink" href="#pipx-vs-pip-run" title="Link to this heading">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jaraco/pip-run">pip-run</a> is focused on running <strong>arbitrary Python code in ephemeral environments</strong>,
+while pipx is focused on running <strong>Python binaries in ephemeral and non-ephemeral environments</strong>.</p>
+<p>For example, these two commands both install poetry to an ephemeral environment and invoke poetry with <code class="docutils literal notranslate"><span class="pre">--help</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pipx<span class="w"> </span>run<span class="w"> </span>poetry<span class="w"> </span>--help
+pip-run<span class="w"> </span>poetry<span class="w"> </span>--<span class="w"> </span>-m<span class="w"> </span>poetry<span class="w"> </span>--help
+</pre></div>
+</div>
+</section>
+<section id="pipx-vs-fades">
+<h2>pipx vs fades<a class="headerlink" href="#pipx-vs-fades" title="Link to this heading">¶</a></h2>
+<p><a class="reference external" href="https://github.com/PyAr/fades">fades</a> runs <strong>individual</strong> Python scripts inside automatically provisioned virtualenvs
+with their dependencies installed.</p>
+<ul class="simple">
+<li><p>Both <a class="reference external" href="https://github.com/PyAr/fades#how-to-mark-the-dependencies-to-be-installed">fades</a> and <a class="reference internal" href="../reference/examples.html"><span class="doc">pipx run</span></a> let you specify a script’s dependencies in specially formatted comments, but the exact syntax
+differs. pipx’s syntax is standardized by a <a class="reference external" href="https://packaging.python.org/en/latest/specifications/inline-script-metadata/">provisional specification</a>; fades’s syntax is not.</p></li>
+<li><p>Both tools automatically set up reusable virtualenvs containing the necessary dependencies.</p></li>
+<li><p>Both can download Python scripts or packages to execute from remote resources.</p></li>
+<li><p>fades can only run individual script files while pipx can also run packages.</p></li>
+</ul>
+</section>
+<section id="pipx-vs-pae-pactivate">
+<h2>pipx vs pae/pactivate<a class="headerlink" href="#pipx-vs-pae-pactivate" title="Link to this heading">¶</a></h2>
+<p><em>pae</em> is a Bash command-line function distributed with <a class="reference external" href="https://github.com/cynic-net/pactivate">pactivate</a> that uses
+pactivate to create non-ephemeral environments focused on general use, rather than just running command-line
+applications.</p>
+<p>There is a <a class="reference external" href="https://github.com/cynic-net/pactivate/blob/main/doc/vs-pipx.md">detailed comparison</a>, but to summarize:</p>
+<p>Similarities:</p>
+<ul class="simple">
+<li><p>Both create isolated environments without having to specify (and remember) a directory in which to store them.</p></li>
+<li><p>Both let you use any Python interpreter available on your system (subject to the version restrictions below).</p></li>
+</ul>
+<p>pae advantages:</p>
+<ul class="simple">
+<li><p>Supports all versions of Python from 2.7 upward. pipx requires 3.10 or above.</p></li>
+<li><p>Fewer dependencies.</p></li>
+<li><p>Easier to have multiple versions of a single program, or use different Python versions for one program.</p></li>
+<li><p>Somewhat more convenient for running arbitrary command-line programs in virtual environments, installing multiple
+packages in a single environment, and activating virtual environments.</p></li>
+<li><p>Integrates well with source repos using <a class="reference external" href="https://github.com/cynic-net/pactivate">pactivate</a>.</p></li>
+</ul>
+<p>pae disadvantages:</p>
+<ul class="simple">
+<li><p>Usable with the Bash shell only.</p></li>
+<li><p>Slightly less quick and convenient for installing or running command-line programs from single Python packages.</p></li>
+<li><p>Can be slower than pipx at creating virtual environments.</p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="making-packages-compatible.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Making packages compatible</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="scope.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Project scope</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2026, pipx contributors
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Comparisons</a><ul>
+<li><a class="reference internal" href="#pipx-vs-pip">pipx vs pip</a></li>
+<li><a class="reference internal" href="#pipx-vs-uv-tool">pipx vs uv tool</a><ul>
+<li><a class="reference internal" href="#where-state-lives">Where state lives</a></li>
+<li><a class="reference internal" href="#subcommand-mapping">Subcommand mapping</a></li>
+<li><a class="reference internal" href="#only-in-pipx">Only in pipx</a></li>
+<li><a class="reference internal" href="#only-in-uv-tool">Only in uv tool</a></li>
+<li><a class="reference internal" href="#gotchas">Gotchas</a></li>
+<li><a class="reference internal" href="#picking-one">Picking one</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pipx-vs-poetry-and-pipenv">pipx vs poetry and pipenv</a></li>
+<li><a class="reference internal" href="#pipx-vs-venv">pipx vs venv</a></li>
+<li><a class="reference internal" href="#pipx-vs-pyenv">pipx vs pyenv</a></li>
+<li><a class="reference internal" href="#pipx-vs-pipsi">pipx vs pipsi</a><ul>
+<li><a class="reference internal" href="#migrating-to-pipx-from-pipsi">Migrating to pipx from pipsi</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pipx-vs-brew">pipx vs brew</a></li>
+<li><a class="reference internal" href="#pipx-vs-npx">pipx vs npx</a></li>
+<li><a class="reference internal" href="#pipx-vs-pip-run">pipx vs pip-run</a></li>
+<li><a class="reference internal" href="#pipx-vs-fades">pipx vs fades</a></li>
+<li><a class="reference internal" href="#pipx-vs-pae-pactivate">pipx vs pae/pactivate</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=b3ce0459"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=a56c686a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>
