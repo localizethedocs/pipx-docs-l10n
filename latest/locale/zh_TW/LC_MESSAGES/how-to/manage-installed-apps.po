@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../how-to/manage-installed-apps.rst:3
 msgid "Manage installed apps"
-msgstr ""
+msgstr "管理已安裝的應用程式"
 
 #: ../../../how-to/manage-installed-apps.rst:5
 msgid ""
@@ -160,7 +160,7 @@ msgstr ""
 
 #: ../../../how-to/manage-installed-apps.rst:111
 msgid "$ pipx reinstall-all"
-msgstr ""
+msgstr "$ pipx reinstall-all"
 
 #: ../../../how-to/manage-installed-apps.rst:115
 msgid ""

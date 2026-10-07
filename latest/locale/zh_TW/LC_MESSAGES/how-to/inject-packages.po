@@ -37,7 +37,7 @@ msgstr ""
 
 #: ../../../how-to/inject-packages.rst:13
 msgid "$ pipx inject ipython matplotlib"
-msgstr ""
+msgstr "$ pipx inject ipython matplotlib"
 
 #: ../../../how-to/inject-packages.rst:17
 msgid "Inject several at once, from a requirements file, or both:"
@@ -49,6 +49,9 @@ msgid ""
 "$ pipx inject ipython -r useful-packages.txt\n"
 "$ pipx inject ipython extra-pkg -r more-packages.txt"
 msgstr ""
+"$ pipx inject ipython matplotlib pandas\n"
+"$ pipx inject ipython -r useful-packages.txt\n"
+"$ pipx inject ipython extra-pkg -r more-packages.txt"
 
 #: ../../../how-to/inject-packages.rst:25
 msgid "Scripts can request the versioned result envelope from either command:"
@@ -59,6 +62,8 @@ msgid ""
 "$ pipx inject ipython matplotlib --output json\n"
 "$ pipx uninject ipython matplotlib --output json"
 msgstr ""
+"$ pipx inject ipython matplotlib --output json\n"
+"$ pipx uninject ipython matplotlib --output json"
 
 #: ../../../how-to/inject-packages.rst:34
 msgid "Expose injected apps"
@@ -72,7 +77,7 @@ msgstr ""
 
 #: ../../../how-to/inject-packages.rst:38
 msgid "$ pipx inject ipython black --include-apps"
-msgstr ""
+msgstr "$ pipx inject ipython black --include-apps"
 
 #: ../../../how-to/inject-packages.rst:42
 msgid ""
@@ -86,6 +91,8 @@ msgid ""
 "$ pipx inject robotframework-keyta robotframework-browser-batteries --"
 "include-resources-from robotframework-browser"
 msgstr ""
+"$ pipx inject robotframework-keyta robotframework-browser-batteries --"
+"include-resources-from robotframework-browser"
 
 #: ../../../how-to/inject-packages.rst:49
 msgid ""
@@ -95,7 +102,7 @@ msgstr ""
 
 #: ../../../how-to/inject-packages.rst:53
 msgid "Other flags"
-msgstr ""
+msgstr "其他旗標"
 
 #: ../../../how-to/inject-packages.rst:55
 msgid ""

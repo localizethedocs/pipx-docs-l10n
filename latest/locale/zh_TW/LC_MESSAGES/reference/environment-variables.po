@@ -34,7 +34,7 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:16
 msgid "Variable"
-msgstr ""
+msgstr "變數"
 
 #: ../../../reference/environment-variables.rst:17
 msgid "Meaning and default"
@@ -42,7 +42,7 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:18
 msgid "``PIPX_HOME``"
-msgstr ""
+msgstr "``PIPX_HOME``"
 
 #: ../../../reference/environment-variables.rst:19
 msgid ""
@@ -53,7 +53,7 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:21
 msgid "``PIPX_BIN_DIR``"
-msgstr ""
+msgstr "``PIPX_BIN_DIR``"
 
 #: ../../../reference/environment-variables.rst:22
 msgid ""
@@ -62,7 +62,7 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:23
 msgid "``PIPX_MAN_DIR``"
-msgstr ""
+msgstr "``PIPX_MAN_DIR``"
 
 #: ../../../reference/environment-variables.rst:24
 msgid "Directory for man page symlinks. Default: ``~/.local/share/man``."
