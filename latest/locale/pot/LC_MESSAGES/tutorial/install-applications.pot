@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../tutorial/install-applications.rst:3
+msgid "Installing applications"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:5
+msgid ""
+":doc:`getting-started` walked through the ``install`` → ``list`` → ``run`` → "
+"``uninstall`` cycle with the toy ``pycowsay`` package. This tutorial repeats "
+"it with a real tool so you can see how a package's name and its apps differ."
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:10
+msgid "Install a tool"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:12
+msgid "Install `HTTPie <https://httpie.io/>`_, a command-line HTTP client:"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:14
+msgid ""
+"$ pipx install httpie\n"
+"  installed package httpie 3.2.4, Python 3.12.3\n"
+"  These apps are now globally available\n"
+"    - http\n"
+"    - https\n"
+"done! ✨ 🌟 ✨"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:23
+msgid ""
+"pipx creates a virtual environment, installs the ``httpie`` package into it, "
+"and exposes the apps it declares on your ``PATH``. Note that the package is "
+"``httpie`` but the commands are ``http`` and ``https``: one package, two "
+"apps."
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:28
+msgid ""
+"To install a tool for every user on the system, pass ``--global``. See :doc:"
+"`Configure paths <../how-to/configure-paths>`."
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:33
+msgid "See what you got"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:35
+msgid ""
+"$ pipx list\n"
+"venvs are in /home/user/.local/share/pipx/venvs\n"
+"apps are exposed on your $PATH at /home/user/.local/bin\n"
+"   package httpie 3.2.4, Python 3.12.3\n"
+"    - http\n"
+"    - https"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:46
+msgid "Run it and verify"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:48
+msgid "Call one of the exposed apps to confirm the install:"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:50
+msgid ""
+"$ http --version\n"
+"3.2.4"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:55
+msgid ""
+"If the version prints, the app is on your ``PATH`` and ready to use. "
+"(Missing? Run ``pipx ensurepath`` and open a new terminal, then see :doc:"
+"`Troubleshoot <../how-to/troubleshoot>`.)"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:60
+msgid "Hold back fresh releases"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:62
+msgid ""
+"A brand-new release is the one most likely to be broken or compromised. "
+"Install the next tool a week behind the index:"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:64
+msgid ""
+"$ pipx install --cooldown 7 black\n"
+"  installed package black 24.8.0, Python 3.12.3\n"
+"  These apps are now globally available\n"
+"    - black\n"
+"    - blackd\n"
+"done! ✨ 🌟 ✨"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:73
+msgid ""
+"pipx remembers the number, so later upgrades of ``black`` keep the same "
+"seven-day lag without you repeating the flag. Set ``PIPX_COOLDOWN=7`` in "
+"your shell profile to get the same lag for every tool."
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:78
+msgid "Learn more"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:80
+msgid "``pipx install`` has more to offer once you outgrow the basics:"
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:82
+msgid ""
+":doc:`Expose apps <../how-to/expose-apps>`: hide or reveal commands with "
+"``expose`` / ``unexpose``, and pull apps out of dependencies with ``--"
+"include-deps``."
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:84
+msgid ""
+":doc:`Tool manifests <../how-to/tool-manifest>`: manage a set of tools with "
+"a ``pipx.toml`` manifest and PEP 751 lock files."
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:86
+msgid ""
+":doc:`Run scripts <../how-to/run-scripts>`: install a local PEP 723 script "
+"as a managed app."
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:87
+msgid ""
+":doc:`Use the uv backend <../how-to/use-uv-backend>`: swap pip for uv to "
+"resolve and install faster."
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:88
+msgid ""
+":doc:`Standalone Python <../how-to/standalone-python>`: install against a "
+"specific Python version, downloading one if needed."
+msgstr ""
+
+#: ../../../tutorial/install-applications.rst:90
+msgid ""
+":doc:`Dependency cooldown <../how-to/dependency-cooldown>`: set the release-"
+"age lag once with ``PIPX_COOLDOWN``."
+msgstr ""
