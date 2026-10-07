@@ -13,22 +13,22 @@
     },
     "zh_CN" : 
     {
-      "branch" : "",
+      "branch" : "main",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2026-10-05 16:32:29 -0700",
+        "hash" : "8a6f17742ab9133dd283def36fa128ef9c0df31e",
+        "title" : "[pre-commit.ci] pre-commit autoupdate (#2067)"
       }
     },
     "zh_TW" : 
     {
-      "branch" : "",
+      "branch" : "main",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2026-10-05 16:32:29 -0700",
+        "hash" : "8a6f17742ab9133dd283def36fa128ef9c0df31e",
+        "title" : "[pre-commit.ci] pre-commit autoupdate (#2067)"
       }
     }
   },

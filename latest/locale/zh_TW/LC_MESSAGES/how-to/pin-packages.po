@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/pin-packages.rst:3
+msgid "Pin packages"
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:5
+msgid ""
+"Hold an installation at its current version so upgrade and reinstall skip it "
+"until you unpin."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:9
+msgid "Pin it"
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:11
+msgid "$ pipx pin black"
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:15
+msgid ""
+"Pinned environments are skipped by ``pipx upgrade``, ``pipx upgrade-all``, "
+"and ``pipx reinstall``, so the app and its dependencies keep their versions "
+"until you unpin."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:18
+msgid ""
+"``pipx pin PACKAGE`` pins the main package and any injected packages in that "
+"environment."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:19
+msgid ""
+"``pipx pin PACKAGE --injected-only`` leaves the main package upgradable but "
+"pins every injected package."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:20
+msgid ""
+"``pipx pin PACKAGE --skip PKG_A PKG_B`` pins injected packages except the "
+"listed ones (implies ``--injected-only``)."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:21
+msgid ""
+"``pipx unpin PACKAGE`` re-enables upgrades for the package and anything "
+"pinned with it."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:23
+msgid ""
+"Pass ``--output json`` to read the changed and skipped packages from a "
+"script, or ``--quiet`` to omit confirmations."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:27
+msgid ""
+"pipx pins the main package and injected packages, not individual transitive "
+"dependencies. Pinning the main package freezes its whole dependency set, "
+"because pipx skips ``pip install --upgrade`` for that environment. For how "
+"pipx records this metadata, see :doc:`../explanation/how-pipx-works`."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:33
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:35
+msgid "$ pipx list --pinned"
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:39
+msgid "Add ``--include-injected`` to also list pinned injected packages."
+msgstr ""

@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/json-output.rst:3
+msgid "JSON output"
+msgstr ""
+
+#: ../../../reference/json-output.rst:5
+msgid ""
+"Most pipx commands accept ``--output json`` to print a single machine-"
+"readable result envelope on stdout instead of human-readable text. Selecting "
+"JSON suppresses the normal progress messages, so the envelope is the only "
+"thing on stdout."
+msgstr ""
+
+#: ../../../reference/json-output.rst:11
+msgid "Envelope"
+msgstr ""
+
+#: ../../../reference/json-output.rst:13
+msgid ""
+"The envelope is a JSON object with these keys (serialized with sorted keys):"
+msgstr ""
+
+#: ../../../reference/json-output.rst:19
+msgid "Key"
+msgstr ""
+
+#: ../../../reference/json-output.rst:20
+msgid "Value"
+msgstr ""
+
+#: ../../../reference/json-output.rst:21
+msgid "``pipx_result_version``"
+msgstr ""
+
+#: ../../../reference/json-output.rst:22
+msgid "Envelope schema version, currently ``\"1\"``."
+msgstr ""
+
+#: ../../../reference/json-output.rst:23
+msgid "``command``"
+msgstr ""
+
+#: ../../../reference/json-output.rst:24
+msgid ""
+"The command tokens as a list, for example ``[\"install\"]`` or ``[\"cache\", "
+"\"dir\"]``."
+msgstr ""
+
+#: ../../../reference/json-output.rst:25
+msgid "``status``"
+msgstr ""
+
+#: ../../../reference/json-output.rst:26
+msgid ""
+"``\"success\"`` when there are no errors, ``\"partial\"`` when the run both "
+"succeeded somewhere and recorded errors, ``\"error\"`` otherwise."
+msgstr ""
+
+#: ../../../reference/json-output.rst:28
+msgid "``exit_code``"
+msgstr ""
+
+#: ../../../reference/json-output.rst:29
+msgid "The integer process exit code (see :doc:`exit-codes`)."
+msgstr ""
+
+#: ../../../reference/json-output.rst:30
+msgid "``data``"
+msgstr ""
+
+#: ../../../reference/json-output.rst:31
+msgid "Command-specific payload object. Its fields depend on the command."
+msgstr ""
+
+#: ../../../reference/json-output.rst:32
+msgid "``errors``"
+msgstr ""
+
+#: ../../../reference/json-output.rst:33
+msgid ""
+"List of error objects. Each has ``code``, ``message``, and the optional "
+"identity fields ``environment`` and ``package``."
+msgstr ""
+
+#: ../../../reference/json-output.rst:36
+msgid ""
+"{\n"
+"  \"pipx_result_version\": \"1\",\n"
+"  \"command\": [\"install\"],\n"
+"  \"status\": \"success\",\n"
+"  \"exit_code\": 0,\n"
+"  \"data\": {},\n"
+"  \"errors\": []\n"
+"}"
+msgstr ""
+
+#: ../../../reference/json-output.rst:47
+msgid ""
+"A dispatch failure on a JSON-enabled command still speaks the envelope: it "
+"prints a ``status`` of ``\"error\"`` with a single error whose ``code`` is "
+"``pipx_error``, and exits ``1``."
+msgstr ""
+
+#: ../../../reference/json-output.rst:52
+msgid "Supported commands"
+msgstr ""
+
+#: ../../../reference/json-output.rst:54
+msgid ""
+"``--output json`` is available on: ``install``, ``inject``, ``uninject``, "
+"``expose``, ``unexpose``, ``pin``, ``unpin``, ``upgrade``, ``upgrade-all``, "
+"``upgrade-shared``, ``uninstall``, ``uninstall-all``, ``reinstall``, "
+"``reinstall-all``, ``reset``, ``health``, ``repair``, ``manifest lock``, "
+"``manifest sync``, ``interpreter list``, ``interpreter prune``, "
+"``interpreter upgrade``, ``cache dir``, and ``cache purge``."
+msgstr ""
+
+#: ../../../reference/json-output.rst:59
+msgid ""
+"It is not available on ``install-all``, ``run``, ``exec``, ``runpip``, "
+"``ensurepath``, ``environment``, ``completions``, or ``help``."
+msgstr ""
+
+#: ../../../reference/json-output.rst:64
+msgid "``list`` is different"
+msgstr ""
+
+#: ../../../reference/json-output.rst:66
+msgid ""
+"``pipx list --output json`` does not emit the result envelope. It prints the "
+"installed-package snapshot that ``install-all`` reads back: an object with "
+"``pipx_spec_version`` and a ``venvs`` map of environment name to its "
+"metadata (see :doc:`metadata`). ``pipx list --json`` is a legacy alias for "
+"the same snapshot."
+msgstr ""
+
+#: ../../../reference/json-output.rst:70
+msgid ""
+"$ pipx list --output json > pipx.json\n"
+"$ pipx install-all pipx.json"
+msgstr ""
+
+#: ../../../reference/json-output.rst:75
+msgid ""
+"``--json`` is a legacy alias only on ``list``; every other command uses ``--"
+"output json``."
+msgstr ""

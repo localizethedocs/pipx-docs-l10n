@@ -1,0 +1,3513 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../changelog.rst:3
+msgid "Changelog"
+msgstr ""
+
+#: ../../../changelog.rst:5
+msgid "All notable changes to this project will be documented in this file."
+msgstr ""
+
+#: ../../../changelog.rst:7
+msgid ""
+"The format is based on `Keep a Changelog <https://keepachangelog.com/"
+"en/1.0.0/>`_, and this project adheres to `Semantic Versioning <https://"
+"semver.org/spec/v2.0.0.html>`_."
+msgstr ""
+
+#: ../../../changelog.rst:10
+msgid ""
+"This project uses `towncrier <https://towncrier.readthedocs.io/>`_ for "
+"keeping the changelog. DO NOT commit any changes to this file."
+msgstr ""
+
+#: ../../../[towncrier-fragments]:2
+msgid ""
+"`Unreleased <https://github.com/pypa/pipx/tree/Unreleased>`_ - 2026-10-07"
+msgstr ""
+
+#: ../../../[towncrier-fragments]:4
+msgid "No significant changes."
+msgstr ""
+
+#: ../../../changelog.rst:18
+msgid "`1.17.11 <https://github.com/pypa/pipx/tree/1.17.11>`_ - 2026-10-03"
+msgstr ""
+
+#: ../../../changelog.rst:21 ../../../changelog.rst:80
+#: ../../../changelog.rst:121 ../../../changelog.rst:182
+#: ../../../changelog.rst:199 ../../../changelog.rst:238
+#: ../../../changelog.rst:259 ../../../changelog.rst:490
+#: ../../../changelog.rst:550 ../../../changelog.rst:571
+#: ../../../changelog.rst:652 ../../../changelog.rst:730
+#: ../../../changelog.rst:764 ../../../changelog.rst:804
+#: ../../../changelog.rst:848 ../../../changelog.rst:877
+#: ../../../changelog.rst:922 ../../../changelog.rst:936
+#: ../../../changelog.rst:949 ../../../changelog.rst:994
+#: ../../../changelog.rst:1034 ../../../changelog.rst:1066
+msgid "Improved Documentation"
+msgstr ""
+
+#: ../../../changelog.rst:23
+msgid ""
+"Hide the extra documentation TOC toggle on narrow screens. (:issue:`2064`)"
+msgstr ""
+
+#: ../../../changelog.rst:27
+msgid "`1.17.10 <https://github.com/pypa/pipx/tree/1.17.10>`_ - 2026-10-02"
+msgstr ""
+
+#: ../../../changelog.rst:30 ../../../changelog.rst:44
+#: ../../../changelog.rst:54 ../../../changelog.rst:63
+#: ../../../changelog.rst:73 ../../../changelog.rst:90
+#: ../../../changelog.rst:99 ../../../changelog.rst:110
+#: ../../../changelog.rst:130 ../../../changelog.rst:139
+#: ../../../changelog.rst:163 ../../../changelog.rst:174
+#: ../../../changelog.rst:191 ../../../changelog.rst:209
+#: ../../../changelog.rst:221 ../../../changelog.rst:230
+#: ../../../changelog.rst:253 ../../../changelog.rst:268
+#: ../../../changelog.rst:279 ../../../changelog.rst:364
+#: ../../../changelog.rst:513 ../../../changelog.rst:523
+#: ../../../changelog.rst:544 ../../../changelog.rst:564
+#: ../../../changelog.rst:623 ../../../changelog.rst:644
+#: ../../../changelog.rst:660 ../../../changelog.rst:679
+#: ../../../changelog.rst:702 ../../../changelog.rst:719
+#: ../../../changelog.rst:738 ../../../changelog.rst:754
+#: ../../../changelog.rst:786 ../../../changelog.rst:836
+#: ../../../changelog.rst:871 ../../../changelog.rst:895
+#: ../../../changelog.rst:906 ../../../changelog.rst:927
+#: ../../../changelog.rst:957 ../../../changelog.rst:1005
+#: ../../../changelog.rst:1014 ../../../changelog.rst:1040
+#: ../../../changelog.rst:1061 ../../../changelog.rst:1085
+msgid "Bugfixes"
+msgstr ""
+
+#: ../../../changelog.rst:32
+msgid ""
+"Remove an environment that has no pipx metadata and an interpreter that no "
+"longer runs, instead of crashing `pipx uninstall` and `pipx uninstall-all`. "
+"(:issue:`2059`)"
+msgstr ""
+
+#: ../../../changelog.rst:34
+msgid ""
+"Derive local script command names from the filename when parent directories "
+"contain `#`. A script installed by an earlier release under its directory's "
+"name no longer upgrades; uninstall it and install it again. (:issue:`2060`)"
+msgstr ""
+
+#: ../../../changelog.rst:36
+msgid ""
+"Install a local PEP 723 script from its file when the path reads as a PyPI "
+"name (`pipx install bare.py`), contains `[`, or starts with a quoted `~`, "
+"and stop the upgrade hint from suggesting a PyPI reinstall for a script. (:"
+"issue:`2062`)"
+msgstr ""
+
+#: ../../../changelog.rst:41
+msgid "`1.17.9 <https://github.com/pypa/pipx/tree/1.17.9>`_ - 2026-10-01"
+msgstr ""
+
+#: ../../../changelog.rst:46
+msgid ""
+"Stop adding ` -E` to an app script's shebang when the longer line would "
+"exceed the kernel's limit, which made the script fail on macOS with `Exec "
+"format error`. (:issue:`2058`)"
+msgstr ""
+
+#: ../../../changelog.rst:51
+msgid "`1.17.8 <https://github.com/pypa/pipx/tree/1.17.8>`_ - 2026-09-29"
+msgstr ""
+
+#: ../../../changelog.rst:56
+msgid ""
+"Remove leftover shell completion scripts when running `pipx uninject`. (:"
+"issue:`2055`)"
+msgstr ""
+
+#: ../../../changelog.rst:60
+msgid "`1.17.7 <https://github.com/pypa/pipx/tree/1.17.7>`_ - 2026-09-28"
+msgstr ""
+
+#: ../../../changelog.rst:65
+msgid ""
+"Prevent `pipx run` from sharing cached environments across different "
+"requirement lists or argument boundaries. This changes cache keys; run `pipx "
+"cache purge` to remove old entries. (:issue:`2053`)"
+msgstr ""
+
+#: ../../../changelog.rst:70
+msgid "`1.17.6 <https://github.com/pypa/pipx/tree/1.17.6>`_ - 2026-09-22"
+msgstr ""
+
+#: ../../../changelog.rst:75
+msgid ""
+"Record each tool's dependency group as its lock's default so `pipx manifest "
+"sync` installs what `pipx manifest lock` wrote. Run `pipx manifest lock` "
+"again to fix existing locks. (:issue:`2049`)"
+msgstr ""
+
+#: ../../../changelog.rst:82
+msgid ""
+"Fix the argument order in the combined inject command example. (:issue:"
+"`2044`)"
+msgstr ""
+
+#: ../../../changelog.rst:83
+msgid ""
+"Use direct URL requirements for the Git install example with extras. (:issue:"
+"`2045`)"
+msgstr ""
+
+#: ../../../changelog.rst:87
+msgid "`1.17.5 <https://github.com/pypa/pipx/tree/1.17.5>`_ - 2026-09-20"
+msgstr ""
+
+#: ../../../changelog.rst:92
+msgid ""
+"Report failed environments when running `pipx reinstall-all`. (:issue:`2042`)"
+msgstr ""
+
+#: ../../../changelog.rst:96
+msgid "`1.17.4 <https://github.com/pypa/pipx/tree/1.17.4>`_ - 2026-09-18"
+msgstr ""
+
+#: ../../../changelog.rst:101
+msgid ""
+"`pipx upgrade` of a package installed from a local path, wheel, or VCS URL "
+"no longer reports \"already at latest version\". It now says the package is "
+"unchanged because it is installed from a local source and that no package "
+"index was checked, and suggests reinstalling by package name to track index "
+"releases. (:issue:`2040`)"
+msgstr ""
+
+#: ../../../changelog.rst:107
+msgid "`1.17.3 <https://github.com/pypa/pipx/tree/1.17.3>`_ - 2026-09-16"
+msgstr ""
+
+#: ../../../changelog.rst:112
+msgid ""
+"Report a clear error when PIPX_MAX_LOGS is not a non-negative integer, "
+"instead of crashing on every pipx command. Empty or whitespace-only values "
+"fall back to the default everywhere, including log setup. (:issue:`2029`)"
+msgstr ""
+
+#: ../../../changelog.rst:114
+msgid ""
+"Split `--pip-args` the way a shell would, so a quoted path with spaces such "
+"as `--find-links '/tmp/foo bar'` reaches pip intact instead of failing to "
+"parse. On Windows pipx now drops the quotes around each argument and keeps "
+"backslashes as path separators. (:issue:`2033`)"
+msgstr ""
+
+#: ../../../changelog.rst:117
+msgid ""
+"Stop `pipx runpip` from printing uv DEBUG logs on the uv backend. (:issue:"
+"`2035`)"
+msgstr ""
+
+#: ../../../changelog.rst:123
+msgid ""
+"List every `--pip-args` flag the uv backend translates instead of only four. "
+"(:issue:`2037`)"
+msgstr ""
+
+#: ../../../changelog.rst:127
+msgid "`1.17.2 <https://github.com/pypa/pipx/tree/1.17.2>`_ - 2026-09-01"
+msgstr ""
+
+#: ../../../changelog.rst:132
+msgid ""
+"Fix `KeyError` stderr noise when installing packages in Python3.15. (:issue:"
+"`2026`)"
+msgstr ""
+
+#: ../../../changelog.rst:136
+msgid "`1.17.1 <https://github.com/pypa/pipx/tree/1.17.1>`_ - 2026-08-30"
+msgstr ""
+
+#: ../../../changelog.rst:141
+msgid ""
+"`pipx environment` now reports `PIPX_MAX_LOGS`, and `pipx environment --"
+"value PIPX_MAX_LOGS` no longer exits with `invalid choice`. (:issue:`2024`)"
+msgstr ""
+
+#: ../../../changelog.rst:146 ../../../changelog.rst:244
+msgid "Miscellaneous internal changes"
+msgstr ""
+
+#: ../../../changelog.rst:148
+msgid ":issue:`2021`, :issue:`2025`"
+msgstr ""
+
+#: ../../../changelog.rst:152
+msgid "`1.17.0 <https://github.com/pypa/pipx/tree/1.17.0>`_ - 2026-08-29"
+msgstr ""
+
+#: ../../../changelog.rst:155 ../../../changelog.rst:290
+#: ../../../changelog.rst:507 ../../../changelog.rst:538
+#: ../../../changelog.rst:558 ../../../changelog.rst:579
+#: ../../../changelog.rst:613 ../../../changelog.rst:639
+#: ../../../changelog.rst:673 ../../../changelog.rst:697
+#: ../../../changelog.rst:712 ../../../changelog.rst:746
+#: ../../../changelog.rst:772 ../../../changelog.rst:815
+#: ../../../changelog.rst:887 ../../../changelog.rst:915
+#: ../../../changelog.rst:944 ../../../changelog.rst:965
+#: ../../../changelog.rst:1023 ../../../changelog.rst:1048
+#: ../../../changelog.rst:1077
+msgid "Features"
+msgstr ""
+
+#: ../../../changelog.rst:157
+msgid ""
+"Add `PIPX_COOLDOWN`, a default for `--cooldown` on `install`, `install-all`, "
+"`inject`, `upgrade`, `upgrade-all` and `run`, so one release-age policy "
+"covers every command. An explicit `--cooldown` still wins, `--cooldown 0` "
+"opts a single command out, and a locked install ignores the variable rather "
+"than failing. (:issue:`2014`)"
+msgstr ""
+
+#: ../../../changelog.rst:165
+msgid ""
+"Require `packaging>=26`. Earlier releases serialize a direct reference as "
+"`name@ url` rather than PEP 508's `name @ url`, so the specifier pipx "
+"recorded in `pipx_metadata.json` and passed to the backend depended on which "
+"`packaging` happened to be installed. (:issue:`2015`)"
+msgstr ""
+
+#: ../../../changelog.rst:171
+msgid "`1.16.8 <https://github.com/pypa/pipx/tree/1.16.8>`_ - 2026-08-25"
+msgstr ""
+
+#: ../../../changelog.rst:176
+msgid ""
+"`pipx run --spec <spec> <app>` on the uv backend builds a pipx-managed venv "
+"when `<app>` differs from the spec's normalized distribution name, or when "
+"the spec carries no name at all, so pipx honors the package's `[pipx.run]` "
+"entry point. An `<app>` that matches the name still runs through `uv tool "
+"run`, which sees console scripts only. (:issue:`2004`)"
+msgstr ""
+
+#: ../../../changelog.rst:184
+msgid ""
+"The CLI reference in the documentation now shows `pipx run` instead of "
+"`sphinx-build run`. (:issue:`2005`)"
+msgstr ""
+
+#: ../../../changelog.rst:188
+msgid "`1.16.7 <https://github.com/pypa/pipx/tree/1.16.7>`_ - 2026-08-13"
+msgstr ""
+
+#: ../../../changelog.rst:193
+msgid ""
+"Fix pipx not being able to discover packages in separated platlib "
+"directories. (:issue:`1999`)"
+msgstr ""
+
+#: ../../../changelog.rst:194
+msgid ""
+"Retry transient failures when fetching the python-build-standalone release "
+"index and downloading interpreter archives, resuming an interrupted archive "
+"download from the bytes already received instead of starting over. (:issue:"
+"`2001`)"
+msgstr ""
+
+#: ../../../changelog.rst:201
+msgid ""
+"Correct the documented Windows default for `PIPX_HOME`, which resolves to "
+"`%LOCALAPPDATA%\\pipx\\pipx` rather than `%LOCALAPPDATA%\\pipx`. (:issue:"
+"`2002`)"
+msgstr ""
+
+#: ../../../changelog.rst:206
+msgid "`1.16.6 <https://github.com/pypa/pipx/tree/1.16.6>`_ - 2026-08-04"
+msgstr ""
+
+#: ../../../changelog.rst:211
+msgid ""
+"Stop appending a second `.exe` on Windows to the app name `pipx run` infers. "
+"(:issue:`1189`)"
+msgstr ""
+
+#: ../../../changelog.rst:212
+msgid ""
+"Run the console script a package declares when `pipx run` infers the app "
+"name from a VCS URL, a local path, or a name it normalized, instead of "
+"passing a guess to `uv tool run`. Reusing that venv no longer reinstalls the "
+"package on every run. (:issue:`1994`)"
+msgstr ""
+
+#: ../../../changelog.rst:218
+msgid "`1.16.5 <https://github.com/pypa/pipx/tree/1.16.5>`_ - 2026-07-29"
+msgstr ""
+
+#: ../../../changelog.rst:223
+msgid ""
+"Honor the version specifier when `pipx upgrade --install` installs a missing "
+"package. (:issue:`1987`)"
+msgstr ""
+
+#: ../../../changelog.rst:227
+msgid "`1.16.4 <https://github.com/pypa/pipx/tree/1.16.4>`_ - 2026-07-29"
+msgstr ""
+
+#: ../../../changelog.rst:232
+msgid ""
+"Bundle `colorama` and `tomli` in the zipapp so the single `pipx.pyz` works "
+"on Windows and on Python 3.10. (:issue:`1978`, :issue:`1984`)"
+msgstr ""
+
+#: ../../../changelog.rst:233
+msgid ""
+"Fix the Release Notes link published in package metadata. (:issue:`1980`)"
+msgstr ""
+
+#: ../../../changelog.rst:234
+msgid ""
+"`PIPX_MAX_LOGS=0` now prunes the log files instead of keeping all of them. (:"
+"issue:`1988`)"
+msgstr ""
+
+#: ../../../changelog.rst:240
+msgid ""
+"Fix the documentation links that 404 after the Sphinx move, including the "
+"PyPI Release Notes link. (:issue:`1980`)"
+msgstr ""
+
+#: ../../../changelog.rst:246
+msgid ":issue:`1989`"
+msgstr ""
+
+#: ../../../changelog.rst:250
+msgid "`1.16.3 <https://github.com/pypa/pipx/tree/1.16.3>`_ - 2026-07-26"
+msgstr ""
+
+#: ../../../changelog.rst:255
+msgid ""
+"Allow read-only global list commands when venv lock files are inaccessible. "
+"(:issue:`1974`)"
+msgstr ""
+
+#: ../../../changelog.rst:261
+msgid ""
+"Direct Linux users to PEP 668-compatible installation methods. (:issue:"
+"`1976`)"
+msgstr ""
+
+#: ../../../changelog.rst:265
+msgid "`1.16.2 <https://github.com/pypa/pipx/tree/1.16.2>`_ - 2026-07-21"
+msgstr ""
+
+#: ../../../changelog.rst:270
+msgid ""
+"Stop venv inspection from crashing on Python 3.15 when a `dist-info` "
+"directory has no `Name` metadata field. `importlib.metadata` now raises "
+"`KeyError` for missing metadata keys instead of returning `None`; such "
+"distributions are skipped again, as on earlier Python versions. (:issue:"
+"`1971`)"
+msgstr ""
+
+#: ../../../changelog.rst:276
+msgid "`1.16.1 <https://github.com/pypa/pipx/tree/1.16.1>`_ - 2026-07-20"
+msgstr ""
+
+#: ../../../changelog.rst:281
+msgid ""
+"Stop `install` and `list` from crashing when the pipx bin directory contains "
+"an executable pipx did not create. Scanning for launcher ownership decoded "
+"arbitrary binary content as an interpreter path, which raised "
+"`UnicodeDecodeError` on Windows, or `ValueError` for a path holding a NUL "
+"byte. Such a file is now treated as not owned by the venv. (:issue:`1965`)"
+msgstr ""
+
+#: ../../../changelog.rst:287
+msgid "`1.16.0 <https://github.com/pypa/pipx/tree/1.16.0>`_ - 2026-07-15"
+msgstr ""
+
+#: ../../../changelog.rst:292
+msgid "Add `pipx list --outdated` and JSON output. (:issue:`149`)"
+msgstr ""
+
+#: ../../../changelog.rst:293
+msgid ""
+"Honour the `requires-python` a package declares. When the default "
+"interpreter fails it, pipx looks for one on the system that satisfies it and "
+"builds the environment there, so `pipx install mytool` no longer needs the "
+"user to work out the right `--python`. Pass `--fetch-python=missing` to let "
+"pipx download a matching interpreter when the system carries none, and name "
+"`--python` yourself to keep the last word. (:issue:`387`)"
+msgstr ""
+
+#: ../../../changelog.rst:297
+msgid "Normalize inferred `pipx run` package names. (:issue:`618`)"
+msgstr ""
+
+#: ../../../changelog.rst:298
+msgid "Allow `pipx list` to select installed packages by name. (:issue:`640`)"
+msgstr ""
+
+#: ../../../changelog.rst:299
+msgid "Add `--output` to structured commands. (:issue:`828`)"
+msgstr ""
+
+#: ../../../changelog.rst:300
+msgid ""
+"Freeze the structured result envelope at `pipx_result_version` 1. Every `--"
+"output json` document now carries the command as a list of CLI tokens, a "
+"`status` of `success`, `partial`, or `error`, the process `exit_code`, the "
+"command `data`, and a top-level `errors` list whose entries each have a "
+"stable `code` and `message` alongside the `environment` and `package` they "
+"concern. A failure that stops a command before it builds a result renders "
+"the same envelope. (:issue:`828`)"
+msgstr ""
+
+#: ../../../changelog.rst:304
+msgid "Add quiet and JSON output for package maintenance. (:issue:`828`)"
+msgstr ""
+
+#: ../../../changelog.rst:305
+msgid ""
+"Give `pipx reinstall` and `pipx reinstall-all` the structured output the "
+"other commands carry. They printed straight to the terminal, so `--quiet` "
+"left `uninstalled NAME!` behind and no `--output json` existed to read the "
+"result from a script. Both now report through the shared renderer. (:issue:"
+"`828`)"
+msgstr ""
+
+#: ../../../changelog.rst:308
+msgid ""
+"Give `pipx cache`, `pipx interpreter`, `pipx upgrade-shared`, `pipx manifest "
+"lock` and `pipx manifest sync` the structured output the other commands "
+"carry, so `--quiet` silences them and `--output json` hands a script the "
+"result. The `cache` and `interpreter` subcommands take `--quiet` and `--"
+"verbose` for the first time, since the shared options had passed them by. "
+"`pipx ensurepath` goes on printing its guidance, because its job is to tell "
+"a person what to add to a shell profile. (:issue:`828`)"
+msgstr ""
+
+#: ../../../changelog.rst:313
+msgid ""
+"Add `--output json` to `pipx inject` and `pipx uninject`. (:issue:`828`)"
+msgstr ""
+
+#: ../../../changelog.rst:314
+msgid "Infer the app name when running packages from VCS URLs. (:issue:`854`)"
+msgstr ""
+
+#: ../../../changelog.rst:315
+msgid "Stream installer output during verbose installs. (:issue:`1069`)"
+msgstr ""
+
+#: ../../../changelog.rst:316
+msgid ""
+"Draw the download progress bar of `pip` and `uv` during a plain `pipx "
+"install`, in place of the pipx spinner. pipx hands the installer a pseudo-"
+"terminal, which is the only way `uv` reports progress, and asks `uv` for its "
+"default output rather than the quiet one. A redirected stream keeps the "
+"previous behaviour. (:issue:`1069`)"
+msgstr ""
+
+#: ../../../changelog.rst:319
+msgid "Allow commands to skip shared-library maintenance. (:issue:`1278`)"
+msgstr ""
+
+#: ../../../changelog.rst:320
+msgid "Install PEP 723 scripts as persistent applications. (:issue:`1388`)"
+msgstr ""
+
+#: ../../../changelog.rst:321
+msgid ""
+"Point library install errors to `inject` and `--preinstall`. (:issue:`1411`)"
+msgstr ""
+
+#: ../../../changelog.rst:322
+msgid ""
+"Add commands to diagnose and repair broken environment interpreters. (:issue:"
+"`1442`)"
+msgstr ""
+
+#: ../../../changelog.rst:323
+msgid ""
+"Add explicit tool manifests with separate PEP 751 locks. (:issue:`1506`)"
+msgstr ""
+
+#: ../../../changelog.rst:324
+msgid ""
+"Add `pipx install --upgrade` to reconcile apps with package specs. (:issue:"
+"`1572`)"
+msgstr ""
+
+#: ../../../changelog.rst:325
+msgid ""
+"Expose the shell completion scripts a package ships, the way pipx already "
+"exposes its man pages. A wheel that installs into `share/bash-completion/"
+"completions`, `share/zsh/site-functions` or `share/fish/vendor_completions."
+"d` gets those files linked under `PIPX_COMPLETION_DIR`, which defaults to "
+"`~/.local/share`. `bash` and `fish` read those locations on their own; `zsh` "
+"needs the site-functions directory on its `fpath`. Uninstalling the package "
+"takes the links away. (:issue:`1604`)"
+msgstr ""
+
+#: ../../../changelog.rst:329
+msgid ""
+"Add `pipx reset`, which uninstalls every pipx-managed package and removes "
+"the shared libraries, the caches, the standalone interpreters, the logs and "
+"the trash, so pipx starts over from a fresh install. It asks before it "
+"removes anything, `--yes` answers for a script, and `--dry-run` lists what "
+"would go. (:issue:`1606`)"
+msgstr ""
+
+#: ../../../changelog.rst:332
+msgid "Add Python interpreter arguments to `pipx run`. (:issue:`1613`)"
+msgstr ""
+
+#: ../../../changelog.rst:333
+msgid ""
+"Add commands to hide and restore resources exposed from an environment. (:"
+"issue:`1645`)"
+msgstr ""
+
+#: ../../../changelog.rst:334
+msgid "Install the generated pipx manual page from wheels. (:issue:`1657`)"
+msgstr ""
+
+#: ../../../changelog.rst:335
+msgid "Add `pipx cache` and `pipx run --refresh`. (:issue:`1681`)"
+msgstr ""
+
+#: ../../../changelog.rst:336
+msgid "Add `--include-apps-from` for selected dependencies. (:issue:`1725`)"
+msgstr ""
+
+#: ../../../changelog.rst:337
+msgid ""
+"Add `pipx exec ENVIRONMENT APPLICATION` for installed environments. (:issue:"
+"`1726`)"
+msgstr ""
+
+#: ../../../changelog.rst:338
+msgid "Support injecting extras into a main package. (:issue:`1805`)"
+msgstr ""
+
+#: ../../../changelog.rst:339
+msgid "Install from PEP 751 lock files. (:issue:`1807`)"
+msgstr ""
+
+#: ../../../changelog.rst:340
+msgid "Add dependency cooldowns. (:issue:`1811`)"
+msgstr ""
+
+#: ../../../changelog.rst:341
+msgid ""
+"Validate requested apps and restore prior environments on failure. (:issue:"
+"`1908`)"
+msgstr ""
+
+#: ../../../changelog.rst:342
+msgid ""
+"Default `PIPX_HOME` to the platform data directory on macOS and Windows "
+"again, which restores `~/Library/Application Support/pipx` on macOS. "
+"`platformdirs` reads `XDG_DATA_HOME` and `XDG_CACHE_HOME` on macOS, so "
+"exporting those moves the pipx directories. A pipx home from an earlier "
+"release keeps working as a fallback. (:issue:`1946`)"
+msgstr ""
+
+#: ../../../changelog.rst:345
+msgid ""
+"Group the manifest commands under `pipx manifest`: use `pipx manifest lock` "
+"and `pipx manifest sync` in place of the top-level `pipx lock` and `pipx "
+"sync`. Keeping both verbs under one noun matches `pipx cache` and `pipx "
+"interpreter` and leaves the top-level command list about the manifest rather "
+"than two loose verbs."
+msgstr ""
+
+#: ../../../changelog.rst:348
+msgid ""
+"Keep `--json` only on `pipx list`, where it prints the versioned package "
+"snapshot that `install-all` reads back. Every other command dropped the `--"
+"json` alias in favour of `--output json`, so the snapshot format and the "
+"result envelope no longer share a flag."
+msgstr ""
+
+#: ../../../changelog.rst:351
+msgid ""
+"Name the existing-environment argument `ENVIRONMENT` across `inject`, "
+"`uninject`, `expose`, `unexpose`, `pin`, `unpin`, `uninstall`, `reinstall`, "
+"and `exec`, and fix the `uninject` help, which described the argument as the "
+"environment to inject into rather than uninject from."
+msgstr ""
+
+#: ../../../changelog.rst:354
+msgid ""
+"Record the interpreter and backend in the structured `install`, `upgrade`, "
+"and `upgrade-all` results, list `PIPX_GLOBAL_COMPLETION_DIR` in `pipx "
+"environment`, and show the shell-completion directory in `pipx list`. "
+"Completions had a global override that pipx honoured but never surfaced, and "
+"the records omitted which Python and backend produced a venv."
+msgstr ""
+
+#: ../../../changelog.rst:358
+msgid ""
+"Rename `--include-apps-from` to `--include-resources-from` and the manifest "
+"key to match. The option always exposed manual pages and shell completions "
+"alongside apps, so the new name describes what it does; `--include-apps` "
+"keeps its name. A venv recorded under the old key is migrated on read."
+msgstr ""
+
+#: ../../../changelog.rst:366
+msgid ""
+"Check a candidate interpreter's real patch version against `requires-"
+"python`. pipx matched only on the minor version, so it rejected an installed "
+"`3.13.7` for `>=3.13.5` and accepted `3.14.6` for `<3.14.1`. It now queries "
+"each resolved interpreter and keeps the first whose full version satisfies "
+"the constraint. (:issue:`387`)"
+msgstr ""
+
+#: ../../../changelog.rst:369
+msgid ""
+"Keep existing exposed files when copy-based environments provide the same "
+"resource name. (:issue:`540`)"
+msgstr ""
+
+#: ../../../changelog.rst:370
+msgid ""
+"Recover custom paths when pipx manages its own installation on Unix. (:issue:"
+"`774`)"
+msgstr ""
+
+#: ../../../changelog.rst:371
+msgid ""
+"Keep install failures in JSON with the correct environment. (:issue:`828`)"
+msgstr ""
+
+#: ../../../changelog.rst:372
+msgid ""
+"Show injected apps in `pipx list` on systems that copy launchers. (:issue:"
+"`997`)"
+msgstr ""
+
+#: ../../../changelog.rst:373
+msgid ""
+"Serialize shared-library maintenance across pipx processes. (:issue:`1056`)"
+msgstr ""
+
+#: ../../../changelog.rst:374
+msgid ""
+"Wait for an installation before listing its environment. (:issue:`1056`)"
+msgstr ""
+
+#: ../../../changelog.rst:375
+msgid ""
+"Draw the installer progress bar while the download runs. pipx reads the "
+"installer output over a pipe, which hid the terminal from `pip`, so `pip` "
+"held its bar back and printed a finished one once the download had ended. (:"
+"issue:`1069`)"
+msgstr ""
+
+#: ../../../changelog.rst:377
+msgid ""
+"Preserve symlinks in `PIPX_HOME` when creating environments. (:issue:`1327`)"
+msgstr ""
+
+#: ../../../changelog.rst:378
+msgid "Create Windows launchers for PEP 723 scripts. (:issue:`1388`)"
+msgstr ""
+
+#: ../../../changelog.rst:379
+msgid ""
+"Preserve the terminal encoding for applications started by `pipx run`. (:"
+"issue:`1423`)"
+msgstr ""
+
+#: ../../../changelog.rst:380
+msgid ""
+"Make `ensurepath --global` update the system PATH configuration instead of "
+"root's shell profiles. (:issue:`1452`)"
+msgstr ""
+
+#: ../../../changelog.rst:381
+msgid ""
+"Refresh `pipx_metadata.json` after `pipx runpip ... install` replaces the "
+"main package, so future `upgrade` and `reinstall` commands stop following a "
+"stale editable source path. (:issue:`1473`)"
+msgstr ""
+
+#: ../../../changelog.rst:383
+msgid ""
+"Accept bare local Git and Mercurial URLs such as `git+file:///path/to/"
+"repository@revision`. (:issue:`1583`)"
+msgstr ""
+
+#: ../../../changelog.rst:384
+msgid "Recreate the shared environment when pip cannot run. (:issue:`1606`)"
+msgstr ""
+
+#: ../../../changelog.rst:385
+msgid ""
+"Resolve local `--find-links` paths before pipx changes the working "
+"directory. (:issue:`1637`)"
+msgstr ""
+
+#: ../../../changelog.rst:386
+msgid ""
+"Keep pipx startup usable when locked files prevent trash cleanup. (:issue:"
+"`1847`)"
+msgstr ""
+
+#: ../../../changelog.rst:387
+msgid ""
+"Fix `pipx run --with` being silently dropped for PEP 723 scripts on the pip "
+"backend; the extra packages are now installed into the temporary venv. (:"
+"issue:`1850`)"
+msgstr ""
+
+#: ../../../changelog.rst:389
+msgid ""
+"Fix `pipx uninject` leaving the injected package's man page symlinks behind. "
+"(:issue:`1853`)"
+msgstr ""
+
+#: ../../../changelog.rst:390
+msgid ""
+"Preserve `--editable` when installing a local package after a non-local "
+"package. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:391
+msgid ""
+"Emit path warnings after logging setup for the active local or global "
+"context. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:392
+msgid ""
+"Treat empty values for pipx path environment variables as unset. (:issue:"
+"`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:393
+msgid ""
+"Apply a 30-second timeout to standalone Python index and archive network "
+"requests. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:394
+msgid ""
+"Enforce pip's minimum supported version when shared-library upgrades include "
+"a user pin. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:395
+msgid ""
+"Remove exposed apps that use a venv suffix when uninjecting packages. (:"
+"issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:396
+msgid ""
+"Report corrupt venv metadata as missing without aborting list and bulk "
+"commands. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:397
+msgid ""
+"Return user-set values for the advertised `pipx environment --value` "
+"choices. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:398
+msgid ""
+"Keep existing venv metadata when pipx cannot write its replacement. (:issue:"
+"`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:399
+msgid ""
+"Keep trash cleanup non-fatal during directory races and failed moves. (:"
+"issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:400
+msgid ""
+"List only packages whose pin state changed during `pipx unpin`. (:issue:"
+"`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:401
+msgid "Reject both Windows path separators in package names. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:402
+msgid ""
+"Resolve relative paths in attached `-c` and `-f` pip arguments before "
+"invoking pip. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:403
+msgid "Support standalone Python downloads on Windows ARM64. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:404
+msgid ""
+"Avoid import crashes when stderr or its encoding is unavailable. (:issue:"
+"`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:405
+msgid ""
+"Keep Windows uninject working while an exposed app runs. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:406
+msgid ""
+"Translate pip binary and trusted-host options to valid uv run arguments, and "
+"reject `--no-deps` before invoking uv. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:407
+msgid ""
+"Validate members before extracting a standalone Python archive on Python "
+"3.10.0-3.10.11, which predate tarfile's data filter. pipx now refuses any "
+"entry whose path or link target would escape the download directory instead "
+"of falling back to an unfiltered extraction. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:410
+msgid ""
+"Return a resolution error when standalone Python lacks a build for the "
+"current platform. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:411
+msgid ""
+"Prevent `install --force` from saving its internal `--force-reinstall` "
+"option in package metadata. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:412
+msgid ""
+"Continue bulk interpreter upgrades after finding a corrupt standalone "
+"interpreter. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:413
+msgid "Skip shared-library maintenance for no-op installs. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:414
+msgid ""
+"Compare metadata versions by parsed release components when selecting shared "
+"libraries. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:415
+msgid ""
+"Wait for the animation thread to stop before clearing its final frame. (:"
+"issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:416
+msgid ""
+"Preserve standalone archive extraction on Python 3.10 releases without the "
+"tar filter API. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:417
+msgid ""
+"Preserve noncanonical package prefixes when completing names of installed "
+"virtual environments. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:418
+msgid ""
+"Preserve stored pip arguments for injected packages during `pipx upgrade --"
+"include-injected`. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:419
+msgid ""
+"Preserve caller-owned pip arguments when creating the shared-library "
+"environment. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:420
+msgid ""
+"Use tar's data filter when extracting standalone Python archives for "
+"consistent safety. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:421
+msgid ""
+"Skip cache tag files when removing expired `pipx run` environments. (:issue:"
+"`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:422
+msgid "Allow forced installs in existing uv environments. (:issue:`1924`)"
+msgstr ""
+
+#: ../../../changelog.rst:423
+msgid ""
+"Store the venv cache and the logs in the platform cache and log directories "
+"on every platform, and keep them out of a pipx home that only exists for "
+"backwards compatibility. Setting `PIPX_HOME` still keeps both inside it. (:"
+"issue:`1946`)"
+msgstr ""
+
+#: ../../../changelog.rst:425
+msgid ""
+"Retry fetching a standalone Python build when GitHub's release CDN returns a "
+"transient error, so a momentary `5xx` or rate-limit response no longer fails "
+"the install. (:issue:`1960`)"
+msgstr ""
+
+#: ../../../changelog.rst:427
+msgid ""
+"Apply `pipx manifest lock` as all-or-nothing. When a manifest declares locks "
+"for several tools, pipx wrote the regenerated files one at a time, so a "
+"failure partway left some locks new and others old. Each target is now "
+"backed up before it is replaced and every applied lock is rolled back if any "
+"replacement fails."
+msgstr ""
+
+#: ../../../changelog.rst:430
+msgid ""
+"Apply a 30-second timeout and a 10 MiB size limit when downloading a remote "
+"`pipx run` or `pipx install` script, so a stalled or oversized URL can no "
+"longer hang pipx or exhaust memory. `pipx run` also accepts a script URL "
+"with a query string, such as `tool.py?raw=1`, by matching on the URL path."
+msgstr ""
+
+#: ../../../changelog.rst:433
+msgid ""
+"Gate a PyPI release on the test suite and validate the built artifacts "
+"before publishing. The release workflow now runs the full test matrix for "
+"the tagged commit, checks the distributions with `twine`, and confirms the "
+"built version matches the tag, so a broken build or a mismatched tag cannot "
+"reach PyPI."
+msgstr ""
+
+#: ../../../changelog.rst:436
+msgid ""
+"Honour a script's PEP 723 `requires-python` on the pip-backed `pipx run`. "
+"Without an explicit `--python`, pipx now picks an interpreter that satisfies "
+"the constraint, matching what the uv backend already does; with an explicit "
+"`--python` that fails the constraint it reports a clear error instead of "
+"running on an unsupported interpreter. A malformed inline metadata block now "
+"produces a readable message rather than a traceback."
+msgstr ""
+
+#: ../../../changelog.rst:440
+msgid ""
+"Include `pipx run --with` packages in the run-cache key. Because they were "
+"absent, `pipx run TOOL` and `pipx run --with EXTRA TOOL` shared one cached "
+"environment, so extras injected by one invocation leaked into later runs "
+"that asked for none. Each distinct set of extras now gets its own "
+"environment, and the extras are injected only when that environment is first "
+"built."
+msgstr ""
+
+#: ../../../changelog.rst:444
+msgid ""
+"Keep the backups that `install --force` and `reinstall` take while replacing "
+"an environment in pipx's trash rather than beside the live environments. A "
+"backup placed in the venvs directory was picked up as a broken environment "
+"by a concurrent `list` or `reinstall-all`; the trash shares the home's "
+"filesystem, so restoring a backup is still an atomic rename."
+msgstr ""
+
+#: ../../../changelog.rst:448
+msgid ""
+"Make a standalone Python upgrade atomic. pipx used to delete the existing "
+"interpreter before downloading its replacement, so a failed download or "
+"unpack left no interpreter at all. The new build is now staged beside the "
+"old one and swapped in only once it is complete, and a failed swap restores "
+"the previous build."
+msgstr ""
+
+#: ../../../changelog.rst:451
+msgid ""
+"Make the expired-cache sweep that runs before `pipx run` non-blocking. pipx "
+"used to wait for a lock on every other cached environment, so a concurrent "
+"`pipx run` whose install held one of those locks stalled the new run, a "
+"stall that lasted the whole install on Windows. The sweep now skips any "
+"environment another run is holding."
+msgstr ""
+
+#: ../../../changelog.rst:454
+msgid ""
+"Probe a `uv` found on `PATH` before using it, and bound every `uv --version` "
+"call with a timeout. A broken or hanging `uv` on `PATH` previously slipped "
+"past discovery and stalled the next command; pipx now skips such a binary "
+"and reports a clear error instead of hanging."
+msgstr ""
+
+#: ../../../changelog.rst:457
+msgid ""
+"Reject a `--suffix` that contains anything but letters, digits, and the "
+"characters `.` `_` `-` `+` `@`. A suffix is spliced straight into the names "
+"of the links pipx writes into `PIPX_BIN_DIR` and `PIPX_MAN_DIR`, so a value "
+"such as `/../../owned` could previously place those links outside pipx's own "
+"directories."
+msgstr ""
+
+#: ../../../changelog.rst:460
+msgid ""
+"Remove a dropped app or man page during upgrade only when pipx still owns "
+"the exposed file, so a command a user or another package replaced is left in "
+"place."
+msgstr ""
+
+#: ../../../changelog.rst:462
+msgid ""
+"Report `pipx expose` as a partial or failed operation when a resource cannot "
+"be linked because a foreign file already occupies its target name. The "
+"command previously claimed success while silently leaving those apps or "
+"manual pages unexposed; it now lists each conflict in the structured result "
+"and exits non-zero."
+msgstr ""
+
+#: ../../../changelog.rst:465
+msgid ""
+"Stop forcing `UV_NO_PROGRESS=1` on every uv call. The override silenced uv's "
+"progress bar even when pipx asked to draw one, and it ignored a "
+"`UV_NO_PROGRESS` already set in the environment. pipx now suppresses the bar "
+"only in quiet, JSON, and non-interactive runs, and defers to the caller's "
+"`UV_NO_PROGRESS` when it does want progress shown."
+msgstr ""
+
+#: ../../../changelog.rst:468
+msgid ""
+"Track exposed shell completions through the full environment lifecycle. "
+"Stale-resource cleanup during install, upgrade, and reinstall, the repair "
+"relink check, and the ownership filter now include completions alongside "
+"apps and manual pages, so a completion a package stops shipping is removed "
+"instead of lingering."
+msgstr ""
+
+#: ../../../changelog.rst:474
+msgid "Performance"
+msgstr ""
+
+#: ../../../changelog.rst:476
+msgid ""
+"Check upgrades in parallel and skip installs for current packages. (:issue:"
+"`1353`)"
+msgstr ""
+
+#: ../../../changelog.rst:477
+msgid ""
+"Index installed distributions during environment inspection. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:478
+msgid "Cache each managed environment's site-packages path. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:479
+msgid "Read environment metadata once per interpreter upgrade. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:480
+msgid ""
+"Cache shared-library validity checks within each pipx process. (:issue:"
+"`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:481
+msgid ""
+"List managed environments only when shell completion requests them. (:issue:"
+"`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:482
+msgid "Cache resolved pipx context paths. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:483
+msgid ""
+"Compute only the requested `pipx environment --value` entry. (:issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:484
+msgid ""
+"Reuse the `pipx run` PATH lookup when warning about an existing app. (:issue:"
+"`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:485
+msgid ""
+"Resolve the default Python interpreter on first use instead of import. (:"
+"issue:`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:486
+msgid ""
+"Inspect legacy environments once during uninstall and reinstall. (:issue:"
+"`1856`)"
+msgstr ""
+
+#: ../../../changelog.rst:492
+msgid ""
+"Document the pipx application scope and feature boundaries. (:issue:`177`)"
+msgstr ""
+
+#: ../../../changelog.rst:496 ../../../changelog.rst:602
+#: ../../../changelog.rst:858 ../../../changelog.rst:1000
+msgid "Deprecations and Removals"
+msgstr ""
+
+#: ../../../changelog.rst:498
+msgid ""
+"Remove the `PIPX_HOME_ALLOW_SPACE` environment variable and the warning "
+"about spaces in the pipx home path. `pip` and `uv` both write a `/bin/sh` "
+"wrapper as the shebang when the interpreter path contains a space, so "
+"applications installed into such a path run. (:issue:`1946`)"
+msgstr ""
+
+#: ../../../changelog.rst:504
+msgid "`1.15.0 <https://github.com/pypa/pipx/tree/1.15.0>`_ - 2026-06-24"
+msgstr ""
+
+#: ../../../changelog.rst:509
+msgid ""
+"Add a ``--dry-run`` flag to ``pipx ensurepath`` that reports which "
+"directories would be added to ``PATH`` without modifying ``PATH`` or any "
+"shell configuration file. (:issue:`1014`)"
+msgstr ""
+
+#: ../../../changelog.rst:515
+msgid ""
+"Fix ``pipx uninject`` for uv-backed environments, where uv lacks pip's "
+"``list --not-required`` option. Both backends now derive the not-required "
+"set from installed distribution metadata, so they behave identically, and a "
+"dependency pulled in only by another package's extra is kept instead of "
+"being treated as removable. (:issue:`1841`)"
+msgstr ""
+
+#: ../../../changelog.rst:520
+msgid "`1.14.1 <https://github.com/pypa/pipx/tree/1.14.1>`_ - 2026-06-17"
+msgstr ""
+
+#: ../../../changelog.rst:525
+msgid ""
+"Restore the original package if ``pipx reinstall-all`` is interrupted during "
+"reinstall. (:issue:`966`)"
+msgstr ""
+
+#: ../../../changelog.rst:526
+msgid "Allow importing ``pipx.util`` before ``pipx.paths``. (:issue:`1333`)"
+msgstr ""
+
+#: ../../../changelog.rst:527
+msgid ""
+"Ensure ``pipx inject --force`` reinstalls injected packages without "
+"persisting the force-reinstall option in package metadata. (:issue:`1545`)"
+msgstr ""
+
+#: ../../../changelog.rst:529
+msgid ""
+"Preserve installer errors when package-name detection fails during local "
+"package installs. (:issue:`1567`)"
+msgstr ""
+
+#: ../../../changelog.rst:530
+msgid ""
+"Expose manual pages for editable local package installs. (:issue:`1793`)"
+msgstr ""
+
+#: ../../../changelog.rst:531
+msgid ""
+"Fixed ``pipx pin <app> --injected-only`` so it can pin injected packages "
+"when the main app is already pinned. (:issue:`1835`)"
+msgstr ""
+
+#: ../../../changelog.rst:535
+msgid "`1.14.0 <https://github.com/pypa/pipx/tree/1.14.0>`_ - 2026-06-04"
+msgstr ""
+
+#: ../../../changelog.rst:540
+msgid ""
+"Add ``--no-path-check`` to ``pipx run`` to skip the warning when the app is "
+"already on ``PATH``. Useful for shim scripts that wrap ``pipx run <app>`` "
+"under the same name as the app. (:issue:`1824`)"
+msgstr ""
+
+#: ../../../changelog.rst:546
+msgid ""
+"Add regression coverage for ``pipx inject`` accepting ``--force`` before or "
+"after injected dependencies. (:issue:`1444`)"
+msgstr ""
+
+#: ../../../changelog.rst:552
+msgid ""
+"Use the bootstrap pipx executable when adding PATH in self-managed installs. "
+"(:issue:`1481`)"
+msgstr ""
+
+#: ../../../changelog.rst:555
+msgid "`1.13.0 <https://github.com/pypa/pipx/tree/1.13.0>`_ - 2026-05-30"
+msgstr ""
+
+#: ../../../changelog.rst:560
+msgid ""
+"Add ``PIPX_DISABLE_SHARED_LIBS_AUTO_UPGRADE`` to skip automatic shared "
+"library upgrades. (:issue:`1650`)"
+msgstr ""
+
+#: ../../../changelog.rst:561
+msgid ""
+"Update the error message in get-pipx.py; it is obsoleted, not deprecated. (:"
+"issue:`1813`)"
+msgstr ""
+
+#: ../../../changelog.rst:566
+msgid ""
+"Install app scripts with shebangs that ignore ``PYTHONPATH``. (:issue:`1584`)"
+msgstr ""
+
+#: ../../../changelog.rst:567
+msgid ""
+"Refresh cached standalone Python indexes written by older pipx versions "
+"before using ``--fetch-missing-python``. (:issue:`1774`)"
+msgstr ""
+
+#: ../../../changelog.rst:573
+msgid "Document how to clear cache warnings from ``runpip``. (:issue:`1802`)"
+msgstr ""
+
+#: ../../../changelog.rst:576
+msgid "`1.12.0 <https://github.com/pypa/pipx/tree/1.12.0>`_ - 2026-05-06"
+msgstr ""
+
+#: ../../../changelog.rst:581
+msgid ""
+"Add ``--fetch-python`` and ``PIPX_FETCH_PYTHON`` to control standalone "
+"Python downloads, with values ``always``, ``missing``, or ``never``. (:issue:"
+"`1663`)"
+msgstr ""
+
+#: ../../../changelog.rst:583
+msgid ""
+"Add an opt-in ``uv`` backend. Install ``pipx[uv]`` (or put ``uv`` on "
+"``PATH``) and pipx will create venvs with ``uv venv``, manage packages with "
+"``uv pip``, and run ephemeral apps via ``uv tool run``."
+msgstr ""
+
+#: ../../../changelog.rst:586
+msgid ""
+"**Default change:** when ``uv`` is reachable, pipx uses it for **new** venvs "
+"by default. Existing venvs keep their recorded backend; flipping a venv "
+"requires ``pipx reinstall NAME --backend X``. Set "
+"``PIPX_DEFAULT_BACKEND=pip`` to force pip even when uv is available, or pass "
+"``--backend pip`` per command. ``pipx install pip`` always picks the pip "
+"backend (uv venvs have no pip)."
+msgstr ""
+
+#: ../../../changelog.rst:591
+msgid ""
+"Selection precedence: ``--backend`` > recorded venv metadata > "
+"``PIPX_DEFAULT_BACKEND`` > auto-detect. The env var sits *below* metadata so "
+"setting ``PIPX_DEFAULT_BACKEND=uv`` does not silently retarget existing pip-"
+"backed venvs; the recorded backend wins until you flip it explicitly. ``pipx "
+"environment`` exposes the resolved backend and its source as "
+"``PIPX_RESOLVED_BACKEND`` and ``PIPX_BACKEND_SOURCE``."
+msgstr ""
+
+#: ../../../changelog.rst:596
+msgid ""
+"**Metadata version bump:** the venv metadata file format moves from ``0.5`` "
+"to ``0.6`` to record the chosen backend. Running this pipx version against "
+"an existing venv rewrites its metadata to ``0.6`` on the next install/"
+"upgrade. If you downgrade pipx after that, the older version raises "
+"``Unknown metadata version 0.6`` and you'll need to reinstall the affected "
+"venvs from the older pipx (``pipx reinstall NAME``). (:issue:`1808`)"
+msgstr ""
+
+#: ../../../changelog.rst:604
+msgid ""
+"Deprecate ``--fetch-missing-python`` and ``PIPX_FETCH_MISSING_PYTHON``; both "
+"are now aliases for ``--fetch-python=missing`` / "
+"``PIPX_FETCH_PYTHON=missing``. ``PIPX_FETCH_MISSING_PYTHON=0`` (and other "
+"falsy values) now disables fetching, where previously any value enabled it. "
+"The ``pipx.interpreter.find_python_interpreter`` keyword "
+"``fetch_missing_python: bool`` is replaced by ``fetch_python: "
+"FetchPythonOptions``. (:issue:`1663`)"
+msgstr ""
+
+#: ../../../changelog.rst:610
+msgid "`1.11.2 <https://github.com/pypa/pipx/tree/1.11.2>`_ - 2026-05-05"
+msgstr ""
+
+#: ../../../changelog.rst:615
+msgid ""
+"Add ``pipx help`` and ``pipx help <command>`` aliases for existing help "
+"output. (:issue:`1535`)"
+msgstr ""
+
+#: ../../../changelog.rst:616
+msgid "Drop support for Python 3.9. (:issue:`1786`)"
+msgstr ""
+
+#: ../../../changelog.rst:617
+msgid ""
+"Replace if/elif command dispatch in main.py with argparse set_defaults. (:"
+"issue:`1794`)"
+msgstr ""
+
+#: ../../../changelog.rst:620
+msgid "`1.11.1 <https://github.com/pypa/pipx/tree/1.11.1>`_ - 2026-03-31"
+msgstr ""
+
+#: ../../../changelog.rst:625
+msgid ""
+"Ignore ``PIP_TARGET`` environment variable to prevent pip from installing "
+"outside the venv. (:issue:`735`)"
+msgstr ""
+
+#: ../../../changelog.rst:626
+msgid ""
+"Fix ``pipx install`` failing on Windows when the username contains non-Latin "
+"characters (e.g. cyrillic, Chinese). (:issue:`780`)"
+msgstr ""
+
+#: ../../../changelog.rst:628
+msgid ""
+"Show installed version and suggest ``upgrade`` when ``install`` detects an "
+"existing installation. (:issue:`795`)"
+msgstr ""
+
+#: ../../../changelog.rst:629
+msgid ""
+"``--verbose`` and ``--quiet`` flags before the subcommand are no longer "
+"silently ignored. (:issue:`1282`)"
+msgstr ""
+
+#: ../../../changelog.rst:630
+msgid ""
+"Remove dependency app symlinks when uninjecting a package that was injected "
+"with ``--include-deps``. (:issue:`1364`)"
+msgstr ""
+
+#: ../../../changelog.rst:631
+msgid ""
+"Remove ``setuptools`` from shared libs to prevent version conflicts when app "
+"venvs use a different Python. (:issue:`1539`)"
+msgstr ""
+
+#: ../../../changelog.rst:633
+msgid ""
+"Prevent ``uninject`` from removing dependencies still needed by other "
+"packages in the venv. (:issue:`1672`)"
+msgstr ""
+
+#: ../../../changelog.rst:636
+msgid "`1.11.0 <https://github.com/pypa/pipx/tree/1.11.0>`_ - 2026-03-23"
+msgstr ""
+
+#: ../../../changelog.rst:641
+msgid ""
+"Add ``PIPX_MAX_LOGS`` environment variable to configure the maximum number "
+"of log files to keep. (:issue:`1570`)"
+msgstr ""
+
+#: ../../../changelog.rst:646
+msgid "Allow ``--pip-args`` to be passed to ``upgrade-all``. (:issue:`1503`)"
+msgstr ""
+
+#: ../../../changelog.rst:647
+msgid ""
+"Fix ``--pip-args='-c <url>'`` breaking when constraint target is a URL "
+"instead of a local path. (:issue:`1582`)"
+msgstr ""
+
+#: ../../../changelog.rst:648
+msgid ""
+"Enable keyring authentication for private package indexes by setting "
+"``PIP_KEYRING_PROVIDER=subprocess`` (:issue:`1603`)"
+msgstr ""
+
+#: ../../../changelog.rst:649
+msgid "Added error handling for ``pip list`` command failures (:issue:`1698`)"
+msgstr ""
+
+#: ../../../changelog.rst:654
+msgid ""
+"Remove outdated \"experimental\" note from ``--suffix`` help text. (:issue:"
+"`1621`)"
+msgstr ""
+
+#: ../../../changelog.rst:657
+msgid "`1.10.1 <https://github.com/pypa/pipx/tree/1.10.1>`_ - 2026-03-20"
+msgstr ""
+
+#: ../../../changelog.rst:662
+msgid ""
+"Use stored pip_args from install metadata when running ``pipx upgrade`` "
+"without explicit ``--pip-args`` (:issue:`1441`)"
+msgstr ""
+
+#: ../../../changelog.rst:663
+msgid ""
+"Fix ``--global`` flag being silently ignored when placed before the "
+"subcommand (:issue:`1443`)"
+msgstr ""
+
+#: ../../../changelog.rst:664
+msgid ""
+"Respect ``--quiet`` flag in ``install`` and suppress animations and success "
+"messages (:issue:`1508`)"
+msgstr ""
+
+#: ../../../changelog.rst:665
+msgid ""
+"Catch missing Python interpreter in ``upgrade`` and show helpful error "
+"instead of crashing (:issue:`1602`)"
+msgstr ""
+
+#: ../../../changelog.rst:666
+msgid ""
+"Prevent data loss by rejecting relative paths in ``uninstall``, "
+"``reinstall``, and other package-name arguments (:issue:`1718`)"
+msgstr ""
+
+#: ../../../changelog.rst:670
+msgid "`1.10.0 <https://github.com/pypa/pipx/tree/1.10.0>`_ - 2026-03-18"
+msgstr ""
+
+#: ../../../changelog.rst:675
+msgid ""
+"Add ``--with`` flag to ``pipx run`` to allow injecting dependencies (:issue:"
+"`1607`)"
+msgstr ""
+
+#: ../../../changelog.rst:676
+msgid ""
+"add more specific directions in the logs towards a resolution if you have a "
+"space in the PIX_HOME path (:issue:`1634`)"
+msgstr ""
+
+#: ../../../changelog.rst:681
+msgid ""
+"Fixed upgrade command failing when package name includes extras (e.g., "
+"``pipx upgrade \"coverage[toml]\"``). (:issue:`925`)"
+msgstr ""
+
+#: ../../../changelog.rst:683
+msgid ""
+"Fix run command with bash substitution (e.g. ``pipx run <(pbpaste)``) (:"
+"issue:`1293`)"
+msgstr ""
+
+#: ../../../changelog.rst:684
+msgid "Allow ``pipx runpip`` to split single string arguments. (:issue:`1520`)"
+msgstr ""
+
+#: ../../../changelog.rst:685
+msgid ""
+"Fix handling of shared libraries when the original Python interpreter is "
+"removed on Windows by detecting stale venv references and recreating the "
+"shared libraries with the current Python. (:issue:`1723`)"
+msgstr ""
+
+#: ../../../changelog.rst:689 ../../../changelog.rst:863
+msgid "Misc"
+msgstr ""
+
+#: ../../../changelog.rst:691
+msgid ":issue:`1638`, :issue:`1731`"
+msgstr ""
+
+#: ../../../changelog.rst:694
+msgid "`1.9.0 <https://github.com/pypa/pipx/tree/1.9.0>`_ - 2026-03-17"
+msgstr ""
+
+#: ../../../changelog.rst:699
+msgid ""
+"Add completion choices for ``pipx environment --value``. (:issue:`1498`)"
+msgstr ""
+
+#: ../../../changelog.rst:704
+msgid "Ignore recursive symlink loops in PIPX_BIN_DIR. (:issue:`1592`)"
+msgstr ""
+
+#: ../../../changelog.rst:705
+msgid ""
+"``pipx reinstall``: An exception will now be raised if package is pinned. (:"
+"issue:`1611`)"
+msgstr ""
+
+#: ../../../changelog.rst:706
+msgid ""
+"Stop ``pipx run`` from leaving bad temporary venvs when first installation "
+"was unsuccessful. (:issue:`1709`)"
+msgstr ""
+
+#: ../../../changelog.rst:709
+msgid "`1.8.0 <https://github.com/pypa/pipx/tree/1.8.0>`_ - 2025-09-30"
+msgstr ""
+
+#: ../../../changelog.rst:714
+msgid ""
+"Rename environmental variable ``USE_EMOJI`` to ``PIPX_USE_EMOJI``. (:issue:"
+"`1395`)"
+msgstr ""
+
+#: ../../../changelog.rst:715
+msgid "Add ``--all-shells`` flag to ``pipx ensurepath``. (:issue:`1585`)"
+msgstr ""
+
+#: ../../../changelog.rst:716
+msgid "Add support for Python 3.13 (:issue:`1647`)"
+msgstr ""
+
+#: ../../../changelog.rst:721
+msgid ""
+"On Windows, no longer overwrite existing files on upgrade if source and "
+"destination are the same (:issue:`683`)"
+msgstr ""
+
+#: ../../../changelog.rst:722
+msgid ""
+"Update the logic of finding python interpreter such that ``--fetch-missing-"
+"python`` works on Windows (:issue:`1521`)"
+msgstr ""
+
+#: ../../../changelog.rst:723
+msgid ""
+"Fix no message displayed when no packages are upgraded with ``upgrade-all``. "
+"(:issue:`1565`)"
+msgstr ""
+
+#: ../../../changelog.rst:724
+msgid ""
+"Fix incorrect order of flags when using ``pipx upgrade``. (:issue:`1610`)"
+msgstr ""
+
+#: ../../../changelog.rst:725
+msgid "Update the archive name of build of Python for Windows (:issue:`1630`)"
+msgstr ""
+
+#: ../../../changelog.rst:726
+msgid ""
+"Set up standalone python fetching to use checksums directly from the GitHub "
+"API. (:issue:`1652`)"
+msgstr ""
+
+#: ../../../changelog.rst:727
+msgid ""
+"Fix running a script with explicitly empty ``dependencies = []``. (:issue:"
+"`1658`)"
+msgstr ""
+
+#: ../../../changelog.rst:732
+msgid "Fix ``/changelog/`` and ``/contributing/`` docs URLs (:issue:`1540`)"
+msgstr ""
+
+#: ../../../changelog.rst:735
+msgid "`1.7.1 <https://github.com/pypa/pipx/tree/1.7.1>`_ - 2024-08-23"
+msgstr ""
+
+#: ../../../changelog.rst:740
+msgid ""
+"Use minimum supported Python to build zipapp in release action such that "
+"``tomli`` is included in it. (:issue:`1514`)"
+msgstr ""
+
+#: ../../../changelog.rst:743
+msgid "`1.7.0 <https://github.com/pypa/pipx/tree/1.7.0>`_ - 2024-08-22"
+msgstr ""
+
+#: ../../../changelog.rst:748
+msgid ""
+"Add a ``--prepend`` option to the ``pipx ensurepath`` command to allow "
+"prepending ``pipx``'s location to ``PATH`` rather than appending to it. This "
+"is useful when you want to prioritize ``pipx``'s executables over other "
+"executables in your ``PATH``. (:issue:`1451`)"
+msgstr ""
+
+#: ../../../changelog.rst:751
+msgid ""
+"List ``PIPX_GLOBAL_[HOME|BIN_DIR|MAN_DIR]`` in ``pipx environment``. (:issue:"
+"`1492`)"
+msgstr ""
+
+#: ../../../changelog.rst:756
+msgid ""
+"Introduce ``PIPX_HOME_ALLOW_SPACE`` environment variable, to silence the "
+"spaces in pipx home path warning (:issue:`1320`)"
+msgstr ""
+
+#: ../../../changelog.rst:758
+msgid ""
+"Fix passing constraints file path into ``pipx install`` operation via "
+"``pip`` args (:issue:`1389`)"
+msgstr ""
+
+#: ../../../changelog.rst:759
+msgid ""
+"Add help messages for ``pipx pin`` and ``pipx unpin`` commands. (:issue:"
+"`1438`)"
+msgstr ""
+
+#: ../../../changelog.rst:760
+msgid ""
+"Stop ``pipx install --global`` from installing files in ``~/.local``. (:"
+"issue:`1475`)"
+msgstr ""
+
+#: ../../../changelog.rst:761
+msgid ""
+"Fix installation abortion on multiple packages when one or more are already "
+"installed. (:issue:`1509`)"
+msgstr ""
+
+#: ../../../changelog.rst:766
+msgid "Move all documentation files to the ``docs`` directory. (:issue:`1479`)"
+msgstr ""
+
+#: ../../../changelog.rst:769
+msgid "`1.6.0 <https://github.com/pypa/pipx/tree/1.6.0>`_ - 2024-06-01"
+msgstr ""
+
+#: ../../../changelog.rst:774
+msgid ""
+"Add ``install-all`` command to install packages according to spec metadata "
+"file. (:issue:`687`)"
+msgstr ""
+
+#: ../../../changelog.rst:775
+msgid ""
+"Introduce ``pipx pin`` and ``pipx unpin`` commands, which can be used to pin "
+"or unpin the version of an installed package, so it will not be upgraded by "
+"``pipx upgrade`` or ``pipx upgrade-all``. (:issue:`891`)"
+msgstr ""
+
+#: ../../../changelog.rst:777
+msgid ""
+"Add a new option ``--pinned`` to ``pipx list`` command for listing pinned "
+"packages only. (:issue:`891`)"
+msgstr ""
+
+#: ../../../changelog.rst:778
+msgid ""
+"Add ``pipx interpreter upgrade`` command to upgrade local standalone python "
+"in micro/patch level (:issue:`1249`)"
+msgstr ""
+
+#: ../../../changelog.rst:779
+msgid ""
+"Add ``--requirement`` option to ``inject`` command to read list of packages "
+"from a text file. (:issue:`1252`)"
+msgstr ""
+
+#: ../../../changelog.rst:780
+msgid ""
+"Add ``pipx upgrade-shared`` command, to create/upgrade shared libraries as a "
+"standalone command. (:issue:`1316`)"
+msgstr ""
+
+#: ../../../changelog.rst:781
+msgid ""
+"Allow ``upgrade`` command to accept multiple packages as arguments. (:issue:"
+"`1336`)"
+msgstr ""
+
+#: ../../../changelog.rst:782
+msgid ""
+"Support Python version for ``--python`` arg when py launcher is not "
+"available (:issue:`1342`)"
+msgstr ""
+
+#: ../../../changelog.rst:783
+msgid "Make ``install-all`` gather errors in batch (:issue:`1348`)"
+msgstr ""
+
+#: ../../../changelog.rst:788
+msgid ""
+"Resolve the ``DEFAULT_PYTHON`` to the actual absolute path (:issue:`965`)"
+msgstr ""
+
+#: ../../../changelog.rst:789
+msgid "Fix error log overwrite for \"-all\" batch operations. (:issue:`1132`)"
+msgstr ""
+
+#: ../../../changelog.rst:790
+msgid ""
+"Do not reinstall already injected packages without ``--force`` being passed. "
+"(:issue:`1300`)"
+msgstr ""
+
+#: ../../../changelog.rst:791
+msgid ""
+"Only show ``--python`` and ``--force`` flag warning if both flags are "
+"present (:issue:`1304`)"
+msgstr ""
+
+#: ../../../changelog.rst:792
+msgid ""
+"Don't allow paths to be passed into ``pipx reinstall``, as this might wreak "
+"havoc. (:issue:`1324`)"
+msgstr ""
+
+#: ../../../changelog.rst:793
+msgid ""
+"Make the Python ``venv`` module arguments work with ``upgrade --install`` (:"
+"issue:`1344`)"
+msgstr ""
+
+#: ../../../changelog.rst:794
+msgid "Fix version check for standalone python (:issue:`1349`)"
+msgstr ""
+
+#: ../../../changelog.rst:795
+msgid "Validate package(s) argument should not be path(s). (:issue:`1354`)"
+msgstr ""
+
+#: ../../../changelog.rst:796
+msgid "Validate whether a package is an URL correctly. (:issue:`1355`)"
+msgstr ""
+
+#: ../../../changelog.rst:797
+msgid "Support python3.8 for standalone python builds (:issue:`1375`)"
+msgstr ""
+
+#: ../../../changelog.rst:798
+msgid ""
+"Install specified version of ``--preinstall`` dependency instead of latest "
+"version (:issue:`1377`)"
+msgstr ""
+
+#: ../../../changelog.rst:799
+msgid ""
+"Move ``--global`` option into shared parser, such that it can be passed "
+"after the subcommand, for example ``pipx ensurepath --global``. (:issue:"
+"`1397`)"
+msgstr ""
+
+#: ../../../changelog.rst:801
+msgid ""
+"Fix discovery of a ``pipx run`` entry point if a local path was given as "
+"package. (:issue:`1422`)"
+msgstr ""
+
+#: ../../../changelog.rst:806
+msgid ""
+"Create a dedicated section for manual pages and add an example with ``pdm-"
+"backend``. (:issue:`1312`)"
+msgstr ""
+
+#: ../../../changelog.rst:807
+msgid ""
+"Add example, test and cli help description how to install multiple packages "
+"with the --preinstall flag (:issue:`1321`)"
+msgstr ""
+
+#: ../../../changelog.rst:808
+msgid "Refine docs generation script and template. (:issue:`1325`)"
+msgstr ""
+
+#: ../../../changelog.rst:809
+msgid ""
+"Add a note about sourcing the shell config file for ``ensure_path`` (:issue:"
+"`1346`)"
+msgstr ""
+
+#: ../../../changelog.rst:812
+msgid "`1.5.0 <https://github.com/pypa/pipx/tree/1.5.0>`_ - 2024-03-29"
+msgstr ""
+
+#: ../../../changelog.rst:817
+msgid "Add ``--global`` option to ``pipx`` commands."
+msgstr ""
+
+#: ../../../changelog.rst:819
+msgid ""
+"This will run the action in a global scope and affect environment for all "
+"system users. (:issue:`754`)"
+msgstr ""
+
+#: ../../../changelog.rst:821
+msgid ""
+"Add a ``--fetch-missing-python`` flag to all commands that accept a ``--"
+"python`` flag."
+msgstr ""
+
+#: ../../../changelog.rst:823
+msgid ""
+"When combined, this will automatically download a standalone copy of the "
+"requested python version if it's not already available on the user's system. "
+"(:issue:`1242`)"
+msgstr ""
+
+#: ../../../changelog.rst:826
+msgid "Add commands to list and prune standalone interpreters (:issue:`1248`)"
+msgstr ""
+
+#: ../../../changelog.rst:827
+msgid "Revert platform-specific directories on MacOS and Windows"
+msgstr ""
+
+#: ../../../changelog.rst:829
+msgid ""
+"They were leading to a lot of issues with Windows sandboxing and spaces in "
+"shebangs on MacOS. (:issue:`1257`)"
+msgstr ""
+
+#: ../../../changelog.rst:831
+msgid "Add ``--install`` option to ``pipx upgrade`` command."
+msgstr ""
+
+#: ../../../changelog.rst:833
+msgid ""
+"This will install the package given as argument if it is not already "
+"installed. (:issue:`1262`)"
+msgstr ""
+
+#: ../../../changelog.rst:838
+msgid ""
+"Correctly resolve home directory in pipx directory environment variables. (:"
+"issue:`94`)"
+msgstr ""
+
+#: ../../../changelog.rst:839
+msgid ""
+"Pass through ``pip`` arguments when upgrading shared libraries. (:issue:"
+"`964`)"
+msgstr ""
+
+#: ../../../changelog.rst:840
+msgid ""
+"Fix installation issues when files in the working directory interfere with "
+"venv creation process. (:issue:`1091`)"
+msgstr ""
+
+#: ../../../changelog.rst:841
+msgid ""
+"Report correct filename in tracebacks with ``pipx run <scriptname>`` (:issue:"
+"`1191`)"
+msgstr ""
+
+#: ../../../changelog.rst:842
+msgid ""
+"Let self-managed pipx uninstall itself on windows again. (:issue:`1203`)"
+msgstr ""
+
+#: ../../../changelog.rst:843
+msgid ""
+"Fix path resolution for python executables looked up in PATH on windows. (:"
+"issue:`1205`)"
+msgstr ""
+
+#: ../../../changelog.rst:844
+msgid ""
+"Display help message when ``pipx install`` is run without arguments. (:issue:"
+"`1266`)"
+msgstr ""
+
+#: ../../../changelog.rst:845
+msgid ""
+"Fix crashes due to superfluous ``-q`` flags by discarding exceeding values (:"
+"issue:`1283`)"
+msgstr ""
+
+#: ../../../changelog.rst:850
+msgid "Update the completion instructions for zipapp users. (:issue:`1072`)"
+msgstr ""
+
+#: ../../../changelog.rst:851
+msgid ""
+"Update the example for running scripts with dependencies. (:issue:`1227`)"
+msgstr ""
+
+#: ../../../changelog.rst:852
+msgid ""
+"Update the docs for package developers on the use of configuration using "
+"pyproject.toml (:issue:`1229`)"
+msgstr ""
+
+#: ../../../changelog.rst:853
+msgid "Add installation instructions for Fedora (:issue:`1239`)"
+msgstr ""
+
+#: ../../../changelog.rst:854
+msgid "Update the examples for installation from local dir (:issue:`1277`)"
+msgstr ""
+
+#: ../../../changelog.rst:855
+msgid ""
+"Fix inconsistent wording in ``pipx install`` command description. (:issue:"
+"`1307`)"
+msgstr ""
+
+#: ../../../changelog.rst:860
+msgid ""
+"Deprecate ``--skip-maintenance`` flag of ``pipx list``; maintenance is now "
+"never executed there (:issue:`1256`)"
+msgstr ""
+
+#: ../../../changelog.rst:865
+msgid ":issue:`1296`"
+msgstr ""
+
+#: ../../../changelog.rst:868
+msgid "`1.4.3 <https://github.com/pypa/pipx/tree/1.4.3>`_ - 2024-01-16"
+msgstr ""
+
+#: ../../../changelog.rst:873
+msgid ""
+"Autofix python version for pylauncher, when version is provided prefixed "
+"with ``python`` (:issue:`1150`)"
+msgstr ""
+
+#: ../../../changelog.rst:874
+msgid ""
+"Support building pipx wheels with setuptools-scm<7, such as on FreeBSD. (:"
+"issue:`1208`)"
+msgstr ""
+
+#: ../../../changelog.rst:879
+msgid ""
+"Provide useful error messages when unresolvable python version is passed (:"
+"issue:`1150`)"
+msgstr ""
+
+#: ../../../changelog.rst:880
+msgid "Introduce towncrier for managing the changelog (:issue:`1161`)"
+msgstr ""
+
+#: ../../../changelog.rst:881
+msgid ""
+"Add workaround for using pipx applications in shebang under macOS (:issue:"
+"`1198`)"
+msgstr ""
+
+#: ../../../changelog.rst:884
+msgid "`1.4.2 <https://github.com/pypa/pipx/tree/1.4.2>`_"
+msgstr ""
+
+#: ../../../changelog.rst:889
+msgid "Allow skipping maintenance tasks during list command"
+msgstr ""
+
+#: ../../../changelog.rst:890
+msgid ""
+"Raise more user friendly error when provided ``--python`` version is not "
+"found"
+msgstr ""
+
+#: ../../../changelog.rst:891
+msgid ""
+"Update ``pipx run`` on scripts using ``/// script`` and no ``run`` table "
+"following the updated version of PEP 723 (#1180)"
+msgstr ""
+
+#: ../../../changelog.rst:897
+msgid ""
+"Include ``tomli`` into ``pipx.pyz`` (zipapp) so that it can be executed with "
+"Python 3.10 or earlier (#1142)"
+msgstr ""
+
+#: ../../../changelog.rst:898
+msgid "Fix resolving the python executable path on linux"
+msgstr ""
+
+#: ../../../changelog.rst:899
+msgid ""
+"``pipx run``: Verify whether the script name provided is a file before "
+"running it"
+msgstr ""
+
+#: ../../../changelog.rst:900
+msgid "Avoid repeated exception logging in a few rare cases (#1192)"
+msgstr ""
+
+#: ../../../changelog.rst:903
+msgid "`1.4.1 <https://github.com/pypa/pipx/tree/1.4.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:908
+msgid ""
+"Set default logging level to WARNING, so debug log messages won't be shown "
+"without passing additional flags such as ``--verbose``"
+msgstr ""
+
+#: ../../../changelog.rst:912
+msgid "`1.4.0 <https://github.com/pypa/pipx/tree/1.4.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:917
+msgid "Add ``--quiet`` and ``--verbose`` options for the ``pipx`` subcommands"
+msgstr ""
+
+#: ../../../changelog.rst:918
+msgid "Add ability to install multiple packages at once"
+msgstr ""
+
+#: ../../../changelog.rst:919
+msgid "Delete directories directly instead of spawning rmdir on Windows"
+msgstr ""
+
+#: ../../../changelog.rst:924
+msgid "Add Scoop installation instructions"
+msgstr ""
+
+#: ../../../changelog.rst:929
+msgid "\"Failed to delete\" error when using Microsoft Store Python"
+msgstr ""
+
+#: ../../../changelog.rst:930
+msgid "\"No pyvenv.cfg file\" error when using Microsoft Store Python (#1164)"
+msgstr ""
+
+#: ../../../changelog.rst:933
+msgid "`1.3.3 <https://github.com/pypa/pipx/tree/1.3.3>`_"
+msgstr ""
+
+#: ../../../changelog.rst:938
+msgid "Make the logo more visible in dark mode"
+msgstr ""
+
+#: ../../../changelog.rst:941
+msgid "`1.3.2 <https://github.com/pypa/pipx/tree/1.3.2>`_"
+msgstr ""
+
+#: ../../../changelog.rst:946
+msgid ""
+"The project version number is now dynamic and generated from the VCS at "
+"build time"
+msgstr ""
+
+#: ../../../changelog.rst:951
+msgid "Add additional example for --pip-args option, to docs/examples.md"
+msgstr ""
+
+#: ../../../changelog.rst:954
+msgid "`1.3.1 <https://github.com/pypa/pipx/tree/1.3.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:959
+msgid "Fix combining of --editable and --force flag"
+msgstr ""
+
+#: ../../../changelog.rst:962
+msgid "`1.3.0 <https://github.com/pypa/pipx/tree/1.3.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:967
+msgid "Allow running ``pip`` with ``pipx run``"
+msgstr ""
+
+#: ../../../changelog.rst:968
+msgid "Add ``--with-suffix`` for ``pipx inject`` command"
+msgstr ""
+
+#: ../../../changelog.rst:969
+msgid ""
+"``pipx install``: emit a warning when ``--force`` and ``--python`` were "
+"passed at the same time"
+msgstr ""
+
+#: ../../../changelog.rst:970
+msgid "Add explicit 3.12 support"
+msgstr ""
+
+#: ../../../changelog.rst:971
+msgid ""
+"Make usage message in ``pipx run`` show ``package_or_url``, so extra will be "
+"printed out as well"
+msgstr ""
+
+#: ../../../changelog.rst:972
+msgid ""
+"Use the py launcher, if available, to select Python version with the ``--"
+"python`` option"
+msgstr ""
+
+#: ../../../changelog.rst:973
+msgid "add pre-commit hook support"
+msgstr ""
+
+#: ../../../changelog.rst:974
+msgid ""
+"Add ``pipx install --preinstall`` to support preinstalling build requirements"
+msgstr ""
+
+#: ../../../changelog.rst:975
+msgid ""
+"Return an error message when directory can't be added to PATH successfully"
+msgstr ""
+
+#: ../../../changelog.rst:976
+msgid ""
+"Expose manual pages included in an application installed with ``pipx "
+"install``"
+msgstr ""
+
+#: ../../../changelog.rst:977
+msgid ""
+"Check whether pip module exists in shared lib before performing any actions, "
+"such as ``reinstall-all``."
+msgstr ""
+
+#: ../../../changelog.rst:978
+msgid ""
+"Drop ``setuptools`` and ``wheel`` from the shared libraries. This results in "
+"less time consumption when the libraries are automatically upgraded."
+msgstr ""
+
+#: ../../../changelog.rst:980
+msgid ""
+"Support `inline script metadata <https://packaging.python.org/en/latest/"
+"specifications/inline-script-metadata/>`_ in ``pipx run``."
+msgstr ""
+
+#: ../../../changelog.rst:982
+msgid "Imply ``--include-apps`` when running ``pipx inject --include-deps``"
+msgstr ""
+
+#: ../../../changelog.rst:983
+msgid "Add ``--force-reinstall`` to pip arguments when ``--force`` was passed"
+msgstr ""
+
+#: ../../../changelog.rst:984
+msgid "Support including requirements in scripts run using ``pipx run`` (#916)"
+msgstr ""
+
+#: ../../../changelog.rst:985
+msgid "Pass ``pip_args`` to ``shared_libs.upgrade()``"
+msgstr ""
+
+#: ../../../changelog.rst:986
+msgid ""
+"Fallback to user's log path if the default log path (``$PIPX_HOME/logs``) is "
+"not writable to aid with pipx being used for multi-user (e.g. system-wide) "
+"installs of applications"
+msgstr ""
+
+#: ../../../changelog.rst:988
+msgid "Don't show escaped backslashes for paths in console output"
+msgstr ""
+
+#: ../../../changelog.rst:989
+msgid ""
+"Move ``pipx`` paths to ensure compatibility with the platform-specific user "
+"directories"
+msgstr ""
+
+#: ../../../changelog.rst:990
+msgid "Pass ``--no-input`` to pip when output is not piped to parent stdout"
+msgstr ""
+
+#: ../../../changelog.rst:991
+msgid "Print all environment variables in ``pipx environment``"
+msgstr ""
+
+#: ../../../changelog.rst:996
+msgid "Add more examples for ``pipx run``"
+msgstr ""
+
+#: ../../../changelog.rst:997
+msgid "Add subsection to make README easier to read"
+msgstr ""
+
+#: ../../../changelog.rst:1002
+msgid "Drop support for Python 3.7"
+msgstr ""
+
+#: ../../../changelog.rst:1007
+msgid ""
+"Fix wrong interpreter usage when injecting local pip-installable "
+"dependencies into venvs"
+msgstr ""
+
+#: ../../../changelog.rst:1008
+msgid "Fix program name in generated manual page"
+msgstr ""
+
+#: ../../../changelog.rst:1011
+msgid "`1.2.1 <https://github.com/pypa/pipx/tree/1.2.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1016
+msgid ""
+"Fix compatibility to packaging 23.2+ by removing reliance on packaging's "
+"requirement validation logic and detecting a URL-based requirement in pipx. "
+"(#1070)"
+msgstr ""
+
+#: ../../../changelog.rst:1020
+msgid "`1.2.0 <https://github.com/pypa/pipx/tree/1.2.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1025
+msgid "Add ``pipx uninject`` command (#820)"
+msgstr ""
+
+#: ../../../changelog.rst:1026
+msgid ""
+"Ship a `zipapp <https://docs.python.org/3/library/zipapp.html>`_ of pipx"
+msgstr ""
+
+#: ../../../changelog.rst:1027
+msgid ""
+"Match pip's behaviour when package name ends with archive extension (treat "
+"it as a path)"
+msgstr ""
+
+#: ../../../changelog.rst:1028
+msgid ""
+"Change the program name to ``path/to/python -m pipx`` when running as "
+"``python -m pipx``"
+msgstr ""
+
+#: ../../../changelog.rst:1029
+msgid ""
+"Improve the detection logic for MSYS2 to avoid entering infinite loop (#908) "
+"(#938)"
+msgstr ""
+
+#: ../../../changelog.rst:1030
+msgid "Remove extra trailing quote from exception message"
+msgstr ""
+
+#: ../../../changelog.rst:1031
+msgid "Fix EncodingWarning in ``pipx_metadata_file``."
+msgstr ""
+
+#: ../../../changelog.rst:1036
+msgid "Add an example for installation from source with extras"
+msgstr ""
+
+#: ../../../changelog.rst:1037
+msgid ""
+"Fix ``pipx run`` examples and update Python versions used by ``pipx "
+"install`` examples"
+msgstr ""
+
+#: ../../../changelog.rst:1042
+msgid ""
+"Add test for pip module in ``pipx reinstall`` to fix an issue with ``pipx "
+"reinstall-all`` (#935)"
+msgstr ""
+
+#: ../../../changelog.rst:1045
+msgid "`1.1.0 <https://github.com/pypa/pipx/tree/1.1.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1050
+msgid "Add ``pipx environment`` command (#793)"
+msgstr ""
+
+#: ../../../changelog.rst:1051
+msgid "Add ``list --short`` option to list only package names (#804)"
+msgstr ""
+
+#: ../../../changelog.rst:1052
+msgid ""
+"Improve the behaviour of ``shlex.split`` on Windows, so paths on Windows can "
+"be handled properly when they are passed in ``--pip-args``. (#794)"
+msgstr ""
+
+#: ../../../changelog.rst:1054
+msgid "[dev] Change github action job names"
+msgstr ""
+
+#: ../../../changelog.rst:1055
+msgid "Add additional examples for installation from git repos"
+msgstr ""
+
+#: ../../../changelog.rst:1056
+msgid ""
+"[packaging] Switch to `PEP 621 <https://www.python.org/dev/peps/pep-0621/>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1057
+msgid ""
+"Add a CACHEDIR.TAG to the cache directory to prevent it from being included "
+"in archives and backups. For more information about cache directory tags, "
+"see https://bford.info/cachedir"
+msgstr ""
+
+#: ../../../changelog.rst:1063
+msgid "Fix encoding issue on Windows when pip fails to install a package"
+msgstr ""
+
+#: ../../../changelog.rst:1068
+msgid "Add more examples"
+msgstr ""
+
+#: ../../../changelog.rst:1069
+msgid ""
+"Fix the command for `installing development version <https://pipx.pypa.io/"
+"stable/installation/#install-pipx-development-versions>`_. (#801)"
+msgstr ""
+
+#: ../../../changelog.rst:1071
+msgid "Fix test status badge in readme file"
+msgstr ""
+
+#: ../../../changelog.rst:1074
+msgid "`1.0.0 <https://github.com/pypa/pipx/tree/1.0.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1079
+msgid ""
+"Support `argcomplete 2.0.0 <https://pypi.org/project/argcomplete/2.0.0>`_ "
+"(#790)"
+msgstr ""
+
+#: ../../../changelog.rst:1080
+msgid ""
+"Include machinery to build a manpage for pipx with `argparse-manpage "
+"<https://pypi.org/project/argparse-manpage/>`_."
+msgstr ""
+
+#: ../../../changelog.rst:1081
+msgid ""
+"Add better handling for 'app not found' when a single app is present in the "
+"project, and an improved error message (#733)"
+msgstr ""
+
+#: ../../../changelog.rst:1087
+msgid ""
+"Fixed animations sending output to stdout, which can break JSON output. "
+"(#769)"
+msgstr ""
+
+#: ../../../changelog.rst:1088
+msgid "Fix typo in ``pipx upgrade-all`` output"
+msgstr ""
+
+#: ../../../changelog.rst:1091
+msgid "`0.17.0 <https://github.com/pypa/pipx/tree/0.17.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1093
+msgid "Support ``pipx run`` with version constraints and extras. (#697)"
+msgstr ""
+
+#: ../../../changelog.rst:1096
+msgid "`0.16.5 <https://github.com/pypa/pipx/tree/0.16.5>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1098
+msgid ""
+"Fixed ``pipx list`` output phrasing to convey that python version displayed "
+"is the one with which package was installed."
+msgstr ""
+
+#: ../../../changelog.rst:1100
+msgid ""
+"Fixed ``pipx install`` to provide return code 0 if venv already exists, "
+"similar to pip's behavior. (#736)"
+msgstr ""
+
+#: ../../../changelog.rst:1101
+msgid ""
+"[docs] Update ansible's install command in `Programs to Try document "
+"<https://pipx.pypa.io/stable/programs-to-try/#ansible>`_ to work with "
+"Ansible 2.10+ (#742)"
+msgstr ""
+
+#: ../../../changelog.rst:1105
+msgid "`0.16.4 <https://github.com/pypa/pipx/tree/0.16.4>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1107
+msgid ""
+"Fix to ``pipx ensurepath`` to fix behavior in user locales other than UTF-8, "
+"to fix #644. The internal change is to use userpath v1.6.0 or greater. (#700)"
+msgstr ""
+
+#: ../../../changelog.rst:1109
+msgid ""
+"Fix virtual environment inspection for Python releases that uses an int for "
+"its release serial number. (#706)"
+msgstr ""
+
+#: ../../../changelog.rst:1110
+msgid "Fix PermissionError in windows when pipx manages itself. (#718)"
+msgstr ""
+
+#: ../../../changelog.rst:1113
+msgid "`0.16.3 <https://github.com/pypa/pipx/tree/0.16.3>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1115
+msgid ""
+"Organization: pipx is extremely pleased to now be a project of the Python "
+"Packaging Authority (PyPA)! Note that our github URL has changed to `pypa/"
+"pipx <https://github.com/pypa/pipx>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1117
+msgid ""
+"Fixed ``pipx list --json`` to return valid json with no venvs installed. "
+"Previously would return an empty string to stdout. (#681)"
+msgstr ""
+
+#: ../../../changelog.rst:1119
+msgid ""
+"Changed ``pipx ensurepath`` bash behavior so that only one of {``~/."
+"profile``, ``~/.bash_profile``} is modified with the extra pipx paths, not "
+"both. Previously, if a ``.bash_profile`` file was created where one didn't "
+"exist, it could cause problems, e.g. #456. The internal change is to use "
+"userpath v1.5.0 or greater. (#684)"
+msgstr ""
+
+#: ../../../changelog.rst:1122
+msgid ""
+"Changed default nox tests, Github Workflow tests, and pytest behavior to use "
+"local pypi server with fixed lists of available packages. This allows "
+"greater test isolation (no network pypi access needed) and determinism "
+"(fixed available dependencies.) It also allows running the tests offline "
+"with some extra preparation beforehand (See `Running Unit Tests Offline "
+"<https://pipx.pypa.io/stable/contributing/#running-unit-tests-offline>`_). "
+"The old style tests that use the internet to access pypi.org are still "
+"available using ``nox -s tests_internet`` or ``pytest --net-pypiserver "
+"tests``. (#686)"
+msgstr ""
+
+#: ../../../changelog.rst:1128
+msgid "Colorama is now only installed on Windows. (#691)"
+msgstr ""
+
+#: ../../../changelog.rst:1131
+msgid "`0.16.2.1 <https://github.com/pypa/pipx/tree/0.16.2.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1133
+msgid ""
+"Changed non-venv-info warnings and notices from ``pipx list`` to print to "
+"stderr. This especially prevents ``pipx list --json`` from printing invalid "
+"json to stdout. (#680)"
+msgstr ""
+
+#: ../../../changelog.rst:1135
+msgid ""
+"Fixed bug that could cause uninstall on Windows with injected packages to "
+"uninstall too many apps from the local binary directory. (#679)"
+msgstr ""
+
+#: ../../../changelog.rst:1139
+msgid "`0.16.2.0 <https://github.com/pypa/pipx/tree/0.16.2.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1141
+msgid ""
+"Fixed bug #670 where uninstalling a venv could erroneously uninstall other "
+"apps from the local binary directory. (#672)"
+msgstr ""
+
+#: ../../../changelog.rst:1143
+msgid ""
+"Added ``--json`` switch to ``pipx list`` to output rich json-metadata for "
+"all venvs."
+msgstr ""
+
+#: ../../../changelog.rst:1144
+msgid ""
+"Ensured log files are utf-8 encoded to prevent Unicode encoding errors from "
+"occurring with emojis. (#646)"
+msgstr ""
+
+#: ../../../changelog.rst:1145
+msgid ""
+"Fixed issue which made pipx incorrectly list apps as part of a venv when "
+"they were not installed by pipx. (#650)"
+msgstr ""
+
+#: ../../../changelog.rst:1146
+msgid ""
+"Fixed old regression that would prevent pipx uninstall from cleaning up "
+"linked binaries if the venv was old and did not have pipx metadata. (#651)"
+msgstr ""
+
+#: ../../../changelog.rst:1148
+msgid ""
+"Fixed bugs with suffixed-venvs on Windows. Now properly summarizes install, "
+"and actually uninstalls associated binaries for suffixed-venvs. (#653)"
+msgstr ""
+
+#: ../../../changelog.rst:1150
+msgid ""
+"Changed venv minimum python version to 3.6, removing python 3.5 which is End "
+"of Life. (#666)"
+msgstr ""
+
+#: ../../../changelog.rst:1153
+msgid "`0.16.1.0 <https://github.com/pypa/pipx/tree/0.16.1.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1155
+msgid ""
+"Introduce the ``pipx.run`` entry point group as an alternative way to "
+"declare an application for ``pipx run``."
+msgstr ""
+
+#: ../../../changelog.rst:1156
+msgid "Fix cursor show/hide to work with older versions of Windows. (#610)"
+msgstr ""
+
+#: ../../../changelog.rst:1157
+msgid "Support text colors on Windows. (#612)"
+msgstr ""
+
+#: ../../../changelog.rst:1158
+msgid ""
+"Better platform unicode detection to avoid errors and allow showing emojis "
+"when possible. (#614)"
+msgstr ""
+
+#: ../../../changelog.rst:1159
+msgid ""
+"Don't emit show cursor or hide cursor codes if STDERR is not a tty. (#620)"
+msgstr ""
+
+#: ../../../changelog.rst:1160
+msgid "Sped up ``pipx list`` (#624)."
+msgstr ""
+
+#: ../../../changelog.rst:1161
+msgid ""
+"pip errors no longer stream to the shell when pip fails during a pipx "
+"install. pip's output is now saved to a log file. In the shell, pipx will "
+"tell you the location of the log file and attempt to summarize why pip "
+"failed. (#625)"
+msgstr ""
+
+#: ../../../changelog.rst:1163
+msgid ""
+"For ``reinstall-all``, fixed bug where missing python executable would cause "
+"error. (#634)"
+msgstr ""
+
+#: ../../../changelog.rst:1164
+msgid ""
+"Fix regression which prevented pipx from working with pythonloc (and "
+"``__pypackages__`` folder). (#636)"
+msgstr ""
+
+#: ../../../changelog.rst:1167
+msgid "`0.16.0.0 <https://github.com/pypa/pipx/tree/0.16.0.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1169
+msgid ""
+"New venv inspection! The code that pipx uses to examine and determine "
+"metadata in an installed venv has been made faster, better, and more "
+"reliable. It now uses modern python libraries like ``packaging`` and "
+"``importlib.metadata`` to examine installed venvs. It also now properly "
+"handles installed package extras. In addition, some problems pipx has had "
+"with certain characters (like periods) in package names should be remedied."
+msgstr ""
+
+#: ../../../changelog.rst:1173
+msgid "Added reinstall command for reinstalling a single venv."
+msgstr ""
+
+#: ../../../changelog.rst:1174
+msgid ""
+"Changed ``pipx run`` on non-Windows systems to actually replace pipx process "
+"with the app process instead of running it as a subprocess. (Now using "
+"python's ``os.exec*``)"
+msgstr ""
+
+#: ../../../changelog.rst:1176
+msgid ""
+"[bugfix] Fixed bug with reinstall-all command when package have been "
+"installed using a specifier. Now the initial specifier is used."
+msgstr ""
+
+#: ../../../changelog.rst:1178
+msgid ""
+"[bugfix] Override display of ``PIPX_DEFAULT_PYTHON`` value when generating "
+"web documentation for ``pipx install`` #523"
+msgstr ""
+
+#: ../../../changelog.rst:1179
+msgid "[bugfix] Wrap help documentation for environment variables."
+msgstr ""
+
+#: ../../../changelog.rst:1180
+msgid ""
+"[bugfix] Fixed uninstall crash that could happen on Windows for certain "
+"packages"
+msgstr ""
+
+#: ../../../changelog.rst:1181
+msgid ""
+"[feature] Venv package name arguments now do not have to match exactly as "
+"pipx has them stored, but can be specified in any python-package-name-"
+"equivalent way. (i.e. case does not matter, and ``.``, ``-``, ``_`` "
+"characters are interchangeable.)"
+msgstr ""
+
+#: ../../../changelog.rst:1184
+msgid ""
+"[change] Venvs with a suffix: A suffix can contain any characters, but for "
+"purposes of uniqueness, python package name rules apply--upper- and lower-"
+"case letters are equivalent, and any number of ``.``, ``-``, or ``_`` "
+"characters in a row are equivalent. (e.g. if you have a suffixed venv "
+"``pylint_1.0A`` you could not add another suffixed venv called "
+"``pylint--1-0a``, as it would not be a unique name.)"
+msgstr ""
+
+#: ../../../changelog.rst:1188
+msgid ""
+"[implementation detail] Pipx shared libraries (providing pip, setuptools, "
+"wheel to pipx) are no longer installed using pip arguments taken from the "
+"last regular pipx install. If you need to apply pip arguments to pipx's use "
+"of pip for its internal shared libraries, use ``PIP_*`` environment "
+"variables."
+msgstr ""
+
+#: ../../../changelog.rst:1191
+msgid ""
+"[feature] Autocomplete for venv names is no longer restricted to an exact "
+"match to the literal venv name, but will autocomplete any logically-similar "
+"python package name (i.e. case does not matter, and ``.``, ``-``, ``_`` "
+"characters are all equivalent.)"
+msgstr ""
+
+#: ../../../changelog.rst:1194
+msgid ""
+"pipx now reinstall its internal shared libraries when the user executes "
+"``reinstall-all``."
+msgstr ""
+
+#: ../../../changelog.rst:1195
+msgid ""
+"Made sure shell exit codes from every pipx command are correct. In the past "
+"some (like from ``pipx upgrade``) were wrong. The exit code from ``pipx "
+"runpip`` is now the exit code from the ``pip`` command run. The exit code "
+"from ``pipx list`` will be 1 if one or more venvs have problems that need to "
+"be addressed."
+msgstr ""
+
+#: ../../../changelog.rst:1198
+msgid ""
+"pipx now writes a log file for each pipx command executed to ``$PIPX_HOME/"
+"logs``, typically ``~/.local/pipx/logs``. pipx keeps the most recent 10 logs "
+"and deletes others."
+msgstr ""
+
+#: ../../../changelog.rst:1200
+msgid ""
+"``pipx upgrade`` and ``pipx upgrade-all`` now have a ``--upgrade-injected`` "
+"option which directs pipx to also upgrade injected packages."
+msgstr ""
+
+#: ../../../changelog.rst:1202
+msgid ""
+"``pipx list`` now detects, identifies, and suggests a remedy for venvs with "
+"old-internal data (internal venv names) that need to be updated."
+msgstr ""
+
+#: ../../../changelog.rst:1204
+msgid ""
+"Added a \"Troubleshooting\" page to the pipx web documentation for common "
+"problems pipx users may encounter."
+msgstr ""
+
+#: ../../../changelog.rst:1205
+msgid ""
+"pipx error, warning, and other messages now word-wrap so words are not split "
+"across lines. Their appearance is also now more consistent."
+msgstr ""
+
+#: ../../../changelog.rst:1209
+msgid "`0.15.6.0 <https://github.com/pypa/pipx/tree/0.15.6.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1211
+msgid "[docs] Update license"
+msgstr ""
+
+#: ../../../changelog.rst:1212
+msgid ""
+"[docs] Display a more idiomatic command for registering completions on fish."
+msgstr ""
+
+#: ../../../changelog.rst:1213
+msgid ""
+"[bugfix] Fixed regression in list, inject, upgrade, reinstall-all commands "
+"when suffixed packages are used."
+msgstr ""
+
+#: ../../../changelog.rst:1214
+msgid ""
+"[bugfix] Do not reset package url during upgrade when main package is "
+"``pipx``"
+msgstr ""
+
+#: ../../../changelog.rst:1215
+msgid ""
+"Updated help text to show description for ``ensurepath`` and ``completions`` "
+"help"
+msgstr ""
+
+#: ../../../changelog.rst:1216
+msgid ""
+"Added support for user-defined default python interpreter via new "
+"``PIPX_DEFAULT_PYTHON``. Helpful for use with pyenv among other uses."
+msgstr ""
+
+#: ../../../changelog.rst:1218
+msgid ""
+"[bugfix] Fixed bug where extras were ignored with a PEP 508 package "
+"specification with a URL."
+msgstr ""
+
+#: ../../../changelog.rst:1221
+msgid "`0.15.5.1 <https://github.com/pypa/pipx/tree/0.15.5.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1223
+msgid ""
+"[bugfix] Fixed regression of 0.15.5.0 which erroneously made installing from "
+"a local path with package extras not possible."
+msgstr ""
+
+#: ../../../changelog.rst:1227
+msgid "`0.15.5.0 <https://github.com/pypa/pipx/tree/0.15.5.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1229
+msgid ""
+"pipx now parses package specification before install. It removes (with "
+"warning) the ``--editable`` install option for any package specification "
+"that is not a local path. It also removes (with warning) any environment "
+"markers."
+msgstr ""
+
+#: ../../../changelog.rst:1231
+msgid ""
+"Disabled animation when we cannot determine terminal size or if the number "
+"of columns is too small. (Fixes #444)"
+msgstr ""
+
+#: ../../../changelog.rst:1232
+msgid ""
+"[feature] Version of each injected package is now listed after name for "
+"``pipx list --include-injected``"
+msgstr ""
+
+#: ../../../changelog.rst:1233
+msgid ""
+"Change metadata recorded from version-specified install to allow upgrades in "
+"future. Adds pipx dependency on ``packaging`` package."
+msgstr ""
+
+#: ../../../changelog.rst:1235
+msgid ""
+"[bugfix] Prevent python error in case where package has no pipx metadata and "
+"advise user how to fix."
+msgstr ""
+
+#: ../../../changelog.rst:1236
+msgid ""
+"[feature] ``ensurepath`` now also ensures that pip user binary path "
+"containing pipx itself is in user's PATH if pipx was installed using ``pip "
+"install --user``."
+msgstr ""
+
+#: ../../../changelog.rst:1238
+msgid ""
+"[bugfix] For ``pipx install``, fixed failure to install if user has "
+"``PIP_USER=1`` or ``user=true`` in pip.conf. (#110)"
+msgstr ""
+
+#: ../../../changelog.rst:1240
+msgid ""
+"[bugfix] Requiring userpath v1.4.1 or later so ensure Windows bug is fixed "
+"for ``ensurepath`` (#437)"
+msgstr ""
+
+#: ../../../changelog.rst:1241
+msgid "[feature] log pipx version (#423)"
+msgstr ""
+
+#: ../../../changelog.rst:1242
+msgid ""
+"[feature] ``--suffix`` option for ``install`` to allow multiple versions of "
+"same tool to be installed (#445)"
+msgstr ""
+
+#: ../../../changelog.rst:1243
+msgid ""
+"[feature] pipx can now be used with the Windows embeddable Python "
+"distribution"
+msgstr ""
+
+#: ../../../changelog.rst:1246
+msgid "`0.15.4.0 <https://github.com/pypa/pipx/tree/0.15.4.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1248
+msgid ""
+"[feature] ``list`` now has a new option ``--include-injected`` to show the "
+"injected packages in the main apps"
+msgstr ""
+
+#: ../../../changelog.rst:1249
+msgid "[bugfix] Fixed bug that can cause crash when installing an app"
+msgstr ""
+
+#: ../../../changelog.rst:1252
+msgid "`0.15.3.1 <https://github.com/pypa/pipx/tree/0.15.3.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1254
+msgid "[bugfix] Workaround multiprocessing issues on certain platforms (#229)"
+msgstr ""
+
+#: ../../../changelog.rst:1257
+msgid "`0.15.3.0 <https://github.com/pypa/pipx/tree/0.15.3.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1259
+msgid "[feature] Use symlinks on Windows when symlinks are available"
+msgstr ""
+
+#: ../../../changelog.rst:1262
+msgid "`0.15.2.0 <https://github.com/pypa/pipx/tree/0.15.2.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1264
+msgid "[bugfix] Improved error reporting during venv metadata inspection."
+msgstr ""
+
+#: ../../../changelog.rst:1265
+msgid "[bugfix] Fixed incompatibility with pypy as venv interpreter (#372)."
+msgstr ""
+
+#: ../../../changelog.rst:1266
+msgid ""
+"[bugfix] Replaced implicit dependency on setuptools with an explicit "
+"dependency on packaging (#339)."
+msgstr ""
+
+#: ../../../changelog.rst:1267
+msgid "[bugfix] Continue reinstalling packages after failure"
+msgstr ""
+
+#: ../../../changelog.rst:1268
+msgid "[bugfix] Hide cursor while pipx runs"
+msgstr ""
+
+#: ../../../changelog.rst:1269
+msgid ""
+"[feature] Add environment variable ``USE_EMOJI`` to allow enabling/disabling "
+"emojis (#376)"
+msgstr ""
+
+#: ../../../changelog.rst:1270
+msgid ""
+"[refactor] Moved all commands to separate files within the commands module "
+"(#255)."
+msgstr ""
+
+#: ../../../changelog.rst:1271
+msgid ""
+"[bugfix] Ignore system shared libraries when installing shared libraries "
+"pip, wheel, and setuptools. This also fixes an incompatibility with Debian/"
+"Ubuntu's version of pip (#386)."
+msgstr ""
+
+#: ../../../changelog.rst:1275
+msgid "`0.15.1.3 <https://github.com/pypa/pipx/tree/0.15.1.3>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1277
+msgid "[bugfix] On Windows, pipx now lists correct Windows apps (#217)"
+msgstr ""
+
+#: ../../../changelog.rst:1278
+msgid ""
+"[bugfix] Fixed a ``pipx install`` bug causing incorrect python binary to be "
+"used when using the optional --python argument in certain situations, such "
+"as running pipx from a Framework python on macOS and specifying a non-"
+"Framework python."
+msgstr ""
+
+#: ../../../changelog.rst:1283
+msgid "`0.15.1.2 <https://github.com/pypa/pipx/tree/0.15.1.2>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1285
+msgid ""
+"[bugfix] Fix recursive search of dependencies' apps so no apps are missed."
+msgstr ""
+
+#: ../../../changelog.rst:1286
+msgid ""
+"``upgrade-all`` now skips editable packages, because pip disallows upgrading "
+"editable packages."
+msgstr ""
+
+#: ../../../changelog.rst:1289
+msgid "`0.15.1.1 <https://github.com/pypa/pipx/tree/0.15.1.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1291
+msgid ""
+"[bugfix] fix regression that caused installing with --editable flag to fail "
+"package name determination."
+msgstr ""
+
+#: ../../../changelog.rst:1294
+msgid "`0.15.1.0 <https://github.com/pypa/pipx/tree/0.15.1.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1296
+msgid "Add Python 3.8 to PyPI classifier and travis test matrix"
+msgstr ""
+
+#: ../../../changelog.rst:1297
+msgid ""
+"[feature] auto-upgrade shared libraries, including pip, if older than one "
+"month. Hide all pip warnings that a new version is available. (#264)"
+msgstr ""
+
+#: ../../../changelog.rst:1299
+msgid "[bugfix] pass pip arguments to pip when determining package name (#320)"
+msgstr ""
+
+#: ../../../changelog.rst:1302
+msgid "`0.15.0.0 <https://github.com/pypa/pipx/tree/0.15.0.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1304
+msgid ""
+"Upgrade instructions: When upgrading to 0.15.0.0 or above from a "
+"pre-0.15.0.0 version, you must re-install all packages to take advantage of "
+"the new persistent pipx metadata files introduced in this release. These "
+"metadata files store pip specification values, injected packages, any custom "
+"pip arguments, and more in each main package's venv. You can do this by "
+"running ``pipx reinstall-all`` or ``pipx uninstall-all``, then reinstalling "
+"manually."
+msgstr ""
+
+#: ../../../changelog.rst:1309
+msgid ""
+"``install`` now has no ``--spec`` option. You may specify any valid pip "
+"specification for ``install``'s main argument."
+msgstr ""
+
+#: ../../../changelog.rst:1310
+msgid "``inject`` will now accept pip specifications for dependency arguments"
+msgstr ""
+
+#: ../../../changelog.rst:1311
+msgid ""
+"Metadata is now stored for each application installed, including install "
+"options like ``--spec``, and injected packages. This information allows "
+"upgrade, upgrade-all and reinstall-all to work properly even with non-pypi "
+"installed packages. (#222)"
+msgstr ""
+
+#: ../../../changelog.rst:1314
+msgid ""
+"``upgrade`` options ``--spec`` and ``--include-deps`` were removed. Pipx now "
+"uses the original options used to install each application instead. (#222)"
+msgstr ""
+
+#: ../../../changelog.rst:1316
+msgid ""
+"``upgrade-all`` options ``--include-deps``, ``--system-site-packages``, ``--"
+"index-url``, ``--editable``, and ``--pip-args`` were removed. Pipx now uses "
+"the original options used to install each application instead. (#222)"
+msgstr ""
+
+#: ../../../changelog.rst:1318
+msgid ""
+"``reinstall-all`` options ``--include-deps``, ``--system-site-packages``, "
+"``--index-url``, ``--editable``, and ``--pip-args`` were removed. Pipx now "
+"uses the original options used to install each application instead. (#222)"
+msgstr ""
+
+#: ../../../changelog.rst:1320
+msgid "Handle missing interpreters more gracefully (#146)"
+msgstr ""
+
+#: ../../../changelog.rst:1321
+msgid ""
+"Change ``reinstall-all`` to use system python by default for apps. Now use "
+"``--python`` option to specify a different python version."
+msgstr ""
+
+#: ../../../changelog.rst:1323
+msgid ""
+"Remove the PYTHONPATH environment variable when executing any command to "
+"prevent conflicts between pipx dependencies and package dependencies when "
+"pipx is installed via homebrew. Homebrew can use PYTHONPATH manipulation "
+"instead of virtual environments. (#233)"
+msgstr ""
+
+#: ../../../changelog.rst:1326
+msgid "Add printed summary after successful call to ``pipx inject``"
+msgstr ""
+
+#: ../../../changelog.rst:1327
+msgid "Support associating apps with Python 3.5"
+msgstr ""
+
+#: ../../../changelog.rst:1328
+msgid "Improvements to animation status text"
+msgstr ""
+
+#: ../../../changelog.rst:1329
+msgid "Make ``--python`` argument in ``reinstall-all`` command optional"
+msgstr ""
+
+#: ../../../changelog.rst:1330
+msgid "Use threads on OS's without support for semaphores"
+msgstr ""
+
+#: ../../../changelog.rst:1331
+msgid "Stricter parsing when passing ``--`` argument as delimiter"
+msgstr ""
+
+#: ../../../changelog.rst:1334
+msgid "`0.14.0.0 <https://github.com/pypa/pipx/tree/0.14.0.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1336
+msgid ""
+"Speed up operations by using shared venv for ``pip``, ``setuptools``, and "
+"``wheel``. You can see more detail in the 'how pipx works' section of the "
+"documentation. (#164, @pfmoore)"
+msgstr ""
+
+#: ../../../changelog.rst:1338
+msgid ""
+"Breaking change: for the ``inject`` command, change ``--include-binaries`` "
+"to ``--include-apps``"
+msgstr ""
+
+#: ../../../changelog.rst:1339
+msgid "Change all terminology from ``binary`` to ``app`` or ``application``"
+msgstr ""
+
+#: ../../../changelog.rst:1340
+msgid "Improve argument parsing for ``pipx run`` and ``pipx runpip``"
+msgstr ""
+
+#: ../../../changelog.rst:1341
+msgid "If ``--force`` is passed, remove existing files in PIPX_BIN_DIR"
+msgstr ""
+
+#: ../../../changelog.rst:1342
+msgid "Move animation to start of line, hide cursor when animating"
+msgstr ""
+
+#: ../../../changelog.rst:1345
+msgid "`0.13.2.3 <https://github.com/pypa/pipx/tree/0.13.2.3>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1347
+msgid ""
+"Fix regression when installing a package that doesn't have any entry points"
+msgstr ""
+
+#: ../../../changelog.rst:1350
+msgid "`0.13.2.2 <https://github.com/pypa/pipx/tree/0.13.2.2>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1352
+msgid ""
+"Remove unnecessary and sometimes incorrect check after ``pipx inject`` (#195)"
+msgstr ""
+
+#: ../../../changelog.rst:1353
+msgid "Make status text/animation reliably disappear before continuing"
+msgstr ""
+
+#: ../../../changelog.rst:1354
+msgid "Update animation symbols"
+msgstr ""
+
+#: ../../../changelog.rst:1357
+msgid "`0.13.2.1 <https://github.com/pypa/pipx/tree/0.13.2.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1359
+msgid ""
+"Remove virtual environment if installation did not complete. For example, if "
+"it was interrupted by ctrl+c or if an exception occurred for any reason. "
+"(#193)"
+msgstr ""
+
+#: ../../../changelog.rst:1363
+msgid "`0.13.2.0 <https://github.com/pypa/pipx/tree/0.13.2.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1365
+msgid ""
+"Add shell autocompletion. Also add ``pipx completions`` command to print "
+"instructions on how to add pipx completions to your shell."
+msgstr ""
+
+#: ../../../changelog.rst:1367
+msgid ""
+"Un-deprecate ``ensurepath``. Use ``userpath`` internally instead of "
+"instructing users to run the ``userpath`` cli command."
+msgstr ""
+
+#: ../../../changelog.rst:1369
+msgid "Improve detection of PIPX_BIN_DIR not being on PATH"
+msgstr ""
+
+#: ../../../changelog.rst:1370
+msgid ""
+"Improve error message when an existing symlink exists in PIPX_BIN_DIR and "
+"points to the wrong location"
+msgstr ""
+
+#: ../../../changelog.rst:1371
+msgid "Improve handling of unexpected files in PIPX_HOME (@uranusjr)"
+msgstr ""
+
+#: ../../../changelog.rst:1372
+msgid ""
+"swap out of order logic in order to correctly recommend --include-deps "
+"(@joshuarli)"
+msgstr ""
+
+#: ../../../changelog.rst:1373
+msgid "[dev] Migrate from tox to nox"
+msgstr ""
+
+#: ../../../changelog.rst:1376
+msgid "`0.13.1.1 <https://github.com/pypa/pipx/tree/0.13.1.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1378
+msgid "Do not raise bare exception if no binaries found (#150)"
+msgstr ""
+
+#: ../../../changelog.rst:1379
+msgid "Update pipsi migration script"
+msgstr ""
+
+#: ../../../changelog.rst:1382
+msgid "`0.13.1.0 <https://github.com/pypa/pipx/tree/0.13.1.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1384
+msgid "Deprecate ``ensurepath`` command. Use ``userpath append ~/.local/bin``"
+msgstr ""
+
+#: ../../../changelog.rst:1385
+msgid ""
+"Support redirects and proxies when downloading python files (i.e. ``pipx run "
+"http://url/file.py``)"
+msgstr ""
+
+#: ../../../changelog.rst:1386
+msgid ""
+"Use tox for document generation and CI testing (CI tests are now functional "
+"rather than static tests on style and formatting!)"
+msgstr ""
+
+#: ../../../changelog.rst:1388
+msgid "Use mkdocs for documentation"
+msgstr ""
+
+#: ../../../changelog.rst:1389
+msgid "Change default cache duration for ``pipx run`` from 2 to 14 days"
+msgstr ""
+
+#: ../../../changelog.rst:1392
+msgid "`0.13.0.1 <https://github.com/pypa/pipx/tree/0.13.0.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1394
+msgid "Fix upgrade-all and reinstall-all regression"
+msgstr ""
+
+#: ../../../changelog.rst:1397
+msgid "`0.13.0.0 <https://github.com/pypa/pipx/tree/0.13.0.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1399
+msgid ""
+"Add ``runpip`` command to run arbitrary pip commands in pipx-managed virtual "
+"environments"
+msgstr ""
+
+#: ../../../changelog.rst:1400
+msgid ""
+"Do not raise error when running ``pipx install PACKAGE`` and the package has "
+"already been installed by pipx (#125). This is the cause of the major "
+"version change from 0.12 to 0.13."
+msgstr ""
+
+#: ../../../changelog.rst:1402
+msgid ""
+"Add ``--skip`` argument to ``upgrade-all`` and ``reinstall-all`` commands, "
+"to let the user skip particular packages"
+msgstr ""
+
+#: ../../../changelog.rst:1405
+msgid "`0.12.3.3 <https://github.com/pypa/pipx/tree/0.12.3.3>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1407
+msgid ""
+"Update logic in determining a package's binaries during installation. This "
+"removes spurious binaries from the installation. (#104)"
+msgstr ""
+
+#: ../../../changelog.rst:1409
+msgid ""
+"Improve compatibility with Debian distributions by using ``shutil.which`` "
+"instead of ``distutils.spawn.find_executable`` (#102)"
+msgstr ""
+
+#: ../../../changelog.rst:1413
+msgid "`0.12.3.2 <https://github.com/pypa/pipx/tree/0.12.3.2>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1415
+msgid ""
+"Fix infinite recursion error when installing package such as "
+"``cloudtoken==0.1.84`` (#103)"
+msgstr ""
+
+#: ../../../changelog.rst:1416
+msgid "Fix windows type errors (#96, #98)"
+msgstr ""
+
+#: ../../../changelog.rst:1419
+msgid "`0.12.3.1 <https://github.com/pypa/pipx/tree/0.12.3.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1421
+msgid "Fix \"WindowsPath is not iterable\" bug"
+msgstr ""
+
+#: ../../../changelog.rst:1424
+msgid "`0.12.3.0 <https://github.com/pypa/pipx/tree/0.12.3.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1426
+msgid ""
+"Add ``--include-deps`` argument to include binaries of dependent packages "
+"when installing with pipx. This improves compatibility with packages that "
+"depend on other installed packages, such as ``jupyter``."
+msgstr ""
+
+#: ../../../changelog.rst:1428
+msgid ""
+"Speed up ``pipx list`` output (by running multiple processes in parallel) "
+"and by collecting all metadata in a single subprocess call"
+msgstr ""
+
+#: ../../../changelog.rst:1430
+msgid ""
+"More aggressive cache directory removal when ``--no-cache`` is passed to "
+"``pipx run``"
+msgstr ""
+
+#: ../../../changelog.rst:1431
+msgid ""
+"[dev] Move inline text passed to subprocess calls to their own files to "
+"enable autoformatting, linting, unit testing"
+msgstr ""
+
+#: ../../../changelog.rst:1434
+msgid "`0.12.2.0 <https://github.com/pypa/pipx/tree/0.12.2.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1436
+msgid ""
+"Add support for PEP 582's ``__pypackages__`` (experimental). ``pipx run "
+"BINARY`` will first search in ``__pypackages__`` for binary, then fallback "
+"to installing from PyPI. ``pipx run --pypackages BINARY`` will raise an "
+"error if the binary is not found in ``__pypackages__``."
+msgstr ""
+
+#: ../../../changelog.rst:1439
+msgid "Fix regression when installing with ``--editable`` flag (#93)"
+msgstr ""
+
+#: ../../../changelog.rst:1440
+msgid "[dev] improve unit tests"
+msgstr ""
+
+#: ../../../changelog.rst:1443
+msgid "`0.12.1.0 <https://github.com/pypa/pipx/tree/0.12.1.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1445
+msgid ""
+"Cache and reuse temporary Virtual Environments created with ``pipx run`` "
+"(#61)"
+msgstr ""
+
+#: ../../../changelog.rst:1446
+msgid "Update binary discovery logic to find \"scripts\" like awscli (#91)"
+msgstr ""
+
+#: ../../../changelog.rst:1447
+msgid ""
+"Forward ``--pip-args`` to the pip upgrade command (previously the args were "
+"forwarded to install/upgrade commands for packages) (#77)"
+msgstr ""
+
+#: ../../../changelog.rst:1449
+msgid ""
+"When using environment variable PIPX_HOME, Virtual Environments will now be "
+"created at ``$PIPX_HOME/venvs`` rather than at ``$PIPX_HOME``."
+msgstr ""
+
+#: ../../../changelog.rst:1451
+msgid "[dev] refactor into multiple files, add more unit tests"
+msgstr ""
+
+#: ../../../changelog.rst:1454
+msgid "`0.12.0.4 <https://github.com/pypa/pipx/tree/0.12.0.4>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1456
+msgid "Fix parsing bug in pipx run"
+msgstr ""
+
+#: ../../../changelog.rst:1459
+msgid "`0.12.0.3 <https://github.com/pypa/pipx/tree/0.12.0.3>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1461
+msgid ""
+"list python2 as supported language so that pip installs with python2 will no "
+"longer install the pipx on PyPI from the original pipx owner. Running pipx "
+"with python2 will fail, but at least it will not be as confusing as running "
+"the pipx package from the original owner."
+msgstr ""
+
+#: ../../../changelog.rst:1466
+msgid "`0.12.0.2 <https://github.com/pypa/pipx/tree/0.12.0.2>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1468
+msgid "forward arguments to run command correctly #90"
+msgstr ""
+
+#: ../../../changelog.rst:1471
+msgid "`0.12.0.1 <https://github.com/pypa/pipx/tree/0.12.0.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1473
+msgid "stop using unverified context #89"
+msgstr ""
+
+#: ../../../changelog.rst:1476
+msgid "`0.12.0.0 <https://github.com/pypa/pipx/tree/0.12.0.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1478
+msgid "Change installation instructions to use ``pipx`` PyPI name"
+msgstr ""
+
+#: ../../../changelog.rst:1479
+msgid "Add ``ensurepath`` command"
+msgstr ""
+
+#: ../../../changelog.rst:1482
+msgid "`0.11.0.2 <https://github.com/pypa/pipx/tree/0.11.0.2>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1484
+msgid "add version argument parsing back in (fixes regression)"
+msgstr ""
+
+#: ../../../changelog.rst:1487
+msgid "`0.11.0.1 <https://github.com/pypa/pipx/tree/0.11.0.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1489
+msgid ""
+"add version check, command check, fix printed version update installation "
+"instructions"
+msgstr ""
+
+#: ../../../changelog.rst:1492
+msgid "`0.11.0.0 <https://github.com/pypa/pipx/tree/0.11.0.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1494
+msgid ""
+"Replace ``pipx BINARY`` with ``pipx run BINARY`` to run a binary in an "
+"ephemeral environment. This is a breaking API change so the major version "
+"has been incremented. (Issue #69)"
+msgstr ""
+
+#: ../../../changelog.rst:1496
+msgid "upgrade pip when upgrading packages (Issue #72)"
+msgstr ""
+
+#: ../../../changelog.rst:1497
+msgid "support --system-site-packages flag (Issue #64)"
+msgstr ""
+
+#: ../../../changelog.rst:1500
+msgid "`0.10.4.1 <https://github.com/pypa/pipx/tree/0.10.4.1>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1502
+msgid "Fix version printed when ``pipx --version`` is run"
+msgstr ""
+
+#: ../../../changelog.rst:1505
+msgid "`0.10.4.0 <https://github.com/pypa/pipx/tree/0.10.4.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1507
+msgid "Add --index-url, --editable, and --pip-args flags"
+msgstr ""
+
+#: ../../../changelog.rst:1508
+msgid "Updated README with pipsi migration instructions"
+msgstr ""
+
+#: ../../../changelog.rst:1511
+msgid "`0.10.3.0 <https://github.com/pypa/pipx/tree/0.10.3.0>`_"
+msgstr ""
+
+#: ../../../changelog.rst:1513
+msgid "Display python version in list"
+msgstr ""
+
+#: ../../../changelog.rst:1514
+msgid ""
+"Do not reinstall package if already installed (added ``--force`` flag to "
+"override)"
+msgstr ""
+
+#: ../../../changelog.rst:1515
+msgid "When upgrading all packages, print message only when package is updated"
+msgstr ""
+
+#: ../../../changelog.rst:1516
+msgid "Avoid accidental execution of ``pipx.__main__``"
+msgstr ""
