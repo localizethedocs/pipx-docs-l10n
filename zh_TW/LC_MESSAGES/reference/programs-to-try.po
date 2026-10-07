@@ -1,0 +1,234 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/programs-to-try.rst:3
+msgid "Programs to try"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:5
+msgid ""
+"Applications worth trying with ``pipx run``, which fetches the package into "
+"a temporary environment and runs it without installing. Add ``--help`` on "
+"first use so an unfamiliar tool does not act unexpectedly. Swap ``run`` for "
+"``install`` to keep any of them on your ``PATH``."
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:13
+msgid "Program"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:14
+msgid "Description"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:15
+msgid "Command"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:16
+msgid "ansible"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:17
+msgid "IT automation"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:18
+msgid "``pipx run ansible``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:19
+msgid "asciinema"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:20
+msgid "Record and share terminal sessions"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:21
+msgid "``pipx run asciinema``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:22
+msgid "black"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:23
+msgid "Uncompromising Python code formatter"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:24
+msgid "``pipx run black``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:25
+msgid "pybabel"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:26
+msgid "Internationalize and localize Python applications"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:27
+msgid "``pipx run --spec babel pybabel``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:28
+msgid "chardetect"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:29
+msgid "Detect file encoding"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:30
+msgid "``pipx run --spec chardet chardetect``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:31
+msgid "cookiecutter"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:32
+msgid "Create projects from templates"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:33
+msgid "``pipx run cookiecutter``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:34
+msgid "flake8"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:35
+msgid "Style guide enforcement"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:36
+msgid "``pipx run flake8``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:37
+msgid "gdbgui"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:38
+msgid "Browser-based gdb debugger"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:39
+msgid "``pipx run gdbgui``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:40
+msgid "hatch"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:41
+msgid "Build and publish packages, manage environments"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:42
+msgid "``pipx run hatch``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:43
+msgid "ipython"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:44
+msgid "Interactive Python shell"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:45
+msgid "``pipx run ipython``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:46
+msgid "jupyter"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:47
+msgid "Web-based interactive computing notebooks"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:48
+msgid "``pipx run jupyter``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:49
+msgid "pipenv"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:50
+msgid "Python dependency and environment management"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:51
+msgid "``pipx run pipenv``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:52
+msgid "poetry"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:53
+msgid "Python dependency, environment, and packaging management"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:54
+msgid "``pipx run poetry``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:55
+msgid "pylint"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:56
+msgid "Source code analyzer"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:57
+msgid "``pipx run pylint``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:58
+msgid "pyinstaller"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:59
+msgid "Bundle a Python application into a single package"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:60
+msgid "``pipx run pyinstaller``"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:61
+msgid "ruff"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:62
+msgid "Fast Python linter and formatter"
+msgstr ""
+
+#: ../../../reference/programs-to-try.rst:63
+msgid "``pipx run ruff``"
+msgstr ""

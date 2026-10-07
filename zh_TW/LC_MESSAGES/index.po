@@ -1,0 +1,241 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../index.rst:3
+msgid "pipx"
+msgstr "pipx"
+
+#: ../../../index.rst:5
+msgid ""
+"``pipx`` installs and runs end-user Python applications in isolated "
+"environments. It fills the same role as macOS's ``brew``, JavaScript's `npx "
+"<https://docs.npmjs.com/cli/commands/npx>`_, and Linux's ``apt``. Under the "
+"hood it uses pip, but unlike pip it creates a separate virtual environment "
+"for each application, so their dependencies never collide and an uninstall "
+"leaves nothing behind."
+msgstr ""
+"``pipx`` 可以在隔離環境中安裝並執行終端使用者的 Python 應用程式。它的用途與 "
+"macOS 的 ``brew``、JavaScript 的 `npx <https://docs.npmjs.com/cli/commands/"
+"npx>`_ 和 Linux 的 ``apt`` 相同。它在底層使用 pip，但不同於 pip，它會為每個應"
+"用程式建立獨立的虛擬環境，因此彼此的依賴不會互相衝突，解除安裝後也不會留下任"
+"何東西。"
+
+#: ../../../index.rst:32
+msgid "Start here"
+msgstr ""
+
+#: ../../../index.rst:37
+msgid "Tutorials"
+msgstr ""
+
+#: ../../../index.rst:41
+msgid ""
+"Install your first application and run one in a throwaway environment, one "
+"step at a time."
+msgstr ""
+
+#: ../../../index.rst:43
+msgid "How-to guides"
+msgstr "操作指南"
+
+#: ../../../index.rst:47
+msgid ""
+"Task recipes for installing pipx, injecting packages, pinning versions, "
+"configuring paths, and more."
+msgstr ""
+
+#: ../../../index.rst:49
+msgid "Reference"
+msgstr ""
+
+#: ../../../index.rst:53
+msgid ""
+"The full CLI, environment variables, exit codes, the JSON envelope, and "
+"worked examples."
+msgstr ""
+
+#: ../../../index.rst:55
+msgid "Explanation"
+msgstr ""
+
+#: ../../../index.rst:59
+msgid ""
+"How pipx works, what it manages on disk, and how it compares to other tools."
+msgstr ""
+
+#: ../../../index.rst:63
+msgid "pip vs pipx"
+msgstr ""
+
+#: ../../../index.rst:65
+msgid ""
+"pip installs both libraries and applications into whatever environment is "
+"active, with no isolation. pipx installs only applications, each in its own "
+"virtual environment, and exposes their commands on your ``PATH``. You get "
+"clean uninstalls, zero dependency conflicts between tools, and no ``sudo pip "
+"install`` — pipx runs with regular user permissions."
+msgstr ""
+"pip 會將程式庫和應用程式都安裝到目前激活的環境中，不會隔離。pipx 只會安裝應用"
+"程式，每個應用程式各自使用一個虛擬環境，並將其命令加入到您的 ``PATH``。您可以"
+"乾淨地解除安裝、避免工具之間的依賴衝突，而且不需要 ``sudo pip install`` — "
+"pipx 以一般使用者權限執行。"
+
+#: ../../../index.rst:72
+msgid "Where apps come from"
+msgstr ""
+
+#: ../../../index.rst:74
+msgid ""
+"pipx pulls packages from `PyPI <https://pypi.org/>`_ by default, but accepts "
+"any source pip supports: local directories, wheels, and git URLs. Any "
+"package that declares `console script entry points <https://packaging.python."
+"org/en/latest/specifications/entry-points/>`_ works with pipx. `Poetry "
+"<https://python-poetry.org/docs/pyproject/#scripts>`_ and `Hatch <https://"
+"hatch.pypa.io/latest/config/metadata/#cli>`_ users can add entry points the "
+"same way."
+msgstr ""
+
+#: ../../../index.rst:82
+msgid "Highlights"
+msgstr ""
+
+#: ../../../index.rst:84
+msgid ""
+"Install CLI apps into isolated environments with ``pipx install``, so there "
+"are no dependency conflicts and uninstalls are clean."
+msgstr ""
+"使用 ``pipx install`` 將 CLI 應用程式安裝在隔離的環境中，避免依賴衝突，解除安"
+"裝時也能清除乾淨。"
+
+#: ../../../index.rst:86
+msgid "List, upgrade, and uninstall managed apps in one command."
+msgstr "一個命令即可列出、升級和解除安裝受管理的應用程式。"
+
+#: ../../../index.rst:87
+msgid ""
+"Run the latest version of any app in a temporary environment with ``pipx "
+"run``, without installing it first."
+msgstr ""
+"使用 ``pipx run`` 在臨時環境中執行任何應用程式的最新版本，無須事先安裝。"
+
+#: ../../../index.rst:91
+msgid "Testimonials"
+msgstr ""
+
+#: ../../../index.rst:93
+msgid ""
+"\"Thanks for improving the workflow that pipsi has covered in the past. "
+"Nicely done!\""
+msgstr ""
+
+#: ../../../index.rst:95
+msgid ""
+"*Jannis Leidel, PSF fellow, former pip and Django core developer, and "
+"founder of the Python Packaging Authority (PyPA)*"
+msgstr ""
+
+#: ../../../index.rst:98
+msgid ""
+"\"My setup pieces together pyenv, poetry, and pipx. [...] For the things I "
+"need, it's perfect.\""
+msgstr ""
+
+#: ../../../index.rst:100
+msgid ""
+"*Jacob Kaplan-Moss, co-creator of Django, in* `My Python Development "
+"Environment, 2020 Edition <https://jacobian.org/2019/nov/11/python-"
+"environment-2020/>`_"
+msgstr ""
+
+#: ../../../index.rst:103
+msgid "\"I'm a big fan of pipx. I think pipx is super cool.\""
+msgstr ""
+
+#: ../../../index.rst:105
+msgid ""
+"*Michael Kennedy, co-host of the PythonBytes podcast, in* `episode 139 "
+"<https://pythonbytes.fm/episodes/transcript/139/f-yes-for-the-f-strings>`_"
+msgstr ""
+
+#: ../../../index.rst:110
+msgid "Credits"
+msgstr ""
+
+#: ../../../index.rst:112
+msgid ""
+"pipx was inspired by `pipsi <https://github.com/mitsuhiko/pipsi>`_ and `npx "
+"<https://github.com/npm/npx>`_. It was created by `Chad Smith <https://"
+"github.com/cs01/>`_ and has had lots of help from `contributors <https://"
+"github.com/pypa/pipx/graphs/contributors>`_. The logo was created by "
+"`@IrishMorales <https://github.com/IrishMorales>`_."
+msgstr ""
+"pipx 的靈感來自 `pipsi <https://github.com/mitsuhiko/pipsi>`_ 和 `npx "
+"<https://github.com/npm/npx>`_。它由 `Chad Smith <https://github.com/cs01/"
+">`_ 創建，並獲得許多\\ `貢獻者 <https://github.com/pypa/pipx/graphs/"
+"contributors>`_\\ 的協助。標誌由 `@IrishMorales <https://github.com/"
+"IrishMorales>`_ 設計。"
+
+#: ../../../index.rst:117
+msgid "pipx is maintained by a team of volunteers (in alphabetical order):"
+msgstr "pipx 由一群志願者共同維護（依字母順序排列）："
+
+#: ../../../index.rst:119
+msgid "`Bernát Gábor <https://github.com/gaborbernat>`_"
+msgstr "`Bernát Gábor <https://github.com/gaborbernat>`_"
+
+#: ../../../index.rst:120
+msgid "`Henry Schreiner <https://github.com/henryiii>`_"
+msgstr "`Henry Schreiner <https://github.com/henryiii>`_"
+
+#: ../../../index.rst:121
+msgid "`Jason Lam <https://github.com/dukecat0>`_"
+msgstr "`Jason Lam <https://github.com/dukecat0>`_"
+
+#: ../../../index.rst:122
+msgid "`Tzu-ping Chung <https://github.com/uranusjr>`_"
+msgstr "`Tzu-ping Chung <https://github.com/uranusjr>`_"
+
+#: ../../../index.rst:123
+msgid "`Xuan Hu <https://github.com/huxuan>`_"
+msgstr "`Xuan Hu <https://github.com/huxuan>`_"
+
+#: ../../../index.rst:125
+msgid "Emeritus maintainers, who shaped earlier releases:"
+msgstr "曾參與打造早期發行版的榮譽維護者："
+
+#: ../../../index.rst:127
+msgid "`Chad Smith <https://github.com/cs01>`_"
+msgstr "`Chad Smith <https://github.com/cs01>`_"
+
+#: ../../../index.rst:128
+msgid "`Chrysle <https://github.com/chrysle>`_"
+msgstr "`Chrysle <https://github.com/chrysle>`_"
+
+#: ../../../index.rst:129
+msgid "`Matthew Clapp <https://github.com/itsayellow>`_"
+msgstr "`Matthew Clapp <https://github.com/itsayellow>`_"
+
+#: ../../../index.rst:130
+msgid "`Robert Offner <https://github.com/gitznik>`_"
+msgstr "`Robert Offner <https://github.com/gitznik>`_"
+
+#: ../../../index.rst:132
+msgid ""
+"The documentation follows the `Diátaxis <https://diataxis.fr>`_ framework."
+msgstr ""

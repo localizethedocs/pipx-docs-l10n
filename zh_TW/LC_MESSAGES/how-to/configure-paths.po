@@ -1,0 +1,280 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/configure-paths.rst:3
+msgid "Configure paths"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:5
+msgid ""
+"Choose where pipx stores environments, apps, and manual pages, and how it "
+"installs for all users."
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:9
+msgid "Directory layout"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:11
+msgid ""
+"pipx splits its files across three locations, each with an environment-"
+"variable override and a ``--global`` counterpart:"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:38
+msgid "Variable"
+msgstr "變數"
+
+#: ../../../how-to/configure-paths.rst:39
+msgid "Holds"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:40
+msgid "Default"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:41
+msgid "``PIPX_HOME``"
+msgstr "``PIPX_HOME``"
+
+#: ../../../how-to/configure-paths.rst:42
+msgid "Virtual environments and shared libraries"
+msgstr "虛擬環境與共享程式庫"
+
+#: ../../../how-to/configure-paths.rst:43
+msgid "``~/.local/share/pipx``"
+msgstr "``~/.local/share/pipx``"
+
+#: ../../../how-to/configure-paths.rst:44
+msgid "``PIPX_BIN_DIR``"
+msgstr "``PIPX_BIN_DIR``"
+
+#: ../../../how-to/configure-paths.rst:45
+msgid "App links"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:46
+msgid "``~/.local/bin``"
+msgstr "``~/.local/bin``"
+
+#: ../../../how-to/configure-paths.rst:47
+msgid "``PIPX_MAN_DIR``"
+msgstr "``PIPX_MAN_DIR``"
+
+#: ../../../how-to/configure-paths.rst:48
+msgid "Manual page links"
+msgstr "手冊頁面連結"
+
+#: ../../../how-to/configure-paths.rst:49
+msgid "``~/.local/share/man``"
+msgstr "``~/.local/share/man``"
+
+#: ../../../how-to/configure-paths.rst:51
+msgid ""
+"The default ``PIPX_HOME`` is typically ``~/.local/share/pipx`` on Linux, ``~/"
+"Library/Application Support/pipx`` on macOS, and ``%USERPROFILE%"
+"\\AppData\\Local\\pipx\\pipx`` on Windows. Set any variable to override its "
+"location."
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:58
+msgid "platformdirs migration"
+msgstr "platformdirs 遷移"
+
+#: ../../../how-to/configure-paths.rst:60
+msgid ""
+"After version 1.16.0, pipx moved its default paths from ``~/.local/pipx`` to "
+"per-platform user directories from the `platformdirs <https://pypi.org/"
+"project/platformdirs/>`_ library:"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:67
+msgid "Old path"
+msgstr "舊路徑"
+
+#: ../../../how-to/configure-paths.rst:68
+msgid "New path"
+msgstr "新路徑"
+
+#: ../../../how-to/configure-paths.rst:69
+msgid "``~/.local/pipx/.trash``"
+msgstr "``~/.local/pipx/.trash``"
+
+#: ../../../how-to/configure-paths.rst:70
+msgid "``platformdirs.user_data_dir()/pipx/trash``"
+msgstr "``platformdirs.user_data_dir()/pipx/trash``"
+
+#: ../../../how-to/configure-paths.rst:71
+msgid "``~/.local/pipx/shared``"
+msgstr "``~/.local/pipx/shared``"
+
+#: ../../../how-to/configure-paths.rst:72
+msgid "``platformdirs.user_data_dir()/pipx/shared``"
+msgstr "``platformdirs.user_data_dir()/pipx/shared``"
+
+#: ../../../how-to/configure-paths.rst:73
+msgid "``~/.local/pipx/venvs``"
+msgstr "``~/.local/pipx/venvs``"
+
+#: ../../../how-to/configure-paths.rst:74
+msgid "``platformdirs.user_data_dir()/pipx/venvs``"
+msgstr "``platformdirs.user_data_dir()/pipx/venvs``"
+
+#: ../../../how-to/configure-paths.rst:75
+msgid "``~/.local/pipx/.cache``"
+msgstr "``~/.local/pipx/.cache``"
+
+#: ../../../how-to/configure-paths.rst:76
+msgid "``platformdirs.user_cache_dir()/pipx``"
+msgstr "``platformdirs.user_cache_dir()/pipx``"
+
+#: ../../../how-to/configure-paths.rst:77
+msgid "``~/.local/pipx/logs``"
+msgstr "``~/.local/pipx/logs``"
+
+#: ../../../how-to/configure-paths.rst:78
+msgid "``platformdirs.user_log_dir()/pipx/log``"
+msgstr "``platformdirs.user_log_dir()/pipx/log``"
+
+#: ../../../how-to/configure-paths.rst:80
+msgid ""
+"For compatibility, if ``~/.local/pipx`` exists (or ``~\\pipx`` on Windows), "
+"pipx keeps using it. See the `platformdirs platform table <https://"
+"platformdirs.readthedocs.io/en/latest/api.html#platforms>`_ for the resolved "
+"directories. On Linux and macOS, ``platformdirs`` reads ``XDG_DATA_HOME`` "
+"and ``XDG_CACHE_HOME``, so exporting either moves the matching pipx "
+"directory; leave them unset for the platform default."
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:85
+msgid ""
+"These paths were introduced in 1.2.0 and temporarily reverted for macOS and "
+"Windows between 1.5.0 and 1.16.0. To move an existing installation to the "
+"new default, see :doc:`move-installation`."
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:90
+msgid "Install for all users"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:92
+msgid ""
+"The ``--global`` flag installs into a system-wide location for all users. "
+"Place it **after** the subcommand:"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:94
+msgid ""
+"$ sudo pipx install --global pycowsay\n"
+"$ sudo pipx list --global"
+msgstr ""
+"$ sudo pipx install --global pycowsay\n"
+"$ sudo pipx list --global"
+
+#: ../../../how-to/configure-paths.rst:99
+msgid ""
+"pipx silently ignores ``--global`` when it comes before the subcommand "
+"(``sudo pipx --global install pycowsay``)."
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:101
+msgid ""
+"Default global paths are ``/usr/local/bin`` for binaries, ``/usr/local/share/"
+"man`` for man pages, and ``/opt/pipx`` for environments. Override them with "
+"``PIPX_GLOBAL_BIN_DIR``, ``PIPX_GLOBAL_MAN_DIR``, and ``PIPX_GLOBAL_HOME``. "
+"Add the global binary directory to the system ``PATH`` with ``sudo pipx "
+"ensurepath --global``, which writes ``/etc/profile.d/pipx.sh`` on Linux and "
+"``/etc/paths.d/pipx`` on macOS."
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:106
+msgid ""
+"You can also set the variables explicitly instead of using ``--global``:"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:108
+msgid ""
+"$ sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin PIPX_MAN_DIR=/usr/"
+"local/share/man pipx install <PACKAGE>"
+msgstr ""
+"$ sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin PIPX_MAN_DIR=/usr/"
+"local/share/man pipx install <PACKAGE>"
+
+#: ../../../how-to/configure-paths.rst:114
+msgid "``--global`` is not supported on Windows."
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:118
+msgid "Prepend or preview the PATH edit"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:120
+msgid ""
+"Pass ``--prepend`` to ``pipx ensurepath`` to prepend the pipx bin directory "
+"to ``PATH`` instead of appending it, so pipx-installed binaries win over "
+"system binaries of the same name."
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:123
+msgid ""
+"Pass ``--dry-run`` to report which directories ``ensurepath`` would add, "
+"without touching ``PATH`` or any shell configuration file:"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:126
+msgid "$ pipx ensurepath --dry-run"
+msgstr "$ pipx ensurepath --dry-run"
+
+#: ../../../how-to/configure-paths.rst:132
+msgid "Point pip at an index"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:134
+msgid ""
+"pipx uses pip internally for all installs, including its own shared "
+"libraries. Set ``PIP_*`` environment variables to route pip at a private "
+"index; pipx forwards them to every pip call. For per-command control use ``--"
+"pip-args``. See :doc:`use-private-index` for the full recipe."
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:138
+msgid ""
+"Set ``PIPX_DISABLE_SHARED_LIBS_AUTO_UPGRADE=1`` to skip automatic shared-"
+"library upgrades during commands such as ``pipx install`` and ``pipx "
+"upgrade``; ``pipx upgrade-shared`` still upgrades them. Use ``--skip-"
+"maintenance`` to apply the same policy to one command:"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:142
+msgid "$ pipx install --skip-maintenance my-package"
+msgstr "$ pipx install --skip-maintenance my-package"
+
+#: ../../../how-to/configure-paths.rst:148
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:150
+msgid ""
+"$ pipx environment --value PIPX_HOME\n"
+"$ pipx environment --value PIPX_BIN_DIR"
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:155
+msgid "Each prints the path pipx will use, reflecting any override you set."
+msgstr ""

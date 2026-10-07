@@ -1,0 +1,359 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/install-pipx.rst:3
+msgid "Install pipx"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:5
+msgid "Get pipx onto your system and add its app directory to your ``PATH``."
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:7
+msgid "pipx runs on macOS, Linux, and Windows."
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:9
+msgid "Packaging status"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:15
+msgid "Check the requirements"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:17
+msgid ""
+"Installing pipx needs Python 3.10 or newer; the apps it runs can target "
+"Python 3.3 or newer. Without Python 3.10, see the `Python 3 installation "
+"guide <https://realpython.com/installing-python/>`_."
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:20
+msgid ""
+"You also need ``pip`` for ``python3``. The steps vary by system; see `pip's "
+"installation instructions <https://pip.pypa.io/en/stable/installation/>`_. "
+"On Linux, install through a `Linux package manager <https://packaging.python."
+"org/guides/installing-using-linux-tools/#installing-pip-setuptools-wheel-"
+"with-linux-package-managers>`_."
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:26
+msgid "Install per OS"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:29
+msgid "macOS"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:31
+msgid ""
+"$ brew install pipx\n"
+"$ pipx ensurepath"
+msgstr ""
+"$ brew install pipx\n"
+"$ pipx ensurepath"
+
+#: ../../../how-to/install-pipx.rst:37
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../../how-to/install-pipx.rst:39
+msgid "Ubuntu 23.04 or newer:"
+msgstr "Ubuntu 23.04 或更新的散佈版："
+
+#: ../../../how-to/install-pipx.rst:41
+msgid ""
+"$ sudo apt update\n"
+"$ sudo apt install pipx\n"
+"$ pipx ensurepath"
+msgstr ""
+"$ sudo apt update\n"
+"$ sudo apt install pipx\n"
+"$ pipx ensurepath"
+
+#: ../../../how-to/install-pipx.rst:47
+msgid "Fedora:"
+msgstr "Fedora："
+
+#: ../../../how-to/install-pipx.rst:49
+msgid ""
+"$ sudo dnf install pipx\n"
+"$ pipx ensurepath"
+msgstr ""
+"$ sudo dnf install pipx\n"
+"$ pipx ensurepath"
+
+#: ../../../how-to/install-pipx.rst:54
+msgid "Other distributions, using ``pip``:"
+msgstr "其他散佈版，使用 ``pip``："
+
+#: ../../../how-to/install-pipx.rst:56
+msgid ""
+"$ python3 -m pip install --user pipx\n"
+"$ python3 -m pipx ensurepath"
+msgstr ""
+"$ python3 -m pip install --user pipx\n"
+"$ python3 -m pipx ensurepath"
+
+#: ../../../how-to/install-pipx.rst:63
+msgid ""
+"Distributions that adopt `PEP 668 <https://peps.python.org/pep-0668/>`_ "
+"(Ubuntu 23.04+, Debian 12+, Fedora 38+) mark the system Python as externally "
+"managed, so ``pip install --user`` fails with ``externally-managed-"
+"environment``. Use the distribution package (``apt install pipx``, ``dnf "
+"install pipx``). If none exists, install pipx into its own virtual "
+"environment:"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:68
+msgid ""
+"$ python3 -m venv ~/.local/share/pipx-venv\n"
+"$ ~/.local/share/pipx-venv/bin/pip install pipx\n"
+"$ ln -s ~/.local/share/pipx-venv/bin/pipx ~/.local/bin/pipx\n"
+"$ pipx ensurepath"
+msgstr ""
+"$ python3 -m venv ~/.local/share/pipx-venv\n"
+"$ ~/.local/share/pipx-venv/bin/pip install pipx\n"
+"$ ln -s ~/.local/share/pipx-venv/bin/pipx ~/.local/bin/pipx\n"
+"$ pipx ensurepath"
+
+#: ../../../how-to/install-pipx.rst:76
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../../how-to/install-pipx.rst:78
+msgid "Install via `Scoop <https://scoop.sh/>`_:"
+msgstr "透過 `Scoop <https://scoop.sh/>`_ 安裝："
+
+#: ../../../how-to/install-pipx.rst:80
+msgid ""
+"$ scoop install pipx\n"
+"$ pipx ensurepath"
+msgstr ""
+"$ scoop install pipx\n"
+"$ pipx ensurepath"
+
+#: ../../../how-to/install-pipx.rst:85
+msgid ""
+"Install via pip (needs pip 19.0 or newer; replace ``py`` with ``python3`` if "
+"you installed Python from the Microsoft Store):"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:88
+msgid "$ py -m pip install --user pipx"
+msgstr "$ py -m pip install --user pipx"
+
+#: ../../../how-to/install-pipx.rst:92
+msgid ""
+"This often ends with a warning that ``pipx.exe`` is installed in a directory "
+"that is not on ``PATH``. Go to that directory and run the executable "
+"directly to fix it (run this even without the warning):"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:95
+msgid "$ .\\pipx.exe ensurepath"
+msgstr "$ .\\pipx.exe ensurepath"
+
+#: ../../../how-to/install-pipx.rst:99
+msgid ""
+"This adds both that directory and ``%USERPROFILE%\\.local\\bin`` to your "
+"search path. Restart the terminal, then confirm ``pipx`` runs."
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:103
+msgid "FreeBSD"
+msgstr "FreeBSD"
+
+#: ../../../how-to/install-pipx.rst:105
+msgid ""
+"$ pkg install -y py311-pipx\n"
+"$ pipx ensurepath"
+msgstr ""
+"$ pkg install -y py311-pipx\n"
+"$ pipx ensurepath"
+
+#: ../../../how-to/install-pipx.rst:110
+msgid "Or via pip:"
+msgstr "或者透過 pip："
+
+#: ../../../how-to/install-pipx.rst:112
+msgid ""
+"$ pip install --user pipx\n"
+"$ pipx ensurepath"
+msgstr ""
+"$ pip install --user pipx\n"
+"$ pipx ensurepath"
+
+#: ../../../how-to/install-pipx.rst:119
+msgid "Optional PATH commands"
+msgstr "選用的 PATH 命令"
+
+#: ../../../how-to/install-pipx.rst:121
+msgid "Add the global app directory to the system ``PATH`` (pipx 1.5.0+):"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:123
+msgid "$ sudo pipx ensurepath --global"
+msgstr "$ sudo pipx ensurepath --global"
+
+#: ../../../how-to/install-pipx.rst:127
+msgid ""
+"Prepend the pipx bin directory instead of appending it, so pipx apps win "
+"over system apps of the same name (pipx 1.7.0+):"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:130
+msgid "$ sudo pipx ensurepath --prepend"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:134
+msgid ""
+"For where these directories live and how to change them, see :doc:`configure-"
+"paths`."
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:138
+msgid ""
+"Some distributions ship older pipx versions (Ubuntu 24.04 ships 1.4.3). If "
+"``--global`` or ``--prepend`` fails with \"unrecognized arguments\", :doc:"
+"`upgrade pipx <upgrade-pipx>` first."
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:143
+msgid ""
+"``sudo pipx`` reports \"command not found\" when pipx lives in your user "
+"directory. See :ref:`sudo-pipx-not-found` for the fix."
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:148
+msgid "Run pipx without installing"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:150
+msgid ""
+"Download the zipapp from `GitHub releases <https://github.com/pypa/pipx/"
+"releases>`_ and invoke it with a Python 3.10+ interpreter:"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:153
+msgid "$ python pipx.pyz ensurepath"
+msgstr "$ python pipx.pyz ensurepath"
+
+#: ../../../how-to/install-pipx.rst:159
+msgid "Self-managed pipx"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:161
+msgid ""
+"Let pipx manage its own installation so ``pipx upgrade pipx`` keeps it "
+"current and you avoid distro packages that ship older versions. Bootstrap it "
+"through a throwaway virtual environment:"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:164
+msgid ""
+"$ python3 -m venv /tmp/bootstrap\n"
+"$ /tmp/bootstrap/bin/pip install pipx\n"
+"$ /tmp/bootstrap/bin/pipx install pipx\n"
+"$ /tmp/bootstrap/bin/pipx ensurepath\n"
+"$ rm -rf /tmp/bootstrap"
+msgstr ""
+"$ python3 -m venv /tmp/bootstrap\n"
+"$ /tmp/bootstrap/bin/pip install pipx\n"
+"$ /tmp/bootstrap/bin/pipx install pipx\n"
+"$ /tmp/bootstrap/bin/pipx ensurepath\n"
+"$ rm -rf /tmp/bootstrap"
+
+#: ../../../how-to/install-pipx.rst:172
+msgid ""
+"After this, ``pipx upgrade pipx`` upgrades pipx like any other managed app. "
+"On Windows, pipx cannot delete its own running executable, so it moves "
+"locked files to a trash directory and cleans them up on the next run."
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:179
+msgid "Install from source control"
+msgstr "從來源碼控制安裝"
+
+#: ../../../how-to/install-pipx.rst:181
+msgid ""
+"pipx accepts any source pip supports, including git repositories. Using "
+"``black`` as an example:"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:183
+msgid ""
+"$ pipx install git+https://github.com/psf/black.git\n"
+"$ pipx install git+ssh://git@github.com/psf/black\n"
+"$ pipx install git+https://github.com/psf/black.git@branch\n"
+"$ pipx install git+https://github.com/psf/black."
+"git@ce14fa8b497bae2b50ec48b3bd7022573a59cdb1\n"
+"$ pipx install https://github.com/psf/black/archive/18.9b0.zip"
+msgstr ""
+"$ pipx install git+https://github.com/psf/black.git\n"
+"$ pipx install git+ssh://git@github.com/psf/black\n"
+"$ pipx install git+https://github.com/psf/black.git@branch\n"
+"$ pipx install git+https://github.com/psf/black."
+"git@ce14fa8b497bae2b50ec48b3bd7022573a59cdb1\n"
+"$ pipx install https://github.com/psf/black/archive/18.9b0.zip"
+
+#: ../../../how-to/install-pipx.rst:191
+msgid "Use a direct URL requirement to install extras:"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:193
+msgid ""
+"$ pipx install \"black[jupyter] @ git+https://github.com/psf/black.git\""
+msgstr ""
+"$ pipx install \"black[jupyter] @ git+https://github.com/psf/black.git\""
+
+#: ../../../how-to/install-pipx.rst:197
+msgid ""
+"To test a package from an open pull request, find the fork owner and branch "
+"on the PR page, then build the git URL. For PR #794 from user "
+"``contributor`` on branch ``fix-something``:"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:200
+msgid ""
+"$ pipx install git+https://github.com/contributor/pipx.git@fix-something"
+msgstr ""
+"$ pipx install git+https://github.com/contributor/pipx.git@fix-something"
+
+#: ../../../how-to/install-pipx.rst:204
+msgid "If the branch is already merged, use the merge commit hash instead:"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:206
+msgid "$ pipx install git+https://github.com/pypa/pipx.git@abc123def"
+msgstr "$ pipx install git+https://github.com/pypa/pipx.git@abc123def"
+
+#: ../../../how-to/install-pipx.rst:212
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:214
+msgid "$ pipx --version"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:218
+msgid ""
+"Open a new terminal after ``pipx ensurepath`` so the updated ``PATH`` takes "
+"effect, then run ``pipx list`` to confirm the environment is reachable."
+msgstr ""

@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../explanation/scope.rst:3
+msgid "Project scope"
+msgstr ""
+
+#: ../../../explanation/scope.rst:5
+msgid ""
+"pipx installs and runs Python applications. It manages the isolated "
+"environments that support those applications and exposes their entry points "
+"on ``PATH``."
+msgstr ""
+
+#: ../../../explanation/scope.rst:10
+msgid "What pipx manages"
+msgstr ""
+
+#: ../../../explanation/scope.rst:12
+msgid ""
+"Persistent application environments for ``pipx install`` and disposable "
+"environments for ``pipx run``."
+msgstr ""
+
+#: ../../../explanation/scope.rst:13
+msgid ""
+"User installations by default and system installations when the caller "
+"passes ``--global``."
+msgstr ""
+
+#: ../../../explanation/scope.rst:14
+msgid ""
+"Application dependencies inside a managed environment. For unlocked "
+"environments, ``inject`` and ``--preinstall`` extend an application "
+"environment; they do not create standalone library environments."
+msgstr ""
+
+#: ../../../explanation/scope.rst:16
+msgid ""
+"Entry points from the main package and dependencies named with ``--include-"
+"resources-from`` or ``--include-deps``."
+msgstr ""
+
+#: ../../../explanation/scope.rst:18
+msgid ""
+"An install fails when neither the package nor its selected dependencies "
+"expose an application. The caller can pass ``--app NAME`` to require an "
+"exact entry point. pipx removes a new environment or restores an existing "
+"one when the check fails."
+msgstr ""
+
+#: ../../../explanation/scope.rst:24
+msgid "Boundaries"
+msgstr ""
+
+#: ../../../explanation/scope.rst:26
+msgid "pipx does not manage these use cases:"
+msgstr ""
+
+#: ../../../explanation/scope.rst:28
+msgid "standalone environments for importing libraries or modules;"
+msgstr ""
+
+#: ../../../explanation/scope.rst:29
+msgid ""
+"tool selection based on the current directory, parent directories, or "
+"project metadata;"
+msgstr ""
+
+#: ../../../explanation/scope.rst:30
+msgid "system installation inferred from elevated privileges;"
+msgstr ""
+
+#: ../../../explanation/scope.rst:31
+msgid "a ``pip`` executable from each managed environment on ``PATH``;"
+msgstr ""
+
+#: ../../../explanation/scope.rst:32
+msgid ""
+"package search, package ranking, or index-specific application discovery; or"
+msgstr ""
+
+#: ../../../explanation/scope.rst:33
+msgid ""
+"frozen pipx executables, operating-system packages, zipapp installers, "
+"repositories, and signing keys."
+msgstr ""
+
+#: ../../../explanation/scope.rst:35
+msgid ""
+"Use ``pipx runpip`` when you need package-manager access inside an "
+"environment that pipx created. Distribution projects may package pipx for "
+"their users, but each ecosystem owns its build, release, update, and signing "
+"process."
+msgstr ""
+
+#: ../../../explanation/scope.rst:40
+msgid "Configuration and state"
+msgstr ""
+
+#: ../../../explanation/scope.rst:42
+msgid ""
+"Ordinary pipx commands do not search the current directory or its parents "
+"for configuration. ``pipx manifest sync PATH`` applies the desired "
+"application state from the manifest at ``PATH``; pipx does not infer that "
+"path. The manifest accepts tool state instead of arbitrary command defaults."
+msgstr ""
+
+#: ../../../explanation/scope.rst:46
+msgid ""
+"pipx can record an environment's resolved dependencies as a lock file in the "
+"PyPA ``pylock.toml`` format, so the environment rebuilds identically; ``pipx "
+"manifest lock`` writes these locks and ``pipx install --lock`` reads one "
+"back. pipx does not use ``requirements.txt`` as a state or lock format."
+msgstr ""
+
+#: ../../../explanation/scope.rst:50
+msgid ""
+"pipx exposes top-level policy when pip and uv honor the same contract. "
+"Backend arguments carry controls specific to pip or uv. ``--cooldown DAYS`` "
+"maps one pipx release-age policy to both backends."
+msgstr ""
+
+#: ../../../explanation/scope.rst:53
+msgid ""
+"A release-age policy describes the machine, not one command, so "
+"``PIPX_COOLDOWN`` supplies the default and no configuration file appears to "
+"hold it. That keeps pipx settings in one place and keeps the policy out of "
+"the backend environment variables (``PIP_UPLOADED_PRIOR_TO``, "
+"``UV_EXCLUDE_NEWER``), which would bind pipx to one backend and leak into "
+"unrelated pip and uv runs in the same shell. The variable outranks the "
+"cooldown an environment recorded at install time, because it states what the "
+"machine wants now rather than what an older install happened to use; ``--"
+"cooldown`` still overrides both, and a lock file supersedes all of them by "
+"pinning every version outright."
+msgstr ""
+
+#: ../../../explanation/scope.rst:60
+msgid ""
+"Application launchers start the installed application without downloading "
+"packages or changing its environment. Health checks and repairs belong in "
+"commands that the user invokes for those purposes."
+msgstr ""
+
+#: ../../../explanation/scope.rst:65
+msgid "Existing directory lookup"
+msgstr ""
+
+#: ../../../explanation/scope.rst:67
+msgid ""
+"``pipx run`` has experimental support for applications under "
+"``__pypackages__/<major>.<minor>/lib/bin`` in the current directory. This "
+"behavior predates the scope above and conflicts with the directory-discovery "
+"boundary. New features must not use it as a model; the project should "
+"deprecate and remove it in a separate change."
+msgstr ""
+
+#: ../../../explanation/scope.rst:73
+msgid "Choose another tool"
+msgstr ""
+
+#: ../../../explanation/scope.rst:75
+msgid ""
+"Use a project dependency manager such as uv or Poetry for project libraries "
+"and development tools. Use ``venv``, pip, or uv for a library environment. "
+"Use a version manager such as mise when a directory must select tool "
+"versions, and use the system package manager to find or install operating-"
+"system packages."
+msgstr ""

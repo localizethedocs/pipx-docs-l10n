@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/shell-completions.rst:3
+msgid "Shell completions"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:5
+msgid "Enable tab completion for pipx and for the apps it installs."
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:9
+msgid "Enable pipx completion"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:11
+msgid "Print the instructions for your shell and follow them:"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:13
+msgid "$ pipx completions"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:19
+msgid "Completions for installed apps"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:21
+msgid ""
+"A package can ship the completion script for its own command, the way it "
+"ships a man page. pipx links that script out of the environment it installed "
+"into, so the completions arrive with the package and leave with it."
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:24
+msgid ""
+"pipx picks up the three directories a wheel installs completion scripts into "
+"and links each under ``PIPX_COMPLETION_DIR`` (default ``~/.local/share``):"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:31
+msgid "Shipped by the package"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:32
+msgid "Linked to"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:33
+msgid "Loaded by"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:34
+msgid "``share/bash-completion/completions/``"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:35
+msgid "``~/.local/share/bash-completion/completions/``"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:36
+msgid "bash, on its own"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:37
+msgid "``share/fish/vendor_completions.d/``"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:38
+msgid "``~/.local/share/fish/vendor_completions.d/``"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:39
+msgid "fish, on its own"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:40
+msgid "``share/zsh/site-functions/``"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:41
+msgid "``~/.local/share/zsh/site-functions/``"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:42
+msgid "zsh, once you say so"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:44
+msgid ""
+"bash and fish read their directories without further help. zsh needs the "
+"directory on its ``fpath``, so add this to ``~/.zshrc`` ahead of the call to "
+"``compinit``:"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:47
+msgid ""
+"fpath+=(\"$(pipx environment --value PIPX_COMPLETION_DIR)/zsh/site-"
+"functions\")"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:51
+msgid ""
+"``pipx uninstall`` takes the links away, and ``pipx unexpose`` removes them "
+"while leaving the package in place (see :doc:`expose-apps`)."
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:56
+msgid "Ship completions from your package"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:58
+msgid ""
+"Install completion scripts through your build backend's data files. With "
+"setuptools:"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:60
+msgid ""
+"setup(\n"
+"    name=\"your-tool\",\n"
+"    data_files=[\n"
+"        (\"share/bash-completion/completions\", [\"completions/your-"
+"tool\"]),\n"
+"        (\"share/zsh/site-functions\", [\"completions/_your-tool\"]),\n"
+"        (\"share/fish/vendor_completions.d\", [\"completions/your-tool."
+"fish\"]),\n"
+"    ],\n"
+")"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:73
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/shell-completions.rst:75
+msgid ""
+"Open a new shell and press ``Tab`` after typing ``pipx``. The subcommands "
+"complete when the setup took effect."
+msgstr ""

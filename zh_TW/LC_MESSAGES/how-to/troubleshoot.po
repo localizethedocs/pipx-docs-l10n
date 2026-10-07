@@ -1,0 +1,402 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/troubleshoot.rst:3
+msgid "Troubleshoot"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:5
+msgid ""
+"Diagnose and fix common pipx problems, from wrong package versions to broken "
+"environments."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:9
+msgid "Wrong package version installed"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:11
+msgid ""
+"pipx builds venvs with your default Python, and pip installs the newest "
+"release compatible with it. When a package drops support for your Python "
+"version, pip installs an older release without warning."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:14
+msgid "Check which Python pipx uses:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:16
+msgid "$ pipx environment --value PIPX_DEFAULT_PYTHON"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:20
+msgid "Install with a different Python:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:22
+msgid "$ pipx install my-package --python python3.12"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:26
+msgid "If you do not have that version, let pipx download a standalone build:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:28
+msgid "$ pipx install my-package --python 3.13 --fetch-python=missing"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:32
+msgid ""
+"Pass ``--fetch-python=always`` to download even when the system has the "
+"requested version, for example to avoid a patched distro interpreter. See :"
+"doc:`standalone-python`."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:39
+msgid "Diagnose and repair environments"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:41
+msgid "Check each managed environment without changing it:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:43 ../../../how-to/troubleshoot.rst:251
+msgid "$ pipx health"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:47
+msgid ""
+"The command exits with status 1 when an environment cannot run its Python "
+"interpreter. Pass package names to check a subset, or ``--output json`` to "
+"read the result from a script."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:50
+msgid "Repair failed environments with the default Python:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:52
+msgid "$ pipx repair"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:56
+msgid ""
+"Pass package names to limit the repair, and ``--python`` when the rebuilt "
+"environments need another interpreter:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:58
+msgid "$ pipx repair --python python3.13"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:62
+msgid ""
+"``pipx repair`` reuses the recorded metadata, like ``pipx reinstall``, and "
+"leaves healthy environments unchanged. It refuses a pinned package because "
+"its recorded source may resolve to another release; run ``pipx unpin "
+"PACKAGE`` first. To rebuild healthy environments too (for example after an "
+"old pipx release), use ``pipx reinstall-all`` (see :doc:`manage-installed-"
+"apps`)."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:69
+msgid ""
+"A package installed with a pipx before 0.15.0.0 has no recorded options. To "
+"specify options, uninstall and install it manually:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:72
+msgid ""
+"$ pipx uninstall <mypackage>\n"
+"$ pipx install <mypackage>"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:79
+msgid "Start over from a fresh install"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:81
+msgid ""
+"An interrupted install or shared-library upgrade can leave state that ``pipx "
+"repair`` cannot mend, such as a shared environment whose pip no longer "
+"imports. Reset pipx to the state it had at install time:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:84
+msgid "$ pipx reset"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:88
+msgid ""
+"It uninstalls every managed package (unlinking their apps and man pages) and "
+"removes the shared libraries, caches, standalone interpreters, logs, and "
+"trash. Because it asks first, ``--yes`` answers for a script, and ``--dry-"
+"run`` lists what it would remove without touching anything:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:92
+msgid "$ pipx reset --dry-run"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:96
+msgid ""
+"Record what you have with ``pipx list --short`` before the reset, then "
+"reinstall afterward."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:100
+msgid "Specify options that take an argument"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:102
+msgid "Use an ``=`` sign for options that require an argument:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:104
+msgid "$ pipx install pycowsay --pip-args=\"--no-cache-dir\""
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:108
+msgid "To ignore SSL/TLS errors:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:110
+msgid ""
+"$ pipx install termpair --pip-args '--trusted-host files.pythonhosted.org --"
+"trusted-host pypi.org --trusted-host pypi.python.org --trusted-host github."
+"com'"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:116
+msgid "Check for PIP_* environment variables"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:118
+msgid ""
+"pipx uses pip to install and manage packages. If pipx behaves strangely on "
+"install or upgrade, check for environment variables that change pip's "
+"behavior."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:121 ../../../how-to/troubleshoot.rst:219
+msgid "Unix or macOS:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:123
+msgid "$ env | grep '^PIP_'"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:127
+msgid "Windows PowerShell:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:129
+msgid "$ ls env:PIP_*"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:133
+msgid "Windows ``cmd``:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:135
+msgid "$ set PIP_"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:139
+msgid ""
+"See `pip's environment variables <https://pip.pypa.io/en/stable/user_guide/"
+"#environment-variables>`_."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:143
+msgid "Clear runpip cache warnings"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:145
+msgid ""
+"``pipx runpip`` runs the pip installed inside a pipx-managed venv. Warnings "
+"such as ``WARNING: Cache entry deserialization failed, entry ignored`` come "
+"from that pip and its own HTTP cache, not from pipx's venv cache."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:148
+msgid "Clear the cache for a managed package:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:150
+msgid "$ pipx runpip <package> cache purge"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:154
+msgid ""
+"Inspect the cache directory first with ``--verbose`` so pipx does not quiet "
+"pip's output:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:156
+msgid "$ pipx runpip --verbose <package> cache dir"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:160
+msgid ""
+"Clearing ``$PIPX_HOME/.cache`` or the cache for a different interpreter does "
+"not clear entries used by ``pipx runpip <package>``."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:165
+msgid "Log files"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:167
+msgid ""
+"pipx writes a verbose log for every command. The last 10 logs live in "
+"``$XDG_STATE_HOME/pipx/logs``, or the user log path when that is not "
+"writable (usually ``~/.local/state/pipx/logs``). Set ``PIPX_MAX_LOGS`` to "
+"change how many are kept (default ``10``)."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:175
+msgid "``sudo pipx`` not found"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:177
+msgid ""
+"If you installed pipx with ``pip install --user``, its binary lives in your "
+"user directory (for example ``~/.local/bin/pipx``). Root's ``PATH`` does not "
+"include that directory, so ``sudo pipx`` fails with \"command not found\". "
+"Use the full path:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:181
+msgid "$ sudo ~/.local/bin/pipx ensurepath --global"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:185
+msgid ""
+"To avoid this, install pipx through your distribution's package manager "
+"(``apt install pipx``, ``dnf install pipx``) or system-wide with ``sudo pip "
+"install pipx`` (without ``--user``)."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:190
+msgid "Debian and Ubuntu issues"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:192
+msgid ""
+"On Debian, Ubuntu, and derivatives, make sure these packages are installed; "
+"Debian systems do not add them by default:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:194
+msgid "$ sudo apt install python3-venv python3-pip"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:198
+msgid ""
+"See the `Python Packaging User Guide <https://packaging.python.org/guides/"
+"installing-using-linux-tools>`_ on installing pip, setuptools, and wheel "
+"with Linux package managers."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:204
+msgid "Naming a pipx app in your own shebang"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:206
+msgid ""
+"The default pipx home on macOS is ``~/Library/Application Support/pipx``, "
+"which contains a space. Apps installed there run because pip and uv write a "
+"``/bin/sh`` wrapper as the shebang whenever the interpreter path holds a "
+"space."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:209
+msgid ""
+"A shebang you write yourself has no such wrapper. ``#!/Users/you/.local/bin/"
+"aws`` works, while a shebang naming a path with a space does not, because "
+"the kernel reads the first space as the end of the interpreter path. Point "
+"your shebang at ``PIPX_BIN_DIR`` (``~/.local/bin`` by default, no space), or "
+"set ``PIPX_HOME`` to a path without spaces."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:215
+msgid "Does it install with plain pip?"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:217
+msgid ""
+"To tell whether pipx or the package is at fault, try installing the package "
+"with pip."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:221
+msgid ""
+"$ python3 -m venv test_venv\n"
+"$ test_venv/bin/python3 -m pip install <problem-package>"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:226
+msgid "Windows:"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:228
+msgid ""
+"$ python -m venv test_venv\n"
+"$ test_venv/Scripts/python -m pip install <problem-package>"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:233
+msgid ""
+"If pip also fails, the problem is likely the package or your host. Clean up "
+"with ``rm -rf test_venv``."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:237
+msgid "Files not in the documented locations"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:239
+msgid ""
+"pipx after 1.16.0 places ``PIPX_HOME`` and the data, cache, and log "
+"directories in the platform locations `platformdirs <https://pypi.org/"
+"project/platformdirs/>`_ reports. Earlier versions defaulted ``PIPX_HOME`` "
+"to ``~/.local/pipx`` (or ``~/pipx`` on Windows), and pipx keeps using such a "
+"directory when it exists. The venv cache and logs still move to the platform "
+"cache and log directories even when pipx falls back to an older home, "
+"because both are disposable. Setting ``PIPX_HOME`` yourself keeps them "
+"inside it."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:245
+msgid ""
+"For the full old-to-new path map and how to migrate, see :ref:`platformdirs-"
+"migration` and :doc:`move-installation`."
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:249
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/troubleshoot.rst:255
+msgid ""
+"A clean ``pipx health`` (exit status 0) confirms every managed environment "
+"can run its interpreter."
+msgstr ""
