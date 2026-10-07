@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/standalone-python.rst:3
+msgid "Standalone Python"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:5
+msgid ""
+"Install an app under a Python interpreter downloaded from `python-build-"
+"standalone <https://github.com/astral-sh/python-build-standalone>`_ instead "
+"of the system one. Reach for this when the system Python lacks the version "
+"you need, or when a distro patched its Python in ways that break the app."
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:11
+msgid "How pipx decides"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:13
+msgid ""
+"``--fetch-python`` (or ``PIPX_FETCH_PYTHON``) sets the policy. With "
+"``missing``, pipx downloads only when no local interpreter satisfies the "
+"app's ``requires-python``:"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:35
+msgid ""
+"Naming ``--python`` yourself keeps the last word: pipx uses the interpreter "
+"you named and reports it, rather than overriding you when the package "
+"rejects it."
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:40
+msgid "Set the policy"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:46
+msgid "Value"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:47
+msgid "Behavior"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:48
+msgid "``never``"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:49
+msgid ""
+"Default. Never download; use interpreters from ``PATH`` or the ``py`` "
+"launcher."
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:50
+msgid "``missing``"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:51
+msgid "Look locally first; download when the requested version is not found."
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:52
+msgid "``always``"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:53
+msgid ""
+"Skip the local search and use a standalone build for the requested version."
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:55
+msgid ""
+"$ pipx install --python 3.13 --fetch-python=missing my-package\n"
+"$ pipx install --python 3.13 --fetch-python=always my-package"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:60
+msgid "Set it for the whole shell session with the environment variable:"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:62
+msgid ""
+"$ export PIPX_FETCH_PYTHON=missing\n"
+"$ pipx install --python 3.13 my-package"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:67
+msgid ""
+"Reach for ``always`` in CI runs that should not depend on the runner's "
+"Python, on distros that strip modules like ``tkinter`` or ``lzma``, or on "
+"air-gapped hosts with a populated standalone cache."
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:72
+msgid "Manage cached interpreters"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:74
+msgid ""
+"pipx unpacks each interpreter into its standalone cache. Manage them with:"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:76
+msgid ""
+"$ pipx interpreter list\n"
+"$ pipx interpreter prune\n"
+"$ pipx interpreter upgrade"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:84
+msgid ""
+"``--fetch-missing-python`` and ``PIPX_FETCH_MISSING_PYTHON`` still work but "
+"are deprecated aliases for ``--fetch-python=missing`` / "
+"``PIPX_FETCH_PYTHON=missing``. pipx errors if you set both "
+"``PIPX_FETCH_MISSING_PYTHON`` and ``PIPX_FETCH_PYTHON``."
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:90
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:92
+msgid "$ pipx list"
+msgstr ""
+
+#: ../../../how-to/standalone-python.rst:96
+msgid ""
+"The environment lists the interpreter version pipx settled on. For how pipx "
+"resolves interpreters, see :doc:`../explanation/how-pipx-works`."
+msgstr ""

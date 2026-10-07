@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/use-with-pre-commit.rst:3
+msgid "Use with pre-commit"
+msgstr ""
+
+#: ../../../how-to/use-with-pre-commit.rst:5
+msgid ""
+"Run a pipx app as a `pre-commit <https://pre-commit.com/>`_ hook. This is "
+"useful for apps that work with ``pipx run`` but have no native pre-commit "
+"support, when you want the prebuilt wheel from PyPI rather than a source "
+"build, or when you need pipx's ``--spec`` and ``--index-url`` flags."
+msgstr ""
+
+#: ../../../how-to/use-with-pre-commit.rst:11
+msgid "Add the hook"
+msgstr ""
+
+#: ../../../how-to/use-with-pre-commit.rst:13
+msgid ""
+"Add this to your ``.pre-commit-config.yaml``, using the code linter `yapf "
+"<https://github.com/google/yapf/>`_ as the example. Set ``rev`` to the "
+"latest pipx release tag from the `releases page <https://github.com/pypa/"
+"pipx/releases>`_ (``1.15.0`` shown here):"
+msgstr ""
+
+#: ../../../how-to/use-with-pre-commit.rst:17
+msgid ""
+"- repo: https://github.com/pypa/pipx\n"
+"  rev: \"1.15.0\"\n"
+"  hooks:\n"
+"    - id: pipx\n"
+"      alias: yapf\n"
+"      name: yapf\n"
+"      args: [yapf, -i]\n"
+"      types: [python]"
+msgstr ""
+
+#: ../../../how-to/use-with-pre-commit.rst:28
+msgid ""
+"The ``args`` list is passed to ``pipx run``: the first item is the app to "
+"run, the rest are its arguments."
+msgstr ""
+
+#: ../../../how-to/use-with-pre-commit.rst:32
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/use-with-pre-commit.rst:34
+msgid "$ pre-commit run yapf --all-files"
+msgstr ""
+
+#: ../../../how-to/use-with-pre-commit.rst:38
+msgid "The hook resolves the app through ``pipx run`` and reports its result."
+msgstr ""

@@ -1,0 +1,302 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/metadata.rst:3
+msgid "On-disk metadata"
+msgstr ""
+
+#: ../../../reference/metadata.rst:5
+msgid ""
+"pipx has no user configuration file. It is configured only through :doc:"
+"`environment variables <environment-variables>`. The only per-installation "
+"state pipx keeps is a metadata file inside each managed virtual environment."
+msgstr ""
+
+#: ../../../reference/metadata.rst:9
+msgid ""
+"Every environment under ``$PIPX_HOME/venvs/<environment>/`` holds a "
+"``pipx_metadata.json`` file. pipx writes it after each operation and reads "
+"it to drive ``list``, ``upgrade``, ``reinstall``, ``uninstall``, and the "
+"rest. Treat it as pipx-owned; pipx rewrites it atomically and may change its "
+"shape between versions."
+msgstr ""
+
+#: ../../../reference/metadata.rst:13
+msgid ""
+"The current schema version is ``0.12`` (``pipx_metadata_version``). pipx "
+"migrates older files forward on read."
+msgstr ""
+
+#: ../../../reference/metadata.rst:17
+msgid "Top-level fields"
+msgstr ""
+
+#: ../../../reference/metadata.rst:23 ../../../reference/metadata.rst:55
+msgid "Field"
+msgstr ""
+
+#: ../../../reference/metadata.rst:24 ../../../reference/metadata.rst:56
+msgid "Meaning"
+msgstr ""
+
+#: ../../../reference/metadata.rst:25
+msgid "``pipx_metadata_version``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:26
+msgid "Schema version string, currently ``\"0.12\"``."
+msgstr ""
+
+#: ../../../reference/metadata.rst:27
+msgid "``environment``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:28
+msgid "The environment (venv) name, or ``null``."
+msgstr ""
+
+#: ../../../reference/metadata.rst:29
+msgid "``main_package``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:30
+msgid "Package record for the installed application (see below)."
+msgstr ""
+
+#: ../../../reference/metadata.rst:31
+msgid "``injected_packages``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:32
+msgid "Map of injected package name to its package record."
+msgstr ""
+
+#: ../../../reference/metadata.rst:33
+msgid "``python_version``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:34
+msgid "Python version the environment was created with, or ``null``."
+msgstr ""
+
+#: ../../../reference/metadata.rst:35
+msgid "``source_interpreter``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:36
+msgid "Path to the interpreter used to create the environment, or ``null``."
+msgstr ""
+
+#: ../../../reference/metadata.rst:37
+msgid "``venv_args``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:38
+msgid ""
+"Extra arguments passed when the venv was created (for example ``--system-"
+"site-packages``)."
+msgstr ""
+
+#: ../../../reference/metadata.rst:39
+msgid "``backend``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:40
+msgid ""
+"Backend that manages the environment, ``pip`` or ``uv``. An unknown value is "
+"read back as ``pip`` with a warning."
+msgstr ""
+
+#: ../../../reference/metadata.rst:42
+msgid "``exposure_enabled``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:43
+msgid ""
+"Whether the environment's apps and man pages are currently exposed on "
+"``PATH``."
+msgstr ""
+
+#: ../../../reference/metadata.rst:47
+msgid "Package records"
+msgstr ""
+
+#: ../../../reference/metadata.rst:49
+msgid ""
+"``main_package`` and each entry in ``injected_packages`` share this shape:"
+msgstr ""
+
+#: ../../../reference/metadata.rst:57
+msgid "``package``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:58
+msgid "Canonical package name, or ``null``."
+msgstr ""
+
+#: ../../../reference/metadata.rst:59
+msgid "``package_or_url``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:60
+msgid "The install source as given: a package name, path, or URL."
+msgstr ""
+
+#: ../../../reference/metadata.rst:61
+msgid "``package_version``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:62
+msgid "Resolved installed version."
+msgstr ""
+
+#: ../../../reference/metadata.rst:63
+msgid "``pip_args``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:64
+msgid "Arguments forwarded to the backend at install time."
+msgstr ""
+
+#: ../../../reference/metadata.rst:65
+msgid "``include_dependencies``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:66
+msgid "Whether apps and man pages from all dependencies are exposed."
+msgstr ""
+
+#: ../../../reference/metadata.rst:67
+msgid "``include_resources_from``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:68
+msgid "Dependencies whose apps and man pages are exposed individually."
+msgstr ""
+
+#: ../../../reference/metadata.rst:69
+msgid "``include_apps``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:70
+msgid ""
+"Whether this package's own apps are exposed. Always true for "
+"``main_package``."
+msgstr ""
+
+#: ../../../reference/metadata.rst:71
+msgid "``apps`` / ``app_paths``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:72
+msgid "App names and their paths inside the environment."
+msgstr ""
+
+#: ../../../reference/metadata.rst:73
+msgid "``apps_of_dependencies`` / ``app_paths_of_dependencies``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:74
+msgid "Apps contributed by dependencies, and their paths keyed by dependency."
+msgstr ""
+
+#: ../../../reference/metadata.rst:75
+msgid "``man_pages`` / ``man_paths``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:76
+msgid "Man page names and their paths inside the environment."
+msgstr ""
+
+#: ../../../reference/metadata.rst:77
+msgid "``man_pages_of_dependencies`` / ``man_paths_of_dependencies``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:78
+msgid ""
+"Man pages contributed by dependencies, and their paths keyed by dependency."
+msgstr ""
+
+#: ../../../reference/metadata.rst:79
+msgid "``completions`` / ``completion_paths``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:80
+msgid "Shell completion names and their paths inside the environment."
+msgstr ""
+
+#: ../../../reference/metadata.rst:81
+msgid "``completions_of_dependencies`` / ``completion_paths_of_dependencies``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:82
+msgid ""
+"Completions contributed by dependencies, and their paths keyed by dependency."
+msgstr ""
+
+#: ../../../reference/metadata.rst:83
+msgid "``expected_apps``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:84
+msgid "Apps required after install via ``--app``."
+msgstr ""
+
+#: ../../../reference/metadata.rst:85
+msgid "``lock_file``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:86
+msgid "Path to the ``pylock.toml`` used to install, or ``null``."
+msgstr ""
+
+#: ../../../reference/metadata.rst:87
+msgid "``cooldown_days``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:88
+msgid ""
+"Index-artifact cooldown recorded for the install, from ``--cooldown`` or "
+"``PIPX_COOLDOWN``, or ``null``."
+msgstr ""
+
+#: ../../../reference/metadata.rst:89
+msgid "``suffix``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:90
+msgid "Suffix appended to the environment and executable names, or empty."
+msgstr ""
+
+#: ../../../reference/metadata.rst:91
+msgid "``pinned``"
+msgstr ""
+
+#: ../../../reference/metadata.rst:92
+msgid "Whether the package is pinned against upgrades."
+msgstr ""
+
+#: ../../../reference/metadata.rst:96
+msgid ""
+"Path values are encoded as ``{\"__type__\": \"Path\", \"__Path__\": "
+"\"<path>\"}`` so pipx can round-trip them across platforms. The same "
+"snapshot, wrapped under ``pipx_spec_version`` and a ``venvs`` map, is what "
+"``pipx list --output json`` emits and ``pipx install-all`` consumes (see :"
+"doc:`json-output`)."
+msgstr ""

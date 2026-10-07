@@ -1,0 +1,330 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/environment-variables.rst:3
+msgid "Environment variables"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:5
+msgid ""
+"pipx has no user configuration file. Every setting is an environment "
+"variable, all of them optional. Run ``pipx environment`` to print the "
+"resolved value of each one on your system."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:10
+msgid "Settable variables"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:16
+msgid "Variable"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:17
+msgid "Meaning and default"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:18
+msgid "``PIPX_HOME``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:19
+msgid ""
+"Root directory for pipx virtual environments. Default: ``platformdirs."
+"user_data_path(\"pipx\")`` — Linux ``~/.local/share/pipx``, macOS ``~/"
+"Library/Application Support/pipx``, Windows ``%LOCALAPPDATA%\\pipx\\pipx``."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:21
+msgid "``PIPX_BIN_DIR``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:22
+msgid ""
+"Directory for application entry-point symlinks. Default: ``~/.local/bin``."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:23
+msgid "``PIPX_MAN_DIR``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:24
+msgid "Directory for man page symlinks. Default: ``~/.local/share/man``."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:25
+msgid "``PIPX_COMPLETION_DIR``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:26
+msgid "Directory for shell completion symlinks. Default: ``~/.local/share``."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:27
+msgid "``PIPX_GLOBAL_HOME``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:28
+msgid ""
+"Root directory for global (``--global``) virtual environments. Default: ``/"
+"opt/pipx``."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:29
+msgid "``PIPX_GLOBAL_BIN_DIR``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:30
+msgid "Entry-point directory for global installs. Default: ``/usr/local/bin``."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:31
+msgid "``PIPX_GLOBAL_MAN_DIR``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:32
+msgid ""
+"Man page directory for global installs. Default: ``/usr/local/share/man``."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:33
+msgid "``PIPX_GLOBAL_COMPLETION_DIR``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:34
+msgid ""
+"Shell completion directory for global installs. Default: ``/usr/local/"
+"share``."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:35
+msgid "``PIPX_SHARED_LIBS``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:36
+msgid ""
+"Override the shared libraries directory. Default: ``$PIPX_HOME/shared``."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:37
+msgid "``PIPX_DEFAULT_PYTHON``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:38
+msgid ""
+"Python interpreter used when ``--python`` is not passed. Default: the "
+"interpreter running pipx (``sys.executable``)."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:40
+msgid "``PIPX_DEFAULT_BACKEND``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:41
+msgid ""
+"Backend for new venvs, ``pip`` or ``uv``. Default: ``uv`` when uv is "
+"available, else ``pip``."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:42
+msgid "``PIPX_COOLDOWN``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:43
+msgid ""
+"Default for ``--cooldown``: ignore index artifacts uploaded fewer than this "
+"many days ago, on ``install``, ``install-all``, ``inject``, ``upgrade``, "
+"``upgrade-all`` and ``run``. An explicit ``--cooldown`` wins, and ``--"
+"cooldown 0`` opts a single command out. A locked install ignores it. "
+"Default: unset."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:46
+msgid "``PIPX_FETCH_PYTHON``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:47
+msgid ""
+"When to fetch a standalone Python build: ``always``, ``missing``, or "
+"``never``. Default: ``never``."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:48
+msgid "``PIPX_FETCH_MISSING_PYTHON``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:49
+msgid "Deprecated alias for ``PIPX_FETCH_PYTHON=missing``. Default: unset."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:50
+msgid "``PIPX_DISABLE_SHARED_LIBS_AUTO_UPGRADE``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:51
+msgid ""
+"Set to a truthy value to skip automatic shared library upgrades. Default: "
+"unset."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:52
+msgid "``PIPX_USE_EMOJI``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:53
+msgid ""
+"Set to a falsy value to disable emoji output. Default: enabled when the "
+"terminal encoding supports the emoji glyphs."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:55
+msgid "``PIPX_MAX_LOGS``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:56
+msgid "Number of log files to keep in the log directory. Default: ``10``."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:60
+msgid ""
+"``USE_EMOJI`` (unprefixed) is honored as a fallback when ``PIPX_USE_EMOJI`` "
+"is unset."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:64
+msgid ""
+"pipx forwards the standard ``PIP_*`` environment variables (for example "
+"``PIP_INDEX_URL``) to pip. See :doc:`Troubleshoot <../how-to/troubleshoot>` "
+"if pip behaves unexpectedly."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:68
+msgid "Legacy fallback home"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:70
+msgid ""
+"If a legacy home directory already exists on disk, pipx keeps its virtual "
+"environments there instead of the ``PIPX_HOME`` default: ``~/.local/pipx`` "
+"on any platform, and ``~\\pipx`` on Windows. These are used only when "
+"present and when ``PIPX_HOME`` is unset. See :doc:`Configure paths <../how-"
+"to/configure-paths>` to migrate off them."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:74
+msgid ""
+"On Unix, a pipx installation that manages itself recovers ``PIPX_HOME``, "
+"``PIPX_BIN_DIR``, and ``PIPX_DEFAULT_PYTHON`` from its own virtual "
+"environment when those variables are unset, so later shells stay attached to "
+"the same installation."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:80
+msgid "Derived (read-only) values"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:82
+msgid ""
+"``pipx environment`` also reports the following values. pipx computes them "
+"from the settable variables and the platform; they are reported, not set."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:89
+msgid "Value"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:90
+msgid "Meaning"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:91
+msgid "``PIPX_LOCAL_VENVS``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:92
+msgid ""
+"Directory holding the per-package virtual environments (``$PIPX_HOME/"
+"venvs``)."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:93
+msgid "``PIPX_LOG_DIR``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:94
+msgid "Directory holding command logs."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:95
+msgid "``PIPX_TRASH_DIR``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:96
+msgid "Staging directory for deletions on the same filesystem as the venvs."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:97
+msgid "``PIPX_VENV_CACHEDIR``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:98
+msgid "Cache directory for ``pipx run`` environments."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:99
+msgid "``PIPX_STANDALONE_PYTHON_CACHEDIR``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:100
+msgid "Cache directory for downloaded standalone Python builds."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:101
+msgid "``PIPX_RESOLVED_BACKEND``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:102
+msgid "Backend pipx resolved for new venvs (``pip`` or ``uv``)."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:103
+msgid "``PIPX_BACKEND_SOURCE``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:104
+msgid ""
+"Where the resolved backend came from (CLI flag, environment, or auto-"
+"detection)."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:105
+msgid "``PIPX_UV_BINARY``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:106
+msgid "Path to the uv binary pipx would use, or empty when none is found."
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:107
+msgid "``UV_CACHE_DIR``"
+msgstr ""
+
+#: ../../../reference/environment-variables.rst:108
+msgid "Value of ``UV_CACHE_DIR`` in the environment, passed through to uv."
+msgstr ""
