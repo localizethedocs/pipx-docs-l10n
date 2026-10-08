@@ -1,4 +1,10 @@
 <div align="center">
+<picture>
+  <img height="150" src="https://cdn.jsdelivr.net/gh/localizethedocs/static/logo/pipx.svg">
+</picture>
+</div>
+
+<div align="center">
 <h1 id="localization-of-the-pipx-documentation">Localization of The Pipx Documentation</h1>
 </div>
 
