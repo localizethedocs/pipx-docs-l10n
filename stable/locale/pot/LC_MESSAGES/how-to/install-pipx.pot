@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 1.17\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"POT-Creation-Date: 2026-10-12 18:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,8 +39,8 @@ msgstr ""
 
 #: ../../../how-to/install-pipx.rst:17
 msgid ""
-"Installing pipx needs Python 3.10 or newer; the apps it runs can target "
-"Python 3.3 or newer. Without Python 3.10, see the `Python 3 installation "
+"Installing pipx needs Python 3.11 or newer; the apps it runs can target "
+"Python 3.3 or newer. Without Python 3.11, see the `Python 3 installation "
 "guide <https://realpython.com/installing-python/>`_."
 msgstr ""
 
@@ -228,7 +229,7 @@ msgstr ""
 #: ../../../how-to/install-pipx.rst:150
 msgid ""
 "Download the zipapp from `GitHub releases <https://github.com/pypa/pipx/"
-"releases>`_ and invoke it with a Python 3.10+ interpreter:"
+"releases>`_ and invoke it with a Python 3.11+ interpreter:"
 msgstr ""
 
 #: ../../../how-to/install-pipx.rst:153
