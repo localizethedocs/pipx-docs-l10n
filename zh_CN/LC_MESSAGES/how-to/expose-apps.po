@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/expose-apps.rst:3
+msgid "Expose apps"
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:5
+msgid ""
+"Control which apps and manual pages an environment links onto your ``PATH``, "
+"without rebuilding it."
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:9
+msgid "Hide an app"
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:11
+msgid ""
+"Use ``unexpose`` when another command with the same name should win, but you "
+"want to keep the environment:"
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:13
+msgid "$ pipx unexpose ansible"
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:17
+msgid ""
+"pipx removes the apps and manual pages recorded for that environment from "
+"its global directories. Upgrade and reinstall keep it hidden, and injected "
+"apps stay hidden too."
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:22
+msgid "Restore an app"
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:24
+msgid "$ pipx expose ansible"
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:28
+msgid ""
+"pipx relinks each recorded app and manual page without rebuilding the "
+"environment."
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:32
+msgid "Expose a dependency's apps"
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:34
+msgid ""
+"A dependency's apps are not exposed by default. Select them at install time."
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:36
+msgid "``--include-deps`` exposes apps and manual pages from every dependency:"
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:38
+msgid "$ pipx install nox --include-deps"
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:42
+msgid ""
+"``--include-resources-from PACKAGE`` exposes resources from one dependency; "
+"repeat it to select more:"
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:44
+msgid "$ pipx install \"nox[tox_to_nox]\" --include-resources-from tox"
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:48
+msgid ""
+"pipx records the selection so upgrade and reinstall preserve it. The install "
+"fails and rolls back when a selected package is not a dependency that ships "
+"apps or manual pages. Both options also work on ``pipx inject``; see :doc:"
+"`inject-packages`."
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:54
+msgid ""
+"``--include-apps-from`` was renamed to ``--include-resources-from``. pipx "
+"still reads the old name from metadata written by earlier versions."
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:59
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:61
+msgid "$ pipx list"
+msgstr ""
+
+#: ../../../how-to/expose-apps.rst:65
+msgid ""
+"The exposed apps appear under their environment. Run one to confirm it "
+"resolves on your ``PATH``."
+msgstr ""

@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../tutorial/getting-started.rst:3
+msgid "Getting started"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:5
+msgid ""
+"This tutorial covers the core pipx workflow: install an application, run it, "
+"upgrade it, and remove it. Work through it top to bottom with one small "
+"package, and you will know every command you need day to day."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:10
+msgid "Install pipx first. See :doc:`Install pipx <../how-to/install-pipx>`."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:14
+msgid "Packages and apps"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:16
+msgid ""
+"pipx installs **packages** and exposes their **apps**. A package is what you "
+"download from PyPI, such as ``pycowsay`` or ``httpie``. An app is a command "
+"that package puts on your ``PATH`` through a `console script entry point "
+"<https://packaging.python.org/en/latest/specifications/entry-points/>`_. One "
+"package can expose several apps: ``httpie`` gives you both ``http`` and "
+"``https``. For the full picture, see :doc:`How pipx works <../explanation/"
+"how-pipx-works>`."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:23
+msgid "The lifecycle"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:38
+msgid "Install your first app"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:40
+msgid "Pick a small package to try. ``pycowsay`` works well:"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:42
+msgid ""
+"$ pipx install pycowsay\n"
+"  installed package pycowsay 2.0.3, Python 3.10.3\n"
+"  These apps are now globally available\n"
+"    - pycowsay\n"
+"done! ✨ 🌟 ✨"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:50
+msgid ""
+"pipx creates an isolated virtual environment for ``pycowsay``, installs it "
+"there, and links the ``pycowsay`` command into a directory on your ``PATH``. "
+"No ``sudo`` required."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:54
+msgid "Confirm it worked"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:56
+msgid "Run the app from anywhere:"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:58
+msgid ""
+"$ pycowsay moo\n"
+"  ---\n"
+"< moo >\n"
+"  ---\n"
+"   \\   ^__^\n"
+"    \\  (oo)\\_______\n"
+"       (__)\\       )\\/\\\n"
+"           ||----w |\n"
+"           ||     ||"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:70
+msgid "If you see the cow, pipx is working."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:74
+msgid ""
+"``pycowsay: command not found``? pipx installed the app but its directory is "
+"not on your ``PATH`` yet. Run ``pipx ensurepath``, then open a new terminal. "
+"See :doc:`Install pipx <../how-to/install-pipx>` and :doc:`Troubleshoot <../"
+"how-to/troubleshoot>` if it persists."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:80
+msgid "List installed apps"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:82
+msgid ""
+"$ pipx list\n"
+"venvs are in /home/user/.local/share/pipx/venvs\n"
+"apps are exposed on your $PATH at /home/user/.local/bin\n"
+"   package pycowsay 2.0.3, Python 3.10.3\n"
+"    - pycowsay"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:90
+msgid ""
+"The output shows each virtual environment's location, the apps it exposes, "
+"and the Python version it uses."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:94
+msgid "Run an app without installing"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:96
+msgid ""
+"``pipx run`` executes an app in a temporary environment and cleans up after "
+"itself:"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:98
+msgid "$ pipx run pycowsay moo"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:102
+msgid ""
+"Reach for this when you want to try a tool once. The :doc:`run-applications` "
+"tutorial covers it in depth."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:106
+msgid "Upgrade an app"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:108
+msgid "Upgrade a single app to its latest release:"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:110
+msgid "$ pipx upgrade pycowsay"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:114
+msgid "Or upgrade everything at once:"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:116
+msgid "$ pipx upgrade-all"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:122
+msgid ""
+"See what has an update before upgrading with ``pipx list --outdated``. The "
+"output lists each package's installed and available versions."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:127
+msgid "Uninstall an app"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:129
+msgid "$ pipx uninstall pycowsay"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:133
+msgid ""
+"pipx deletes the isolated environment and removes the command from your "
+"``PATH``, leaving nothing behind."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:137
+msgid "Next steps"
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:139
+msgid ":doc:`install-applications`: install a real tool with ``pipx install``."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:140
+msgid ""
+":doc:`run-applications`: run apps in throwaway environments with ``pipx "
+"run``."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:141
+msgid ""
+":doc:`How-to guides <../how-to/index>`: inject packages, pin versions, "
+"configure paths, and more."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:142
+msgid ":doc:`../reference/cli`: every command and flag."
+msgstr ""
+
+#: ../../../tutorial/getting-started.rst:146
+msgid ""
+"Scripting pipx? Most commands accept ``--output json``. See :doc:`JSON "
+"output <../reference/json-output>`."
+msgstr ""

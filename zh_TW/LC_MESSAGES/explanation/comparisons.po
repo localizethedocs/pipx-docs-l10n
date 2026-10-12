@@ -1,0 +1,941 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../explanation/comparisons.rst:3
+msgid "Comparisons"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:7
+msgid "pipx vs pip"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:9
+msgid ""
+"pip is a general Python package installer. It can install libraries or CLI "
+"applications with entry points."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:10
+msgid ""
+"pipx is a specialized package installer. It can only install packages with "
+"CLI entry points."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:11
+msgid "pipx and pip both install packages from PyPI (or locally)."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:12
+msgid "pipx relies on pip (and venv)."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:13
+msgid ""
+"pipx replaces a subset of pip's functionality: it installs CLI applications "
+"but not libraries that you import in your code."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:15
+msgid "You can install pipx with pip."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:17
+msgid "Example: install pipx with pip, ``pip install --user pipx``."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:21
+msgid "pipx vs uv tool"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:23
+msgid ""
+"Both `uv tool <https://docs.astral.sh/uv/concepts/tools/>`_ and pipx install "
+"a Python tool into its own virtual environment and expose the tool's console "
+"scripts on ``PATH``. Both have a one-shot run mode (``uvx`` and ``pipx "
+"run``); ``uvx`` is ``uv tool run``. They differ in where state lives, which "
+"extra commands they ship, and how they handle managed Python."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:28
+msgid ""
+"pipx keeps the same CLI across pip and uv backends; ``pipx install "
+"pipx[uv]`` opts you into uv-speed venv creation without changing any "
+"commands. ``uv tool`` ships a smaller per-tool surface, then reuses the rest "
+"of ``uv`` for free: managed Python, content-addressed cache, lockfiles, PEP "
+"723 script handling."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:33
+msgid "Where state lives"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:39
+msgid "State"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:40
+#: ../../../explanation/comparisons.rst:76
+msgid "pipx"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:41
+#: ../../../explanation/comparisons.rst:77
+msgid "uv tool"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:42
+msgid "Per-tool venvs"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:43
+msgid "``$PIPX_HOME/venvs/<name>`` (``PIPX_HOME``)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:44
+msgid "``$UV_TOOL_DIR/<name>`` (``UV_TOOL_DIR``)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:45
+msgid "Exposed binaries"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:46
+msgid "``$PIPX_BIN_DIR`` (default ``~/.local/bin``)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:47
+msgid "``$UV_TOOL_BIN_DIR`` (default same)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:48
+msgid "Man pages"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:49
+msgid "``$PIPX_MAN_DIR`` (default ``~/.local/share/man``)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:50
+msgid "*not exposed*"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:51
+msgid "Shared pip/setuptools/wheel"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:52
+msgid "``$PIPX_HOME/shared`` (pip backend only)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:53
+msgid "*none; uv venvs ship without pip*"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:54
+msgid "Ephemeral run cache"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:55
+msgid "``$PIPX_HOME/.cache`` (TTL 14 days)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:56
+msgid "``$UV_CACHE_DIR`` (no TTL; ``uv cache prune``)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:57
+msgid "Standalone Python"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:58
+msgid "``$PIPX_HOME/py`` (``PIPX_FETCH_PYTHON``)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:59
+msgid "``$UV_PYTHON_INSTALL_DIR``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:60
+msgid "System-wide install"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:61
+msgid "``--global``, ``PIPX_GLOBAL_*``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:62
+msgid "*not supported*"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:64
+msgid ""
+"``PIPX_BIN_DIR`` and ``UV_TOOL_BIN_DIR`` both default to ``~/.local/bin`` on "
+"Unix, so installing the same tool with both managers writes the same "
+"filename. Each manager refuses to overwrite a binary the other one wrote "
+"without ``--force``. Use ``pipx install --suffix=...`` to keep two copies "
+"side-by-side; uv has no equivalent."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:69
+msgid "Subcommand mapping"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:75
+msgid "Task"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:78
+msgid "Install from PyPI"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:79
+msgid "``pipx install ruff``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:80
+msgid "``uv tool install ruff`` (or ``uvx ruff`` for one-off)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:81
+msgid "Install from a git URL"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:82
+msgid "``pipx install 'git+https://…'``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:83
+msgid "``uv tool install 'git+https://…'``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:84
+msgid "Install editable from path"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:85
+msgid "``pipx install -e ./mypkg``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:86
+msgid "``uv tool install -e ./mypkg``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:87
+msgid "One-off run (no install)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:88
+msgid "``pipx run black .``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:89
+msgid "``uvx black .``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:90
+msgid "Refresh one-off run"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:91
+msgid "``pipx run --refresh black .``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:92
+msgid "``uvx --refresh black .``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:93
+msgid "Show ephemeral cache"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:94
+msgid "``pipx cache dir``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:95
+msgid "``uv cache dir``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:96
+msgid "Purge ephemeral cache"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:97
+msgid "``pipx cache purge``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:98
+msgid "``uv cache clean``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:99
+msgid "One-off run with extra dep"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:100
+msgid "``pipx run --with mkdocs-material mkdocs``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:101
+msgid "``uvx --with mkdocs-material mkdocs``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:102
+msgid "Pinned-version one-off"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:103
+msgid "``pipx run --spec 'ruff==0.6.0' ruff check``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:104
+msgid "``uvx ruff@0.6.0 check``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:105
+msgid "Add a dep to existing tool"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:106
+msgid "``pipx inject mkdocs mkdocs-material``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:107
+msgid "``uv tool install mkdocs --with mkdocs-material`` (rebuilds)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:108
+msgid "Remove an injected dep"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:109
+msgid "``pipx uninject mkdocs mkdocs-material``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:110
+msgid "*rebuild without* ``--with``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:111
+msgid "Upgrade one"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:112
+msgid "``pipx upgrade ruff``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:113
+msgid "``uv tool upgrade ruff``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:114
+msgid "Upgrade all"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:115
+msgid "``pipx upgrade-all``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:116
+msgid "``uv tool upgrade --all``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:117
+msgid "List installed or outdated"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:118
+msgid "``pipx list`` (``--outdated``, ``--output json``)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:119
+msgid "``uv tool list`` (``--show-with``, ``--outdated``, …)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:120
+msgid "Diagnose broken environments"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:121
+msgid "``pipx health``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:122
+msgid "*no equivalent*"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:123
+msgid "Repair broken environments"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:124
+msgid "``pipx repair ruff`` / ``repair``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:125
+msgid "``uv tool install ruff`` / *no bulk equivalent*"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:126
+msgid "Reinstall any environment"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:127
+msgid "``pipx reinstall ruff`` / ``reinstall-all``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:128
+msgid "``uv tool upgrade --reinstall ruff`` / ``--all``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:129
+msgid "Run pip inside a venv"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:130
+msgid "``pipx runpip <tool> -- pip ...``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:131
+msgid "*not supported (no pip in uv venvs)*"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:132
+msgid "PATH setup"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:133
+msgid "``pipx ensurepath``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:134
+msgid "``uv tool update-shell``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:135
+msgid "Show resolved env"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:136
+msgid "``pipx environment``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:137
+msgid ""
+"``uv tool dir``, ``uv tool dir --bin``, ``uv cache dir``, ``uv python dir``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:138
+msgid "PEP 723 inline script"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:139
+msgid "``pipx run script.py`` (with uv backend uses ``uv run``)"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:140
+msgid "``uv run --script script.py``"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:143
+msgid "Only in pipx"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:145
+msgid ""
+"``pipx inject`` / ``uninject`` add or remove a package in place. ``uv tool "
+"install --with`` reaches the same end state by rebuilding the venv."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:147
+msgid ""
+"``pipx runpip <venv> -- ...`` runs pip inside a tool's venv. uv venvs have "
+"no pip."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:148
+msgid ""
+"``--include-deps`` exposes entry points from every dependency. uv requires "
+"you to enumerate dep packages with ``--with-executables-from``."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:150
+msgid "``--suffix`` keeps two copies of the same tool side-by-side."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:151
+msgid ""
+"``--global`` and the ``PIPX_GLOBAL_*`` variables drive a system-wide install."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:152
+msgid "Manual pages get symlinked under ``$PIPX_MAN_DIR``."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:153
+msgid ""
+"``pipx manifest sync <manifest>`` applies an explicit desired set; ``pipx "
+"manifest lock <manifest>`` writes one PEP 751 lock per selected tool."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:155
+msgid ""
+"``pipx install-all <spec.json>`` rebuilds every venv from a ``pipx list --"
+"output json`` snapshot for cross-machine migration."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:157
+msgid ""
+"``[project.entry-points.\"pipx.run\"]`` declares pipx-specific runtime "
+"extras in the package metadata."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:158
+msgid ""
+"``pipx environment`` prints every variable and its resolved value in one "
+"place."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:159
+msgid ""
+"``--cooldown DAYS`` provides the same release-age policy through pip and uv."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:162
+msgid "Only in uv tool"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:164
+msgid ""
+"``uv tool list`` toggles columns via ``--show-with``, ``--show-paths``, ``--"
+"show-version-specifiers``, ``--show-extras``, ``--show-python``."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:166
+msgid "``uvx --with-editable PATH`` adds editable extras for a one-off run."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:167
+msgid ""
+"``uv tool upgrade --all -p 3.13`` re-pins every tool to a different Python "
+"in one shot."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:168
+msgid ""
+"``uv python install/list/find/pin/upgrade/uninstall`` integrates managed "
+"Python; uv auto-fetches when the requested Python isn't installed."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:170
+msgid ""
+"``--torch-backend`` and ``--isolated`` add controls that pipx does not "
+"expose."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:171
+msgid ""
+"The content-addressed cache spans ``uv pip``, ``uv tool``, ``uv run``, and "
+"``uv venv``. Wheels downloaded once get reused everywhere."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:175
+msgid "Gotchas"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:177
+msgid ""
+"``uvx`` reuses cached envs across invocations until you prune the cache "
+"(``uv cache clean``), pin a new version (``uvx black@latest``), or pass ``--"
+"refresh``. ``pipx run`` caches for 14 days and accepts ``--refresh`` for an "
+"early replacement."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:180
+msgid ""
+"``uvx`` prefers a persistent install when one exists. After ``uv tool "
+"install ruff``, plain ``uvx ruff`` reuses that env instead of building an "
+"ephemeral one. Pass ``--isolated`` to bypass."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:182
+msgid ""
+"``uv tool`` ignores project-local ``.python-version`` files. ``uv run`` "
+"honors them; tool envs do not. pipx never reads them; pass ``--python`` or "
+"set ``PIPX_DEFAULT_PYTHON``."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:184
+msgid ""
+"``uv python upgrade`` only bumps patch versions. To move a tool from 3.12 to "
+"3.13 run ``uv tool upgrade --all -p 3.13``. pipx's equivalent is ``reinstall-"
+"all --python python3.13``."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:186
+msgid ""
+"``uv run --script`` needs a real on-disk path. When ``pipx run script.py`` "
+"content arrives via URL or named pipe, the uv backend falls back to building "
+"a venv."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:190
+msgid "Picking one"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:192
+msgid ""
+"pipx wins when you need its tool-specific extras: ``inject``/``uninject``, "
+"``--global``, ``--suffix``, manual pages, or ``pipx install-all`` for "
+"migration. Install ``pipx[uv]`` to keep that surface and pick up uv-speed "
+"venv creation. Reach for ``uv tool`` when you already drive uv for managed "
+"Python or ``uv run --script`` and want one binary for everything. Running "
+"both is fine; the only collision point is the shared bin dir, and both sides "
+"refuse to overwrite without ``--force``."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:200
+msgid "pipx vs poetry and pipenv"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:202
+msgid ""
+"pipx is used solely for application consumption: you install CLI apps with "
+"it."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:203
+msgid ""
+"pipenv and poetry are CLI apps used to develop applications and libraries."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:204
+msgid ""
+"All three tools wrap pip and virtual environments for more convenient "
+"workflows."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:206
+msgid ""
+"Example: install poetry with pipx, ``pipx install poetry``; run poetry "
+"without installing it, ``pipx run poetry --help``."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:211
+msgid "pipx vs venv"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:213
+msgid "venv is part of Python's standard library in Python 3.2 and above."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:214
+msgid ""
+"venv creates \"virtual environments\", which are sandboxed Python "
+"installations."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:215
+msgid "pipx relies heavily on the venv package."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:217
+msgid ""
+"Example: pipx installs packages into environments created with venv, ``pipx "
+"install black --verbose``."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:221
+msgid "pipx vs pyenv"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:223
+msgid ""
+"pyenv manages Python versions on your system. It helps you install versions "
+"like Python 3.11, 3.12, and so on."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:224
+msgid ""
+"pipx installs packages in virtual environments and exposes their entry "
+"points on your ``PATH``."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:226
+msgid ""
+"Example: install a Python interpreter with pyenv, then install a package "
+"with pipx using that interpreter, ``pipx install black --python=python3.11`` "
+"where ``python3.11`` was installed by pyenv."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:231
+msgid "pipx vs pipsi"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:233
+msgid "pipx and pipsi both install packages in a similar way."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:234
+msgid "pipx is under active development; pipsi is no longer maintained."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:235
+msgid "pipx always makes sure you're using the latest version of pip."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:236
+msgid ""
+"pipx can run an app in one line, leaving your system unchanged after it "
+"finishes (``pipx run APP``); pipsi cannot."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:237
+msgid "pipx can recursively install binaries from dependent packages."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:238
+msgid ""
+"pipx has more CLI options such as ``upgrade-all``, ``reinstall-all``, and "
+"``uninstall-all``."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:239
+msgid ""
+"pipx is more modern. It requires Python 3.10+ and uses the standard-library "
+"``venv`` package."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:240
+msgid "pipx works with Python homebrew installations while pipsi does not."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:241
+msgid "pipx lets you see each command it runs by passing ``--verbose``."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:244
+msgid "Migrating to pipx from pipsi"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:246
+msgid ""
+"After you have installed pipx, run `migrate_pipsi_to_pipx.py <https://raw."
+"githubusercontent.com/pypa/pipx/main/scripts/migrate_pipsi_to_pipx.py>`_. "
+"You can do this with pipx itself:"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:249
+msgid ""
+"$ pipx run https://raw.githubusercontent.com/pypa/pipx/main/scripts/"
+"migrate_pipsi_to_pipx.py"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:255
+msgid "pipx vs brew"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:257
+msgid "Both brew and pipx install CLI tools."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:258
+msgid ""
+"They install from different sources: brew uses a curated repository specific "
+"to brew, and pipx generally uses PyPI."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:260
+msgid ""
+"Example: brew can install pipx, but the two generally do not interact much."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:264
+msgid "pipx vs npx"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:266
+msgid ""
+"Both can run CLI tools. npx searches ``node_modules`` and otherwise runs in "
+"a temporary environment; ``pipx run`` searches ``__pypackages__`` and "
+"otherwise runs in a temporary environment."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:268
+msgid "npx works with JavaScript and pipx works with Python."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:269
+msgid ""
+"Both make running executables written in a dynamic language as easy as "
+"possible."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:270
+msgid "pipx can also install tools globally; npx cannot."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:272
+msgid "Example: none. These tools work for different languages."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:276
+msgid "pipx vs pip-run"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:278
+msgid ""
+"`pip-run <https://github.com/jaraco/pip-run>`_ is focused on running "
+"**arbitrary Python code in ephemeral environments**, while pipx is focused "
+"on running **Python binaries in ephemeral and non-ephemeral environments**."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:281
+msgid ""
+"For example, these two commands both install poetry to an ephemeral "
+"environment and invoke poetry with ``--help``:"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:283
+msgid ""
+"pipx run poetry --help\n"
+"pip-run poetry -- -m poetry --help"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:290
+msgid "pipx vs fades"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:292
+msgid ""
+"`fades <https://github.com/PyAr/fades>`_ runs **individual** Python scripts "
+"inside automatically provisioned virtualenvs with their dependencies "
+"installed."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:295
+msgid ""
+"Both `fades <https://github.com/PyAr/fades#how-to-mark-the-dependencies-to-"
+"be-installed>`_ and :doc:`pipx run <../reference/examples>` let you specify "
+"a script's dependencies in specially formatted comments, but the exact "
+"syntax differs. pipx's syntax is standardized by a `provisional "
+"specification <https://packaging.python.org/en/latest/specifications/inline-"
+"script-metadata/>`_; fades's syntax is not."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:299
+msgid ""
+"Both tools automatically set up reusable virtualenvs containing the "
+"necessary dependencies."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:300
+msgid ""
+"Both can download Python scripts or packages to execute from remote "
+"resources."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:301
+msgid ""
+"fades can only run individual script files while pipx can also run packages."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:305
+msgid "pipx vs pae/pactivate"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:307
+msgid ""
+"*pae* is a Bash command-line function distributed with `pactivate <https://"
+"github.com/cynic-net/pactivate>`_ that uses pactivate to create non-"
+"ephemeral environments focused on general use, rather than just running "
+"command-line applications."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:311
+msgid ""
+"There is a `detailed comparison <https://github.com/cynic-net/pactivate/blob/"
+"main/doc/vs-pipx.md>`_, but to summarize:"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:313
+msgid "Similarities:"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:315
+msgid ""
+"Both create isolated environments without having to specify (and remember) a "
+"directory in which to store them."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:316
+msgid ""
+"Both let you use any Python interpreter available on your system (subject to "
+"the version restrictions below)."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:318
+msgid "pae advantages:"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:320
+msgid ""
+"Supports all versions of Python from 2.7 upward. pipx requires 3.10 or above."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:321
+msgid "Fewer dependencies."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:322
+msgid ""
+"Easier to have multiple versions of a single program, or use different "
+"Python versions for one program."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:323
+msgid ""
+"Somewhat more convenient for running arbitrary command-line programs in "
+"virtual environments, installing multiple packages in a single environment, "
+"and activating virtual environments."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:325
+msgid ""
+"Integrates well with source repos using `pactivate <https://github.com/cynic-"
+"net/pactivate>`_."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:327
+msgid "pae disadvantages:"
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:329
+msgid "Usable with the Bash shell only."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:330
+msgid ""
+"Slightly less quick and convenient for installing or running command-line "
+"programs from single Python packages."
+msgstr ""
+
+#: ../../../explanation/comparisons.rst:331
+msgid "Can be slower than pipx at creating virtual environments."
+msgstr ""
