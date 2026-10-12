@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../tutorial/index.rst:3
 msgid "Tutorials"
-msgstr ""
+msgstr "教學課程"
 
 #: ../../../tutorial/index.rst:5
 msgid ""

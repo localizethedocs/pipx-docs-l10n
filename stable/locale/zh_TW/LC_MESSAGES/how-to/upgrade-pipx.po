@@ -33,27 +33,27 @@ msgstr ""
 
 #: ../../../how-to/upgrade-pipx.rst:11
 msgid "macOS:"
-msgstr ""
+msgstr "macOS："
 
 #: ../../../how-to/upgrade-pipx.rst:13
 msgid "$ brew update && brew upgrade pipx"
-msgstr ""
+msgstr "$ brew update && brew upgrade pipx"
 
 #: ../../../how-to/upgrade-pipx.rst:17
 msgid "Ubuntu Linux:"
-msgstr ""
+msgstr "Ubuntu Linux："
 
 #: ../../../how-to/upgrade-pipx.rst:19
 msgid "$ sudo apt update && sudo apt upgrade pipx"
-msgstr ""
+msgstr "$ sudo apt update && sudo apt upgrade pipx"
 
 #: ../../../how-to/upgrade-pipx.rst:23
 msgid "Fedora Linux:"
-msgstr ""
+msgstr "Fedora Linux："
 
 #: ../../../how-to/upgrade-pipx.rst:25
 msgid "$ sudo dnf upgrade pipx"
-msgstr ""
+msgstr "$ sudo dnf upgrade pipx"
 
 #: ../../../how-to/upgrade-pipx.rst:29
 msgid "Windows (Scoop):"
@@ -76,11 +76,11 @@ msgstr ""
 
 #: ../../../how-to/upgrade-pipx.rst:42
 msgid "$ pipx upgrade pipx"
-msgstr ""
+msgstr "$ pipx upgrade pipx"
 
 #: ../../../how-to/upgrade-pipx.rst:48
 msgid "Upgrade via pip"
-msgstr ""
+msgstr "透過 pip 升級"
 
 #: ../../../how-to/upgrade-pipx.rst:50
 msgid ""
@@ -90,7 +90,7 @@ msgstr ""
 
 #: ../../../how-to/upgrade-pipx.rst:52
 msgid "$ python3 -m pip install --user --upgrade pipx"
-msgstr ""
+msgstr "$ python3 -m pip install --user --upgrade pipx"
 
 #: ../../../how-to/upgrade-pipx.rst:58
 msgid ""
@@ -106,7 +106,7 @@ msgstr ""
 
 #: ../../../how-to/upgrade-pipx.rst:66
 msgid "$ pipx --version"
-msgstr ""
+msgstr "$ pipx --version"
 
 #: ../../../how-to/upgrade-pipx.rst:72
 msgid ""

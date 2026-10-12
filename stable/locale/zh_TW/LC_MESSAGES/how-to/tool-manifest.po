@@ -93,7 +93,7 @@ msgstr ""
 
 #: ../../../how-to/tool-manifest.rst:56
 msgid "Lock the manifest"
-msgstr ""
+msgstr "鎖定清單"
 
 #: ../../../how-to/tool-manifest.rst:58
 msgid ""
@@ -118,11 +118,11 @@ msgstr ""
 
 #: ../../../how-to/tool-manifest.rst:72
 msgid "Apply the manifest"
-msgstr ""
+msgstr "套用清單"
 
 #: ../../../how-to/tool-manifest.rst:74
 msgid "$ pipx manifest sync ./pipx.toml"
-msgstr ""
+msgstr "$ pipx manifest sync ./pipx.toml"
 
 #: ../../../how-to/tool-manifest.rst:78
 msgid ""
@@ -139,7 +139,7 @@ msgstr ""
 
 #: ../../../how-to/tool-manifest.rst:84
 msgid "$ pipx manifest sync ./pipx.toml --prune"
-msgstr ""
+msgstr "$ pipx manifest sync ./pipx.toml --prune"
 
 #: ../../../how-to/tool-manifest.rst:88
 msgid ""

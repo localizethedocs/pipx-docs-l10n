@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:3
 msgid "Environment variables"
-msgstr ""
+msgstr "環境變數"
 
 #: ../../../reference/environment-variables.rst:5
 msgid ""
@@ -27,10 +27,12 @@ msgid ""
 "variable, all of them optional. Run ``pipx environment`` to print the "
 "resolved value of each one on your system."
 msgstr ""
+"pipx 沒有使用者組態檔。所有設定都是環境變數，而且全部都是選用的。在系統上執"
+"行 ``pipx environment``，即可列印每個變數解析後的值。"
 
 #: ../../../reference/environment-variables.rst:10
 msgid "Settable variables"
-msgstr ""
+msgstr "可設定的變數"
 
 #: ../../../reference/environment-variables.rst:16
 msgid "Variable"
@@ -38,7 +40,7 @@ msgstr "變數"
 
 #: ../../../reference/environment-variables.rst:17
 msgid "Meaning and default"
-msgstr ""
+msgstr "意義與默認值"
 
 #: ../../../reference/environment-variables.rst:18
 msgid "``PIPX_HOME``"
@@ -70,7 +72,7 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:25
 msgid "``PIPX_COMPLETION_DIR``"
-msgstr ""
+msgstr "``PIPX_COMPLETION_DIR``"
 
 #: ../../../reference/environment-variables.rst:26
 msgid "Directory for shell completion symlinks. Default: ``~/.local/share``."
@@ -78,34 +80,34 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:27
 msgid "``PIPX_GLOBAL_HOME``"
-msgstr ""
+msgstr "``PIPX_GLOBAL_HOME``"
 
 #: ../../../reference/environment-variables.rst:28
 msgid ""
 "Root directory for global (``--global``) virtual environments. Default: ``/"
 "opt/pipx``."
-msgstr ""
+msgstr "全域（``--global``）虛擬環境的根目錄。默認值：``/opt/pipx``。"
 
 #: ../../../reference/environment-variables.rst:29
 msgid "``PIPX_GLOBAL_BIN_DIR``"
-msgstr ""
+msgstr "``PIPX_GLOBAL_BIN_DIR``"
 
 #: ../../../reference/environment-variables.rst:30
 msgid "Entry-point directory for global installs. Default: ``/usr/local/bin``."
-msgstr ""
+msgstr "全域安裝的進入點目錄。預設值：``/usr/local/bin``。"
 
 #: ../../../reference/environment-variables.rst:31
 msgid "``PIPX_GLOBAL_MAN_DIR``"
-msgstr ""
+msgstr "``PIPX_GLOBAL_MAN_DIR``"
 
 #: ../../../reference/environment-variables.rst:32
 msgid ""
 "Man page directory for global installs. Default: ``/usr/local/share/man``."
-msgstr ""
+msgstr "全域安裝的手冊頁面目錄。默認值：``/usr/local/share/man``。"
 
 #: ../../../reference/environment-variables.rst:33
 msgid "``PIPX_GLOBAL_COMPLETION_DIR``"
-msgstr ""
+msgstr "``PIPX_GLOBAL_COMPLETION_DIR``"
 
 #: ../../../reference/environment-variables.rst:34
 msgid ""
@@ -144,7 +146,7 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:42
 msgid "``PIPX_COOLDOWN``"
-msgstr ""
+msgstr "``PIPX_COOLDOWN``"
 
 #: ../../../reference/environment-variables.rst:43
 msgid ""
@@ -167,35 +169,35 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:48
 msgid "``PIPX_FETCH_MISSING_PYTHON``"
-msgstr ""
+msgstr "``PIPX_FETCH_MISSING_PYTHON``"
 
 #: ../../../reference/environment-variables.rst:49
 msgid "Deprecated alias for ``PIPX_FETCH_PYTHON=missing``. Default: unset."
-msgstr ""
+msgstr "``PIPX_FETCH_PYTHON=missing`` 的已棄用別名。默認值：未設定。"
 
 #: ../../../reference/environment-variables.rst:50
 msgid "``PIPX_DISABLE_SHARED_LIBS_AUTO_UPGRADE``"
-msgstr ""
+msgstr "``PIPX_DISABLE_SHARED_LIBS_AUTO_UPGRADE``"
 
 #: ../../../reference/environment-variables.rst:51
 msgid ""
 "Set to a truthy value to skip automatic shared library upgrades. Default: "
 "unset."
-msgstr ""
+msgstr "設為真值即可略過自動升級共享程式庫。默認值：未設定。"
 
 #: ../../../reference/environment-variables.rst:52
 msgid "``PIPX_USE_EMOJI``"
-msgstr ""
+msgstr "``PIPX_USE_EMOJI``"
 
 #: ../../../reference/environment-variables.rst:53
 msgid ""
 "Set to a falsy value to disable emoji output. Default: enabled when the "
 "terminal encoding supports the emoji glyphs."
-msgstr ""
+msgstr "設為假值即可停用表情符號輸出。默認值：當終端機編碼支援表情符號時啟用。"
 
 #: ../../../reference/environment-variables.rst:55
 msgid "``PIPX_MAX_LOGS``"
-msgstr ""
+msgstr "``PIPX_MAX_LOGS``"
 
 #: ../../../reference/environment-variables.rst:56
 msgid "Number of log files to keep in the log directory. Default: ``10``."
@@ -265,7 +267,7 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:93
 msgid "``PIPX_LOG_DIR``"
-msgstr ""
+msgstr "``PIPX_LOG_DIR``"
 
 #: ../../../reference/environment-variables.rst:94
 msgid "Directory holding command logs."
@@ -273,7 +275,7 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:95
 msgid "``PIPX_TRASH_DIR``"
-msgstr ""
+msgstr "``PIPX_TRASH_DIR``"
 
 #: ../../../reference/environment-variables.rst:96
 msgid "Staging directory for deletions on the same filesystem as the venvs."
@@ -285,11 +287,11 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:98
 msgid "Cache directory for ``pipx run`` environments."
-msgstr ""
+msgstr "``pipx run`` 環境的快取目錄。"
 
 #: ../../../reference/environment-variables.rst:99
 msgid "``PIPX_STANDALONE_PYTHON_CACHEDIR``"
-msgstr ""
+msgstr "``PIPX_STANDALONE_PYTHON_CACHEDIR``"
 
 #: ../../../reference/environment-variables.rst:100
 msgid "Cache directory for downloaded standalone Python builds."
@@ -297,7 +299,7 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:101
 msgid "``PIPX_RESOLVED_BACKEND``"
-msgstr ""
+msgstr "``PIPX_RESOLVED_BACKEND``"
 
 #: ../../../reference/environment-variables.rst:102
 msgid "Backend pipx resolved for new venvs (``pip`` or ``uv``)."
@@ -305,7 +307,7 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:103
 msgid "``PIPX_BACKEND_SOURCE``"
-msgstr ""
+msgstr "``PIPX_BACKEND_SOURCE``"
 
 #: ../../../reference/environment-variables.rst:104
 msgid ""
@@ -315,16 +317,16 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:105
 msgid "``PIPX_UV_BINARY``"
-msgstr ""
+msgstr "``PIPX_UV_BINARY``"
 
 #: ../../../reference/environment-variables.rst:106
 msgid "Path to the uv binary pipx would use, or empty when none is found."
-msgstr ""
+msgstr "pipx 使用的 uv 二進位檔路徑；若找不到，則為空。"
 
 #: ../../../reference/environment-variables.rst:107
 msgid "``UV_CACHE_DIR``"
-msgstr ""
+msgstr "``UV_CACHE_DIR``"
 
 #: ../../../reference/environment-variables.rst:108
 msgid "Value of ``UV_CACHE_DIR`` in the environment, passed through to uv."
-msgstr ""
+msgstr "環境中的 ``UV_CACHE_DIR`` 值，會直接傳遞給 uv。"

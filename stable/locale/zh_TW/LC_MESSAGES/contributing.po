@@ -152,6 +152,8 @@ msgid ""
 "To develop ``pipx``, either create a :ref:`developer environment <creating-a-"
 "developer-environment>`, or perform an editable install:"
 msgstr ""
+"若要開發 ``pipx``，可以建立:ref:`開發環境 <creating-a-developer-"
+"environment>`，或執行可編輯安裝："
 
 #: ../../../contributing.rst:116
 msgid ""
@@ -174,20 +176,24 @@ msgid ""
 "pipx uses `tox <https://pypi.org/project/tox/>`_ for development, continuous "
 "integration testing, and various tasks."
 msgstr ""
+"pipx 使用 `tox <https://pypi.org/project/tox/>`_ 進行開發、持續整合測試及各種"
+"任務。"
 
 #: ../../../contributing.rst:130
 msgid ""
 "``tox`` defines environments in ``tox.toml`` which can be run with ``tox run "
 "-e ENV_NAME``. Environment names can be listed with ``tox list``."
 msgstr ""
+"``tox`` 會在 ``tox.toml`` 中定義環境，並可使用 ``tox run -e ENV_NAME`` 執行。"
+"可使用 ``tox list`` 列出環境名稱。"
 
 #: ../../../contributing.rst:133
 msgid "Install tox for pipx development:"
-msgstr ""
+msgstr "安裝 tox 來進行 pipx 開發："
 
 #: ../../../contributing.rst:135
 msgid "$ python -m pip install --user tox"
-msgstr ""
+msgstr "$ python -m pip install --user tox"
 
 #: ../../../contributing.rst:139
 msgid ""
@@ -224,7 +230,7 @@ msgstr ""
 
 #: ../../../contributing.rst:168
 msgid "Creating a developer environment"
-msgstr ""
+msgstr "建立開發者環境"
 
 #: ../../../contributing.rst:170
 msgid ""

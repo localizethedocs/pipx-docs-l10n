@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../explanation/index.rst:3
 msgid "Explanation"
-msgstr ""
+msgstr "解釋說明"
 
 #: ../../../explanation/index.rst:5
 msgid ""

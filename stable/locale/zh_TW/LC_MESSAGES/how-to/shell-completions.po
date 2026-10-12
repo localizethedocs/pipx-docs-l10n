@@ -68,11 +68,11 @@ msgstr ""
 
 #: ../../../how-to/shell-completions.rst:34
 msgid "``share/bash-completion/completions/``"
-msgstr ""
+msgstr "``share/bash-completion/completions/``"
 
 #: ../../../how-to/shell-completions.rst:35
 msgid "``~/.local/share/bash-completion/completions/``"
-msgstr ""
+msgstr "``~/.local/share/bash-completion/completions/``"
 
 #: ../../../how-to/shell-completions.rst:36
 msgid "bash, on its own"
@@ -92,11 +92,11 @@ msgstr ""
 
 #: ../../../how-to/shell-completions.rst:40
 msgid "``share/zsh/site-functions/``"
-msgstr ""
+msgstr "``share/zsh/site-functions/``"
 
 #: ../../../how-to/shell-completions.rst:41
 msgid "``~/.local/share/zsh/site-functions/``"
-msgstr ""
+msgstr "``~/.local/share/zsh/site-functions/``"
 
 #: ../../../how-to/shell-completions.rst:42
 msgid "zsh, once you say so"
@@ -114,6 +114,8 @@ msgid ""
 "fpath+=(\"$(pipx environment --value PIPX_COMPLETION_DIR)/zsh/site-"
 "functions\")"
 msgstr ""
+"fpath+=(\"$(pipx environment --value PIPX_COMPLETION_DIR)/zsh/site-"
+"functions\")"
 
 #: ../../../how-to/shell-completions.rst:51
 msgid ""

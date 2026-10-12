@@ -72,7 +72,7 @@ msgstr ""
 
 #: ../../../index.rst:55
 msgid "Explanation"
-msgstr ""
+msgstr "解釋說明"
 
 #: ../../../index.rst:59
 msgid ""

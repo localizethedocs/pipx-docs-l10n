@@ -28,13 +28,13 @@ msgstr ""
 
 #: ../../../how-to/manage-installed-apps.rst:9
 msgid "List apps"
-msgstr ""
+msgstr "列出應用程式"
 
 #: ../../../how-to/manage-installed-apps.rst:11
 #: ../../../how-to/manage-installed-apps.rst:84
 #: ../../../how-to/manage-installed-apps.rst:120
 msgid "$ pipx list"
-msgstr ""
+msgstr "$ pipx list"
 
 #: ../../../how-to/manage-installed-apps.rst:15
 msgid ""
