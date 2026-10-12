@@ -109,7 +109,7 @@ msgstr ""
 
 #: ../../../how-to/expose-apps.rst:61
 msgid "$ pipx list"
-msgstr ""
+msgstr "$ pipx list"
 
 #: ../../../how-to/expose-apps.rst:65
 msgid ""

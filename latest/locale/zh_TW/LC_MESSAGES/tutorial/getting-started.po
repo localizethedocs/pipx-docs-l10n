@@ -139,7 +139,7 @@ msgstr ""
 
 #: ../../../tutorial/getting-started.rst:98
 msgid "$ pipx run pycowsay moo"
-msgstr ""
+msgstr "$ pipx run pycowsay moo"
 
 #: ../../../tutorial/getting-started.rst:102
 msgid ""
@@ -175,11 +175,11 @@ msgstr ""
 
 #: ../../../tutorial/getting-started.rst:127
 msgid "Uninstall an app"
-msgstr ""
+msgstr "解除安裝應用程式"
 
 #: ../../../tutorial/getting-started.rst:129
 msgid "$ pipx uninstall pycowsay"
-msgstr ""
+msgstr "$ pipx uninstall pycowsay"
 
 #: ../../../tutorial/getting-started.rst:133
 msgid ""

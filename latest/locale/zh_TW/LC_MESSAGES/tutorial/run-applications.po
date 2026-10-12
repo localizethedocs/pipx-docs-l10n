@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../tutorial/run-applications.rst:3
 msgid "Running applications"
-msgstr ""
+msgstr "執行應用程式"
 
 #: ../../../tutorial/run-applications.rst:5
 msgid ""
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../../tutorial/run-applications.rst:13
 msgid "$ pipx run pycowsay moo"
-msgstr ""
+msgstr "$ pipx run pycowsay moo"
 
 #: ../../../tutorial/run-applications.rst:17
 msgid ""

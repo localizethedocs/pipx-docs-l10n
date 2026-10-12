@@ -91,6 +91,8 @@ msgid ""
 "$ pipx install --python 3.13 --fetch-python=missing my-package\n"
 "$ pipx install --python 3.13 --fetch-python=always my-package"
 msgstr ""
+"$ pipx install --python 3.13 --fetch-python=missing my-package\n"
+"$ pipx install --python 3.13 --fetch-python=always my-package"
 
 #: ../../../how-to/standalone-python.rst:60
 msgid "Set it for the whole shell session with the environment variable:"
@@ -101,6 +103,8 @@ msgid ""
 "$ export PIPX_FETCH_PYTHON=missing\n"
 "$ pipx install --python 3.13 my-package"
 msgstr ""
+"$ export PIPX_FETCH_PYTHON=missing\n"
+"$ pipx install --python 3.13 my-package"
 
 #: ../../../how-to/standalone-python.rst:67
 msgid ""
@@ -124,6 +128,9 @@ msgid ""
 "$ pipx interpreter prune\n"
 "$ pipx interpreter upgrade"
 msgstr ""
+"$ pipx interpreter list\n"
+"$ pipx interpreter prune\n"
+"$ pipx interpreter upgrade"
 
 #: ../../../how-to/standalone-python.rst:84
 msgid ""
@@ -139,7 +146,7 @@ msgstr ""
 
 #: ../../../how-to/standalone-python.rst:92
 msgid "$ pipx list"
-msgstr ""
+msgstr "$ pipx list"
 
 #: ../../../how-to/standalone-python.rst:96
 msgid ""

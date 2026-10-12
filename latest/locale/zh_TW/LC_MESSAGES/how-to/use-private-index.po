@@ -42,6 +42,9 @@ msgid ""
 "$ pipx install my-package --pip-args=\"--extra-index-url https://my-index."
 "example.com/simple/\""
 msgstr ""
+"$ pipx install my-package --index-url https://my-index.example.com/simple/\n"
+"$ pipx install my-package --pip-args=\"--extra-index-url https://my-index."
+"example.com/simple/\""
 
 #: ../../../how-to/use-private-index.rst:18
 msgid ""
@@ -54,6 +57,8 @@ msgid ""
 "$ pipx install my-package --pip-args=\"--index-url https://my-index.example."
 "com/simple/ --trusted-host my-index.example.com\""
 msgstr ""
+"$ pipx install my-package --pip-args=\"--index-url https://my-index.example."
+"com/simple/ --trusted-host my-index.example.com\""
 
 #: ../../../how-to/use-private-index.rst:27
 msgid "Set it for every command"
@@ -72,6 +77,9 @@ msgid ""
 "$ export PIP_TRUSTED_HOST=my-index.example.com\n"
 "$ pipx install my-private-package"
 msgstr ""
+"$ export PIP_INDEX_URL=https://my-index.example.com/simple/\n"
+"$ export PIP_TRUSTED_HOST=my-index.example.com\n"
+"$ pipx install my-private-package"
 
 #: ../../../how-to/use-private-index.rst:38
 msgid ""
@@ -81,7 +89,7 @@ msgstr ""
 
 #: ../../../how-to/use-private-index.rst:42
 msgid "Install offline"
-msgstr ""
+msgstr "離線安裝"
 
 #: ../../../how-to/use-private-index.rst:44
 msgid ""
@@ -93,6 +101,8 @@ msgid ""
 "$ pipx install my-package --pip-args=\"--no-index --find-links /path/to/"
 "wheels\""
 msgstr ""
+"$ pipx install my-package --pip-args=\"--no-index --find-links /path/to/"
+"wheels\""
 
 #: ../../../how-to/use-private-index.rst:50
 msgid ""

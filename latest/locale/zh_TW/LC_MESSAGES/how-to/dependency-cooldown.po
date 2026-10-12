@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../../../how-to/dependency-cooldown.rst:15
 msgid "$ pipx install --cooldown 7 httpie"
-msgstr ""
+msgstr "$ pipx install --cooldown 7 httpie"
 
 #: ../../../how-to/dependency-cooldown.rst:19
 msgid ""

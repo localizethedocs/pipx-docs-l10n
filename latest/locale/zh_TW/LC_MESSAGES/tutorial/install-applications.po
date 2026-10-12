@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../tutorial/install-applications.rst:3
 msgid "Installing applications"
-msgstr ""
+msgstr "安裝應用程式"
 
 #: ../../../tutorial/install-applications.rst:5
 msgid ""
@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../../../tutorial/install-applications.rst:10
 msgid "Install a tool"
-msgstr ""
+msgstr "安裝工具"
 
 #: ../../../tutorial/install-applications.rst:12
 msgid "Install `HTTPie <https://httpie.io/>`_, a command-line HTTP client:"
@@ -45,6 +45,12 @@ msgid ""
 "    - https\n"
 "done! ✨ 🌟 ✨"
 msgstr ""
+"$ pipx install httpie\n"
+"  installed package httpie 3.2.4, Python 3.12.3\n"
+"  These apps are now globally available\n"
+"    - http\n"
+"    - https\n"
+"done! ✨ 🌟 ✨"
 
 #: ../../../tutorial/install-applications.rst:23
 msgid ""

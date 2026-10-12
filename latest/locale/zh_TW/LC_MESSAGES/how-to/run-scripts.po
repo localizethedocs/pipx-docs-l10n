@@ -45,6 +45,9 @@ msgid ""
 "$ pipx run --spec esptool==4.6.2 esptool.py\n"
 "$ pipx run --spec 'esptool>=4.5' esptool.py"
 msgstr ""
+"$ pipx run mpremote==1.20.0\n"
+"$ pipx run --spec esptool==4.6.2 esptool.py\n"
+"$ pipx run --spec 'esptool>=4.5' esptool.py"
 
 #: ../../../how-to/run-scripts.rst:22
 msgid "Quote any specifier that contains ``>``, ``<``, or spaces."
@@ -156,6 +159,8 @@ msgid ""
 "$ pipx run test.py pipx\n"
 "1.9.0"
 msgstr ""
+"$ pipx run test.py pipx\n"
+"1.9.0"
 
 #: ../../../how-to/run-scripts.rst:102
 msgid ""
@@ -169,7 +174,7 @@ msgstr ""
 
 #: ../../../how-to/run-scripts.rst:108
 msgid "$ pipx run pycowsay moo"
-msgstr ""
+msgstr "$ pipx run pycowsay moo"
 
 #: ../../../how-to/run-scripts.rst:112
 msgid ""

@@ -65,7 +65,7 @@ msgstr ""
 
 #: ../../../how-to/use-with-pre-commit.rst:34
 msgid "$ pre-commit run yapf --all-files"
-msgstr ""
+msgstr "$ pre-commit run yapf --all-files"
 
 #: ../../../how-to/use-with-pre-commit.rst:38
 msgid "The hook resolves the app through ``pipx run`` and reports its result."

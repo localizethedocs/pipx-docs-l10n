@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../how-to/install-pipx.rst:3
 msgid "Install pipx"
-msgstr ""
+msgstr "安裝 pipx"
 
 #: ../../../how-to/install-pipx.rst:5
 msgid "Get pipx onto your system and add its app directory to your ``PATH``."
@@ -220,7 +220,7 @@ msgstr ""
 
 #: ../../../how-to/install-pipx.rst:130
 msgid "$ sudo pipx ensurepath --prepend"
-msgstr ""
+msgstr "$ sudo pipx ensurepath --prepend"
 
 #: ../../../how-to/install-pipx.rst:134
 msgid ""
@@ -350,7 +350,7 @@ msgstr ""
 
 #: ../../../how-to/install-pipx.rst:214
 msgid "$ pipx --version"
-msgstr ""
+msgstr "$ pipx --version"
 
 #: ../../../how-to/install-pipx.rst:218
 msgid ""

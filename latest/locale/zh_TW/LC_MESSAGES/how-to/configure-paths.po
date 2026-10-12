@@ -29,7 +29,7 @@ msgstr ""
 
 #: ../../../how-to/configure-paths.rst:9
 msgid "Directory layout"
-msgstr ""
+msgstr "目錄配置"
 
 #: ../../../how-to/configure-paths.rst:11
 msgid ""
@@ -274,6 +274,8 @@ msgid ""
 "$ pipx environment --value PIPX_HOME\n"
 "$ pipx environment --value PIPX_BIN_DIR"
 msgstr ""
+"$ pipx environment --value PIPX_HOME\n"
+"$ pipx environment --value PIPX_BIN_DIR"
 
 #: ../../../how-to/configure-paths.rst:155
 msgid "Each prints the path pipx will use, reflecting any override you set."

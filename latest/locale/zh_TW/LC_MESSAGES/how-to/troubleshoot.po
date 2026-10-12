@@ -44,7 +44,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:16
 msgid "$ pipx environment --value PIPX_DEFAULT_PYTHON"
-msgstr ""
+msgstr "$ pipx environment --value PIPX_DEFAULT_PYTHON"
 
 #: ../../../how-to/troubleshoot.rst:20
 msgid "Install with a different Python:"
@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:22
 msgid "$ pipx install my-package --python python3.12"
-msgstr ""
+msgstr "$ pipx install my-package --python python3.12"
 
 #: ../../../how-to/troubleshoot.rst:26
 msgid "If you do not have that version, let pipx download a standalone build:"
@@ -60,7 +60,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:28
 msgid "$ pipx install my-package --python 3.13 --fetch-python=missing"
-msgstr ""
+msgstr "$ pipx install my-package --python 3.13 --fetch-python=missing"
 
 #: ../../../how-to/troubleshoot.rst:32
 msgid ""
@@ -71,7 +71,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:39
 msgid "Diagnose and repair environments"
-msgstr ""
+msgstr "診斷並修復環境"
 
 #: ../../../how-to/troubleshoot.rst:41
 msgid "Check each managed environment without changing it:"
@@ -104,7 +104,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:58
 msgid "$ pipx repair --python python3.13"
-msgstr ""
+msgstr "$ pipx repair --python python3.13"
 
 #: ../../../how-to/troubleshoot.rst:62
 msgid ""
@@ -127,6 +127,8 @@ msgid ""
 "$ pipx uninstall <mypackage>\n"
 "$ pipx install <mypackage>"
 msgstr ""
+"$ pipx uninstall <mypackage>\n"
+"$ pipx install <mypackage>"
 
 #: ../../../how-to/troubleshoot.rst:79
 msgid "Start over from a fresh install"
@@ -153,7 +155,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:92
 msgid "$ pipx reset --dry-run"
-msgstr ""
+msgstr "$ pipx reset --dry-run"
 
 #: ../../../how-to/troubleshoot.rst:96
 msgid ""
@@ -171,7 +173,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:104
 msgid "$ pipx install pycowsay --pip-args=\"--no-cache-dir\""
-msgstr ""
+msgstr "$ pipx install pycowsay --pip-args=\"--no-cache-dir\""
 
 #: ../../../how-to/troubleshoot.rst:108
 msgid "To ignore SSL/TLS errors:"
@@ -183,10 +185,13 @@ msgid ""
 "trusted-host pypi.org --trusted-host pypi.python.org --trusted-host github."
 "com'"
 msgstr ""
+"$ pipx install termpair --pip-args '--trusted-host files.pythonhosted.org --"
+"trusted-host pypi.org --trusted-host pypi.python.org --trusted-host github."
+"com'"
 
 #: ../../../how-to/troubleshoot.rst:116
 msgid "Check for PIP_* environment variables"
-msgstr ""
+msgstr "檢查 PIP_* 環境變數"
 
 #: ../../../how-to/troubleshoot.rst:118
 msgid ""
@@ -197,27 +202,27 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:121 ../../../how-to/troubleshoot.rst:219
 msgid "Unix or macOS:"
-msgstr ""
+msgstr "Unix 或 macOS："
 
 #: ../../../how-to/troubleshoot.rst:123
 msgid "$ env | grep '^PIP_'"
-msgstr ""
+msgstr "$ env | grep '^PIP_'"
 
 #: ../../../how-to/troubleshoot.rst:127
 msgid "Windows PowerShell:"
-msgstr ""
+msgstr "Windows PowerShell："
 
 #: ../../../how-to/troubleshoot.rst:129
 msgid "$ ls env:PIP_*"
-msgstr ""
+msgstr "$ ls env:PIP_*"
 
 #: ../../../how-to/troubleshoot.rst:133
 msgid "Windows ``cmd``:"
-msgstr ""
+msgstr "Windows ``cmd``："
 
 #: ../../../how-to/troubleshoot.rst:135
 msgid "$ set PIP_"
-msgstr ""
+msgstr "$ set PIP_"
 
 #: ../../../how-to/troubleshoot.rst:139
 msgid ""
@@ -227,7 +232,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:143
 msgid "Clear runpip cache warnings"
-msgstr ""
+msgstr "清除 runpip 快取警告"
 
 #: ../../../how-to/troubleshoot.rst:145
 msgid ""
@@ -238,11 +243,11 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:148
 msgid "Clear the cache for a managed package:"
-msgstr ""
+msgstr "清除一個受管理軟體包的快取："
 
 #: ../../../how-to/troubleshoot.rst:150
 msgid "$ pipx runpip <package> cache purge"
-msgstr ""
+msgstr "$ pipx runpip <package> cache purge"
 
 #: ../../../how-to/troubleshoot.rst:154
 msgid ""
@@ -252,7 +257,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:156
 msgid "$ pipx runpip --verbose <package> cache dir"
-msgstr ""
+msgstr "$ pipx runpip --verbose <package> cache dir"
 
 #: ../../../how-to/troubleshoot.rst:160
 msgid ""
@@ -262,7 +267,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:165
 msgid "Log files"
-msgstr ""
+msgstr "日誌檔"
 
 #: ../../../how-to/troubleshoot.rst:167
 msgid ""
@@ -286,7 +291,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:181
 msgid "$ sudo ~/.local/bin/pipx ensurepath --global"
-msgstr ""
+msgstr "$ sudo ~/.local/bin/pipx ensurepath --global"
 
 #: ../../../how-to/troubleshoot.rst:185
 msgid ""

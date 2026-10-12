@@ -140,7 +140,7 @@ msgstr ""
 
 #: ../../../how-to/inject-packages.rst:66
 msgid "$ pipx list --include-injected"
-msgstr ""
+msgstr "$ pipx list --include-injected"
 
 #: ../../../how-to/inject-packages.rst:70
 msgid "The injected packages appear under their host environment."
