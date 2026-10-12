@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-10-05 16:32:29 -0700",
-      "hash" : "8a6f17742ab9133dd283def36fa128ef9c0df31e",
-      "title" : "[pre-commit.ci] pre-commit autoupdate (#2067)"
+      "date" : "2026-10-12 06:59:08 +0000",
+      "hash" : "fcd08d8dd4830ca5aa0f669bae0e107fedc2670c",
+      "title" : "Release 1.17.14"
     }
   },
   "type" : "branch",
