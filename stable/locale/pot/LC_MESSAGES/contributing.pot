@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 1.17\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"POT-Creation-Date: 2026-10-12 18:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -203,11 +204,11 @@ msgstr ""
 #: ../../../contributing.rst:147
 msgid ""
 "default environments:\n"
+"3.15 -> run tests with 3.15\n"
 "3.14 -> run tests with 3.14\n"
 "3.13 -> run tests with 3.13\n"
 "3.12 -> run tests with 3.12\n"
 "3.11 -> run tests with 3.11\n"
-"3.10 -> run tests with 3.10\n"
 "type -> run the type checker\n"
 "lint -> run pre-commit on the codebase\n"
 "docs -> build documentation\n"
@@ -235,11 +236,11 @@ msgid "Unit Tests"
 msgstr ""
 
 #: ../../../contributing.rst:176
-msgid "To run unit tests in Python 3.12, you can run"
+msgid "To run unit tests in Python 3.15, you can run"
 msgstr ""
 
 #: ../../../contributing.rst:178
-msgid "$ tox run -e 3.12"
+msgid "$ tox run -e 3.15"
 msgstr ""
 
 #: ../../../contributing.rst:184
@@ -249,7 +250,7 @@ msgid ""
 msgstr ""
 
 #: ../../../contributing.rst:186
-msgid "$ tox run -e 3.10 -- -k EXPRESSION"
+msgid "$ tox run -e 3.15 -- -k EXPRESSION"
 msgstr ""
 
 #: ../../../contributing.rst:190
@@ -257,7 +258,7 @@ msgid "``EXPRESSION`` can be a test name, such as"
 msgstr ""
 
 #: ../../../contributing.rst:192
-msgid "$ tox run -e 3.10 -- -k test_uninstall"
+msgid "$ tox run -e 3.15 -- -k test_uninstall"
 msgstr ""
 
 #: ../../../contributing.rst:196
