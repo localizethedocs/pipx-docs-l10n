@@ -1,0 +1,44 @@
+# pipx — full documentation map
+
+> pipx installs and runs end-user Python applications in isolated environments. It fills the same role as macOS’s brew, JavaScript’s npx, and Linux’s apt. Under the hood it uses pip, but unlike pip it creates a separate virtual environment for each application, so their dependencies never collide and an uninstall leaves nothing behind.
+
+Every documentation page, grouped by section, with a one-line description. Fetch a page's URL for its full content.
+
+## Tutorials
+- [Getting started](https://projects.localizethedocs.org/pipx-docs-l10n/tutorial/getting-started.html): This tutorial covers the core pipx workflow: install an application, run it, upgrade it, and remove it. Work through it top to bottom with one small package, and you will know every command you need day to day.
+- [Installing applications](https://projects.localizethedocs.org/pipx-docs-l10n/tutorial/install-applications.html): getting-started walked through the install → list → run → uninstall cycle with the toy pycowsay package. This tutorial repeats it with a real tool so you can see how a package’s name and its apps differ.
+- [Running applications](https://projects.localizethedocs.org/pipx-docs-l10n/tutorial/run-applications.html): pipx run downloads and runs a Python application in a one-time, temporary environment, then leaves your system untouched. Reach for it to scaffold a new project, check an app’s help text, or try a tool without committing to an install.
+
+## How-to guides
+- [Install pipx](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/install-pipx.html): Get pipx onto your system and add its app directory to your PATH.
+- [Upgrade pipx](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/upgrade-pipx.html): Move pipx itself to the latest release. Pick the method that matches how you installed it.
+- [Manage installed apps](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/manage-installed-apps.html): List, upgrade, and remove the apps pipx manages, then confirm each change.
+- [Run scripts](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/run-scripts.html): Run an app or a script in a temporary environment with pipx run, without installing it first. pipx downloads the package, caches the environment, and runs the app.
+- [Inject packages](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/inject-packages.html): Add extra packages into an existing pipx-managed environment with pipx inject.
+- [Pin packages](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/pin-packages.html): Hold an installation at its current version so upgrade and reinstall skip it until you unpin.
+- [Expose apps](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/expose-apps.html): Control which apps and manual pages an environment links onto your PATH, without rebuilding it.
+- [Tool manifest](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/tool-manifest.html): Declare a set of pipx tools in one file and install, upgrade, or prune them as a unit with pipx manifest.
+- [Configure paths](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/configure-paths.html): Choose where pipx stores environments, apps, and manual pages, and how it installs for all users.
+- [Shell completions](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/shell-completions.html): Enable tab completion for pipx and for the apps it installs.
+- [Move installation](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/move-installation.html): Relocate your pipx directory to a new location and rebuild the environments there.
+- [Standalone Python](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/standalone-python.html): Install an app under a Python interpreter downloaded from python-build-standalone instead of the system one. Reach for this when the system Python lacks the version you need, or when a distro patched its Python in ways that break the app.
+- [Dependency cooldown](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/dependency-cooldown.html): Skip index artifacts uploaded in the last few days, so a compromised or broken release has time to be caught and yanked before your machine picks it up. Reach for this when you install or upgrade tools from a public index and can afford to lag the newest version.
+- [Use a private index](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/use-private-index.html): Install from a private index, behind a proxy, or offline by forwarding index options to the backend.
+- [Use the uv backend](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/use-uv-backend.html): Make pipx use uv to create virtual environments and install packages in place of pip and venv. The CLI surface stays the same.
+- [Use with pre-commit](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/use-with-pre-commit.html): Run a pipx app as a pre-commit hook. This is useful for apps that work with pipx run but have no native pre-commit support, when you want the prebuilt wheel from PyPI rather than a source build, or when you need pipx’s --spec and --index-url flags.
+- [Troubleshoot](https://projects.localizethedocs.org/pipx-docs-l10n/how-to/troubleshoot.html): Diagnose and fix common pipx problems, from wrong package versions to broken environments.
+
+## Reference
+- [CLI reference](https://projects.localizethedocs.org/pipx-docs-l10n/reference/cli.html): -h, --help - show this help message and exit
+- [Environment variables](https://projects.localizethedocs.org/pipx-docs-l10n/reference/environment-variables.html): pipx has no user configuration file. Every setting is an environment variable, all of them optional. Run pipx environment to print the resolved value of each one on your system.
+- [Exit codes](https://projects.localizethedocs.org/pipx-docs-l10n/reference/exit-codes.html): pipx returns 0 on success and 1 on failure. A command that raises an unexpected error, is interrupted, or hits an argument-parsing problem also exits non-zero. The named codes below come from pipx.constants; each maps to one of those two process exit values.
+- [JSON output](https://projects.localizethedocs.org/pipx-docs-l10n/reference/json-output.html): Most pipx commands accept --output json to print a single machine-readable result envelope on stdout instead of human-readable text. Selecting JSON suppresses the normal progress messages, so the envelope is the only thing on stdout.
+- [On-disk metadata](https://projects.localizethedocs.org/pipx-docs-l10n/reference/metadata.html): pipx has no user configuration file. It is configured only through environment variables. The only per-installation state pipx keeps is a metadata file inside each managed virtual environment.
+- [Examples](https://projects.localizethedocs.org/pipx-docs-l10n/reference/examples.html): Copy-paste command examples. For every flag see the CLI reference. For step-by-step narratives, follow the how-to guides linked in each section.
+- [Programs to try](https://projects.localizethedocs.org/pipx-docs-l10n/reference/programs-to-try.html): Applications worth trying with pipx run, which fetches the package into a temporary environment and runs it without installing. Add --help on first use so an unfamiliar tool does not act unexpectedly. Swap run for install to keep any of them on your PATH.
+
+## Explanation
+- [How pipx works](https://projects.localizethedocs.org/pipx-docs-l10n/explanation/how-pipx-works.html): This page describes the pip backend model, where a shared pip environment backs every managed venv through a .pth file. When the uv backend is active (the default whenever uv is available, via the pipx[uv] extra or on PATH) pipx skips the shared environment and uses uv venv and uv pip instead; uv-created venvs ship without pip. See ../how-to/use-uv-backend.
+- [Project scope](https://projects.localizethedocs.org/pipx-docs-l10n/explanation/scope.html): pipx installs and runs Python applications. It manages the isolated environments that support those applications and exposes their entry points on PATH.
+- [Comparisons](https://projects.localizethedocs.org/pipx-docs-l10n/explanation/comparisons.html): pip is a general Python package installer. It can install libraries or CLI applications with entry points.
+- [Making packages compatible](https://projects.localizethedocs.org/pipx-docs-l10n/explanation/making-packages-compatible.html): If you are a developer and want users to be able to run
