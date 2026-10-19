@@ -87,29 +87,29 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:39
 msgid "State"
-msgstr ""
+msgstr "狀態"
 
 #: ../../../explanation/comparisons.rst:40
 #: ../../../explanation/comparisons.rst:76
 msgid "pipx"
-msgstr ""
+msgstr "pipx"
 
 #: ../../../explanation/comparisons.rst:41
 #: ../../../explanation/comparisons.rst:77
 msgid "uv tool"
-msgstr ""
+msgstr "uv tool"
 
 #: ../../../explanation/comparisons.rst:42
 msgid "Per-tool venvs"
-msgstr ""
+msgstr "個別工具的 venv"
 
 #: ../../../explanation/comparisons.rst:43
 msgid "``$PIPX_HOME/venvs/<name>`` (``PIPX_HOME``)"
-msgstr ""
+msgstr "``$PIPX_HOME/venvs/<name>``（``PIPX_HOME``）"
 
 #: ../../../explanation/comparisons.rst:44
 msgid "``$UV_TOOL_DIR/<name>`` (``UV_TOOL_DIR``)"
-msgstr ""
+msgstr "``$UV_TOOL_DIR/<name>``（``UV_TOOL_DIR``）"
 
 #: ../../../explanation/comparisons.rst:45
 msgid "Exposed binaries"
@@ -169,7 +169,7 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:59
 msgid "``$UV_PYTHON_INSTALL_DIR``"
-msgstr ""
+msgstr "``$UV_PYTHON_INSTALL_DIR``"
 
 #: ../../../explanation/comparisons.rst:60
 msgid "System-wide install"
@@ -202,11 +202,11 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:78
 msgid "Install from PyPI"
-msgstr ""
+msgstr "從 PyPI 安裝"
 
 #: ../../../explanation/comparisons.rst:79
 msgid "``pipx install ruff``"
-msgstr ""
+msgstr "``pipx install ruff``"
 
 #: ../../../explanation/comparisons.rst:80
 msgid "``uv tool install ruff`` (or ``uvx ruff`` for one-off)"
@@ -214,15 +214,15 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:81
 msgid "Install from a git URL"
-msgstr ""
+msgstr "從 git URL 安裝"
 
 #: ../../../explanation/comparisons.rst:82
 msgid "``pipx install 'git+https://…'``"
-msgstr ""
+msgstr "``pipx install 'git+https://…'``"
 
 #: ../../../explanation/comparisons.rst:83
 msgid "``uv tool install 'git+https://…'``"
-msgstr ""
+msgstr "``uv tool install 'git+https://…'``"
 
 #: ../../../explanation/comparisons.rst:84
 msgid "Install editable from path"
@@ -230,15 +230,15 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:85
 msgid "``pipx install -e ./mypkg``"
-msgstr ""
+msgstr "``pipx install -e ./mypkg``"
 
 #: ../../../explanation/comparisons.rst:86
 msgid "``uv tool install -e ./mypkg``"
-msgstr ""
+msgstr "``uv tool install -e ./mypkg``"
 
 #: ../../../explanation/comparisons.rst:87
 msgid "One-off run (no install)"
-msgstr ""
+msgstr "單次執行（不安裝）"
 
 #: ../../../explanation/comparisons.rst:88
 msgid "``pipx run black .``"
@@ -302,11 +302,11 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:103
 msgid "``pipx run --spec 'ruff==0.6.0' ruff check``"
-msgstr ""
+msgstr "``pipx run --spec 'ruff==0.6.0' ruff check``"
 
 #: ../../../explanation/comparisons.rst:104
 msgid "``uvx ruff@0.6.0 check``"
-msgstr ""
+msgstr "``uvx ruff@0.6.0 check``"
 
 #: ../../../explanation/comparisons.rst:105
 msgid "Add a dep to existing tool"
@@ -370,11 +370,11 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:120
 msgid "Diagnose broken environments"
-msgstr ""
+msgstr "診斷損毀的環境"
 
 #: ../../../explanation/comparisons.rst:121
 msgid "``pipx health``"
-msgstr ""
+msgstr "``pipx health``"
 
 #: ../../../explanation/comparisons.rst:122
 msgid "*no equivalent*"
@@ -394,15 +394,15 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:126
 msgid "Reinstall any environment"
-msgstr ""
+msgstr "重新安裝任何環境"
 
 #: ../../../explanation/comparisons.rst:127
 msgid "``pipx reinstall ruff`` / ``reinstall-all``"
-msgstr ""
+msgstr "``pipx reinstall ruff`` / ``reinstall-all``"
 
 #: ../../../explanation/comparisons.rst:128
 msgid "``uv tool upgrade --reinstall ruff`` / ``--all``"
-msgstr ""
+msgstr "``uv tool upgrade --reinstall ruff`` / ``--all``"
 
 #: ../../../explanation/comparisons.rst:129
 msgid "Run pip inside a venv"
@@ -410,7 +410,7 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:130
 msgid "``pipx runpip <tool> -- pip ...``"
-msgstr ""
+msgstr "``pipx runpip <tool> -- pip ...``"
 
 #: ../../../explanation/comparisons.rst:131
 msgid "*not supported (no pip in uv venvs)*"
@@ -418,15 +418,15 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:132
 msgid "PATH setup"
-msgstr ""
+msgstr "PATH 設定"
 
 #: ../../../explanation/comparisons.rst:133
 msgid "``pipx ensurepath``"
-msgstr ""
+msgstr "``pipx ensurepath``"
 
 #: ../../../explanation/comparisons.rst:134
 msgid "``uv tool update-shell``"
-msgstr ""
+msgstr "``uv tool update-shell``"
 
 #: ../../../explanation/comparisons.rst:135
 msgid "Show resolved env"
@@ -505,6 +505,8 @@ msgid ""
 "``[project.entry-points.\"pipx.run\"]`` declares pipx-specific runtime "
 "extras in the package metadata."
 msgstr ""
+"``[project.entry-points.\"pipx.run\"]`` 會在軟體包中繼資料中宣告 pipx 專用的"
+"執行時額外項目。"
 
 #: ../../../explanation/comparisons.rst:158
 msgid ""
@@ -732,7 +734,7 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:244
 msgid "Migrating to pipx from pipsi"
-msgstr ""
+msgstr "從 pipsi 遷移至 pipx"
 
 #: ../../../explanation/comparisons.rst:246
 msgid ""
@@ -746,6 +748,8 @@ msgid ""
 "$ pipx run https://raw.githubusercontent.com/pypa/pipx/main/scripts/"
 "migrate_pipsi_to_pipx.py"
 msgstr ""
+"$ pipx run https://raw.githubusercontent.com/pypa/pipx/main/scripts/"
+"migrate_pipsi_to_pipx.py"
 
 #: ../../../explanation/comparisons.rst:255
 msgid "pipx vs brew"
@@ -817,6 +821,8 @@ msgid ""
 "pipx run poetry --help\n"
 "pip-run poetry -- -m poetry --help"
 msgstr ""
+"pipx run poetry --help\n"
+"pip-run poetry -- -m poetry --help"
 
 #: ../../../explanation/comparisons.rst:290
 msgid "pipx vs fades"
@@ -876,19 +882,20 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:313
 msgid "Similarities:"
-msgstr ""
+msgstr "相似之處："
 
 #: ../../../explanation/comparisons.rst:315
 msgid ""
 "Both create isolated environments without having to specify (and remember) a "
 "directory in which to store them."
-msgstr ""
+msgstr "兩者都會建立隔離環境，無須指定（並記住）存放環境的目錄。"
 
 #: ../../../explanation/comparisons.rst:316
 msgid ""
 "Both let you use any Python interpreter available on your system (subject to "
 "the version restrictions below)."
 msgstr ""
+"兩者都能讓您使用系統上可用的任何 Python 直譯器（但須符合以下版本限制）。"
 
 #: ../../../explanation/comparisons.rst:318
 msgid "pae advantages:"

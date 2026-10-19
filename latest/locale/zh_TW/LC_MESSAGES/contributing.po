@@ -329,7 +329,7 @@ msgstr ""
 
 #: ../../../contributing.rst:227
 msgid "$ tox run -e type"
-msgstr ""
+msgstr "$ tox run -e type"
 
 #: ../../../contributing.rst:231
 msgid ""

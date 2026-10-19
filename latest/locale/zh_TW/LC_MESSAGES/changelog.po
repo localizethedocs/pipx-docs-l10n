@@ -248,6 +248,9 @@ msgid ""
 "`pipx environment` now reports `PIPX_MAX_LOGS`, and `pipx environment --"
 "value PIPX_MAX_LOGS` no longer exits with `invalid choice`. (:issue:`2024`)"
 msgstr ""
+"現在執行 `pipx environment` 會回報 `PIPX_MAX_LOGS`，而執行 `pipx environment "
+"--value PIPX_MAX_LOGS` 也不會再因為 `invalid choice` 而退出。（:issue:"
+"`2024`）"
 
 #: ../../../changelog.rst:146 ../../../changelog.rst:244
 msgid "Miscellaneous internal changes"

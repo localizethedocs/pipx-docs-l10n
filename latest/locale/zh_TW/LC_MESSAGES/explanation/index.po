@@ -44,6 +44,8 @@ msgid ""
 ":doc:`comparisons` relates pipx to pip, uv tool, Poetry, pipenv, pyenv, "
 "brew, npx, and more."
 msgstr ""
+":doc:`comparisons`\\ 說明 pipx 與 pip、uv tool、Poetry、pipenv、pyenv、brew、"
+"npx 等工具的比較。"
 
 #: ../../../explanation/index.rst:11
 msgid ""

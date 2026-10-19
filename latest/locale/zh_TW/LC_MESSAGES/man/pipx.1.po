@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../man/pipx.1.rst:5
 msgid "pipx"
-msgstr ""
+msgstr "pipx"
 
 #: ../../../man/pipx.1.rst:9
 msgid "install and run Python applications in isolated environments"

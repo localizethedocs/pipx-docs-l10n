@@ -136,7 +136,7 @@ msgstr ""
 
 #: ../../../index.rst:91
 msgid "Testimonials"
-msgstr ""
+msgstr "感謝語"
 
 #: ../../../index.rst:93
 msgid ""
