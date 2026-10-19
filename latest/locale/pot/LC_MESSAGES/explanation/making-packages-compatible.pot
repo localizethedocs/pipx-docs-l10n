@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"POT-Creation-Date: 2026-10-19 16:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -90,9 +91,9 @@ msgstr ""
 
 #: ../../../explanation/making-packages-compatible.rst:60
 msgid ""
-"Here ``foo`` and ``bar`` (and ``baz`` on Windows) become applications that "
-"pipx exposes after installing the package, invoking their corresponding "
-"entry point functions."
+"Here ``foo``, ``bar``, and ``baz`` become applications that pipx exposes "
+"after installing the package, invoking their corresponding entry point "
+"functions."
 msgstr ""
 
 #: ../../../explanation/making-packages-compatible.rst:83
@@ -133,21 +134,23 @@ msgid ""
 "main`` even if no console script named ``my-package`` exists. The `build "
 "<https://github.com/pypa/build>`_ package uses this pattern so that ``pipx "
 "run build`` works even though build's console script is named ``pyproject-"
-"build``."
-msgstr ""
-
-#: ../../../explanation/making-packages-compatible.rst:113
-msgid "Detect a pipx installation"
+"build``. The uv backend hands ``pipx run build`` to ``uv tool run``, which "
+"reads console scripts only, so this needs ``--backend pip`` there (see :doc:"
+"`../how-to/use-uv-backend`)."
 msgstr ""
 
 #: ../../../explanation/making-packages-compatible.rst:115
+msgid "Detect a pipx installation"
+msgstr ""
+
+#: ../../../explanation/making-packages-compatible.rst:117
 msgid ""
 "pipx records the environment name in ``pipx_metadata.json`` for packages "
 "installed with ``pipx install``. Package code can read this name when it "
 "needs to give pipx-specific recovery instructions:"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:118
+#: ../../../explanation/making-packages-compatible.rst:120
 msgid ""
 "import json\n"
 "import sys\n"
@@ -165,25 +168,25 @@ msgid ""
 "    return environment if isinstance(environment, str) else None"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:133
+#: ../../../explanation/making-packages-compatible.rst:135
 msgid ""
 "Use the returned name as the target for commands such as ``pipx inject "
 "ENVIRONMENT 'mytool[feature]'``. pipx records the extra on the main package, "
 "so reinstalling the environment retains it."
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:136
+#: ../../../explanation/making-packages-compatible.rst:138
 msgid ""
 "``pipx run`` may create internal metadata without setting ``environment``, "
 "so check the field value. Treat other keys as internal pipx state. If the "
 "function returns ``None``, show the package's usual installer-neutral advice."
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:140
+#: ../../../explanation/making-packages-compatible.rst:142
 msgid "Manual pages"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:142
+#: ../../../explanation/making-packages-compatible.rst:144
 msgid ""
 "To provide documentation via ``man`` pages on UNIX-like systems, ship them "
 "as data files. pipx exposes them the same way it exposes apps."
@@ -193,7 +196,7 @@ msgstr ""
 msgid "setuptools"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:149
+#: ../../../explanation/making-packages-compatible.rst:151
 msgid ""
 "# pyproject.toml\n"
 "[tool.setuptools.data-files]\n"
@@ -202,7 +205,7 @@ msgid ""
 "]"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:157
+#: ../../../explanation/making-packages-compatible.rst:159
 msgid ""
 "# setup.cfg\n"
 "[options.data_files]\n"
@@ -210,7 +213,7 @@ msgid ""
 "    manpage.1"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:164
+#: ../../../explanation/making-packages-compatible.rst:166
 msgid ""
 "# setup.py\n"
 "setup(\n"
@@ -219,7 +222,7 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:174
+#: ../../../explanation/making-packages-compatible.rst:176
 msgid ""
 "The ``data-files`` keyword is \"discouraged\" in the `setuptools "
 "documentation <https://setuptools.pypa.io/en/latest/userguide/"
@@ -231,7 +234,7 @@ msgstr ""
 msgid "pdm-backend"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:180
+#: ../../../explanation/making-packages-compatible.rst:182
 msgid ""
 "# pyproject.toml\n"
 "[tool.pdm.build]\n"
@@ -243,18 +246,18 @@ msgid ""
 "]"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:191
+#: ../../../explanation/making-packages-compatible.rst:193
 msgid ""
 "The manual page ``manpage.1`` can then be read with ``man manpage`` after "
 "installing the package. For a real-world example, see `pycowsay's setup.py "
 "<https://github.com/cs01/pycowsay/blob/master/setup.py>`_."
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:195
+#: ../../../explanation/making-packages-compatible.rst:197
 msgid "Shell completions"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:197
+#: ../../../explanation/making-packages-compatible.rst:199
 msgid ""
 "A package can ship the completion script for its own command the same way it "
 "ships a man page. pipx picks up the three directories a wheel installs "
@@ -263,61 +266,61 @@ msgid ""
 "leave with it."
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:205
+#: ../../../explanation/making-packages-compatible.rst:207
 msgid "Shipped by the package"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:206
+#: ../../../explanation/making-packages-compatible.rst:208
 msgid "Exposed to"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:207
+#: ../../../explanation/making-packages-compatible.rst:209
 msgid "Loaded by"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:208
+#: ../../../explanation/making-packages-compatible.rst:210
 msgid "``share/bash-completion/completions/``"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:209
+#: ../../../explanation/making-packages-compatible.rst:211
 msgid "``~/.local/share/bash-completion/completions/``"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:210
+#: ../../../explanation/making-packages-compatible.rst:212
 msgid "bash"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:211
+#: ../../../explanation/making-packages-compatible.rst:213
 msgid "``share/fish/vendor_completions.d/``"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:212
+#: ../../../explanation/making-packages-compatible.rst:214
 msgid "``~/.local/share/fish/vendor_completions.d/``"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:213
+#: ../../../explanation/making-packages-compatible.rst:215
 msgid "fish"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:214
+#: ../../../explanation/making-packages-compatible.rst:216
 msgid "``share/zsh/site-functions/``"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:215
+#: ../../../explanation/making-packages-compatible.rst:217
 msgid "``~/.local/share/zsh/site-functions/``"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:216
+#: ../../../explanation/making-packages-compatible.rst:218
 msgid "zsh (with the directory on ``fpath``)"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:218
+#: ../../../explanation/making-packages-compatible.rst:220
 msgid ""
 "Declare them through the data files of your build backend, exactly as with "
 "man pages:"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:220
+#: ../../../explanation/making-packages-compatible.rst:222
 msgid ""
 "setup(\n"
 "    name=\"your-tool\",\n"
@@ -331,20 +334,20 @@ msgid ""
 ")"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:231
+#: ../../../explanation/making-packages-compatible.rst:233
 msgid ""
 "See :doc:`../how-to/shell-completions` for how each shell loads these "
 "directories."
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:233
+#: ../../../explanation/making-packages-compatible.rst:235
 msgid ""
 "You can read more about entry points in the `setuptools quickstart <https://"
 "setuptools.pypa.io/en/latest/userguide/quickstart.html#entry-points-and-"
 "automatic-script-creation>`_."
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:238
+#: ../../../explanation/making-packages-compatible.rst:240
 msgid ""
 "This is often the ``[project]`` table, but it might be named differently. "
 "Read more in the `PyPUG <https://packaging.python.org/en/latest/guides/"

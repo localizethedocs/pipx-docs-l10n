@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"POT-Creation-Date: 2026-10-19 16:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -106,7 +107,7 @@ msgid "**expose**"
 msgstr ""
 
 #: ../../../man/pipx.1.rst:44
-msgid "Restore resources from a hidden environment"
+msgid "Relink hidden or missing resources of an environment"
 msgstr ""
 
 #: ../../../man/pipx.1.rst:46
@@ -146,8 +147,7 @@ msgid "**upgrade-all**"
 msgstr ""
 
 #: ../../../man/pipx.1.rst:59
-msgid ""
-"Upgrade all packages. Runs ``pip install -U <pkgname>`` for each package."
+msgid "Upgrade all packages."
 msgstr ""
 
 #: ../../../man/pipx.1.rst:61
@@ -270,7 +270,9 @@ msgid "**runpip**"
 msgstr ""
 
 #: ../../../man/pipx.1.rst:105
-msgid "Run pip in an existing pipx-managed Virtual Environment"
+msgid ""
+"Run pip, or ``uv pip`` under the uv backend, in an existing pipx-managed "
+"Virtual Environment"
 msgstr ""
 
 #: ../../../man/pipx.1.rst:107
