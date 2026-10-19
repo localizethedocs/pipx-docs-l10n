@@ -6,12 +6,13 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: pipx 1.17\n"
+"Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"POT-Creation-Date: 2026-10-19 16:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -69,8 +70,8 @@ msgstr ""
 
 #: ../../../tutorial/run-applications.rst:41
 msgid ""
-"pipx can swallow an argument meant for the app when it looks like one of "
-"pipx's own options:"
+"On Python 3.11, pipx can swallow an argument meant for the app when it looks "
+"like one of pipx's own options:"
 msgstr ""
 
 #: ../../../tutorial/run-applications.rst:43
@@ -104,87 +105,96 @@ msgstr ""
 
 #: ../../../tutorial/run-applications.rst:65
 msgid ""
-"`esptool <https://github.com/espressif/esptool>`_, for example, lists its "
-"executables when you guess wrong:"
+"Under the pip backend, pipx lists the executables of a package when you "
+"guess wrong. `esptool <https://github.com/espressif/esptool>`_ 4.6.2 ships "
+"no ``esptool`` script:"
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:67
+#: ../../../tutorial/run-applications.rst:68
 msgid ""
-"$ pipx run esptool\n"
+"$ pipx run --spec esptool==4.6.2 esptool\n"
 "'esptool' executable script not found in package 'esptool'.\n"
 "Available executable scripts:\n"
-"    esptool.py - usage: 'pipx run --spec esptool esptool.py [arguments?]'\n"
-"    espefuse.py - usage: 'pipx run --spec esptool espefuse.py [arguments?]'"
+"    esp_rfc2217_server.py - usage: 'pipx run --spec esptool==4.6.2 "
+"esp_rfc2217_server.py [arguments?]'\n"
+"    espefuse.py - usage: 'pipx run --spec esptool==4.6.2 espefuse.py "
+"[arguments?]'\n"
+"    espsecure.py - usage: 'pipx run --spec esptool==4.6.2 espsecure.py "
+"[arguments?]'\n"
+"    esptool.py - usage: 'pipx run --spec esptool==4.6.2 esptool.py "
+"[arguments?]'"
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:75
+#: ../../../tutorial/run-applications.rst:78
 msgid "Run the one you want with ``--spec``:"
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:77
-msgid "$ pipx run --spec esptool esptool.py"
+#: ../../../tutorial/run-applications.rst:80
+msgid "$ pipx run --spec esptool==4.6.2 esptool.py"
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:81
+#: ../../../tutorial/run-applications.rst:84
 msgid ""
 "Package authors can remove this requirement by declaring a :doc:`pipx.run "
 "entry point <../explanation/making-packages-compatible>` in their metadata."
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:88
+#: ../../../tutorial/run-applications.rst:91
 msgid "Run cache"
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:90
+#: ../../../tutorial/run-applications.rst:93
 msgid ""
-"pipx caches each ``pipx run`` environment for a few days so repeated runs "
-"start instantly. After the cache expires, the next run fetches the latest "
-"version."
+"pipx caches each ``pipx run`` environment for 14 days so repeated runs start "
+"instantly. After the cache expires, the next run fetches the latest version. "
+"Under the uv backend pipx hands the run to ``uv tool run``, so uv's own "
+"cache applies instead."
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:109
+#: ../../../tutorial/run-applications.rst:113
 msgid ""
 "Force a rebuild before the cache expires with ``--refresh``, which replaces "
 "that app's cached environment and keeps the replacement:"
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:112
+#: ../../../tutorial/run-applications.rst:116
 msgid "$ pipx run --refresh APP"
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:116
+#: ../../../tutorial/run-applications.rst:120
 msgid ""
-"``--no-cache`` also rebuilds, but marks the new environment for cleanup by a "
-"later run. The two options are mutually exclusive."
+"``--no-cache`` also rebuilds, but under the pip backend marks the new "
+"environment for cleanup by a later run. The two options are mutually "
+"exclusive."
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:119
-msgid "Inspect or clear every cached run environment:"
+#: ../../../tutorial/run-applications.rst:123
+msgid "Show the cache directory or remove pipx's cached run environments:"
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:121
+#: ../../../tutorial/run-applications.rst:125
 msgid ""
 "$ pipx cache dir\n"
 "$ pipx cache purge"
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:126
+#: ../../../tutorial/run-applications.rst:130
 msgid ""
 "For how pipx decides what to cache and when, see :doc:`How pipx works <../"
 "explanation/how-pipx-works>`."
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:130
+#: ../../../tutorial/run-applications.rst:134
 msgid "Learn more"
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:132
+#: ../../../tutorial/run-applications.rst:136
 msgid ""
 ":doc:`Use the uv backend <../how-to/use-uv-backend>`: run with uv, which "
 "keeps its own ephemeral cache."
 msgstr ""
 
-#: ../../../tutorial/run-applications.rst:133
+#: ../../../tutorial/run-applications.rst:137
 msgid ""
 ":doc:`../reference/cli`: every ``pipx run`` flag, including ``--python-"
 "args`` and ``--with``."

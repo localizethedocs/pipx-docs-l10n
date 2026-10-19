@@ -6,12 +6,13 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: pipx 1.17\n"
+"Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"POT-Creation-Date: 2026-10-19 16:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,8 +39,8 @@ msgstr ""
 
 #: ../../../how-to/install-pipx.rst:17
 msgid ""
-"Installing pipx needs Python 3.10 or newer; the apps it runs can target "
-"Python 3.3 or newer. Without Python 3.10, see the `Python 3 installation "
+"Installing pipx needs Python 3.11 or newer, and so does any interpreter you "
+"pass with ``--python``. Without Python 3.11, see the `Python 3 installation "
 "guide <https://realpython.com/installing-python/>`_."
 msgstr ""
 
@@ -185,7 +186,7 @@ msgid "Optional PATH commands"
 msgstr ""
 
 #: ../../../how-to/install-pipx.rst:121
-msgid "Add the global app directory to the system ``PATH`` (pipx 1.5.0+):"
+msgid "Add the global app directory to the system ``PATH`` (pipx 1.6.0+):"
 msgstr ""
 
 #: ../../../how-to/install-pipx.rst:123
@@ -199,7 +200,7 @@ msgid ""
 msgstr ""
 
 #: ../../../how-to/install-pipx.rst:130
-msgid "$ sudo pipx ensurepath --prepend"
+msgid "$ pipx ensurepath --prepend"
 msgstr ""
 
 #: ../../../how-to/install-pipx.rst:134
@@ -228,7 +229,7 @@ msgstr ""
 #: ../../../how-to/install-pipx.rst:150
 msgid ""
 "Download the zipapp from `GitHub releases <https://github.com/pypa/pipx/"
-"releases>`_ and invoke it with a Python 3.10+ interpreter:"
+"releases>`_ and invoke it with a Python 3.11+ interpreter:"
 msgstr ""
 
 #: ../../../how-to/install-pipx.rst:153
@@ -262,17 +263,32 @@ msgid ""
 "locked files to a trash directory and cleans them up on the next run."
 msgstr ""
 
+#: ../../../how-to/install-pipx.rst:175
+msgid ""
+"To share one self-managed pipx between all users on Unix, run the "
+"bootstrap's ``install`` with ``sudo`` and ``--global`` instead. The "
+"installed ``pipx`` then works on each user's own environments, and on the "
+"global ones only when ``--global`` is passed:"
+msgstr ""
+
 #: ../../../how-to/install-pipx.rst:179
+msgid ""
+"$ sudo /tmp/bootstrap/bin/pipx install --global pipx\n"
+"$ pipx install pycowsay\n"
+"$ sudo pipx install --global pycowsay"
+msgstr ""
+
+#: ../../../how-to/install-pipx.rst:189
 msgid "Install from source control"
 msgstr ""
 
-#: ../../../how-to/install-pipx.rst:181
+#: ../../../how-to/install-pipx.rst:191
 msgid ""
 "pipx accepts any source pip supports, including git repositories. Using "
 "``black`` as an example:"
 msgstr ""
 
-#: ../../../how-to/install-pipx.rst:183
+#: ../../../how-to/install-pipx.rst:193
 msgid ""
 "$ pipx install git+https://github.com/psf/black.git\n"
 "$ pipx install git+ssh://git@github.com/psf/black\n"
@@ -282,44 +298,44 @@ msgid ""
 "$ pipx install https://github.com/psf/black/archive/18.9b0.zip"
 msgstr ""
 
-#: ../../../how-to/install-pipx.rst:191
+#: ../../../how-to/install-pipx.rst:201
 msgid "Use a direct URL requirement to install extras:"
 msgstr ""
 
-#: ../../../how-to/install-pipx.rst:193
+#: ../../../how-to/install-pipx.rst:203
 msgid ""
 "$ pipx install \"black[jupyter] @ git+https://github.com/psf/black.git\""
 msgstr ""
 
-#: ../../../how-to/install-pipx.rst:197
+#: ../../../how-to/install-pipx.rst:207
 msgid ""
 "To test a package from an open pull request, find the fork owner and branch "
 "on the PR page, then build the git URL. For PR #794 from user "
 "``contributor`` on branch ``fix-something``:"
 msgstr ""
 
-#: ../../../how-to/install-pipx.rst:200
+#: ../../../how-to/install-pipx.rst:210
 msgid ""
 "$ pipx install git+https://github.com/contributor/pipx.git@fix-something"
 msgstr ""
 
-#: ../../../how-to/install-pipx.rst:204
+#: ../../../how-to/install-pipx.rst:214
 msgid "If the branch is already merged, use the merge commit hash instead:"
 msgstr ""
 
-#: ../../../how-to/install-pipx.rst:206
+#: ../../../how-to/install-pipx.rst:216
 msgid "$ pipx install git+https://github.com/pypa/pipx.git@abc123def"
 msgstr ""
 
-#: ../../../how-to/install-pipx.rst:212
+#: ../../../how-to/install-pipx.rst:222
 msgid "Verify it"
 msgstr ""
 
-#: ../../../how-to/install-pipx.rst:214
+#: ../../../how-to/install-pipx.rst:224
 msgid "$ pipx --version"
 msgstr ""
 
-#: ../../../how-to/install-pipx.rst:218
+#: ../../../how-to/install-pipx.rst:228
 msgid ""
 "Open a new terminal after ``pipx ensurepath`` so the updated ``PATH`` takes "
 "effect, then run ``pipx list`` to confirm the environment is reachable."
