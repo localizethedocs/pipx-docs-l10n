@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../explanation/making-packages-compatible.rst:3
 msgid "Making packages compatible"
-msgstr ""
+msgstr "讓軟體包相容"
 
 #: ../../../explanation/making-packages-compatible.rst:7
 msgid "Developing for pipx"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../../explanation/making-packages-compatible.rst:11
 msgid "$ pipx install MY_PACKAGE"
-msgstr ""
+msgstr "$ pipx install MY_PACKAGE"
 
 #: ../../../explanation/making-packages-compatible.rst:15
 msgid ""
