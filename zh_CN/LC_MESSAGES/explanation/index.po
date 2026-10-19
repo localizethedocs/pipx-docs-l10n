@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../explanation/index.rst:3
+msgid "Explanation"
+msgstr ""
+
+#: ../../../explanation/index.rst:5
+msgid ""
+"Design rationale and background. Read these to understand *why* pipx works "
+"the way it does."
+msgstr ""
+
+#: ../../../explanation/index.rst:7
+msgid ""
+":doc:`how-pipx-works` covers the virtual-environment architecture, the "
+"shared pip library, and how apps reach your ``PATH``."
+msgstr ""
+
+#: ../../../explanation/index.rst:9
+msgid ""
+":doc:`scope` sets the application model and the boundaries for "
+"configuration, discovery, and distribution."
+msgstr ""
+
+#: ../../../explanation/index.rst:10
+msgid ""
+":doc:`comparisons` relates pipx to pip, uv tool, Poetry, pipenv, pyenv, "
+"brew, npx, and more."
+msgstr ""
+
+#: ../../../explanation/index.rst:11
+msgid ""
+":doc:`making-packages-compatible` explains the entry points, man pages, and "
+"completions that make a package installable with pipx."
+msgstr ""

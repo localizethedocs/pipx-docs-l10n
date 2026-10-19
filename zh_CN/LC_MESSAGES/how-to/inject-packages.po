@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.17\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/inject-packages.rst:3
+msgid "Inject packages"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:5
+msgid ""
+"Add extra packages into an existing pipx-managed environment with ``pipx "
+"inject``."
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:9
+msgid "Inject a package"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:11
+msgid "Add ``matplotlib`` to the ``ipython`` environment:"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:13
+msgid "$ pipx inject ipython matplotlib"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:17
+msgid "Inject several at once, from a requirements file, or both:"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:19
+msgid ""
+"$ pipx inject ipython matplotlib pandas\n"
+"$ pipx inject ipython -r useful-packages.txt\n"
+"$ pipx inject ipython extra-pkg -r more-packages.txt"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:25
+msgid "Scripts can request the versioned result envelope from either command:"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:27
+msgid ""
+"$ pipx inject ipython matplotlib --output json\n"
+"$ pipx uninject ipython matplotlib --output json"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:34
+msgid "Expose injected apps"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:36
+msgid ""
+"Injected packages do not add their entry points to your ``PATH`` by default. "
+"Use ``--include-apps`` to expose them:"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:38
+msgid "$ pipx inject ipython black --include-apps"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:42
+msgid ""
+"``--include-deps`` exposes apps and manual pages from every dependency. Use "
+"``--include-resources-from PACKAGE`` to expose one dependency, repeating it "
+"to select more. Both options imply ``--include-apps``."
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:45
+msgid ""
+"$ pipx inject robotframework-keyta robotframework-browser-batteries --"
+"include-resources-from robotframework-browser"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:49
+msgid ""
+"For exposing apps from an already-installed environment, see :doc:`expose-"
+"apps`."
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:53
+msgid "Other flags"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:55
+msgid ""
+"``--force`` / ``-f`` reinstalls the package even when it is already injected."
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:56
+msgid ""
+"``--editable`` / ``-e`` installs the package in editable (development) mode."
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:57
+msgid ""
+"``--with-suffix`` targets a suffixed venv (for example ``ipython_3.11``)."
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:58
+msgid ""
+"``--pip-args`` passes extra arguments to pip (for example ``--pip-args='--no-"
+"cache-dir'``)."
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:59
+msgid "``--index-url`` / ``-i`` sets the package index URL for this inject."
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:60
+msgid ""
+"``--system-site-packages`` gives the venv access to the system site-packages."
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:64
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:66
+msgid "$ pipx list --include-injected"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:70
+msgid "The injected packages appear under their host environment."
+msgstr ""
