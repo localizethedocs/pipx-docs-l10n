@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"POT-Creation-Date: 2026-10-19 16:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,20 +48,23 @@ msgstr ""
 
 #: ../../../how-to/use-uv-backend.rst:20
 msgid ""
-"Or install uv however you like (``brew install uv``, ``cargo install uv``) "
-"and put it on ``PATH``; pipx picks it up automatically. New venvs then "
-"default to uv. Existing venvs keep their recorded backend."
+"Or install uv 0.9.17 or newer however you like (``brew install uv``, ``cargo "
+"install uv``) and put it on ``PATH``; pipx picks it up automatically. New "
+"venvs then default to uv. Existing venvs keep their recorded backend. When "
+"the uv pipx finds is older than that, pipx warns and falls back to pip. "
+"Asking for uv explicitly (``--backend uv``, ``PIPX_DEFAULT_BACKEND=uv``, or "
+"a venv that recorded uv) with an older uv fails and asks you to upgrade it."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:25
+#: ../../../how-to/use-uv-backend.rst:27
 msgid "How pipx picks a backend"
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:47
+#: ../../../how-to/use-uv-backend.rst:49
 msgid "Choose a backend explicitly"
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:49
+#: ../../../how-to/use-uv-backend.rst:51
 msgid ""
 "$ pipx install black --backend pip\n"
 "$ pipx install ruff --backend uv\n"
@@ -69,60 +72,59 @@ msgid ""
 "$ pipx environment --value PIPX_RESOLVED_BACKEND"
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:56
+#: ../../../how-to/use-uv-backend.rst:58
 msgid ""
 "``install``, ``install-all``, ``inject``, ``upgrade``, ``upgrade-all``, "
 "``reinstall``, ``reinstall-all``, and ``run`` all accept ``--backend``. "
 "Switch an installed venv with ``pipx reinstall NAME --backend uv``."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:61
+#: ../../../how-to/use-uv-backend.rst:63
 msgid "What changes under uv"
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:63
+#: ../../../how-to/use-uv-backend.rst:65
 msgid ""
 "pipx creates venvs with ``uv venv``. The venv contains no ``pip`` and no "
 "``pipx_shared.pth`` file."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:64
+#: ../../../how-to/use-uv-backend.rst:66
 msgid ""
 "``pipx runpip`` runs ``uv pip <args> --python <venv>/bin/python``. uv "
 "rejects flags it does not understand rather than dropping them silently."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:66
+#: ../../../how-to/use-uv-backend.rst:68
 msgid ""
 "``pipx run`` execs ``uv tool run``; its cache lives in uv's cache directory. "
 "Pass ``--no-cache`` to skip it or ``--refresh`` to rebuild the cached "
 "environment."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:68
+#: ../../../how-to/use-uv-backend.rst:70
 msgid ""
 "``pipx run script.py`` execs ``uv run --script script.py`` for PEP 723 "
 "inline scripts."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:69
+#: ../../../how-to/use-uv-backend.rst:71
 msgid ""
 "``--cooldown DAYS`` (or ``PIPX_COOLDOWN``) maps to uv's ``--exclude-newer "
-"P{DAYS}D``. Relative cooldowns need uv 0.9.17 or newer. See :doc:`Dependency "
-"cooldown <dependency-cooldown>`."
+"P{DAYS}D``. See :doc:`Dependency cooldown <dependency-cooldown>`."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:73
+#: ../../../how-to/use-uv-backend.rst:76
 msgid "Limitations"
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:75
+#: ../../../how-to/use-uv-backend.rst:78
 msgid ""
 "``pipx install pip --backend uv`` errors: a uv venv has no pip. Use ``--"
 "backend pip``."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:76
+#: ../../../how-to/use-uv-backend.rst:79
 msgid ""
 "``pipx run --backend uv`` honors ``[pipx.run]`` entry points only where it "
 "builds a venv, which with ``--spec`` means an ``<app>`` that differs from "
@@ -132,21 +134,27 @@ msgid ""
 "the same name."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:80
+#: ../../../how-to/use-uv-backend.rst:83
 msgid ""
 "Some ``--pip-args`` values have no ``uv tool run`` equivalent (``--"
 "editable``, ``--no-build-isolation``); pipx errors instead of dropping them. "
 "See :doc:`use-private-index` for which flags uv translates."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:82
+#: ../../../how-to/use-uv-backend.rst:85
+msgid ""
+"``pipx run --backend uv`` rejects ``--system-site-packages``, since uv "
+"builds the environment. Use ``--backend pip`` when you need it."
+msgstr ""
+
+#: ../../../how-to/use-uv-backend.rst:87
 msgid ""
 "``pipx run --backend uv`` against URL or named-pipe scripts falls back to a "
 "pipx-managed venv, because ``uv run --script`` reads PEP 723 metadata off "
 "disk and runtime-fetched content has no on-disk path. pipx logs a warning."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:84
+#: ../../../how-to/use-uv-backend.rst:89
 msgid ""
 "``pipx run`` falls back to a pipx-managed venv when it has to infer the "
 "script name: from a VCS URL, a local project path, or a name it normalizes "
@@ -159,11 +167,11 @@ msgid ""
 "venv."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:93
+#: ../../../how-to/use-uv-backend.rst:98
 msgid "Cache layout"
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:95
+#: ../../../how-to/use-uv-backend.rst:100
 msgid ""
 "Under the uv backend, ``pipx run`` caches in ``UV_CACHE_DIR`` instead of "
 "``PIPX_VENV_CACHEDIR``. Switching the default backend on a host that already "
@@ -173,14 +181,14 @@ msgid ""
 "cache, which uv manages on its own schedule (``uv cache clean``)."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:102
+#: ../../../how-to/use-uv-backend.rst:107
 msgid "Verify it"
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:104
+#: ../../../how-to/use-uv-backend.rst:109
 msgid "$ pipx environment --value PIPX_RESOLVED_BACKEND"
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:108
+#: ../../../how-to/use-uv-backend.rst:113
 msgid "It prints ``uv`` when pipx will use the uv backend for new venvs."
 msgstr ""

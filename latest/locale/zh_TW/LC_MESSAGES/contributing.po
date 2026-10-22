@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"POT-Creation-Date: 2026-10-19 16:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,20 +63,21 @@ msgid ""
 "The changelog at ``docs/changelog.rst`` is built by `towncrier <https://pypi."
 "org/project/towncrier/>`_ from news fragments in the ``changelog.d/`` "
 "directory. To add an entry, create a news fragment in that directory named "
-"``{number}.{type}.md``, where ``{number}`` is the issue number, and ``{type}"
-"`` is one of ``feature``, ``bugfix``, ``doc``, ``removal``, or ``misc``."
+"``{number}.{type}.md``, where ``{number}`` is the pull request number, and "
+"``{type}`` is one of ``feature``, ``bugfix``, ``performance``, ``doc``, "
+"``removal``, or ``misc``."
 msgstr ""
 
 #: ../../../contributing.rst:27
 msgid ""
-"For example, if your issue number is 1234 and it's fixing a bug, then you "
-"would create ``changelog.d/1234.bugfix.md``. PRs can span multiple "
+"For example, if your pull request number is 1234 and it fixes a bug, then "
+"you would create ``changelog.d/1234.bugfix.md``. PRs can span multiple "
 "categories by creating multiple files: if you added a feature and deprecated/"
-"removed an old feature for issue #5678, you would create ``changelog.d/5678."
-"feature.md`` and ``changelog.d/5678.removal.md``."
+"removed an old feature in pull request #5678, you would create ``changelog."
+"d/5678.feature.md`` and ``changelog.d/5678.removal.md``."
 msgstr ""
 
-#: ../../../contributing.rst:31
+#: ../../../contributing.rst:32
 msgid ""
 "A changelog entry is meant for end users and should only contain details "
 "relevant to them. In order to maintain a consistent style, please keep the "
@@ -87,7 +88,7 @@ msgid ""
 "wrapped at 80 characters and separated by blank lines."
 msgstr ""
 
-#: ../../../contributing.rst:37
+#: ../../../contributing.rst:38
 msgid ""
 "You don't need to reference the pull request or issue number in a changelog "
 "entry, since towncrier will add a link using the number in the file name. "
@@ -95,21 +96,21 @@ msgid ""
 "associated with the pull request."
 msgstr ""
 
-#: ../../../contributing.rst:43
+#: ../../../contributing.rst:44
 msgid "Codebase Architecture"
 msgstr ""
 
-#: ../../../contributing.rst:45
+#: ../../../contributing.rst:46
 msgid ""
 "All source code lives under ``src/pipx/``. The CLI entry point is ``main."
 "py``, which dispatches to command modules in ``commands/``."
 msgstr ""
 
-#: ../../../contributing.rst:91
+#: ../../../contributing.rst:92
 msgid "Key modules"
 msgstr ""
 
-#: ../../../contributing.rst:93
+#: ../../../contributing.rst:94
 msgid ""
 "``venv.py`` is the core abstraction. ``Venv`` wraps a single virtual "
 "environment (create, install, uninstall, upgrade) and ``VenvContainer`` "
@@ -117,7 +118,7 @@ msgid ""
 "operations to the shared libraries venv managed by ``shared_libs.py``."
 msgstr ""
 
-#: ../../../contributing.rst:97
+#: ../../../contributing.rst:98
 msgid ""
 "``paths.py`` resolves all directory locations from environment variables, "
 "platform defaults, and legacy fallback paths. ``pipx_metadata_file.py`` "
@@ -126,7 +127,7 @@ msgid ""
 "original install."
 msgstr ""
 
-#: ../../../contributing.rst:101
+#: ../../../contributing.rst:102
 msgid ""
 "``interpreter.py`` and ``standalone_python.py`` handle Python version "
 "resolution. When ``--fetch-python`` is ``missing`` or ``always``, pipx "
@@ -136,18 +137,18 @@ msgid ""
 "interpreters."
 msgstr ""
 
-#: ../../../contributing.rst:106
+#: ../../../contributing.rst:107
 msgid ""
 "``script.py`` parses PEP 723 inline metadata. ``run`` installs the declared "
 "dependencies in a cached temporary venv. ``install`` sends both backends the "
 "same generated wheel and records the source path or URL."
 msgstr ""
 
-#: ../../../contributing.rst:111
+#: ../../../contributing.rst:112
 msgid "Running pipx For Development"
 msgstr ""
 
-#: ../../../contributing.rst:113
+#: ../../../contributing.rst:114
 msgid ""
 "To develop ``pipx``, either create a :ref:`developer environment <creating-a-"
 "developer-environment>`, or perform an editable install:"
@@ -155,7 +156,7 @@ msgstr ""
 "若要開發 ``pipx``，可以建立:ref:`開發環境 <creating-a-developer-"
 "environment>`，或執行可編輯安裝："
 
-#: ../../../contributing.rst:116
+#: ../../../contributing.rst:117
 msgid ""
 "$ python -m pip install -e .\n"
 "$ python -m pipx --version"
@@ -163,15 +164,15 @@ msgstr ""
 "$ python -m pip install -e .\n"
 "$ python -m pipx --version"
 
-#: ../../../contributing.rst:123
+#: ../../../contributing.rst:124
 msgid "Running Tests"
 msgstr "執行測試"
 
-#: ../../../contributing.rst:126
+#: ../../../contributing.rst:127
 msgid "Setup"
 msgstr ""
 
-#: ../../../contributing.rst:128
+#: ../../../contributing.rst:129
 msgid ""
 "pipx uses `tox <https://pypi.org/project/tox/>`_ for development, continuous "
 "integration testing, and various tasks."
@@ -179,7 +180,7 @@ msgstr ""
 "pipx 使用 `tox <https://pypi.org/project/tox/>`_ 進行開發、持續整合測試及各種"
 "任務。"
 
-#: ../../../contributing.rst:130
+#: ../../../contributing.rst:131
 msgid ""
 "``tox`` defines environments in ``tox.toml`` which can be run with ``tox run "
 "-e ENV_NAME``. Environment names can be listed with ``tox list``."
@@ -187,40 +188,41 @@ msgstr ""
 "``tox`` 會在 ``tox.toml`` 中定義環境，並可使用 ``tox run -e ENV_NAME`` 執行。"
 "可使用 ``tox list`` 列出環境名稱。"
 
-#: ../../../contributing.rst:133
+#: ../../../contributing.rst:134
 msgid "Install tox for pipx development:"
 msgstr "安裝 tox 來進行 pipx 開發："
 
-#: ../../../contributing.rst:135
+#: ../../../contributing.rst:136
 msgid "$ python -m pip install --user tox"
 msgstr "$ python -m pip install --user tox"
 
-#: ../../../contributing.rst:139
+#: ../../../contributing.rst:140
 msgid ""
 "Tests are defined as ``tox`` environments. You can see all tox environments "
 "with"
 msgstr ""
 
-#: ../../../contributing.rst:141
+#: ../../../contributing.rst:142
 msgid "$ tox list"
 msgstr "$ tox list"
 
-#: ../../../contributing.rst:145
+#: ../../../contributing.rst:146
 msgid "At the time of this writing, the output looks like this"
 msgstr ""
 
-#: ../../../contributing.rst:147
+#: ../../../contributing.rst:148
 msgid ""
 "default environments:\n"
+"3.15 -> run tests with 3.15\n"
 "3.14 -> run tests with 3.14\n"
 "3.13 -> run tests with 3.13\n"
 "3.12 -> run tests with 3.12\n"
 "3.11 -> run tests with 3.11\n"
-"3.10 -> run tests with 3.10\n"
-"type -> run the type checker\n"
-"lint -> run pre-commit on the codebase\n"
+"3.15t -> run tests with 3.15t\n"
 "docs -> build documentation\n"
+"lint -> run pre-commit on the codebase\n"
 "man  -> build man page\n"
+"type -> run the type checker\n"
 "\n"
 "additional environments:\n"
 "dev       -> generate a DEV environment\n"
@@ -228,57 +230,57 @@ msgid ""
 "zipapp    -> build zipapp via shiv"
 msgstr ""
 
-#: ../../../contributing.rst:168
+#: ../../../contributing.rst:170
 msgid "Creating a developer environment"
 msgstr "建立開發者環境"
 
-#: ../../../contributing.rst:170
+#: ../../../contributing.rst:172
 msgid ""
 "For developing the tool (and to attach to your IDE) we recommend creating a "
 "Python environment via ``tox run -e dev``, afterwards use the Python "
 "interpreter available under ``.tox/dev/bin/python``."
 msgstr ""
 
-#: ../../../contributing.rst:174
+#: ../../../contributing.rst:176
 msgid "Unit Tests"
 msgstr "單元測試"
 
-#: ../../../contributing.rst:176
-msgid "To run unit tests in Python 3.12, you can run"
+#: ../../../contributing.rst:178
+msgid "To run unit tests in Python 3.15, you can run"
 msgstr ""
 
-#: ../../../contributing.rst:178
-msgid "$ tox run -e 3.12"
-msgstr "$ tox run -e 3.12"
+#: ../../../contributing.rst:180
+msgid "$ tox run -e 3.15"
+msgstr ""
 
-#: ../../../contributing.rst:184
+#: ../../../contributing.rst:186
 msgid ""
 "You can run a specific unit test by passing arguments to pytest, the test "
 "runner pipx uses:"
 msgstr ""
 
-#: ../../../contributing.rst:186
-msgid "$ tox run -e 3.10 -- -k EXPRESSION"
-msgstr "$ tox run -e 3.10 -- -k EXPRESSION"
-
-#: ../../../contributing.rst:190
-msgid "``EXPRESSION`` can be a test name, such as"
+#: ../../../contributing.rst:188
+msgid "$ tox run -e 3.15 -- -k EXPRESSION"
 msgstr ""
 
 #: ../../../contributing.rst:192
-msgid "$ tox run -e 3.10 -- -k test_uninstall"
-msgstr "$ tox run -e 3.10 -- -k test_uninstall"
+msgid "``EXPRESSION`` can be a test name, such as"
+msgstr ""
 
-#: ../../../contributing.rst:196
+#: ../../../contributing.rst:194
+msgid "$ tox run -e 3.15 -- -k test_uninstall"
+msgstr ""
+
+#: ../../../contributing.rst:198
 msgid ""
 "Coverage errors can usually be ignored when only running a subset of tests."
 msgstr ""
 
-#: ../../../contributing.rst:199
+#: ../../../contributing.rst:201
 msgid "Running Unit Tests Offline"
 msgstr "離線執行單元測試"
 
-#: ../../../contributing.rst:201
+#: ../../../contributing.rst:203
 msgid ""
 "Running the unit tests requires a directory ``.pipx_tests/package_cache`` to "
 "be populated from a fixed list of package distribution files (wheels or "
@@ -288,59 +290,72 @@ msgid ""
 "ignore the rest of this section."
 msgstr ""
 
-#: ../../../contributing.rst:206
+#: ../../../contributing.rst:208
 msgid ""
 "If, however, you wish to run tests offline without the need for network "
 "access, you can populate ``.pipx_tests/package_cache`` yourself manually "
 "beforehand when you do have network access."
 msgstr ""
 
-#: ../../../contributing.rst:210
+#: ../../../contributing.rst:212
 msgid "Lint Tests"
 msgstr ""
 
-#: ../../../contributing.rst:212
+#: ../../../contributing.rst:214
 msgid ""
 "Linting runs through `pre-commit <https://pre-commit.com/>`_, wired into the "
 "``lint`` tox environment:"
 msgstr ""
 
-#: ../../../contributing.rst:214
+#: ../../../contributing.rst:216
 msgid "$ tox run -e lint"
 msgstr "$ tox run -e lint"
 
-#: ../../../contributing.rst:218
+#: ../../../contributing.rst:220
 msgid ""
 "The key hooks are ``ruff-check`` and ``ruff-format`` (lint and format "
 "Python), ``codespell`` (spelling), ``mdformat`` (Markdown, wrapped at 120), "
-"``yamlfmt`` (YAML), and ``pyproject-fmt`` (``pyproject.toml``)."
+"``yamlfmt`` (YAML), ``pyproject-fmt`` (``pyproject.toml``), and ``flake8-"
+"lazy``."
 msgstr ""
 
-#: ../../../contributing.rst:222
+#: ../../../contributing.rst:223
+msgid ""
+"``flake8-lazy`` keeps the ``__lazy_modules__`` list at the top of each "
+"module under ``src/pipx`` up to date. On Python 3.15 and later (:pep:`810`) "
+"the modules it lists load on first use rather than at import, which shortens "
+"CLI startup; older Pythons ignore the list. The hook rewrites the list "
+"itself, so when it fails, review and stage its change. A module whose import "
+"has a side effect that must happen at startup (reading environment variables "
+"or terminal state) belongs in ``standalone.lazy-exclude-modules`` under "
+"``[tool.flake8-lazy]`` in ``pyproject.toml``."
+msgstr ""
+
+#: ../../../contributing.rst:230
 msgid "Type checking"
 msgstr ""
 
-#: ../../../contributing.rst:224
+#: ../../../contributing.rst:232
 msgid ""
 "Type checking uses `ty <https://github.com/astral-sh/ty>`_ and runs in its "
 "own tox environment rather than pre-commit, since pre-commit.ci cannot "
 "install its heavier dependency set:"
 msgstr ""
 
-#: ../../../contributing.rst:227
+#: ../../../contributing.rst:235
 msgid "$ tox run -e type"
 msgstr "$ tox run -e type"
 
-#: ../../../contributing.rst:231
+#: ../../../contributing.rst:239
 msgid ""
 "A dedicated GitHub Actions job runs the same check on every pull request."
 msgstr ""
 
-#: ../../../contributing.rst:234
+#: ../../../contributing.rst:242
 msgid "Installing or injecting new packages in tests"
 msgstr ""
 
-#: ../../../contributing.rst:236
+#: ../../../contributing.rst:244
 msgid ""
 "If the tests are modified such that a new package / version combination is "
 "``pipx install``ed or ``pipx inject``ed that wasn't used in other tests, "
@@ -348,65 +363,65 @@ msgid ""
 "``testdata/tests_packages``."
 msgstr ""
 
-#: ../../../contributing.rst:240
+#: ../../../contributing.rst:248
 msgid "To accomplish this:"
 msgstr ""
 
-#: ../../../contributing.rst:242
+#: ../../../contributing.rst:250
 msgid ""
 "Edit ``testdata/tests_packages/primary_packages.txt`` to add the new "
 "package(s) that you wish to ``pipx install`` or ``pipx inject`` in the tests."
 msgstr ""
 
-#: ../../../contributing.rst:245
+#: ../../../contributing.rst:253
 msgid "Then using Github workflows to generate all platforms in the Github CI:"
 msgstr ""
 
-#: ../../../contributing.rst:247
+#: ../../../contributing.rst:255
 msgid ""
 "Manually activate the Github workflow: Create tests package lists for "
 "offline tests"
 msgstr ""
 
-#: ../../../contributing.rst:248
+#: ../../../contributing.rst:256
 msgid ""
-"Download the artifact ``lists`` and put the files from it into ``testdata/"
-"tests_packages/``"
+"Download each ``lists-<os>-<python>`` artifact and put the files from it "
+"into ``testdata/tests_packages/``"
 msgstr ""
 
-#: ../../../contributing.rst:250
+#: ../../../contributing.rst:258
 msgid ""
 "Finally, check-in the new or modified list files in the directory ``testdata/"
 "tests_packages``"
 msgstr ""
 
-#: ../../../contributing.rst:254
+#: ../../../contributing.rst:262
 msgid "Testing pipx on Continuous Integration builds"
 msgstr ""
 
-#: ../../../contributing.rst:256
+#: ../../../contributing.rst:264
 msgid "Upon opening pull requests GitHub Actions will automatically trigger."
 msgstr ""
 
-#: ../../../contributing.rst:260
+#: ../../../contributing.rst:268
 msgid "Building Documentation"
 msgstr "建置文件"
 
-#: ../../../contributing.rst:262
+#: ../../../contributing.rst:270
 msgid ""
 "The documentation is built with Sphinx. When updating pipx docs, make sure "
 "you are modifying the ``docs`` directory."
 msgstr ""
 
-#: ../../../contributing.rst:264
+#: ../../../contributing.rst:272
 msgid "Build the HTML documentation with"
 msgstr ""
 
-#: ../../../contributing.rst:266
+#: ../../../contributing.rst:274
 msgid "$ tox run -e docs"
 msgstr "$ tox run -e docs"
 
-#: ../../../contributing.rst:270
+#: ../../../contributing.rst:278
 msgid ""
 "This runs ``sphinx-build`` with ``-W --keep-going``, so any warning fails "
 "the build. The CLI reference is generated from pipx's argparse parser by "
@@ -414,11 +429,11 @@ msgid ""
 "reloading preview while editing, use ``tox run -e docs-live``."
 msgstr ""
 
-#: ../../../contributing.rst:276
+#: ../../../contributing.rst:284
 msgid "Releasing New ``pipx`` Versions"
 msgstr "發行新的 ``pip`` 版本"
 
-#: ../../../contributing.rst:278
+#: ../../../contributing.rst:286
 msgid ""
 "The release process for pipx is designed to be simple and fully automated "
 "with a single button press. The workflow automatically determines the next "
@@ -426,27 +441,27 @@ msgid ""
 "release commit, and publishes to PyPI."
 msgstr ""
 
-#: ../../../contributing.rst:283
+#: ../../../contributing.rst:291
 msgid "Initiating a Release"
 msgstr ""
 
-#: ../../../contributing.rst:285
+#: ../../../contributing.rst:293
 msgid ""
 "Navigate to the **Actions** tab in the GitHub repository and select the "
 "**Pre-release** workflow. Click **Run workflow** and choose the appropriate "
 "version bump strategy. The ``auto`` option intelligently determines whether "
 "a minor or patch bump is needed by examining the types of changelog "
-"fragments present. If new features or removals exist, it performs a minor "
-"version bump; otherwise, it increments the patch version. Alternatively, you "
-"can explicitly select ``major``, ``minor``, or ``patch`` to control the "
-"version increment directly."
+"fragments present. If new features, performance improvements or removals "
+"exist, it performs a minor version bump; otherwise, it increments the patch "
+"version. Alternatively, you can explicitly select ``major``, ``minor``, or "
+"``patch`` to control the version increment directly."
 msgstr ""
 
-#: ../../../contributing.rst:292
+#: ../../../contributing.rst:300
 msgid "What Happens During Release"
 msgstr ""
 
-#: ../../../contributing.rst:294
+#: ../../../contributing.rst:302
 msgid ""
 "Once triggered, the pre-release workflow executes the ``scripts/release.py`` "
 "script which collects all changelog fragments from the ``changelog.d/`` "
@@ -456,26 +471,34 @@ msgid ""
 "formatting, both the commit and tag are pushed to the main branch."
 msgstr ""
 
-#: ../../../contributing.rst:299
+#: ../../../contributing.rst:307
 msgid ""
 "The act of pushing a version tag (matching the pattern ``*.*.*``) "
 "automatically triggers the main release workflow. This workflow builds the "
 "project distribution files, publishes the package to PyPI using trusted "
 "publishing, creates a GitHub release with auto-generated notes, and builds "
-"the zipapp using the minimum supported Python version before uploading it to "
-"the GitHub release assets."
+"the zipapp with Python 3.15 before uploading it to the GitHub release assets."
 msgstr ""
 
-#: ../../../contributing.rst:305
+#: ../../../contributing.rst:313
 msgid "Version Calculation Examples"
 msgstr ""
 
-#: ../../../contributing.rst:307
+#: ../../../contributing.rst:315
 msgid ""
 "Starting from version ``1.8.0``, the version bump types produce the "
-"following results: ``auto`` with feature fragments becomes ``1.9.0``, while "
-"``auto`` with only bugfixes becomes ``1.8.1``. Selecting ``major`` "
-"explicitly jumps to ``2.0.0``, ``minor`` moves to ``1.9.0``, and ``patch`` "
-"increments to ``1.8.1``. This automation eliminates the need for manual "
-"version management and ensures consistency across releases."
+"following results: ``auto`` with feature or performance fragments becomes "
+"``1.9.0``, while ``auto`` with only bugfixes becomes ``1.8.1``. Selecting "
+"``major`` explicitly jumps to ``2.0.0``, ``minor`` moves to ``1.9.0``, and "
+"``patch`` increments to ``1.8.1``. This automation eliminates the need for "
+"manual version management and ensures consistency across releases."
 msgstr ""
+
+#~ msgid "$ tox run -e 3.12"
+#~ msgstr "$ tox run -e 3.12"
+
+#~ msgid "$ tox run -e 3.10 -- -k EXPRESSION"
+#~ msgstr "$ tox run -e 3.10 -- -k EXPRESSION"
+
+#~ msgid "$ tox run -e 3.10 -- -k test_uninstall"
+#~ msgstr "$ tox run -e 3.10 -- -k test_uninstall"
