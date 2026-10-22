@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"POT-Creation-Date: 2026-10-19 16:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -54,7 +55,7 @@ msgid ""
 "logs_dir=$(pipx environment --value PIPX_LOG_DIR)\n"
 "trash_dir=$(pipx environment --value PIPX_TRASH_DIR)\n"
 "home_dir=$(pipx environment --value PIPX_HOME)\n"
-"NEW_LOCATION='~/Library/Application Support/pipx'\n"
+"NEW_LOCATION=\"$HOME/Library/Application Support\"\n"
 "rm -rf \"$cache_dir\" \"$logs_dir\" \"$trash_dir\"\n"
 "mkdir -p \"$NEW_LOCATION\" && mv \"$home_dir\" \"$NEW_LOCATION\"\n"
 "pipx reinstall-all"
@@ -65,7 +66,9 @@ msgid "Linux"
 msgstr ""
 
 #: ../../../how-to/move-installation.rst:36
-msgid "Current default location: ``~/.local/share``."
+msgid ""
+"Current default location: ``~/.local/share/pipx`` (``$XDG_DATA_HOME/pipx`` "
+"when set)."
 msgstr ""
 
 #: ../../../how-to/move-installation.rst:38
@@ -85,12 +88,12 @@ msgid "Windows"
 msgstr ""
 
 #: ../../../how-to/move-installation.rst:53
-msgid "Current default location: ``~/pipx``."
+msgid "Current default location: ``%LOCALAPPDATA%\\pipx\\pipx``."
 msgstr ""
 
 #: ../../../how-to/move-installation.rst:55
 msgid ""
-"$NEW_LOCATION = Join-Path \"$HOME\" 'pipx'\n"
+"$NEW_LOCATION = Join-Path \"$env:LOCALAPPDATA\" 'pipx\\pipx'\n"
 "$cache_dir = pipx environment --value PIPX_VENV_CACHEDIR\n"
 "$logs_dir = pipx environment --value PIPX_LOG_DIR\n"
 "$trash_dir = pipx environment --value PIPX_TRASH_DIR\n"
@@ -101,28 +104,30 @@ msgid ""
 "\n"
 "# Remove the destination first so Move-Item renames rather than nests\n"
 "Remove-Item -Recurse -Force -ErrorAction SilentlyContinue \"$NEW_LOCATION\"\n"
+"New-Item -ItemType Directory -Force (Split-Path \"$NEW_LOCATION\") | Out-"
+"Null\n"
 "\n"
 "Move-Item -Path $home_dir -Destination \"$NEW_LOCATION\"\n"
 "pipx reinstall-all"
 msgstr ""
 
-#: ../../../how-to/move-installation.rst:71
+#: ../../../how-to/move-installation.rst:72
 msgid ""
 "To move it from git-bash or WSL instead, follow the macOS/Linux steps and "
 "set ``NEW_LOCATION`` to the Windows path."
 msgstr ""
 
-#: ../../../how-to/move-installation.rst:75
+#: ../../../how-to/move-installation.rst:76
 msgid "Verify it"
 msgstr ""
 
-#: ../../../how-to/move-installation.rst:77
+#: ../../../how-to/move-installation.rst:78
 msgid ""
 "$ pipx environment --value PIPX_HOME\n"
 "$ pipx list"
 msgstr ""
 
-#: ../../../how-to/move-installation.rst:82
+#: ../../../how-to/move-installation.rst:83
 msgid ""
 "The home path reflects the new location and every environment lists cleanly "
 "after the reinstall."
