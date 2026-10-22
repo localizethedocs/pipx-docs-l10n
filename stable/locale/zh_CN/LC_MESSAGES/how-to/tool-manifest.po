@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: pipx 1.17\n"
+"Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"POT-Creation-Date: 2026-10-19 16:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,11 +34,12 @@ msgstr ""
 #: ../../../how-to/tool-manifest.rst:11
 msgid ""
 "The manifest is a ``pipx.toml`` file. Each dependency group holds one PEP "
-"508 package requirement and names its pipx environment. Keep ``project."
-"dependencies`` empty so each group resolves on its own:"
+"508 package requirement and names its pipx environment. ``project."
+"dependencies`` must be an empty list so each group resolves on its own; pipx "
+"rejects the manifest otherwise:"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:14
+#: ../../../how-to/tool-manifest.rst:15
 msgid ""
 "[project]\n"
 "name = \"pipx-tools\"\n"
@@ -61,7 +62,7 @@ msgid ""
 "apps = [\"http\", \"https\"]"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:36
+#: ../../../how-to/tool-manifest.rst:37
 msgid ""
 "Add a ``tool.pipx.tools`` table only when a tool needs policy beyond its "
 "package requirement. A tool table may set ``suffix``, ``apps``, ``include-"
@@ -71,13 +72,13 @@ msgid ""
 "start from the manifest directory. Put nab settings in ``tool.nab``."
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:41
+#: ../../../how-to/tool-manifest.rst:42
 msgid ""
 "Use the normalized package name plus its suffix as the environment name when "
 "a tool sets a suffix:"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:43
+#: ../../../how-to/tool-manifest.rst:44
 msgid ""
 "[dependency-groups]\n"
 "black-24 = [\"black==24.10.0\"]\n"
@@ -87,27 +88,27 @@ msgid ""
 "apps = [\"black\"]"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:52
+#: ../../../how-to/tool-manifest.rst:53
 msgid "Package requirements use PEP 508 syntax without environment markers."
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:56
+#: ../../../how-to/tool-manifest.rst:57
 msgid "Lock the manifest"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:58
+#: ../../../how-to/tool-manifest.rst:59
 msgid ""
 "`nab <https://pypi.org/project/nab/>`_ resolves each locked dependency group "
 "into a PEP 751 lock file. Install it, then generate the declared locks:"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:61
+#: ../../../how-to/tool-manifest.rst:62
 msgid ""
 "$ pipx install nab\n"
 "$ pipx manifest lock ./pipx.toml"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:66
+#: ../../../how-to/tool-manifest.rst:67
 msgid ""
 "``pipx manifest lock`` passes the manifest to nab once per locked dependency "
 "group, and records that group as the lock's default so installers select it. "
@@ -116,15 +117,15 @@ msgid ""
 "unlocked."
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:72
+#: ../../../how-to/tool-manifest.rst:73
 msgid "Apply the manifest"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:74
+#: ../../../how-to/tool-manifest.rst:75
 msgid "$ pipx manifest sync ./pipx.toml"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:78
+#: ../../../how-to/tool-manifest.rst:79
 msgid ""
 "``sync`` installs, upgrades, or downgrades each declared tool. The backend "
 "resolves unlocked specs on each run; locked entries install from the "
@@ -133,30 +134,32 @@ msgid ""
 "a required app."
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:82
-msgid "Pass ``--prune`` to uninstall environments absent from the manifest:"
+#: ../../../how-to/tool-manifest.rst:83
+msgid ""
+"Pass ``--prune`` to uninstall environments absent from the manifest. pipx "
+"skips pruning when any declared tool fails to sync:"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:84
+#: ../../../how-to/tool-manifest.rst:86
 msgid "$ pipx manifest sync ./pipx.toml --prune"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:88
+#: ../../../how-to/tool-manifest.rst:90
 msgid ""
 "Without ``--prune``, sync leaves your other pipx environments alone. Pass "
-"``--global`` or ``--backend`` after ``sync`` to select the pipx store or the "
-"installation backend. pipx reads only the manifest path you supply on the "
-"command line."
+"``--global`` (not available on Windows) or ``--backend`` after ``sync`` to "
+"select the pipx store or the installation backend. pipx reads only the "
+"manifest path you supply on the command line."
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:93
+#: ../../../how-to/tool-manifest.rst:96
 msgid "Verify it"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:95
+#: ../../../how-to/tool-manifest.rst:98
 msgid "$ pipx list --short"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:99
+#: ../../../how-to/tool-manifest.rst:102
 msgid "Each declared tool appears at the version its group resolved to."
 msgstr ""

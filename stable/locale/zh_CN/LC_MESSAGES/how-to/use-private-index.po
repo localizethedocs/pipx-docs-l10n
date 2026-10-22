@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: pipx 1.17\n"
+"Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-07 03:48+0000\n"
+"POT-Creation-Date: 2026-10-19 16:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,9 +61,9 @@ msgstr ""
 
 #: ../../../how-to/use-private-index.rst:29
 msgid ""
-"pipx forwards ``PIP_*`` environment variables to every pip invocation, "
-"including shared-library upgrades. Set them in your shell profile or pip's "
-"own config file for a permanent default:"
+"Under the pip backend, pipx forwards ``PIP_*`` environment variables to "
+"every pip invocation, including shared-library upgrades. Set them in your "
+"shell profile or pip's own config file for a permanent default:"
 msgstr ""
 
 #: ../../../how-to/use-private-index.rst:32
@@ -76,49 +76,53 @@ msgstr ""
 #: ../../../how-to/use-private-index.rst:38
 msgid ""
 "See the `pip configuration docs <https://pip.pypa.io/en/stable/topics/"
-"configuration/>`_ for the config-file form."
-msgstr ""
-
-#: ../../../how-to/use-private-index.rst:42
-msgid "Install offline"
+"configuration/>`_ for the config-file form. pipx always sets ``PIP_USER=0`` "
+"and drops ``PIP_TARGET`` so packages land in the venv. The uv backend "
+"ignores ``PIP_*``; use uv's own variables (for example ``UV_INDEX_URL``) or "
+"``--backend pip``."
 msgstr ""
 
 #: ../../../how-to/use-private-index.rst:44
+msgid "Install offline"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:46
 msgid ""
 "Point pip at a local directory of wheels and stop it reaching the network:"
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:46
+#: ../../../how-to/use-private-index.rst:48
 msgid ""
 "$ pipx install my-package --pip-args=\"--no-index --find-links /path/to/"
 "wheels\""
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:50
+#: ../../../how-to/use-private-index.rst:52
 msgid ""
 "Pass ``--skip-maintenance`` to keep the bundled pip instead of downloading a "
 "shared-library upgrade during the install."
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:54
+#: ../../../how-to/use-private-index.rst:56
 msgid ""
-"Under the uv backend, pipx translates only a subset of ``--pip-args``: ``--"
-"index-url`` (``-i``), ``--extra-index-url``, ``--find-links`` (``-f``), ``--"
-"trusted-host``, ``--no-binary``, ``--only-binary``, ``--pre``, ``--upgrade`` "
-"(``-U``), and ``--no-cache-dir``. Any other flag raises an error rather than "
-"being silently dropped. Use ``--backend pip`` when you need a flag uv cannot "
-"translate. See :doc:`use-uv-backend`."
+"Under the uv backend, ``pipx run`` translates only a subset of ``--pip-"
+"args``: ``--index-url`` (``-i``), ``--extra-index-url``, ``--find-links`` "
+"(``-f``), ``--trusted-host``, ``--no-binary``, ``--only-binary``, ``--pre``, "
+"``--upgrade`` (``-U``), and ``--no-cache-dir``. Any other flag raises an "
+"error rather than being silently dropped. Other commands pass ``--pip-args`` "
+"to ``uv pip install`` unchanged, so uv decides which flags it accepts. Use "
+"``--backend pip`` when you need a pip-only flag. See :doc:`use-uv-backend`."
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:61
+#: ../../../how-to/use-private-index.rst:64
 msgid "Verify it"
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:63
+#: ../../../how-to/use-private-index.rst:66
 msgid "$ pipx list --short"
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:67
+#: ../../../how-to/use-private-index.rst:70
 msgid ""
 "The package installs at the version your index serves. For a private index "
 "that pipx must also use for its own shared libraries, set the ``PIP_*`` "
