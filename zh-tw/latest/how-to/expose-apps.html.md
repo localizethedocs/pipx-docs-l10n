@@ -1,0 +1,58 @@
+# Expose apps
+
+Control which apps, manual pages, and shell completions an environment links onto your `PATH`, without rebuilding
+it.
+
+## Hide an app
+
+Use `unexpose` when another command with the same name should win, but you want to keep the environment:
+
+```console
+$ pipx unexpose ansible
+```
+
+pipx removes the apps, manual pages, and shell completions recorded for that environment from its global directories.
+Upgrade and reinstall keep it hidden, and injected apps stay hidden too.
+
+## Restore an app
+
+```console
+$ pipx expose ansible
+```
+
+pipx links each recorded app, manual page, and shell completion that is missing from its target directory, without
+rebuilding the environment. Run it on an exposed environment to restore a link you deleted. When a file pipx does not
+own already sits at a target path, pipx leaves it in place, links the rest, and exits with `1`. Move that file away
+and run `pipx expose` again to link the skipped resource.
+
+## Expose a dependency’s apps
+
+A dependency’s apps are not exposed by default. Select them at install time.
+
+`--include-deps` exposes apps and manual pages from every dependency:
+
+```console
+$ pipx install nox --include-deps
+```
+
+`--include-resources-from PACKAGE` exposes resources from one dependency; repeat it to select more:
+
+```console
+$ pipx install "nox[tox_to_nox]" --include-resources-from tox
+```
+
+pipx records the selection so upgrade and reinstall preserve it. The install fails and rolls back when a selected
+package is not a dependency that ships apps, manual pages, or shell completions. Both options also work on
+`pipx inject`; see [Inject packages](inject-packages.html.md).
+
+#### NOTE
+`--include-apps-from` was renamed to `--include-resources-from`. pipx still reads the old name from metadata
+written by earlier versions.
+
+## Verify it
+
+```console
+$ pipx list
+```
+
+The exposed apps appear under their environment. Run one to confirm it resolves on your `PATH`.
