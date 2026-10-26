@@ -493,12 +493,3 @@ msgid ""
 "``patch`` increments to ``1.8.1``. This automation eliminates the need for "
 "manual version management and ensures consistency across releases."
 msgstr ""
-
-#~ msgid "$ tox run -e 3.12"
-#~ msgstr "$ tox run -e 3.12"
-
-#~ msgid "$ tox run -e 3.10 -- -k EXPRESSION"
-#~ msgstr "$ tox run -e 3.10 -- -k EXPRESSION"
-
-#~ msgid "$ tox run -e 3.10 -- -k test_uninstall"
-#~ msgstr "$ tox run -e 3.10 -- -k test_uninstall"

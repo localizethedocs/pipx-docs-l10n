@@ -344,17 +344,3 @@ msgstr "``UV_CACHE_DIR``"
 #: ../../../reference/environment-variables.rst:116
 msgid "Value of ``UV_CACHE_DIR`` in the environment, passed through to uv."
 msgstr "環境中的 ``UV_CACHE_DIR`` 值，會直接傳遞給 uv。"
-
-#~ msgid ""
-#~ "pipx has no user configuration file. Every setting is an environment "
-#~ "variable, all of them optional. Run ``pipx environment`` to print the "
-#~ "resolved value of each one on your system."
-#~ msgstr ""
-#~ "pipx 沒有使用者組態檔。所有設定都是環境變數，而且全部都是選用的。在系統上"
-#~ "執行 ``pipx environment``，即可列印每個變數解析後的值。"
-
-#~ msgid ""
-#~ "Set to a falsy value to disable emoji output. Default: enabled when the "
-#~ "terminal encoding supports the emoji glyphs."
-#~ msgstr ""
-#~ "設為假值即可停用表情符號輸出。默認值：當終端機編碼支援表情符號時啟用。"

@@ -950,6 +950,3 @@ msgstr ""
 #: ../../../explanation/comparisons.rst:332
 msgid "Can be slower than pipx at creating virtual environments."
 msgstr ""
-
-#~ msgid "``pipx runpip <tool> -- pip ...``"
-#~ msgstr "``pipx runpip <tool> -- pip ...``"
