@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:51+0000\n"
+"POT-Creation-Date: 2026-10-26 15:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,8 +27,8 @@ msgstr ""
 
 #: ../../../changelog.rst:7
 msgid ""
-"The format is based on `Keep a Changelog <https://keepachangelog.com/"
-"en/1.0.0/>`_, and this project adheres to `Semantic Versioning <https://"
+"The format is based on `Keep a Changelog <https://keepachangelog.com/en/"
+"1.0.0/>`_, and this project adheres to `Semantic Versioning <https://"
 "semver.org/spec/v2.0.0.html>`_."
 msgstr ""
 
@@ -40,7 +40,7 @@ msgstr ""
 
 #: ../../../[towncrier-fragments]:2
 msgid ""
-"`Unreleased <https://github.com/pypa/pipx/tree/Unreleased>`_ - 2026-10-19"
+"`Unreleased <https://github.com/pypa/pipx/tree/Unreleased>`_ - 2026-10-26"
 msgstr ""
 
 #: ../../../[towncrier-fragments]:4
@@ -92,8 +92,8 @@ msgstr ""
 
 #: ../../../changelog.rst:33
 msgid ""
-"Allow selecting dependencies that ship only shell completions. (:issue:"
-"`2157`)"
+"Allow selecting dependencies that ship only shell completions. "
+"(:issue:`2157`)"
 msgstr ""
 
 #: ../../../changelog.rst:37
@@ -116,8 +116,8 @@ msgstr ""
 #: ../../../changelog.rst:45
 msgid ""
 "Print the installer error once when a `pipx upgrade --verbose` or pip `pipx "
-"install --verbose` fails, instead of repeating it after the live output. (:"
-"issue:`2153`)"
+"install --verbose` fails, instead of repeating it after the live output. "
+"(:issue:`2153`)"
 msgstr ""
 
 #: ../../../changelog.rst:47
@@ -163,8 +163,8 @@ msgstr ""
 
 #: ../../../changelog.rst:68
 msgid ""
-"`upgrade` and `reinstall-all` refresh shared pip only after 30 days. (:issue:"
-"`2116`)"
+"`upgrade` and `reinstall-all` refresh shared pip only after 30 days. "
+"(:issue:`2116`)"
 msgstr ""
 
 #: ../../../changelog.rst:69
@@ -173,8 +173,8 @@ msgstr ""
 
 #: ../../../changelog.rst:70
 msgid ""
-"Set `PYTHON_LAZY_IMPORTS=normal` to opt out; the entry point is `pipx."
-"__main__`. (:issue:`2132`)"
+"Set `PYTHON_LAZY_IMPORTS=normal` to opt out; the entry point is "
+"`pipx.__main__`. (:issue:`2132`)"
 msgstr ""
 
 #: ../../../changelog.rst:71
@@ -185,15 +185,15 @@ msgstr ""
 
 #: ../../../changelog.rst:72
 msgid ""
-"Run `reinstall-all`, `upgrade-all` and `install-all` across venvs at once. (:"
-"issue:`2137`)"
+"Run `reinstall-all`, `upgrade-all` and `install-all` across venvs at once. "
+"(:issue:`2137`)"
 msgstr ""
 
 #: ../../../changelog.rst:73
 msgid ""
 "Let running upgrades finish on Ctrl-C in `upgrade-all`; a second Ctrl-C "
-"stops them, and the next `upgrade` repairs what was left half-upgraded. (:"
-"issue:`2144`)"
+"stops them, and the next `upgrade` repairs what was left half-upgraded. "
+"(:issue:`2144`)"
 msgstr ""
 
 #: ../../../changelog.rst:75
@@ -222,8 +222,8 @@ msgstr ""
 
 #: ../../../changelog.rst:84
 msgid ""
-"Use the default Python for scripts when it satisfies `requires-python`. (:"
-"issue:`2093`)"
+"Use the default Python for scripts when it satisfies `requires-python`. "
+"(:issue:`2093`)"
 msgstr ""
 
 #: ../../../changelog.rst:85
@@ -274,32 +274,32 @@ msgstr ""
 
 #: ../../../changelog.rst:93
 msgid ""
-"Keep `PIPX_MAX_LOGS` logs, not one extra, and rotate uv error logs too. (:"
-"issue:`2103`)"
+"Keep `PIPX_MAX_LOGS` logs, not one extra, and rotate uv error logs too. "
+"(:issue:`2103`)"
 msgstr ""
 
 #: ../../../changelog.rst:94
 msgid ""
-"Keep the last output of a child process streamed to a terminal on macOS. (:"
-"issue:`2111`)"
+"Keep the last output of a child process streamed to a terminal on macOS. "
+"(:issue:`2111`)"
 msgstr ""
 
 #: ../../../changelog.rst:95
 msgid ""
-"Report apps whose Python is missing in `upgrade-all` instead of crashing. (:"
-"issue:`2141`)"
+"Report apps whose Python is missing in `upgrade-all` instead of crashing. "
+"(:issue:`2141`)"
 msgstr ""
 
 #: ../../../changelog.rst:96
 msgid ""
-"Show child output that is not valid UTF-8 instead of crashing. (:issue:"
-"`2144`)"
+"Show child output that is not valid UTF-8 instead of crashing. "
+"(:issue:`2144`)"
 msgstr ""
 
 #: ../../../changelog.rst:97
 msgid ""
-"Mask passwords in index and package URLs in pipx's output and log files. (:"
-"issue:`2144`)"
+"Mask passwords in index and package URLs in pipx's output and log files. "
+"(:issue:`2144`)"
 msgstr ""
 
 #: ../../../changelog.rst:101 ../../../changelog.rst:635
@@ -332,14 +332,14 @@ msgstr ""
 
 #: ../../../changelog.rst:107
 msgid ""
-"Skip a WMI query on Windows at startup by detecting the OS with `sys."
-"platform`. (:issue:`2125`)"
+"Skip a WMI query on Windows at startup by detecting the OS with "
+"`sys.platform`. (:issue:`2125`)"
 msgstr ""
 
 #: ../../../changelog.rst:108
 msgid ""
-"Uninject orphaned dependencies in one pip call, reported on one line. (:"
-"issue:`2126`)"
+"Uninject orphaned dependencies in one pip call, reported on one line. "
+"(:issue:`2126`)"
 msgstr ""
 
 #: ../../../changelog.rst:109
@@ -356,14 +356,14 @@ msgstr ""
 
 #: ../../../changelog.rst:111
 msgid ""
-"Start pipx 10 to 50 ms faster on Python 3.15 through lazy imports. (:issue:"
-"`2129`)"
+"Start pipx 10 to 50 ms faster on Python 3.15 through lazy imports. "
+"(:issue:`2129`)"
 msgstr ""
 
 #: ../../../changelog.rst:112
 msgid ""
-"Check shared pip by its files instead of starting Python on every command. (:"
-"issue:`2131`)"
+"Check shared pip by its files instead of starting Python on every command. "
+"(:issue:`2131`)"
 msgstr ""
 
 #: ../../../changelog.rst:113
@@ -374,14 +374,14 @@ msgstr ""
 
 #: ../../../changelog.rst:114
 msgid ""
-"Scan exposed app and man page dirs once per `list` and `uninstall-all`. (:"
-"issue:`2138`)"
+"Scan exposed app and man page dirs once per `list` and `uninstall-all`. "
+"(:issue:`2138`)"
 msgstr ""
 
 #: ../../../changelog.rst:115
 msgid ""
-"Require filelock 4.2, whose lighter import speeds up most pipx commands. (:"
-"issue:`2142`)"
+"Require filelock 4.2, whose lighter import speeds up most pipx commands. "
+"(:issue:`2142`)"
 msgstr ""
 
 #: ../../../changelog.rst:119 ../../../changelog.rst:142
@@ -402,8 +402,8 @@ msgstr ""
 
 #: ../../../changelog.rst:121
 msgid ""
-"Correct the log directory in the platformdirs migration table. (:issue:"
-"`2086`)"
+"Correct the log directory in the platformdirs migration table. "
+"(:issue:`2086`)"
 msgstr ""
 
 #: ../../../changelog.rst:122
@@ -414,8 +414,8 @@ msgstr ""
 
 #: ../../../changelog.rst:123
 msgid ""
-"Match help text, troubleshooting and samples to how pipx behaves today. (:"
-"issue:`2105`)"
+"Match help text, troubleshooting and samples to how pipx behaves today. "
+"(:issue:`2105`)"
 msgstr ""
 
 #: ../../../changelog.rst:127 ../../../changelog.rst:307
@@ -424,11 +424,7 @@ msgid "Miscellaneous internal changes"
 msgstr ""
 
 #: ../../../changelog.rst:129
-msgid ""
-":issue:`2090`, :issue:`2091`, :issue:`2100`, :issue:`2104`, :issue:`2106`, :"
-"issue:`2107`, :issue:`2109`, :issue:`2112`, :issue:`2115`, :issue:`2117`, :"
-"issue:`2119`, :issue:`2120`, :issue:`2124`, :issue:`2133`, :issue:`2135`, :"
-"issue:`2139`, :issue:`2140`, :issue:`2143`, :issue:`2144`"
+msgid ":issue:`2090`, :issue:`2091`, :issue:`2100`, :issue:`2104`, :issue:`2106`, :issue:`2107`, :issue:`2109`, :issue:`2112`, :issue:`2115`, :issue:`2117`, :issue:`2119`, :issue:`2120`, :issue:`2124`, :issue:`2133`, :issue:`2135`, :issue:`2139`, :issue:`2140`, :issue:`2143`, :issue:`2144`"
 msgstr ""
 
 #: ../../../changelog.rst:133
@@ -453,8 +449,8 @@ msgstr ""
 
 #: ../../../changelog.rst:153
 msgid ""
-"Accept bare and suffixed injected package names in `pipx pin --skip`. (:"
-"issue:`2079`)"
+"Accept bare and suffixed injected package names in `pipx pin --skip`. "
+"(:issue:`2079`)"
 msgstr ""
 
 #: ../../../changelog.rst:154
@@ -524,8 +520,8 @@ msgstr ""
 msgid ""
 "Install a local PEP 723 script from its file when the path reads as a PyPI "
 "name (`pipx install bare.py`), contains `[`, or starts with a quoted `~`, "
-"and stop the upgrade hint from suggesting a PyPI reinstall for a script. (:"
-"issue:`2062`)"
+"and stop the upgrade hint from suggesting a PyPI reinstall for a script. "
+"(:issue:`2062`)"
 msgstr ""
 
 #: ../../../changelog.rst:202
@@ -545,8 +541,8 @@ msgstr ""
 
 #: ../../../changelog.rst:217
 msgid ""
-"Remove leftover shell completion scripts when running `pipx uninject`. (:"
-"issue:`2055`)"
+"Remove leftover shell completion scripts when running `pipx uninject`. "
+"(:issue:`2055`)"
 msgstr ""
 
 #: ../../../changelog.rst:221
@@ -573,14 +569,14 @@ msgstr ""
 
 #: ../../../changelog.rst:243
 msgid ""
-"Fix the argument order in the combined inject command example. (:issue:"
-"`2044`)"
+"Fix the argument order in the combined inject command example. "
+"(:issue:`2044`)"
 msgstr ""
 
 #: ../../../changelog.rst:244
 msgid ""
-"Use direct URL requirements for the Git install example with extras. (:issue:"
-"`2045`)"
+"Use direct URL requirements for the Git install example with extras. "
+"(:issue:`2045`)"
 msgstr ""
 
 #: ../../../changelog.rst:248
@@ -626,8 +622,8 @@ msgstr ""
 
 #: ../../../changelog.rst:278
 msgid ""
-"Stop `pipx runpip` from printing uv DEBUG logs on the uv backend. (:issue:"
-"`2035`)"
+"Stop `pipx runpip` from printing uv DEBUG logs on the uv backend. "
+"(:issue:`2035`)"
 msgstr ""
 
 #: ../../../changelog.rst:284
@@ -642,8 +638,8 @@ msgstr ""
 
 #: ../../../changelog.rst:293
 msgid ""
-"Fix `KeyError` stderr noise when installing packages in Python3.15. (:issue:"
-"`2026`)"
+"Fix `KeyError` stderr noise when installing packages in Python3.15. "
+"(:issue:`2026`)"
 msgstr ""
 
 #: ../../../changelog.rst:297
@@ -714,15 +710,15 @@ msgstr ""
 msgid ""
 "Retry transient failures when fetching the python-build-standalone release "
 "index and downloading interpreter archives, resuming an interrupted archive "
-"download from the bytes already received instead of starting over. (:issue:"
-"`2001`)"
+"download from the bytes already received instead of starting over. "
+"(:issue:`2001`)"
 msgstr ""
 
 #: ../../../changelog.rst:362
 msgid ""
 "Correct the documented Windows default for `PIPX_HOME`, which resolves to "
-"`%LOCALAPPDATA%\\pipx\\pipx` rather than `%LOCALAPPDATA%\\pipx`. (:issue:"
-"`2002`)"
+"`%LOCALAPPDATA%\\pipx\\pipx` rather than `%LOCALAPPDATA%\\pipx`. "
+"(:issue:`2002`)"
 msgstr ""
 
 #: ../../../changelog.rst:367
@@ -770,8 +766,8 @@ msgstr ""
 
 #: ../../../changelog.rst:395
 msgid ""
-"`PIPX_MAX_LOGS=0` now prunes the log files instead of keeping all of them. (:"
-"issue:`1988`)"
+"`PIPX_MAX_LOGS=0` now prunes the log files instead of keeping all of them. "
+"(:issue:`1988`)"
 msgstr ""
 
 #: ../../../changelog.rst:401
@@ -796,8 +792,8 @@ msgstr ""
 
 #: ../../../changelog.rst:422
 msgid ""
-"Direct Linux users to PEP 668-compatible installation methods. (:issue:"
-"`1976`)"
+"Direct Linux users to PEP 668-compatible installation methods. "
+"(:issue:`1976`)"
 msgstr ""
 
 #: ../../../changelog.rst:426
@@ -809,8 +805,8 @@ msgid ""
 "Stop venv inspection from crashing on Python 3.15 when a `dist-info` "
 "directory has no `Name` metadata field. `importlib.metadata` now raises "
 "`KeyError` for missing metadata keys instead of returning `None`; such "
-"distributions are skipped again, as on earlier Python versions. (:issue:"
-"`1971`)"
+"distributions are skipped again, as on earlier Python versions. "
+"(:issue:`1971`)"
 msgstr ""
 
 #: ../../../changelog.rst:437
@@ -876,8 +872,8 @@ msgid ""
 "Give `pipx reinstall` and `pipx reinstall-all` the structured output the "
 "other commands carry. They printed straight to the terminal, so `--quiet` "
 "left `uninstalled NAME!` behind and no `--output json` existed to read the "
-"result from a script. Both now report through the shared renderer. (:issue:"
-"`828`)"
+"result from a script. Both now report through the shared renderer. "
+"(:issue:`828`)"
 msgstr ""
 
 #: ../../../changelog.rst:469
@@ -928,8 +924,8 @@ msgstr ""
 
 #: ../../../changelog.rst:483
 msgid ""
-"Add commands to diagnose and repair broken environment interpreters. (:issue:"
-"`1442`)"
+"Add commands to diagnose and repair broken environment interpreters. "
+"(:issue:`1442`)"
 msgstr ""
 
 #: ../../../changelog.rst:484
@@ -939,19 +935,19 @@ msgstr ""
 
 #: ../../../changelog.rst:485
 msgid ""
-"Add `pipx install --upgrade` to reconcile apps with package specs. (:issue:"
-"`1572`)"
+"Add `pipx install --upgrade` to reconcile apps with package specs. "
+"(:issue:`1572`)"
 msgstr ""
 
 #: ../../../changelog.rst:486
 msgid ""
 "Expose the shell completion scripts a package ships, the way pipx already "
 "exposes its man pages. A wheel that installs into `share/bash-completion/"
-"completions`, `share/zsh/site-functions` or `share/fish/vendor_completions."
-"d` gets those files linked under `PIPX_COMPLETION_DIR`, which defaults to "
-"`~/.local/share`. `bash` and `fish` read those locations on their own; `zsh` "
-"needs the site-functions directory on its `fpath`. Uninstalling the package "
-"takes the links away. (:issue:`1604`)"
+"completions`, `share/zsh/site-functions` or `share/fish/"
+"vendor_completions.d` gets those files linked under `PIPX_COMPLETION_DIR`, "
+"which defaults to `~/.local/share`. `bash` and `fish` read those locations "
+"on their own; `zsh` needs the site-functions directory on its `fpath`. "
+"Uninstalling the package takes the links away. (:issue:`1604`)"
 msgstr ""
 
 #: ../../../changelog.rst:490
@@ -969,8 +965,8 @@ msgstr ""
 
 #: ../../../changelog.rst:494
 msgid ""
-"Add commands to hide and restore resources exposed from an environment. (:"
-"issue:`1645`)"
+"Add commands to hide and restore resources exposed from an environment. "
+"(:issue:`1645`)"
 msgstr ""
 
 #: ../../../changelog.rst:495
@@ -987,8 +983,8 @@ msgstr ""
 
 #: ../../../changelog.rst:498
 msgid ""
-"Add `pipx exec ENVIRONMENT APPLICATION` for installed environments. (:issue:"
-"`1726`)"
+"Add `pipx exec ENVIRONMENT APPLICATION` for installed environments. "
+"(:issue:`1726`)"
 msgstr ""
 
 #: ../../../changelog.rst:499
@@ -1005,8 +1001,8 @@ msgstr ""
 
 #: ../../../changelog.rst:502
 msgid ""
-"Validate requested apps and restore prior environments on failure. (:issue:"
-"`1908`)"
+"Validate requested apps and restore prior environments on failure. "
+"(:issue:`1908`)"
 msgstr ""
 
 #: ../../../changelog.rst:503
@@ -1077,8 +1073,8 @@ msgstr ""
 
 #: ../../../changelog.rst:531
 msgid ""
-"Recover custom paths when pipx manages its own installation on Unix. (:issue:"
-"`774`)"
+"Recover custom paths when pipx manages its own installation on Unix. "
+"(:issue:`774`)"
 msgstr ""
 
 #: ../../../changelog.rst:532
@@ -1088,8 +1084,8 @@ msgstr ""
 
 #: ../../../changelog.rst:533
 msgid ""
-"Show injected apps in `pipx list` on systems that copy launchers. (:issue:"
-"`997`)"
+"Show injected apps in `pipx list` on systems that copy launchers. "
+"(:issue:`997`)"
 msgstr ""
 
 #: ../../../changelog.rst:534
@@ -1106,8 +1102,8 @@ msgstr ""
 msgid ""
 "Draw the installer progress bar while the download runs. pipx reads the "
 "installer output over a pipe, which hid the terminal from `pip`, so `pip` "
-"held its bar back and printed a finished one once the download had ended. (:"
-"issue:`1069`)"
+"held its bar back and printed a finished one once the download had ended. "
+"(:issue:`1069`)"
 msgstr ""
 
 #: ../../../changelog.rst:538
@@ -1121,8 +1117,8 @@ msgstr ""
 
 #: ../../../changelog.rst:540
 msgid ""
-"Preserve the terminal encoding for applications started by `pipx run`. (:"
-"issue:`1423`)"
+"Preserve the terminal encoding for applications started by `pipx run`. "
+"(:issue:`1423`)"
 msgstr ""
 
 #: ../../../changelog.rst:541
@@ -1156,15 +1152,15 @@ msgstr ""
 
 #: ../../../changelog.rst:547
 msgid ""
-"Keep pipx startup usable when locked files prevent trash cleanup. (:issue:"
-"`1847`)"
+"Keep pipx startup usable when locked files prevent trash cleanup. "
+"(:issue:`1847`)"
 msgstr ""
 
 #: ../../../changelog.rst:548
 msgid ""
 "Fix `pipx run --with` being silently dropped for PEP 723 scripts on the pip "
-"backend; the extra packages are now installed into the temporary venv. (:"
-"issue:`1850`)"
+"backend; the extra packages are now installed into the temporary venv. "
+"(:issue:`1850`)"
 msgstr ""
 
 #: ../../../changelog.rst:550
@@ -1187,8 +1183,8 @@ msgstr ""
 
 #: ../../../changelog.rst:553
 msgid ""
-"Treat empty values for pipx path environment variables as unset. (:issue:"
-"`1856`)"
+"Treat empty values for pipx path environment variables as unset. "
+"(:issue:`1856`)"
 msgstr ""
 
 #: ../../../changelog.rst:554
@@ -1205,8 +1201,8 @@ msgstr ""
 
 #: ../../../changelog.rst:556
 msgid ""
-"Remove exposed apps that use a venv suffix when uninjecting packages. (:"
-"issue:`1856`)"
+"Remove exposed apps that use a venv suffix when uninjecting packages. "
+"(:issue:`1856`)"
 msgstr ""
 
 #: ../../../changelog.rst:557
@@ -1223,20 +1219,20 @@ msgstr ""
 
 #: ../../../changelog.rst:559
 msgid ""
-"Keep existing venv metadata when pipx cannot write its replacement. (:issue:"
-"`1856`)"
+"Keep existing venv metadata when pipx cannot write its replacement. "
+"(:issue:`1856`)"
 msgstr ""
 
 #: ../../../changelog.rst:560
 msgid ""
-"Keep trash cleanup non-fatal during directory races and failed moves. (:"
-"issue:`1856`)"
+"Keep trash cleanup non-fatal during directory races and failed moves. "
+"(:issue:`1856`)"
 msgstr ""
 
 #: ../../../changelog.rst:561
 msgid ""
-"List only packages whose pin state changed during `pipx unpin`. (:issue:"
-"`1856`)"
+"List only packages whose pin state changed during `pipx unpin`. "
+"(:issue:`1856`)"
 msgstr ""
 
 #: ../../../changelog.rst:562
@@ -1255,8 +1251,8 @@ msgstr ""
 
 #: ../../../changelog.rst:565
 msgid ""
-"Avoid import crashes when stderr or its encoding is unavailable. (:issue:"
-"`1856`)"
+"Avoid import crashes when stderr or its encoding is unavailable. "
+"(:issue:`1856`)"
 msgstr ""
 
 #: ../../../changelog.rst:566
@@ -1308,8 +1304,8 @@ msgstr ""
 
 #: ../../../changelog.rst:576
 msgid ""
-"Wait for the animation thread to stop before clearing its final frame. (:"
-"issue:`1856`)"
+"Wait for the animation thread to stop before clearing its final frame. "
+"(:issue:`1856`)"
 msgstr ""
 
 #: ../../../changelog.rst:577
@@ -1344,8 +1340,8 @@ msgstr ""
 
 #: ../../../changelog.rst:582
 msgid ""
-"Skip cache tag files when removing expired `pipx run` environments. (:issue:"
-"`1856`)"
+"Skip cache tag files when removing expired `pipx run` environments. "
+"(:issue:`1856`)"
 msgstr ""
 
 #: ../../../changelog.rst:583
@@ -1356,8 +1352,8 @@ msgstr ""
 msgid ""
 "Store the venv cache and the logs in the platform cache and log directories "
 "on every platform, and keep them out of a pipx home that only exists for "
-"backwards compatibility. Setting `PIPX_HOME` still keeps both inside it. (:"
-"issue:`1946`)"
+"backwards compatibility. Setting `PIPX_HOME` still keeps both inside it. "
+"(:issue:`1946`)"
 msgstr ""
 
 #: ../../../changelog.rst:586
@@ -1493,8 +1489,8 @@ msgstr ""
 
 #: ../../../changelog.rst:637
 msgid ""
-"Check upgrades in parallel and skip installs for current packages. (:issue:"
-"`1353`)"
+"Check upgrades in parallel and skip installs for current packages. "
+"(:issue:`1353`)"
 msgstr ""
 
 #: ../../../changelog.rst:638
@@ -1512,14 +1508,14 @@ msgstr ""
 
 #: ../../../changelog.rst:641
 msgid ""
-"Cache shared-library validity checks within each pipx process. (:issue:"
-"`1856`)"
+"Cache shared-library validity checks within each pipx process. "
+"(:issue:`1856`)"
 msgstr ""
 
 #: ../../../changelog.rst:642
 msgid ""
-"List managed environments only when shell completion requests them. (:issue:"
-"`1856`)"
+"List managed environments only when shell completion requests them. "
+"(:issue:`1856`)"
 msgstr ""
 
 #: ../../../changelog.rst:643
@@ -1533,20 +1529,20 @@ msgstr ""
 
 #: ../../../changelog.rst:645
 msgid ""
-"Reuse the `pipx run` PATH lookup when warning about an existing app. (:issue:"
-"`1856`)"
+"Reuse the `pipx run` PATH lookup when warning about an existing app. "
+"(:issue:`1856`)"
 msgstr ""
 
 #: ../../../changelog.rst:646
 msgid ""
-"Resolve the default Python interpreter on first use instead of import. (:"
-"issue:`1856`)"
+"Resolve the default Python interpreter on first use instead of import. "
+"(:issue:`1856`)"
 msgstr ""
 
 #: ../../../changelog.rst:647
 msgid ""
-"Inspect legacy environments once during uninstall and reinstall. (:issue:"
-"`1856`)"
+"Inspect legacy environments once during uninstall and reinstall. "
+"(:issue:`1856`)"
 msgstr ""
 
 #: ../../../changelog.rst:653
@@ -1659,8 +1655,8 @@ msgstr ""
 
 #: ../../../changelog.rst:722
 msgid ""
-"Update the error message in get-pipx.py; it is obsoleted, not deprecated. (:"
-"issue:`1813`)"
+"Update the error message in get-pipx.py; it is obsoleted, not deprecated. "
+"(:issue:`1813`)"
 msgstr ""
 
 #: ../../../changelog.rst:727
@@ -1685,8 +1681,8 @@ msgstr ""
 #: ../../../changelog.rst:742
 msgid ""
 "Add ``--fetch-python`` and ``PIPX_FETCH_PYTHON`` to control standalone "
-"Python downloads, with values ``always``, ``missing``, or ``never``. (:issue:"
-"`1663`)"
+"Python downloads, with values ``always``, ``missing``, or ``never``. "
+"(:issue:`1663`)"
 msgstr ""
 
 #: ../../../changelog.rst:744
@@ -1753,8 +1749,8 @@ msgstr ""
 
 #: ../../../changelog.rst:778
 msgid ""
-"Replace if/elif command dispatch in main.py with argparse set_defaults. (:"
-"issue:`1794`)"
+"Replace if/elif command dispatch in main.py with argparse set_defaults. "
+"(:issue:`1794`)"
 msgstr ""
 
 #: ../../../changelog.rst:781
@@ -1835,8 +1831,8 @@ msgstr ""
 
 #: ../../../changelog.rst:815
 msgid ""
-"Remove outdated \"experimental\" note from ``--suffix`` help text. (:issue:"
-"`1621`)"
+"Remove outdated \"experimental\" note from ``--suffix`` help text. "
+"(:issue:`1621`)"
 msgstr ""
 
 #: ../../../changelog.rst:818
@@ -1879,8 +1875,8 @@ msgstr ""
 
 #: ../../../changelog.rst:836
 msgid ""
-"Add ``--with`` flag to ``pipx run`` to allow injecting dependencies (:issue:"
-"`1607`)"
+"Add ``--with`` flag to ``pipx run`` to allow injecting dependencies "
+"(:issue:`1607`)"
 msgstr ""
 
 #: ../../../changelog.rst:837
@@ -1897,8 +1893,8 @@ msgstr ""
 
 #: ../../../changelog.rst:844
 msgid ""
-"Fix run command with bash substitution (e.g. ``pipx run <(pbpaste)``) (:"
-"issue:`1293`)"
+"Fix run command with bash substitution (e.g. ``pipx run <(pbpaste)``) "
+"(:issue:`1293`)"
 msgstr ""
 
 #: ../../../changelog.rst:845
@@ -1935,8 +1931,8 @@ msgstr ""
 
 #: ../../../changelog.rst:866
 msgid ""
-"``pipx reinstall``: An exception will now be raised if package is pinned. (:"
-"issue:`1611`)"
+"``pipx reinstall``: An exception will now be raised if package is pinned. "
+"(:issue:`1611`)"
 msgstr ""
 
 #: ../../../changelog.rst:867
@@ -1951,8 +1947,8 @@ msgstr ""
 
 #: ../../../changelog.rst:875
 msgid ""
-"Rename environmental variable ``USE_EMOJI`` to ``PIPX_USE_EMOJI``. (:issue:"
-"`1395`)"
+"Rename environmental variable ``USE_EMOJI`` to ``PIPX_USE_EMOJI``. "
+"(:issue:`1395`)"
 msgstr ""
 
 #: ../../../changelog.rst:876
@@ -1998,8 +1994,8 @@ msgstr ""
 
 #: ../../../changelog.rst:888
 msgid ""
-"Fix running a script with explicitly empty ``dependencies = []``. (:issue:"
-"`1658`)"
+"Fix running a script with explicitly empty ``dependencies = []``. "
+"(:issue:`1658`)"
 msgstr ""
 
 #: ../../../changelog.rst:893
@@ -2030,8 +2026,8 @@ msgstr ""
 
 #: ../../../changelog.rst:912
 msgid ""
-"List ``PIPX_GLOBAL_[HOME|BIN_DIR|MAN_DIR]`` in ``pipx environment``. (:issue:"
-"`1492`)"
+"List ``PIPX_GLOBAL_[HOME|BIN_DIR|MAN_DIR]`` in ``pipx environment``. "
+"(:issue:`1492`)"
 msgstr ""
 
 #: ../../../changelog.rst:917
@@ -2048,14 +2044,14 @@ msgstr ""
 
 #: ../../../changelog.rst:920
 msgid ""
-"Add help messages for ``pipx pin`` and ``pipx unpin`` commands. (:issue:"
-"`1438`)"
+"Add help messages for ``pipx pin`` and ``pipx unpin`` commands. "
+"(:issue:`1438`)"
 msgstr ""
 
 #: ../../../changelog.rst:921
 msgid ""
-"Stop ``pipx install --global`` from installing files in ``~/.local``. (:"
-"issue:`1475`)"
+"Stop ``pipx install --global`` from installing files in ``~/.local``. "
+"(:issue:`1475`)"
 msgstr ""
 
 #: ../../../changelog.rst:922
@@ -2111,8 +2107,8 @@ msgstr ""
 
 #: ../../../changelog.rst:942
 msgid ""
-"Allow ``upgrade`` command to accept multiple packages as arguments. (:issue:"
-"`1336`)"
+"Allow ``upgrade`` command to accept multiple packages as arguments. "
+"(:issue:`1336`)"
 msgstr ""
 
 #: ../../../changelog.rst:943
@@ -2154,8 +2150,8 @@ msgstr ""
 
 #: ../../../changelog.rst:954
 msgid ""
-"Make the Python ``venv`` module arguments work with ``upgrade --install`` (:"
-"issue:`1344`)"
+"Make the Python ``venv`` module arguments work with ``upgrade --install`` "
+"(:issue:`1344`)"
 msgstr ""
 
 #: ../../../changelog.rst:955
@@ -2183,8 +2179,8 @@ msgstr ""
 #: ../../../changelog.rst:960
 msgid ""
 "Move ``--global`` option into shared parser, such that it can be passed "
-"after the subcommand, for example ``pipx ensurepath --global``. (:issue:"
-"`1397`)"
+"after the subcommand, for example ``pipx ensurepath --global``. "
+"(:issue:`1397`)"
 msgstr ""
 
 #: ../../../changelog.rst:962
@@ -2211,8 +2207,8 @@ msgstr ""
 
 #: ../../../changelog.rst:970
 msgid ""
-"Add a note about sourcing the shell config file for ``ensure_path`` (:issue:"
-"`1346`)"
+"Add a note about sourcing the shell config file for ``ensure_path`` "
+"(:issue:`1346`)"
 msgstr ""
 
 #: ../../../changelog.rst:973
@@ -2268,14 +2264,14 @@ msgstr ""
 
 #: ../../../changelog.rst:999
 msgid ""
-"Correctly resolve home directory in pipx directory environment variables. (:"
-"issue:`94`)"
+"Correctly resolve home directory in pipx directory environment variables. "
+"(:issue:`94`)"
 msgstr ""
 
 #: ../../../changelog.rst:1000
 msgid ""
-"Pass through ``pip`` arguments when upgrading shared libraries. (:issue:"
-"`964`)"
+"Pass through ``pip`` arguments when upgrading shared libraries. "
+"(:issue:`964`)"
 msgstr ""
 
 #: ../../../changelog.rst:1001
@@ -2286,8 +2282,8 @@ msgstr ""
 
 #: ../../../changelog.rst:1002
 msgid ""
-"Report correct filename in tracebacks with ``pipx run <scriptname>`` (:issue:"
-"`1191`)"
+"Report correct filename in tracebacks with ``pipx run <scriptname>`` "
+"(:issue:`1191`)"
 msgstr ""
 
 #: ../../../changelog.rst:1003
@@ -2297,20 +2293,20 @@ msgstr ""
 
 #: ../../../changelog.rst:1004
 msgid ""
-"Fix path resolution for python executables looked up in PATH on windows. (:"
-"issue:`1205`)"
+"Fix path resolution for python executables looked up in PATH on windows. "
+"(:issue:`1205`)"
 msgstr ""
 
 #: ../../../changelog.rst:1005
 msgid ""
-"Display help message when ``pipx install`` is run without arguments. (:issue:"
-"`1266`)"
+"Display help message when ``pipx install`` is run without arguments. "
+"(:issue:`1266`)"
 msgstr ""
 
 #: ../../../changelog.rst:1006
 msgid ""
-"Fix crashes due to superfluous ``-q`` flags by discarding exceeding values (:"
-"issue:`1283`)"
+"Fix crashes due to superfluous ``-q`` flags by discarding exceeding values "
+"(:issue:`1283`)"
 msgstr ""
 
 #: ../../../changelog.rst:1011
@@ -2338,8 +2334,8 @@ msgstr ""
 
 #: ../../../changelog.rst:1016
 msgid ""
-"Fix inconsistent wording in ``pipx install`` command description. (:issue:"
-"`1307`)"
+"Fix inconsistent wording in ``pipx install`` command description. "
+"(:issue:`1307`)"
 msgstr ""
 
 #: ../../../changelog.rst:1021
@@ -2364,14 +2360,14 @@ msgstr ""
 
 #: ../../../changelog.rst:1035
 msgid ""
-"Support building pipx wheels with setuptools-scm<7, such as on FreeBSD. (:"
-"issue:`1208`)"
+"Support building pipx wheels with setuptools-scm<7, such as on FreeBSD. "
+"(:issue:`1208`)"
 msgstr ""
 
 #: ../../../changelog.rst:1040
 msgid ""
-"Provide useful error messages when unresolvable python version is passed (:"
-"issue:`1150`)"
+"Provide useful error messages when unresolvable python version is passed "
+"(:issue:`1150`)"
 msgstr ""
 
 #: ../../../changelog.rst:1041
@@ -2380,8 +2376,8 @@ msgstr ""
 
 #: ../../../changelog.rst:1042
 msgid ""
-"Add workaround for using pipx applications in shebang under macOS (:issue:"
-"`1198`)"
+"Add workaround for using pipx applications in shebang under macOS "
+"(:issue:`1198`)"
 msgstr ""
 
 #: ../../../changelog.rst:1045
@@ -2851,11 +2847,11 @@ msgstr ""
 
 #: ../../../changelog.rst:1280
 msgid ""
-"Changed ``pipx ensurepath`` bash behavior so that only one of {``~/."
-"profile``, ``~/.bash_profile``} is modified with the extra pipx paths, not "
-"both. Previously, if a ``.bash_profile`` file was created where one didn't "
-"exist, it could cause problems, e.g. #456. The internal change is to use "
-"userpath v1.5.0 or greater. (#684)"
+"Changed ``pipx ensurepath`` bash behavior so that only one of "
+"{``~/.profile``, ``~/.bash_profile``} is modified with the extra pipx paths, "
+"not both. Previously, if a ``.bash_profile`` file was created where one "
+"didn't exist, it could cause problems, e.g. #456. The internal change is to "
+"use userpath v1.5.0 or greater. (#684)"
 msgstr ""
 
 #: ../../../changelog.rst:1283

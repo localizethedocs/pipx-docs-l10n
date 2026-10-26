@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-10-18 13:35:13 -0700",
-      "hash" : "bd0a54bc48aab9399d36f87d04308295bedc9a62",
-      "title" : "build(deps): bump astral-sh/setup-uv from 10.2.0 to 10.3.0 in the actions group (#2162)"
+      "date" : "2026-10-22 07:14:36 -0700",
+      "hash" : "9a49f1957fad930860189421f2cd29d5a5604fd4",
+      "title" : "[pre-commit.ci] pre-commit autoupdate (#2164)"
     }
   },
   "type" : "branch",
