@@ -87,7 +87,7 @@ msgstr "``~/.local/share/man``"
 
 #: ../../../how-to/configure-paths.rst:54
 msgid "``PIPX_COMPLETION_DIR``"
-msgstr ""
+msgstr "``PIPX_COMPLETION_DIR``"
 
 #: ../../../how-to/configure-paths.rst:55
 msgid "Shell completion links"
@@ -308,13 +308,3 @@ msgstr ""
 #: ../../../how-to/configure-paths.rst:173
 msgid "Each prints the path pipx will use, reflecting any override you set."
 msgstr ""
-
-#~ msgid "``platformdirs.user_log_dir()/pipx/log``"
-#~ msgstr "``platformdirs.user_log_dir()/pipx/log``"
-
-#~ msgid ""
-#~ "$ sudo pipx install --global pycowsay\n"
-#~ "$ sudo pipx list --global"
-#~ msgstr ""
-#~ "$ sudo pipx install --global pycowsay\n"
-#~ "$ sudo pipx list --global"

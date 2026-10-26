@@ -372,6 +372,3 @@ msgid ""
 "Open a new terminal after ``pipx ensurepath`` so the updated ``PATH`` takes "
 "effect, then run ``pipx list`` to confirm the environment is reachable."
 msgstr ""
-
-#~ msgid "$ sudo pipx ensurepath --prepend"
-#~ msgstr "$ sudo pipx ensurepath --prepend"

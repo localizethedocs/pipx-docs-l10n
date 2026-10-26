@@ -484,12 +484,3 @@ msgid ""
 "A clean ``pipx health`` (exit status 0) confirms every managed environment "
 "can run its interpreter."
 msgstr ""
-
-#~ msgid "Clear the cache for a managed package:"
-#~ msgstr "清除一個受管理軟體包的快取："
-
-#~ msgid "$ pipx runpip <package> cache purge"
-#~ msgstr "$ pipx runpip <package> cache purge"
-
-#~ msgid "$ pipx runpip --verbose <package> cache dir"
-#~ msgstr "$ pipx runpip --verbose <package> cache dir"
