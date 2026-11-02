@@ -34,9 +34,9 @@ msgstr ""
 #: ../../../how-to/tool-manifest.rst:11
 msgid ""
 "The manifest is a ``pipx.toml`` file. Each dependency group holds one PEP "
-"508 package requirement and names its pipx environment. ``project."
-"dependencies`` must be an empty list so each group resolves on its own; pipx "
-"rejects the manifest otherwise:"
+"508 package requirement and names its pipx environment. "
+"``project.dependencies`` must be an empty list so each group resolves on its "
+"own; pipx rejects the manifest otherwise:"
 msgstr ""
 
 #: ../../../how-to/tool-manifest.rst:15

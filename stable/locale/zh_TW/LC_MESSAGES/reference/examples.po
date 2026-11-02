@@ -236,13 +236,13 @@ msgstr ""
 
 #: ../../../reference/examples.rst:154
 msgid ""
-"Reinstall from a snapshot produced by ``pipx list --output json`` (see :doc:"
-"`json-output`). Each environment gets the venv and pip arguments the "
-"snapshot recorded unless you pass your own. A ``--backend`` other than the "
-"recorded one skips the recorded pip arguments with a warning, since they can "
-"hold options only the old backend accepts. Options with an exact equivalent "
-"are translated instead, so the environment still installs from the recorded "
-"index:"
+"Reinstall from a snapshot produced by ``pipx list --output json`` "
+"(see :doc:`json-output`). Each environment gets the venv and pip arguments "
+"the snapshot recorded unless you pass your own. A ``--backend`` other than "
+"the recorded one skips the recorded pip arguments with a warning, since they "
+"can hold options only the old backend accepts. Options with an exact "
+"equivalent are translated instead, so the environment still installs from "
+"the recorded index:"
 msgstr ""
 
 #: ../../../reference/examples.rst:160

@@ -75,8 +75,8 @@ msgstr "$ pipx install my-package --python 3.13 --fetch-python=missing"
 #: ../../../how-to/troubleshoot.rst:38
 msgid ""
 "Pass ``--fetch-python=always`` to download even when the system has the "
-"requested version, for example to avoid a patched distro interpreter. See :"
-"doc:`standalone-python`."
+"requested version, for example to avoid a patched distro interpreter. "
+"See :doc:`standalone-python`."
 msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:45
@@ -192,12 +192,12 @@ msgstr ""
 #: ../../../how-to/troubleshoot.rst:117
 msgid ""
 "$ pipx install termpair --pip-args '--trusted-host files.pythonhosted.org --"
-"trusted-host pypi.org --trusted-host pypi.python.org --trusted-host github."
-"com'"
+"trusted-host pypi.org --trusted-host pypi.python.org --trusted-host "
+"github.com'"
 msgstr ""
 "$ pipx install termpair --pip-args '--trusted-host files.pythonhosted.org --"
-"trusted-host pypi.org --trusted-host pypi.python.org --trusted-host github."
-"com'"
+"trusted-host pypi.org --trusted-host pypi.python.org --trusted-host "
+"github.com'"
 
 #: ../../../how-to/troubleshoot.rst:123
 msgid "Check for PIP_* environment variables"
@@ -375,8 +375,8 @@ msgid ""
 "defaults sit under ``/opt/pipx`` and ``/usr/local``, so run the command with "
 "``sudo``. Otherwise, or to keep the installation out of system directories, "
 "point ``PIPX_HOME``, ``PIPX_BIN_DIR``, and ``PIPX_MAN_DIR`` (or their "
-"``PIPX_GLOBAL_*`` counterparts) at directories you can write; see :doc:"
-"`configure-paths`."
+"``PIPX_GLOBAL_*`` counterparts) at directories you can write; "
+"see :doc:`configure-paths`."
 msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:240

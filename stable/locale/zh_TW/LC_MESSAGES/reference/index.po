@@ -29,7 +29,7 @@ msgstr ""
 
 #: ../../../reference/index.rst:8
 msgid ""
-"The :doc:`CLI reference <cli>` is generated from the argument parser (``pipx."
-"main.build_parser``), so it always matches the installed version and covers "
-"every command and flag."
+"The :doc:`CLI reference <cli>` is generated from the argument parser "
+"(``pipx.main.build_parser``), so it always matches the installed version and "
+"covers every command and flag."
 msgstr ""

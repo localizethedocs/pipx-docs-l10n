@@ -61,8 +61,8 @@ msgstr ""
 
 #: ../../../tutorial/install-applications.rst:34
 msgid ""
-"To install a tool for every user on the system, pass ``--global``. See :doc:"
-"`Configure paths <../how-to/configure-paths>`."
+"To install a tool for every user on the system, pass ``--global``. "
+"See :doc:`Configure paths <../how-to/configure-paths>`."
 msgstr ""
 
 #: ../../../tutorial/install-applications.rst:39
@@ -102,8 +102,8 @@ msgstr ""
 #: ../../../tutorial/install-applications.rst:67
 msgid ""
 "If the version prints, the app is on your ``PATH`` and ready to use. "
-"(Missing? Run ``pipx ensurepath`` and open a new terminal, then see :doc:"
-"`Troubleshoot <../how-to/troubleshoot>`.)"
+"(Missing? Run ``pipx ensurepath`` and open a new terminal, then "
+"see :doc:`Troubleshoot <../how-to/troubleshoot>`.)"
 msgstr ""
 
 #: ../../../tutorial/install-applications.rst:72

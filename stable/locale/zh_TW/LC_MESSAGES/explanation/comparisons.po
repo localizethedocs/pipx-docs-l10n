@@ -117,7 +117,7 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:46
 msgid "``$PIPX_BIN_DIR`` (default ``~/.local/bin``)"
-msgstr ""
+msgstr "``$PIPX_BIN_DIR``（默認值 ``~/.local/bin``）"
 
 #: ../../../explanation/comparisons.rst:47
 msgid "``$UV_TOOL_BIN_DIR`` (default same)"
@@ -129,7 +129,7 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:49
 msgid "``$PIPX_MAN_DIR`` (default ``~/.local/share/man``)"
-msgstr ""
+msgstr "``$PIPX_MAN_DIR``（默認值 ``~/.local/share/man``）"
 
 #: ../../../explanation/comparisons.rst:50
 msgid "*not exposed*"
@@ -167,7 +167,7 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:59
 msgid "``$PIPX_HOME/py`` (``PIPX_FETCH_PYTHON``)"
-msgstr ""
+msgstr "``$PIPX_HOME/py``（``PIPX_FETCH_PYTHON``）"
 
 #: ../../../explanation/comparisons.rst:60
 msgid "``$UV_PYTHON_INSTALL_DIR``"
@@ -179,7 +179,7 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:62
 msgid "``--global``, ``PIPX_GLOBAL_*``"
-msgstr ""
+msgstr "``--global``、``PIPX_GLOBAL_*``"
 
 #: ../../../explanation/comparisons.rst:63
 msgid "*not supported*"
@@ -200,7 +200,7 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:76
 msgid "Task"
-msgstr ""
+msgstr "任務"
 
 #: ../../../explanation/comparisons.rst:79
 msgid "Install from PyPI"
@@ -244,11 +244,11 @@ msgstr "單次執行（不安裝）"
 
 #: ../../../explanation/comparisons.rst:89
 msgid "``pipx run black .``"
-msgstr ""
+msgstr "``pipx run black .``"
 
 #: ../../../explanation/comparisons.rst:90
 msgid "``uvx black .``"
-msgstr ""
+msgstr "``uvx black .``"
 
 #: ../../../explanation/comparisons.rst:91
 msgid "Refresh one-off run"
@@ -256,11 +256,11 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:92
 msgid "``pipx run --refresh black .``"
-msgstr ""
+msgstr "``pipx run --refresh black .``"
 
 #: ../../../explanation/comparisons.rst:93
 msgid "``uvx --refresh black .``"
-msgstr ""
+msgstr "``uvx --refresh black .``"
 
 #: ../../../explanation/comparisons.rst:94
 msgid "Show ephemeral cache"
@@ -268,11 +268,11 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:95
 msgid "``pipx cache dir``"
-msgstr ""
+msgstr "``pipx cache dir``"
 
 #: ../../../explanation/comparisons.rst:96
 msgid "``uv cache dir``"
-msgstr ""
+msgstr "``uv cache dir``"
 
 #: ../../../explanation/comparisons.rst:97
 msgid "Purge ephemeral cache"
@@ -280,11 +280,11 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:98
 msgid "``pipx cache purge``"
-msgstr ""
+msgstr "``pipx cache purge``"
 
 #: ../../../explanation/comparisons.rst:99
 msgid "``uv cache clean``"
-msgstr ""
+msgstr "``uv cache clean``"
 
 #: ../../../explanation/comparisons.rst:100
 msgid "One-off run with extra dep"
@@ -292,11 +292,11 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:101
 msgid "``pipx run --with mkdocs-material mkdocs``"
-msgstr ""
+msgstr "``pipx run --with mkdocs-material mkdocs``"
 
 #: ../../../explanation/comparisons.rst:102
 msgid "``uvx --with mkdocs-material mkdocs``"
-msgstr ""
+msgstr "``uvx --with mkdocs-material mkdocs``"
 
 #: ../../../explanation/comparisons.rst:103
 msgid "Pinned-version one-off"
@@ -742,9 +742,9 @@ msgstr "從 pipsi 遷移至 pipx"
 
 #: ../../../explanation/comparisons.rst:247
 msgid ""
-"After you have installed pipx, run `migrate_pipsi_to_pipx.py <https://raw."
-"githubusercontent.com/pypa/pipx/main/scripts/migrate_pipsi_to_pipx.py>`_. "
-"You can do this with pipx itself:"
+"After you have installed pipx, run `migrate_pipsi_to_pipx.py <https://"
+"raw.githubusercontent.com/pypa/pipx/main/scripts/"
+"migrate_pipsi_to_pipx.py>`_. You can do this with pipx itself:"
 msgstr ""
 
 #: ../../../explanation/comparisons.rst:250

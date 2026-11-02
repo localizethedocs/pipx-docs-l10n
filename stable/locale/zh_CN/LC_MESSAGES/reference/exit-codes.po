@@ -26,8 +26,8 @@ msgid ""
 "pipx returns ``0`` on success and ``1`` on failure. ``run``, ``runpip``, and "
 "``exec`` exit with the code of the app or pip they ran, and argument-parsing "
 "errors exit ``2``. A command that raises an unexpected error or is "
-"interrupted also exits non-zero. The named codes below come from ``pipx."
-"constants``; each maps to ``0`` or ``1``."
+"interrupted also exits non-zero. The named codes below come from "
+"``pipx.constants``; each maps to ``0`` or ``1``."
 msgstr ""
 
 #: ../../../reference/exit-codes.rst:9
@@ -35,8 +35,8 @@ msgid ""
 "``reinstall-all`` exits with ``1`` if any environment could not be "
 "reinstalled, including when its selected Python interpreter belongs to that "
 "environment. With ``--output json``, failed environments appear in "
-"``errors`` and only successfully reinstalled environments appear in ``data."
-"environments``."
+"``errors`` and only successfully reinstalled environments appear in "
+"``data.environments``."
 msgstr ""
 
 #: ../../../reference/exit-codes.rst:18

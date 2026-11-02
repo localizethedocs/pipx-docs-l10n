@@ -39,12 +39,12 @@ msgstr ""
 #: ../../../how-to/use-private-index.rst:13
 msgid ""
 "$ pipx install my-package --index-url https://my-index.example.com/simple/\n"
-"$ pipx install my-package --pip-args=\"--extra-index-url https://my-index."
-"example.com/simple/\""
+"$ pipx install my-package --pip-args=\"--extra-index-url https://my-"
+"index.example.com/simple/\""
 msgstr ""
 "$ pipx install my-package --index-url https://my-index.example.com/simple/\n"
-"$ pipx install my-package --pip-args=\"--extra-index-url https://my-index."
-"example.com/simple/\""
+"$ pipx install my-package --pip-args=\"--extra-index-url https://my-"
+"index.example.com/simple/\""
 
 #: ../../../how-to/use-private-index.rst:18
 msgid ""
@@ -54,11 +54,11 @@ msgstr ""
 
 #: ../../../how-to/use-private-index.rst:21
 msgid ""
-"$ pipx install my-package --pip-args=\"--index-url https://my-index.example."
-"com/simple/ --trusted-host my-index.example.com\""
+"$ pipx install my-package --pip-args=\"--index-url https://my-"
+"index.example.com/simple/ --trusted-host my-index.example.com\""
 msgstr ""
-"$ pipx install my-package --pip-args=\"--index-url https://my-index.example."
-"com/simple/ --trusted-host my-index.example.com\""
+"$ pipx install my-package --pip-args=\"--index-url https://my-"
+"index.example.com/simple/ --trusted-host my-index.example.com\""
 
 #: ../../../how-to/use-private-index.rst:27
 msgid "Set it for every command"
