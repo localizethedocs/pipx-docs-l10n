@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: pipx 0.1\n"
+"Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:51+0000\n"
+"POT-Creation-Date: 2026-11-02 18:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../how-to/use-uv-backend.rst:5
 msgid ""
 "Make pipx use `uv <https://github.com/astral-sh/uv>`_ to create virtual "
-"environments and install packages in place of pip and venv. The CLI surface "
-"stays the same."
+"environments and install packages in place of `pip <https://pip.pypa.io/>`__ "
+"and venv. The CLI surface stays the same."
 msgstr ""
 
 #: ../../../how-to/use-uv-backend.rst:8
@@ -49,11 +49,11 @@ msgstr ""
 #: ../../../how-to/use-uv-backend.rst:20
 msgid ""
 "Or install uv 0.9.17 or newer however you like (``brew install uv``, ``cargo "
-"install uv``) and put it on ``PATH``; pipx picks it up automatically. New "
-"venvs then default to uv. Existing venvs keep their recorded backend. When "
-"the uv pipx finds is older than that, pipx warns and falls back to pip. "
-"Asking for uv explicitly (``--backend uv``, ``PIPX_DEFAULT_BACKEND=uv``, or "
-"a venv that recorded uv) with an older uv fails and asks you to upgrade it."
+"install uv``) and put it on ``PATH``; pipx picks it up. New venvs then "
+"default to uv. Existing venvs keep their recorded backend. When the uv pipx "
+"finds is older than that, pipx warns and falls back to pip. Asking for uv "
+"explicitly (``--backend uv``, ``PIPX_DEFAULT_BACKEND=uv``, or a venv that "
+"recorded uv) with an older uv fails and asks you to upgrade it."
 msgstr ""
 
 #: ../../../how-to/use-uv-backend.rst:27
@@ -104,27 +104,57 @@ msgstr ""
 
 #: ../../../how-to/use-uv-backend.rst:70
 msgid ""
-"``pipx run script.py`` execs ``uv run --script script.py`` for PEP 723 "
-"inline scripts."
+"``pipx run script.py`` execs ``uv run --active --script script.py`` for `PEP "
+"723 <https://peps.python.org/pep-0723/>`__ inline scripts, with "
+"``VIRTUAL_ENV`` pointing at an environment in pipx's cache."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:71
+#: ../../../how-to/use-uv-backend.rst:73
 msgid ""
 "``--cooldown DAYS`` (or ``PIPX_COOLDOWN``) maps to uv's ``--exclude-newer "
 "P{DAYS}D``. See :doc:`Dependency cooldown <dependency-cooldown>`."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:76
+#: ../../../how-to/use-uv-backend.rst:75
+msgid ""
+"uv reads your user config (``~/.config/uv/uv.toml``, ``%APPDATA%"
+"\\uv\\uv.toml`` on Windows), the system config (``/etc/uv/uv.toml``), and a "
+"``UV_CONFIG_FILE``, but no project config from your working directory or the "
+"script's directory. pipx sets ``UV_PROJECT`` (``--project`` for ``uv run --"
+"script``) to ``PIPX_HOME``, replacing any ``UV_PROJECT`` you set, so uv "
+"looks for a ``uv.toml`` or a ``pyproject.toml`` with a ``[tool.uv]`` table "
+"in ``PIPX_HOME`` and each of its parents up to the filesystem root."
+msgstr ""
+
+#: ../../../how-to/use-uv-backend.rst:80
+msgid ""
+"With the default ``PIPX_HOME`` under your home directory, the parents uv "
+"searches for project config belong to you or to root. If ``PIPX_HOME`` (or "
+"``PIPX_GLOBAL_HOME``) sits below a directory other accounts can write, such "
+"as ``/tmp`` or a group-writable share, any of them can place a ``uv.toml`` "
+"there that steers pipx's uv calls; keep it in a directory only you can write."
+msgstr ""
+
+#: ../../../how-to/use-uv-backend.rst:84
+msgid ""
+"A ``--project``, ``--directory`` or ``--config-file`` in ``--pip-args`` "
+"points uv at other configuration, and pipx records it with the environment. "
+"On POSIX, a later ``upgrade`` or ``reinstall`` refuses to replay it when "
+"another account can change the path. See :doc:`Metadata <../reference/"
+"metadata>`."
+msgstr ""
+
+#: ../../../how-to/use-uv-backend.rst:90
 msgid "Limitations"
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:78
+#: ../../../how-to/use-uv-backend.rst:92
 msgid ""
 "``pipx install pip --backend uv`` errors: a uv venv has no pip. Use ``--"
 "backend pip``."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:79
+#: ../../../how-to/use-uv-backend.rst:93
 msgid ""
 "``pipx run --backend uv`` honors ``[pipx.run]`` entry points only where it "
 "builds a venv, which with ``--spec`` means an ``<app>`` that differs from "
@@ -134,27 +164,27 @@ msgid ""
 "the same name."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:83
+#: ../../../how-to/use-uv-backend.rst:97
 msgid ""
 "Some ``--pip-args`` values have no ``uv tool run`` equivalent (``--"
 "editable``, ``--no-build-isolation``); pipx errors instead of dropping them. "
 "See :doc:`use-private-index` for which flags uv translates."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:85
+#: ../../../how-to/use-uv-backend.rst:99
 msgid ""
 "``pipx run --backend uv`` rejects ``--system-site-packages``, since uv "
 "builds the environment. Use ``--backend pip`` when you need it."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:87
+#: ../../../how-to/use-uv-backend.rst:101
 msgid ""
 "``pipx run --backend uv`` against URL or named-pipe scripts falls back to a "
 "pipx-managed venv, because ``uv run --script`` reads PEP 723 metadata off "
 "disk and runtime-fetched content has no on-disk path. pipx logs a warning."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:89
+#: ../../../how-to/use-uv-backend.rst:103
 msgid ""
 "``pipx run`` falls back to a pipx-managed venv when it has to infer the "
 "script name: from a VCS URL, a local project path, or a name it normalizes "
@@ -162,33 +192,35 @@ msgid ""
 "that name up front and would guess it from the package, so pipx installs the "
 "package first and runs the script it declares. Pass ``pipx run --spec <spec> "
 "<normalized-name>`` to keep uv's cache when the package declares a matching "
-"console script. A spec with no distribution name (a path, a URL, a direct "
-"reference) is installed twice, once to learn its name and once into the run "
+"console script. pipx installs a spec with no distribution name (a path, a "
+"URL, a direct reference) twice, once to learn its name and once into the run "
 "venv."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:98
+#: ../../../how-to/use-uv-backend.rst:112
 msgid "Cache layout"
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:100
+#: ../../../how-to/use-uv-backend.rst:114
 msgid ""
-"Under the uv backend, ``pipx run`` caches in ``UV_CACHE_DIR`` instead of "
-"``PIPX_VENV_CACHEDIR``. Switching the default backend on a host that already "
-"used ``pipx run`` leaves the old pipx cache behind. Find it with ``pipx "
-"cache dir`` and remove its environments with ``pipx cache purge``. The 14-"
-"day expiry sweep pipx applies to its own cache does not extend to uv's "
-"cache, which uv manages on its own schedule (``uv cache clean``)."
+"Under the uv backend, ``pipx run APP`` caches in ``UV_CACHE_DIR`` instead of "
+"``PIPX_VENV_CACHEDIR``, while ``pipx run script.py`` keeps the script's "
+"environment in ``PIPX_VENV_CACHEDIR``. Switching the default backend on a "
+"host that already used ``pipx run`` leaves the old pipx cache behind. Find "
+"it with ``pipx cache dir`` and remove its environments with ``pipx cache "
+"purge``. The 14-day expiry sweep pipx applies to its own cache does not "
+"extend to uv's cache, which uv manages on its own schedule (``uv cache "
+"clean``)."
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:107
+#: ../../../how-to/use-uv-backend.rst:122
 msgid "Verify it"
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:109
+#: ../../../how-to/use-uv-backend.rst:124
 msgid "$ pipx environment --value PIPX_RESOLVED_BACKEND"
 msgstr ""
 
-#: ../../../how-to/use-uv-backend.rst:113
+#: ../../../how-to/use-uv-backend.rst:128
 msgid "It prints ``uv`` when pipx will use the uv backend for new venvs."
 msgstr ""
