@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:59+0000\n"
+"POT-Creation-Date: 2026-11-02 18:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,20 +61,43 @@ msgid ""
 msgstr ""
 
 #: ../../../how-to/inject-packages.rst:34
-msgid "Expose injected apps"
+msgid "Add an extra to the environment's app"
 msgstr ""
 
 #: ../../../how-to/inject-packages.rst:36
+msgid ""
+"Name the main package with the extra to add it. pipx installs the extra from "
+"the app's recorded source, so an app installed from a wheel, a directory or "
+"a URL keeps that source and the extras it already had:"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:39
+msgid ""
+"$ pipx install ./mytool-1.0-py3-none-any.whl\n"
+"$ pipx inject mytool 'mytool[feature]'"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:44
+msgid ""
+"A spec that changes anything besides the extras, such as a version or a "
+"different path or URL, replaces the app and needs ``--force``."
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:49
+msgid "Expose injected apps"
+msgstr ""
+
+#: ../../../how-to/inject-packages.rst:51
 msgid ""
 "Injected packages do not add their entry points to your ``PATH`` by default. "
 "Use ``--include-apps`` to expose them:"
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:38
+#: ../../../how-to/inject-packages.rst:53
 msgid "$ pipx inject ipython black --include-apps"
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:42
+#: ../../../how-to/inject-packages.rst:57
 msgid ""
 "``--include-deps`` exposes apps and manual pages from every dependency. Use "
 "``--include-resources-from PACKAGE`` to expose one dependency, repeating it "
@@ -83,62 +106,62 @@ msgid ""
 "environment as it was."
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:46
+#: ../../../how-to/inject-packages.rst:61
 msgid ""
 "$ pipx inject robotframework-keyta robotframework-browser-batteries --"
 "include-resources-from robotframework-browser"
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:50
+#: ../../../how-to/inject-packages.rst:65
 msgid ""
 "For exposing apps from an already-installed environment, see :doc:`expose-"
 "apps`."
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:54
+#: ../../../how-to/inject-packages.rst:69
 msgid "Other flags"
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:56
+#: ../../../how-to/inject-packages.rst:71
 msgid ""
 "``--force`` / ``-f`` reinstalls the package even when it is already injected."
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:57
+#: ../../../how-to/inject-packages.rst:72
 msgid ""
 "``--editable`` / ``-e`` installs the package in editable (development) mode."
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:58
+#: ../../../how-to/inject-packages.rst:73
 msgid ""
 "``--with-suffix`` gives the injected package's apps the environment's suffix "
 "(injecting ``black`` into ``ipython_3.11`` exposes ``black_3.11``)."
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:60
+#: ../../../how-to/inject-packages.rst:75
 msgid ""
-"``--pip-args`` passes extra arguments to pip (for example ``--pip-args='--no-"
-"cache-dir'``)."
+"``--pip-args`` passes extra arguments to `pip <https://pip.pypa.io/>`__ (for "
+"example ``--pip-args='--no-cache-dir'``)."
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:61
+#: ../../../how-to/inject-packages.rst:76
 msgid "``--index-url`` / ``-i`` sets the package index URL for this inject."
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:62
+#: ../../../how-to/inject-packages.rst:77
 msgid ""
-"``--system-site-packages`` is ignored with a warning; the environment keeps "
-"the setting ``pipx install`` gave it."
+"``--system-site-packages`` only prints a warning; the environment keeps the "
+"setting ``pipx install`` gave it."
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:66
+#: ../../../how-to/inject-packages.rst:81
 msgid "Verify it"
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:68
+#: ../../../how-to/inject-packages.rst:83
 msgid "$ pipx list --include-injected"
 msgstr ""
 
-#: ../../../how-to/inject-packages.rst:72
+#: ../../../how-to/inject-packages.rst:87
 msgid "The injected packages appear under their host environment."
 msgstr ""
