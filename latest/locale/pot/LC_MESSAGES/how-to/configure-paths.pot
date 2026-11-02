@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: pipx 0.1\n"
+"Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:51+0000\n"
+"POT-Creation-Date: 2026-11-02 18:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -177,9 +177,9 @@ msgstr ""
 
 #: ../../../how-to/configure-paths.rst:93
 msgid ""
-"These paths were introduced in 1.2.0 and temporarily reverted for macOS and "
-"Windows between 1.5.0 and 1.16.0. To move an existing installation to the "
-"new default, see :doc:`move-installation`."
+"pipx introduced these paths in 1.2.0 and reverted them for macOS and Windows "
+"between 1.5.0 and 1.16.0. To move an existing installation to the new "
+"default, see :doc:`move-installation`."
 msgstr ""
 
 #: ../../../how-to/configure-paths.rst:98
@@ -200,77 +200,87 @@ msgstr ""
 
 #: ../../../how-to/configure-paths.rst:107
 msgid ""
-"Commands that write to the global locations need root. ``pipx list --"
-"global`` and ``pipx environment --global`` only read them, so any user can "
-"run those."
+"Commands that write to the global locations need root. ``pipx environment --"
+"global`` only reads them, so any user can run it. ``pipx list --global`` "
+"reads each environment's ``pipx_metadata.json``, which pipx keeps readable "
+"by its owner only because it can hold index credentials. Other users see "
+"each environment reported as unreadable; run it with ``sudo`` to list them."
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:110
+#: ../../../how-to/configure-paths.rst:112
 msgid ""
 "Putting ``--global`` before the subcommand, as in ``sudo pipx --global "
-"install pycowsay``, raises ``unrecognized arguments: --global``."
+"install pycowsay``, raises ``unrecognized arguments: --global``. For "
+"``manifest``, ``interpreter`` and ``cache`` it goes after their own "
+"subcommand, as in ``sudo pipx manifest sync --global ./pipx.toml``."
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:113
+#: ../../../how-to/configure-paths.rst:116
 msgid ""
 "Default global paths are ``/usr/local/bin`` for binaries, ``/usr/local/share/"
 "man`` for man pages, ``/usr/local/share`` for shell completions, and ``/opt/"
 "pipx`` for environments. Override them with ``PIPX_GLOBAL_BIN_DIR``, "
 "``PIPX_GLOBAL_MAN_DIR``, ``PIPX_GLOBAL_COMPLETION_DIR``, and "
-"``PIPX_GLOBAL_HOME``. Add the global binary directory to the system ``PATH`` "
-"with ``sudo pipx ensurepath --global``, which writes ``/etc/profile.d/pipx."
-"sh`` on Linux and ``/etc/paths.d/pipx`` on macOS."
+"``PIPX_GLOBAL_HOME``."
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:119
+#: ../../../how-to/configure-paths.rst:120
 msgid ""
-"When pipx itself is installed with ``--global`` and ``PIPX_GLOBAL_HOME`` is "
-"overridden, set the override for every user (for example in ``/etc/"
+"Add the global binary directory to the system ``PATH`` with ``sudo pipx "
+"ensurepath --global``, which writes ``/etc/profile.d/pipx.sh`` on Linux and "
+"``/etc/paths.d/pipx`` on macOS. pipx refuses to replace a file there that "
+"holds anything besides the entry an earlier ``ensurepath --global`` wrote; "
+"add the directory yourself, or pass ``--force`` to replace the file."
+msgstr ""
+
+#: ../../../how-to/configure-paths.rst:125
+msgid ""
+"When you install pipx itself with ``--global`` and override "
+"``PIPX_GLOBAL_HOME``, set the override for every user (for example in ``/etc/"
 "environment``), so that pipx recognizes its own environment as the global "
 "one; see :doc:`../reference/environment-variables`."
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:123
-msgid ""
-"You can also set the variables explicitly instead of using ``--global``:"
+#: ../../../how-to/configure-paths.rst:129
+msgid "You can also set the variables yourself instead of using ``--global``:"
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:125
+#: ../../../how-to/configure-paths.rst:131
 msgid ""
 "$ sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin PIPX_MAN_DIR=/usr/"
 "local/share/man pipx install <PACKAGE>"
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:131
-msgid "``--global`` is not supported on Windows."
+#: ../../../how-to/configure-paths.rst:137
+msgid "pipx does not support ``--global`` on Windows."
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:135
+#: ../../../how-to/configure-paths.rst:141
 msgid "Prepend or preview the PATH edit"
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:137
+#: ../../../how-to/configure-paths.rst:143
 msgid ""
 "Pass ``--prepend`` to ``pipx ensurepath`` to prepend the pipx bin directory "
 "to ``PATH`` instead of appending it, so pipx-installed binaries win over "
 "system binaries of the same name."
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:140
+#: ../../../how-to/configure-paths.rst:146
 msgid ""
 "Pass ``--dry-run`` to report which directories ``ensurepath`` would add, "
 "without touching ``PATH`` or any shell configuration file:"
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:143
+#: ../../../how-to/configure-paths.rst:149
 msgid "$ pipx ensurepath --dry-run"
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:149
+#: ../../../how-to/configure-paths.rst:155
 msgid "Point pip at an index"
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:151
+#: ../../../how-to/configure-paths.rst:157
 msgid ""
 "Under the pip backend, pipx uses pip for all installs, including its own "
 "shared libraries. Set ``PIP_*`` environment variables to route pip at a "
@@ -279,7 +289,7 @@ msgid ""
 "control use ``--pip-args``. See :doc:`use-private-index` for the full recipe."
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:156
+#: ../../../how-to/configure-paths.rst:162
 msgid ""
 "Set ``PIPX_DISABLE_SHARED_LIBS_AUTO_UPGRADE=1`` to skip automatic shared-"
 "library upgrades during commands such as ``pipx install`` and ``pipx "
@@ -287,20 +297,20 @@ msgid ""
 "maintenance`` to apply the same policy to one command:"
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:160
+#: ../../../how-to/configure-paths.rst:166
 msgid "$ pipx install --skip-maintenance my-package"
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:166
+#: ../../../how-to/configure-paths.rst:172
 msgid "Verify it"
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:168
+#: ../../../how-to/configure-paths.rst:174
 msgid ""
 "$ pipx environment --value PIPX_HOME\n"
 "$ pipx environment --value PIPX_BIN_DIR"
 msgstr ""
 
-#: ../../../how-to/configure-paths.rst:173
+#: ../../../how-to/configure-paths.rst:179
 msgid "Each prints the path pipx will use, reflecting any override you set."
 msgstr ""

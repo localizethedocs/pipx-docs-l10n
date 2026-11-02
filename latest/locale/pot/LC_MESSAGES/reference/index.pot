@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: pipx 0.1\n"
+"Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:51+0000\n"
+"POT-Creation-Date: 2026-11-02 18:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgstr ""
 
 #: ../../../reference/index.rst:8
 msgid ""
-"The :doc:`CLI reference <cli>` is generated from the argument parser (``pipx."
-"main.build_parser``), so it always matches the installed version and covers "
-"every command and flag."
+"`Sphinx <https://www.sphinx-doc.org>`_ generates the :doc:`CLI reference "
+"<cli>` from the argument parser (``pipx.main.build_parser``), so it always "
+"matches the installed version and covers every command and flag."
 msgstr ""
