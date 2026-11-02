@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-19 16:51+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../reference/json-output.rst:3
+msgid "JSON output"
+msgstr ""
+
+#: ../../../reference/json-output.rst:5
+msgid ""
+"Most pipx commands accept ``--output json`` to print a single machine-"
+"readable result envelope on stdout instead of human-readable text. Selecting "
+"JSON suppresses pipx's own progress messages and sends whatever pip or uv "
+"print while installing to stderr, so the envelope is the only thing on "
+"stdout. When ``install`` moves to another Python because the package's "
+"``requires-python`` rules out the default one, pipx says so on stderr as "
+"well."
+msgstr ""
+
+#: ../../../reference/json-output.rst:12
+msgid "Envelope"
+msgstr ""
+
+#: ../../../reference/json-output.rst:14
+msgid ""
+"The envelope is a JSON object with these keys (serialized with sorted keys):"
+msgstr ""
+
+#: ../../../reference/json-output.rst:20
+msgid "Key"
+msgstr ""
+
+#: ../../../reference/json-output.rst:21
+msgid "Value"
+msgstr ""
+
+#: ../../../reference/json-output.rst:22
+msgid "``pipx_result_version``"
+msgstr ""
+
+#: ../../../reference/json-output.rst:23
+msgid "Envelope schema version, currently ``\"1\"``."
+msgstr ""
+
+#: ../../../reference/json-output.rst:24
+msgid "``command``"
+msgstr ""
+
+#: ../../../reference/json-output.rst:25
+msgid ""
+"The command tokens as a list, for example ``[\"install\"]`` or ``[\"cache\", "
+"\"dir\"]``."
+msgstr ""
+
+#: ../../../reference/json-output.rst:26
+msgid "``status``"
+msgstr ""
+
+#: ../../../reference/json-output.rst:27
+msgid ""
+"``\"success\"`` when there are no errors, ``\"partial\"`` when the run both "
+"succeeded somewhere and recorded errors, ``\"error\"`` otherwise."
+msgstr ""
+
+#: ../../../reference/json-output.rst:29
+msgid "``exit_code``"
+msgstr ""
+
+#: ../../../reference/json-output.rst:30
+msgid "The integer process exit code (see :doc:`exit-codes`)."
+msgstr ""
+
+#: ../../../reference/json-output.rst:31
+msgid "``data``"
+msgstr ""
+
+#: ../../../reference/json-output.rst:32
+msgid "Command-specific payload object. Its fields depend on the command."
+msgstr ""
+
+#: ../../../reference/json-output.rst:33
+msgid "``errors``"
+msgstr ""
+
+#: ../../../reference/json-output.rst:34
+msgid ""
+"List of error objects. Each has ``code``, ``message``, and the optional "
+"identity fields ``environment`` and ``package``. When pip or uv fails an "
+"``install``, its ``message`` ends with the installer's error output."
+msgstr ""
+
+#: ../../../reference/json-output.rst:37
+msgid ""
+"{\n"
+"  \"pipx_result_version\": \"1\",\n"
+"  \"command\": [\"install\"],\n"
+"  \"status\": \"success\",\n"
+"  \"exit_code\": 0,\n"
+"  \"data\": {},\n"
+"  \"errors\": []\n"
+"}"
+msgstr ""
+
+#: ../../../reference/json-output.rst:48
+msgid ""
+"Once the arguments parse, a failure on a JSON-enabled command still speaks "
+"the envelope. That covers an invalid environment variable such as "
+"``PIPX_COOLDOWN``, a ``--python`` that cannot be resolved, a path or URL "
+"where a package name belongs, and ``--backend uv`` without a ``uv`` "
+"executable. The envelope has a ``status`` of ``\"error\"`` and a single "
+"error whose ``code`` is ``pipx_error``, and pipx exits ``1``. Only argument-"
+"parsing errors, such as an unknown option or a missing argument, print plain "
+"text instead: the usage message goes to stderr and pipx exits ``2``."
+msgstr ""
+
+#: ../../../reference/json-output.rst:56
+msgid "Supported commands"
+msgstr ""
+
+#: ../../../reference/json-output.rst:58
+msgid ""
+"``--output json`` is available on: ``install``, ``inject``, ``uninject``, "
+"``expose``, ``unexpose``, ``pin``, ``unpin``, ``upgrade``, ``upgrade-all``, "
+"``upgrade-shared``, ``uninstall``, ``uninstall-all``, ``reinstall``, "
+"``reinstall-all``, ``reset``, ``health``, ``repair``, ``manifest lock``, "
+"``manifest sync``, ``interpreter list``, ``interpreter prune``, "
+"``interpreter upgrade``, ``cache dir``, ``cache purge``, and ``list --"
+"outdated``."
+msgstr ""
+
+#: ../../../reference/json-output.rst:63
+msgid ""
+"It is not available on ``install-all``, ``run``, ``exec``, ``runpip``, "
+"``ensurepath``, ``environment``, ``completions``, or ``help``."
+msgstr ""
+
+#: ../../../reference/json-output.rst:68
+msgid "``list`` is different"
+msgstr ""
+
+#: ../../../reference/json-output.rst:70
+msgid ""
+"``pipx list --output json`` without ``--outdated`` does not emit the result "
+"envelope; errors still use it. It prints the installed-package snapshot that "
+"``install-all`` reads back: an object with ``pipx_spec_version`` (currently "
+"``\"0.1\"``) and a ``venvs`` map of environment name to an object whose "
+"``metadata`` key holds that environment's metadata (see :doc:`metadata`). "
+"``pipx list --json`` is a legacy alias for the same snapshot."
+msgstr ""
+
+#: ../../../reference/json-output.rst:75
+msgid ""
+"$ pipx list --output json > pipx.json\n"
+"$ pipx install-all pipx.json"
+msgstr ""
+
+#: ../../../reference/json-output.rst:80
+msgid ""
+"``--json`` is a legacy alias only on ``list``; every other command uses ``--"
+"output json``."
+msgstr ""
