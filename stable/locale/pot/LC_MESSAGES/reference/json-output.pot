@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:59+0000\n"
+"POT-Creation-Date: 2026-11-02 18:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,86 +25,86 @@ msgstr ""
 msgid ""
 "Most pipx commands accept ``--output json`` to print a single machine-"
 "readable result envelope on stdout instead of human-readable text. Selecting "
-"JSON suppresses pipx's own progress messages and sends whatever pip or uv "
-"print while installing to stderr, so the envelope is the only thing on "
-"stdout. When ``install`` moves to another Python because the package's "
-"``requires-python`` rules out the default one, pipx says so on stderr as "
-"well."
+"JSON suppresses pipx's own progress messages and sends whatever `pip "
+"<https://pip.pypa.io>`_ or `uv <https://docs.astral.sh/uv/>`_ print while "
+"installing to stderr, so the envelope is the only thing on stdout. When "
+"``install`` moves to another Python because the package's ``requires-"
+"python`` rules out the default one, pipx says so on stderr as well."
 msgstr ""
 
-#: ../../../reference/json-output.rst:12
+#: ../../../reference/json-output.rst:13
 msgid "Envelope"
 msgstr ""
 
-#: ../../../reference/json-output.rst:14
+#: ../../../reference/json-output.rst:15
 msgid ""
 "The envelope is a JSON object with these keys (serialized with sorted keys):"
 msgstr ""
 
-#: ../../../reference/json-output.rst:20
+#: ../../../reference/json-output.rst:21
 msgid "Key"
 msgstr ""
 
-#: ../../../reference/json-output.rst:21
+#: ../../../reference/json-output.rst:22
 msgid "Value"
 msgstr ""
 
-#: ../../../reference/json-output.rst:22
+#: ../../../reference/json-output.rst:23
 msgid "``pipx_result_version``"
 msgstr ""
 
-#: ../../../reference/json-output.rst:23
+#: ../../../reference/json-output.rst:24
 msgid "Envelope schema version, currently ``\"1\"``."
 msgstr ""
 
-#: ../../../reference/json-output.rst:24
+#: ../../../reference/json-output.rst:25
 msgid "``command``"
 msgstr ""
 
-#: ../../../reference/json-output.rst:25
+#: ../../../reference/json-output.rst:26
 msgid ""
 "The command tokens as a list, for example ``[\"install\"]`` or ``[\"cache\", "
 "\"dir\"]``."
 msgstr ""
 
-#: ../../../reference/json-output.rst:26
+#: ../../../reference/json-output.rst:27
 msgid "``status``"
 msgstr ""
 
-#: ../../../reference/json-output.rst:27
+#: ../../../reference/json-output.rst:28
 msgid ""
 "``\"success\"`` when there are no errors, ``\"partial\"`` when the run both "
 "succeeded somewhere and recorded errors, ``\"error\"`` otherwise."
 msgstr ""
 
-#: ../../../reference/json-output.rst:29
+#: ../../../reference/json-output.rst:30
 msgid "``exit_code``"
 msgstr ""
 
-#: ../../../reference/json-output.rst:30
+#: ../../../reference/json-output.rst:31
 msgid "The integer process exit code (see :doc:`exit-codes`)."
 msgstr ""
 
-#: ../../../reference/json-output.rst:31
+#: ../../../reference/json-output.rst:32
 msgid "``data``"
 msgstr ""
 
-#: ../../../reference/json-output.rst:32
+#: ../../../reference/json-output.rst:33
 msgid "Command-specific payload object. Its fields depend on the command."
 msgstr ""
 
-#: ../../../reference/json-output.rst:33
+#: ../../../reference/json-output.rst:34
 msgid "``errors``"
 msgstr ""
 
-#: ../../../reference/json-output.rst:34
+#: ../../../reference/json-output.rst:35
 msgid ""
 "List of error objects. Each has ``code``, ``message``, and the optional "
-"identity fields ``environment`` and ``package``. When pip or uv fails an "
-"``install``, its ``message`` ends with the installer's error output."
+"identity fields ``environment`` and ``package``. When ``pip`` or ``uv`` "
+"fails an ``install``, its ``message`` ends with the installer's error output."
 msgstr ""
 
-#: ../../../reference/json-output.rst:37
+#: ../../../reference/json-output.rst:39
 msgid ""
 "{\n"
 "  \"pipx_result_version\": \"1\",\n"
@@ -116,9 +116,9 @@ msgid ""
 "}"
 msgstr ""
 
-#: ../../../reference/json-output.rst:48
+#: ../../../reference/json-output.rst:50
 msgid ""
-"Once the arguments parse, a failure on a JSON-enabled command still speaks "
+"Once the arguments parse, a failure on a JSON-enabled command still produces "
 "the envelope. That covers an invalid environment variable such as "
 "``PIPX_COOLDOWN``, a ``--python`` that cannot be resolved, a path or URL "
 "where a package name belongs, and ``--backend uv`` without a ``uv`` "
@@ -128,11 +128,11 @@ msgid ""
 "text instead: the usage message goes to stderr and pipx exits ``2``."
 msgstr ""
 
-#: ../../../reference/json-output.rst:56
+#: ../../../reference/json-output.rst:58
 msgid "Supported commands"
 msgstr ""
 
-#: ../../../reference/json-output.rst:58
+#: ../../../reference/json-output.rst:60
 msgid ""
 "``--output json`` is available on: ``install``, ``inject``, ``uninject``, "
 "``expose``, ``unexpose``, ``pin``, ``unpin``, ``upgrade``, ``upgrade-all``, "
@@ -143,33 +143,37 @@ msgid ""
 "outdated``."
 msgstr ""
 
-#: ../../../reference/json-output.rst:63
+#: ../../../reference/json-output.rst:65
 msgid ""
 "It is not available on ``install-all``, ``run``, ``exec``, ``runpip``, "
 "``ensurepath``, ``environment``, ``completions``, or ``help``."
 msgstr ""
 
-#: ../../../reference/json-output.rst:68
+#: ../../../reference/json-output.rst:70
 msgid "``list`` is different"
 msgstr ""
 
-#: ../../../reference/json-output.rst:70
+#: ../../../reference/json-output.rst:72
 msgid ""
 "``pipx list --output json`` without ``--outdated`` does not emit the result "
 "envelope; errors still use it. It prints the installed-package snapshot that "
 "``install-all`` reads back: an object with ``pipx_spec_version`` (currently "
 "``\"0.1\"``) and a ``venvs`` map of environment name to an object whose "
 "``metadata`` key holds that environment's metadata (see :doc:`metadata`). "
-"``pipx list --json`` is a legacy alias for the same snapshot."
+"``pipx list --json`` is a legacy alias for the same snapshot. For a self-"
+"managed pipx on Unix, the snapshot gives ``source_interpreter`` as ``null`` "
+"once the recorded interpreter no longer leads to the one its environment "
+"runs on, for example a ``python3`` from a bootstrap environment you removed, "
+"so ``install-all`` uses the default Python there."
 msgstr ""
 
-#: ../../../reference/json-output.rst:75
+#: ../../../reference/json-output.rst:80
 msgid ""
 "$ pipx list --output json > pipx.json\n"
 "$ pipx install-all pipx.json"
 msgstr ""
 
-#: ../../../reference/json-output.rst:80
+#: ../../../reference/json-output.rst:85
 msgid ""
 "``--json`` is a legacy alias only on ``list``; every other command uses ``--"
 "output json``."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:59+0000\n"
+"POT-Creation-Date: 2026-11-02 18:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -124,45 +124,59 @@ msgstr ""
 
 #: ../../../explanation/scope.rst:46
 msgid ""
-"pipx can record an environment's resolved dependencies as a lock file in the "
-"PyPA ``pylock.toml`` format, so the environment rebuilds identically; ``pipx "
-"manifest lock`` writes these locks and ``pipx install --lock`` reads one "
-"back. pipx does not use ``requirements.txt`` as a state or lock format."
+"The `security policy <https://github.com/pypa/pipx/security/policy>`_ builds "
+"on these boundaries: a pipx command that picks up a file the user did not "
+"name, from the current directory, its parents, or a location another local "
+"account can write, has a security bug."
 msgstr ""
 
 #: ../../../explanation/scope.rst:50
 msgid ""
-"pipx exposes top-level policy when pip and uv honor the same contract. "
-"Backend arguments carry controls specific to pip or uv. ``--cooldown DAYS`` "
-"maps one pipx release-age policy to both backends."
+"pipx can record an environment's resolved dependencies as a lock file in the "
+"PyPA `pylock.toml <https://packaging.python.org/en/latest/specifications/"
+"pylock-toml/>`_ format, so the environment rebuilds identically; ``pipx "
+"manifest lock`` writes these locks and ``pipx install --lock`` reads one "
+"back. pipx does not use ``requirements.txt`` as a state or lock format."
 msgstr ""
 
-#: ../../../explanation/scope.rst:53
+#: ../../../explanation/scope.rst:55
+msgid ""
+"pipx exposes top-level policy when `pip <https://pip.pypa.io>`_ and `uv "
+"<https://docs.astral.sh/uv/>`_ honor the same contract. Backend arguments "
+"carry controls specific to ``pip`` or ``uv``. ``--cooldown DAYS`` maps one "
+"pipx release-age policy to both backends."
+msgstr ""
+
+#: ../../../explanation/scope.rst:59
 msgid ""
 "A release-age policy describes the machine, not one command, so "
 "``PIPX_COOLDOWN`` supplies the default and no configuration file appears to "
 "hold it. That keeps pipx settings in one place and keeps the policy out of "
 "the backend environment variables (``PIP_UPLOADED_PRIOR_TO``, "
 "``UV_EXCLUDE_NEWER``), which would bind pipx to one backend and leak into "
-"unrelated pip and uv runs in the same shell. The variable outranks the "
-"cooldown an environment recorded at install time, because it states what the "
-"machine wants now rather than what an older install happened to use; ``--"
-"cooldown`` still overrides both, and a lock file supersedes all of them by "
-"pinning every version outright."
+"unrelated ``pip`` and ``uv`` runs in the same shell."
 msgstr ""
 
-#: ../../../explanation/scope.rst:60
+#: ../../../explanation/scope.rst:64
+msgid ""
+"The variable outranks the cooldown an environment recorded at install time, "
+"because it states what the machine wants now rather than what an older "
+"install happened to use; ``--cooldown`` still overrides both, and a lock "
+"file supersedes all of them by pinning every version outright."
+msgstr ""
+
+#: ../../../explanation/scope.rst:68
 msgid ""
 "Application launchers start the installed application without downloading "
 "packages or changing its environment. Health checks and repairs belong in "
 "commands that the user invokes for those purposes."
 msgstr ""
 
-#: ../../../explanation/scope.rst:65
+#: ../../../explanation/scope.rst:73
 msgid "Existing directory lookup"
 msgstr ""
 
-#: ../../../explanation/scope.rst:67
+#: ../../../explanation/scope.rst:75
 msgid ""
 "``pipx run`` has experimental support for applications under "
 "``__pypackages__/<major>.<minor>/lib/bin`` in the current directory. This "
@@ -171,15 +185,16 @@ msgid ""
 "deprecate and remove it in a separate change."
 msgstr ""
 
-#: ../../../explanation/scope.rst:73
+#: ../../../explanation/scope.rst:81
 msgid "Choose another tool"
 msgstr ""
 
-#: ../../../explanation/scope.rst:75
+#: ../../../explanation/scope.rst:83
 msgid ""
-"Use a project dependency manager such as uv or Poetry for project libraries "
-"and development tools. Use ``venv``, pip, or uv for a library environment. "
-"Use a version manager such as mise when a directory must select tool "
-"versions, and use the system package manager to find or install operating-"
-"system packages."
+"Use a project dependency manager such as ``uv`` or `Poetry <https://python-"
+"poetry.org>`_ for project libraries and development tools. Use `venv "
+"<https://docs.python.org/3/library/venv.html>`_, ``pip``, or ``uv`` for a "
+"library environment. Use a version manager such as `mise <https://"
+"mise.jdx.dev>`_ when a directory must select tool versions, and use the "
+"system package manager to find or install operating-system packages."
 msgstr ""

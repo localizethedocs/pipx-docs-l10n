@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:59+0000\n"
+"POT-Creation-Date: 2026-11-02 18:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -145,10 +145,10 @@ msgstr ""
 
 #: ../../../tutorial/run-applications.rst:93
 msgid ""
-"pipx caches each ``pipx run`` environment for 14 days so repeated runs start "
-"instantly. After the cache expires, the next run fetches the latest version. "
-"Under the uv backend pipx hands the run to ``uv tool run``, so uv's own "
-"cache applies instead."
+"pipx caches each ``pipx run`` environment for 14 days so repeated runs skip "
+"the install. After the cache expires, the next run fetches the latest "
+"version. Under the uv backend pipx hands the run to ``uv tool run``, so `uv "
+"<https://docs.astral.sh/uv/>`_'s own cache applies instead."
 msgstr ""
 
 #: ../../../tutorial/run-applications.rst:113
@@ -190,7 +190,7 @@ msgstr ""
 
 #: ../../../tutorial/run-applications.rst:136
 msgid ""
-":doc:`Use the uv backend <../how-to/use-uv-backend>`: run with uv, which "
+":doc:`Use the uv backend <../how-to/use-uv-backend>`: run with ``uv``, which "
 "keeps its own ephemeral cache."
 msgstr ""
 
