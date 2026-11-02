@@ -740,9 +740,9 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:247
 msgid ""
-"After you have installed pipx, run `migrate_pipsi_to_pipx.py <https://raw."
-"githubusercontent.com/pypa/pipx/main/scripts/migrate_pipsi_to_pipx.py>`_. "
-"You can do this with pipx itself:"
+"After you have installed pipx, run `migrate_pipsi_to_pipx.py <https://"
+"raw.githubusercontent.com/pypa/pipx/main/scripts/"
+"migrate_pipsi_to_pipx.py>`_. You can do this with pipx itself:"
 msgstr ""
 
 #: ../../../explanation/comparisons.rst:250

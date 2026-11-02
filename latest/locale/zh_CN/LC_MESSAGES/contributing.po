@@ -60,8 +60,8 @@ msgstr ""
 
 #: ../../../contributing.rst:22
 msgid ""
-"The changelog at ``docs/changelog.rst`` is built by `towncrier <https://pypi."
-"org/project/towncrier/>`_ from news fragments in the ``changelog.d/`` "
+"The changelog at ``docs/changelog.rst`` is built by `towncrier <https://"
+"pypi.org/project/towncrier/>`_ from news fragments in the ``changelog.d/`` "
 "directory. To add an entry, create a news fragment in that directory named "
 "``{number}.{type}.md``, where ``{number}`` is the pull request number, and "
 "``{type}`` is one of ``feature``, ``bugfix``, ``performance``, ``doc``, "
@@ -73,8 +73,8 @@ msgid ""
 "For example, if your pull request number is 1234 and it fixes a bug, then "
 "you would create ``changelog.d/1234.bugfix.md``. PRs can span multiple "
 "categories by creating multiple files: if you added a feature and deprecated/"
-"removed an old feature in pull request #5678, you would create ``changelog."
-"d/5678.feature.md`` and ``changelog.d/5678.removal.md``."
+"removed an old feature in pull request #5678, you would create ``changelog.d/"
+"5678.feature.md`` and ``changelog.d/5678.removal.md``."
 msgstr ""
 
 #: ../../../contributing.rst:32
@@ -102,8 +102,8 @@ msgstr ""
 
 #: ../../../contributing.rst:46
 msgid ""
-"All source code lives under ``src/pipx/``. The CLI entry point is ``main."
-"py``, which dispatches to command modules in ``commands/``."
+"All source code lives under ``src/pipx/``. The CLI entry point is "
+"``main.py``, which dispatches to command modules in ``commands/``."
 msgstr ""
 
 #: ../../../contributing.rst:92
@@ -131,10 +131,10 @@ msgstr ""
 msgid ""
 "``interpreter.py`` and ``standalone_python.py`` handle Python version "
 "resolution. When ``--fetch-python`` is ``missing`` or ``always``, pipx "
-"downloads a standalone build from `python-build-standalone <https://github."
-"com/astral-sh/python-build-standalone/releases>`_ and caches it locally. The "
-"``pipx interpreter`` subcommands (list, prune, upgrade) manage these cached "
-"interpreters."
+"downloads a standalone build from `python-build-standalone <https://"
+"github.com/astral-sh/python-build-standalone/releases>`_ and caches it "
+"locally. The ``pipx interpreter`` subcommands (list, prune, upgrade) manage "
+"these cached interpreters."
 msgstr ""
 
 #: ../../../contributing.rst:107

@@ -23,9 +23,10 @@ msgstr ""
 
 #: ../../../reference/metadata.rst:5
 msgid ""
-"pipx has no user configuration file. It is configured only through :doc:"
-"`environment variables <environment-variables>`. The only per-installation "
-"state pipx keeps is a metadata file inside each managed virtual environment."
+"pipx has no user configuration file. It is configured only "
+"through :doc:`environment variables <environment-variables>`. The only per-"
+"installation state pipx keeps is a metadata file inside each managed virtual "
+"environment."
 msgstr ""
 
 #: ../../../reference/metadata.rst:9

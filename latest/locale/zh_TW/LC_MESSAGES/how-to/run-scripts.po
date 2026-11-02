@@ -36,9 +36,9 @@ msgstr ""
 
 #: ../../../how-to/run-scripts.rst:13
 msgid ""
-"The ``PACKAGE`` argument is a `requirement specifier <https://packaging."
-"python.org/en/latest/glossary/#term-Requirement-Specifier>`_, so you can pin "
-"versions, ranges, or extras:"
+"The ``PACKAGE`` argument is a `requirement specifier <https://"
+"packaging.python.org/en/latest/glossary/#term-Requirement-Specifier>`_, so "
+"you can pin versions, ranges, or extras:"
 msgstr ""
 
 #: ../../../how-to/run-scripts.rst:17
@@ -125,8 +125,8 @@ msgstr ""
 #: ../../../how-to/run-scripts.rst:70
 msgid ""
 "$ pipx run https://gist.githubusercontent.com/cs01/"
-"fa721a17a326e551ede048c5088f9e0f/"
-"raw/6bdfbb6e9c1132b1c38fdd2f195d4a24c540c324/pipx-demo.py"
+"fa721a17a326e551ede048c5088f9e0f/raw/"
+"6bdfbb6e9c1132b1c38fdd2f195d4a24c540c324/pipx-demo.py"
 msgstr ""
 
 #: ../../../how-to/run-scripts.rst:78

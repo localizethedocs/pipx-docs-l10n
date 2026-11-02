@@ -47,9 +47,10 @@ msgstr ""
 
 #: ../../../reference/environment-variables.rst:19
 msgid ""
-"Root directory for pipx virtual environments. Default: ``platformdirs."
-"user_data_path(\"pipx\")`` — Linux ``~/.local/share/pipx``, macOS ``~/"
-"Library/Application Support/pipx``, Windows ``%LOCALAPPDATA%\\pipx\\pipx``."
+"Root directory for pipx virtual environments. Default: "
+"``platformdirs.user_data_path(\"pipx\")`` — Linux ``~/.local/share/pipx``, "
+"macOS ``~/Library/Application Support/pipx``, Windows ``%LOCALAPPDATA%"
+"\\pipx\\pipx``."
 msgstr ""
 
 #: ../../../reference/environment-variables.rst:21

@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../../reference/programs-to-try.rst:13
 msgid "Program"
-msgstr ""
+msgstr "程式"
 
 #: ../../../reference/programs-to-try.rst:14
 msgid "Description"
@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../../../reference/programs-to-try.rst:15
 msgid "Command"
-msgstr ""
+msgstr "命令"
 
 #: ../../../reference/programs-to-try.rst:16
 msgid "ansible"
@@ -171,11 +171,11 @@ msgstr ""
 
 #: ../../../reference/programs-to-try.rst:48
 msgid "``pipx run jupyter``"
-msgstr ""
+msgstr "``pipx run jupyter``"
 
 #: ../../../reference/programs-to-try.rst:49
 msgid "pipenv"
-msgstr ""
+msgstr "pipenv"
 
 #: ../../../reference/programs-to-try.rst:50
 msgid "Python dependency and environment management"
@@ -183,11 +183,11 @@ msgstr ""
 
 #: ../../../reference/programs-to-try.rst:51
 msgid "``pipx run pipenv``"
-msgstr ""
+msgstr "``pipx run pipenv``"
 
 #: ../../../reference/programs-to-try.rst:52
 msgid "poetry"
-msgstr ""
+msgstr "poetry"
 
 #: ../../../reference/programs-to-try.rst:53
 msgid "Python dependency, environment, and packaging management"
@@ -195,11 +195,11 @@ msgstr ""
 
 #: ../../../reference/programs-to-try.rst:54
 msgid "``pipx run poetry``"
-msgstr ""
+msgstr "``pipx run poetry``"
 
 #: ../../../reference/programs-to-try.rst:55
 msgid "pylint"
-msgstr ""
+msgstr "pylint"
 
 #: ../../../reference/programs-to-try.rst:56
 msgid "Source code analyzer"
@@ -207,11 +207,11 @@ msgstr ""
 
 #: ../../../reference/programs-to-try.rst:57
 msgid "``pipx run pylint``"
-msgstr ""
+msgstr "``pipx run pylint``"
 
 #: ../../../reference/programs-to-try.rst:58
 msgid "pyinstaller"
-msgstr ""
+msgstr "pyinstaller"
 
 #: ../../../reference/programs-to-try.rst:59
 msgid "Bundle a Python application into a single package"
@@ -219,7 +219,7 @@ msgstr ""
 
 #: ../../../reference/programs-to-try.rst:60
 msgid "``pipx run pyinstaller``"
-msgstr ""
+msgstr "``pipx run pyinstaller``"
 
 #: ../../../reference/programs-to-try.rst:61
 msgid "ruff"

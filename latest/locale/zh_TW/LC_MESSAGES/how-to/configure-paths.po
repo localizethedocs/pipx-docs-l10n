@@ -218,8 +218,8 @@ msgid ""
 "pipx`` for environments. Override them with ``PIPX_GLOBAL_BIN_DIR``, "
 "``PIPX_GLOBAL_MAN_DIR``, ``PIPX_GLOBAL_COMPLETION_DIR``, and "
 "``PIPX_GLOBAL_HOME``. Add the global binary directory to the system ``PATH`` "
-"with ``sudo pipx ensurepath --global``, which writes ``/etc/profile.d/pipx."
-"sh`` on Linux and ``/etc/paths.d/pipx`` on macOS."
+"with ``sudo pipx ensurepath --global``, which writes ``/etc/profile.d/"
+"pipx.sh`` on Linux and ``/etc/paths.d/pipx`` on macOS."
 msgstr ""
 
 #: ../../../how-to/configure-paths.rst:119
