@@ -63,6 +63,9 @@ msgid ""
 "$ pipx install httpie\n"
 "$ pipx upgrade-all"
 msgstr ""
+"$ export PIPX_COOLDOWN=7\n"
+"$ pipx install httpie\n"
+"$ pipx upgrade-all"
 
 #: ../../../how-to/dependency-cooldown.rst:34
 msgid ""
@@ -93,7 +96,7 @@ msgstr ""
 
 #: ../../../how-to/dependency-cooldown.rst:49
 msgid "``--cooldown DAYS``"
-msgstr ""
+msgstr "``--cooldown DAYS``"
 
 #: ../../../how-to/dependency-cooldown.rst:50
 msgid ""
@@ -103,11 +106,11 @@ msgstr ""
 
 #: ../../../how-to/dependency-cooldown.rst:51
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: ../../../how-to/dependency-cooldown.rst:52
 msgid "``PIPX_COOLDOWN``"
-msgstr ""
+msgstr "``PIPX_COOLDOWN``"
 
 #: ../../../how-to/dependency-cooldown.rst:53
 msgid ""

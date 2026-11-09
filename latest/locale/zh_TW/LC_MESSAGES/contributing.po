@@ -299,7 +299,7 @@ msgstr ""
 
 #: ../../../contributing.rst:212
 msgid "Lint Tests"
-msgstr ""
+msgstr "梳理測試"
 
 #: ../../../contributing.rst:214
 msgid ""

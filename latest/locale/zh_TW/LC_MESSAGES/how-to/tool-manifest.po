@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../how-to/tool-manifest.rst:3
 msgid "Tool manifest"
-msgstr ""
+msgstr "工具清單"
 
 #: ../../../how-to/tool-manifest.rst:5
 msgid ""
@@ -61,6 +61,25 @@ msgid ""
 "[tool.pipx.tools.httpie]\n"
 "apps = [\"http\", \"https\"]"
 msgstr ""
+"[project]\n"
+"name = \"pipx-tools\"\n"
+"version = \"1\"\n"
+"dependencies = []\n"
+"requires-python = \">=3.10\"\n"
+"\n"
+"[dependency-groups]\n"
+"black = [\"black>=25,<26\"]\n"
+"httpie = [\"httpie\"]\n"
+"\n"
+"[tool.pipx]\n"
+"version = \"1.0\"\n"
+"\n"
+"[tool.pipx.tools.black]\n"
+"apps = [\"black\"]\n"
+"lock = \"pylock.black.toml\"\n"
+"\n"
+"[tool.pipx.tools.httpie]\n"
+"apps = [\"http\", \"https\"]"
 
 #: ../../../how-to/tool-manifest.rst:37
 msgid ""
@@ -87,6 +106,12 @@ msgid ""
 "suffix = \"-24\"\n"
 "apps = [\"black\"]"
 msgstr ""
+"[dependency-groups]\n"
+"black-24 = [\"black==24.10.0\"]\n"
+"\n"
+"[tool.pipx.tools.black-24]\n"
+"suffix = \"-24\"\n"
+"apps = [\"black\"]"
 
 #: ../../../how-to/tool-manifest.rst:53
 msgid "Package requirements use PEP 508 syntax without environment markers."
@@ -107,6 +132,8 @@ msgid ""
 "$ pipx install nab\n"
 "$ pipx manifest lock ./pipx.toml"
 msgstr ""
+"$ pipx install nab\n"
+"$ pipx manifest lock ./pipx.toml"
 
 #: ../../../how-to/tool-manifest.rst:67
 msgid ""
@@ -139,6 +166,8 @@ msgid ""
 "Pass ``--prune`` to uninstall environments absent from the manifest. pipx "
 "skips pruning when any declared tool fails to sync:"
 msgstr ""
+"傳遞 ``--prune``，即可解除安裝清單中不存在的環境。若任何已宣告的工具同步失"
+"敗，則 pipx 就會略過剪裁作業："
 
 #: ../../../how-to/tool-manifest.rst:86
 msgid "$ pipx manifest sync ./pipx.toml --prune"
@@ -158,7 +187,7 @@ msgstr ""
 
 #: ../../../how-to/tool-manifest.rst:98
 msgid "$ pipx list --short"
-msgstr ""
+msgstr "$ pipx list --short"
 
 #: ../../../how-to/tool-manifest.rst:102
 msgid "Each declared tool appears at the version its group resolved to."

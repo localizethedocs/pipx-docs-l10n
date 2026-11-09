@@ -130,7 +130,7 @@ msgstr ""
 
 #: ../../../how-to/use-private-index.rst:66
 msgid "$ pipx list --short"
-msgstr ""
+msgstr "$ pipx list --short"
 
 #: ../../../how-to/use-private-index.rst:70
 msgid ""

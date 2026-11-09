@@ -49,7 +49,7 @@ msgstr ""
 
 #: ../../../changelog.rst:18
 msgid "`1.18.4 <https://github.com/pypa/pipx/tree/1.18.4>`_ - 2026-10-18"
-msgstr ""
+msgstr "`1.18.4 <https://github.com/pypa/pipx/tree/1.18.4>`_ - 2026-10-18"
 
 #: ../../../changelog.rst:21 ../../../changelog.rst:31
 #: ../../../changelog.rst:40 ../../../changelog.rst:55
@@ -88,7 +88,7 @@ msgstr ""
 
 #: ../../../changelog.rst:28
 msgid "`1.18.3 <https://github.com/pypa/pipx/tree/1.18.3>`_ - 2026-10-17"
-msgstr ""
+msgstr "`1.18.3 <https://github.com/pypa/pipx/tree/1.18.3>`_ - 2026-10-17"
 
 #: ../../../changelog.rst:33
 msgid ""

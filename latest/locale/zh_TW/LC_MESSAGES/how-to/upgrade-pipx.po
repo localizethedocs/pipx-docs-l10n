@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../how-to/upgrade-pipx.rst:3
 msgid "Upgrade pipx"
-msgstr ""
+msgstr "升級 pipx"
 
 #: ../../../how-to/upgrade-pipx.rst:5
 msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../../../how-to/upgrade-pipx.rst:31
 msgid "$ scoop update pipx"
-msgstr ""
+msgstr "$ scoop update pipx"
 
 #: ../../../how-to/upgrade-pipx.rst:37
 msgid "Self-managed installs"
@@ -86,7 +86,7 @@ msgstr ""
 
 #: ../../../how-to/upgrade-pipx.rst:48
 msgid "$ sudo pipx upgrade --global pipx"
-msgstr ""
+msgstr "$ sudo pipx upgrade --global pipx"
 
 #: ../../../how-to/upgrade-pipx.rst:54
 msgid "Upgrade via pip"

@@ -112,7 +112,7 @@ msgstr ""
 
 #: ../../../explanation/scope.rst:40
 msgid "Configuration and state"
-msgstr ""
+msgstr "組態與狀態"
 
 #: ../../../explanation/scope.rst:42
 msgid ""
@@ -173,7 +173,7 @@ msgstr ""
 
 #: ../../../explanation/scope.rst:73
 msgid "Choose another tool"
-msgstr ""
+msgstr "選擇其他工具"
 
 #: ../../../explanation/scope.rst:75
 msgid ""

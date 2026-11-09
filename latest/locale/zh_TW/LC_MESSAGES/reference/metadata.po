@@ -67,7 +67,7 @@ msgstr ""
 
 #: ../../../reference/metadata.rst:29
 msgid "``pipx_metadata_version``"
-msgstr ""
+msgstr "``pipx_metadata_version``"
 
 #: ../../../reference/metadata.rst:30
 msgid "Schema version string, currently ``\"0.12\"``."
@@ -75,7 +75,7 @@ msgstr ""
 
 #: ../../../reference/metadata.rst:31
 msgid "``environment``"
-msgstr ""
+msgstr "``environment``"
 
 #: ../../../reference/metadata.rst:32
 msgid "The environment (venv) name, or ``null``."

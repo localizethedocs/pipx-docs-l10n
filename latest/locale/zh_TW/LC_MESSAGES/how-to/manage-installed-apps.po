@@ -66,7 +66,7 @@ msgstr ""
 
 #: ../../../how-to/manage-installed-apps.rst:26
 msgid "$ pipx upgrade black"
-msgstr ""
+msgstr "$ pipx upgrade black"
 
 #: ../../../how-to/manage-installed-apps.rst:30
 msgid ""
@@ -96,7 +96,7 @@ msgstr ""
 #: ../../../how-to/manage-installed-apps.rst:83
 #: ../../../how-to/manage-installed-apps.rst:119
 msgid "$ pipx list --short"
-msgstr ""
+msgstr "$ pipx list --short"
 
 #: ../../../how-to/manage-installed-apps.rst:45
 msgid "Upgrade all"
@@ -104,7 +104,7 @@ msgstr ""
 
 #: ../../../how-to/manage-installed-apps.rst:47
 msgid "$ pipx upgrade-all"
-msgstr ""
+msgstr "$ pipx upgrade-all"
 
 #: ../../../how-to/manage-installed-apps.rst:51
 msgid ""

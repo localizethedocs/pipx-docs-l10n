@@ -136,27 +136,27 @@ msgstr ""
 
 #: ../../../man/pipx.1.rst:55
 msgid "**upgrade**"
-msgstr ""
+msgstr "**upgrade**"
 
 #: ../../../man/pipx.1.rst:56
 msgid "Upgrade a package"
-msgstr ""
+msgstr "升級軟體包"
 
 #: ../../../man/pipx.1.rst:58
 msgid "**upgrade-all**"
-msgstr ""
+msgstr "**upgrade-all**"
 
 #: ../../../man/pipx.1.rst:59
 msgid "Upgrade all packages."
-msgstr ""
+msgstr "升級所有軟體包。"
 
 #: ../../../man/pipx.1.rst:61
 msgid "**upgrade-shared**"
-msgstr ""
+msgstr "**upgrade-shared**"
 
 #: ../../../man/pipx.1.rst:62
 msgid "Upgrade shared libraries."
-msgstr ""
+msgstr "升級共享程式庫。"
 
 #: ../../../man/pipx.1.rst:64
 msgid "**uninstall**"

@@ -76,6 +76,11 @@ msgid ""
 "shared,uninstall,uninstall-all,reset,reinstall,reinstall-"
 "all,health,repair,list,interpreter,cache,manifest,run,exec,runpip,ensurepath,environment,completions,help} ..."
 msgstr ""
+"pipx [-h] [--version]\n"
+"     {install,install-"
+"all,uninject,inject,expose,unexpose,pin,unpin,upgrade,upgrade-all,upgrade-"
+"shared,uninstall,uninstall-all,reset,reinstall,reinstall-"
+"all,health,repair,list,interpreter,cache,manifest,run,exec,runpip,ensurepath,environment,completions,help} ..."
 
 #: ../../../reference/cli.rst:-1
 msgid ""

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../how-to/run-scripts.rst:3
 msgid "Run scripts"
-msgstr ""
+msgstr "執行腳本"
 
 #: ../../../how-to/run-scripts.rst:5
 msgid ""
@@ -72,7 +72,7 @@ msgstr "$ pipx run --with requests --with rich my-script.py"
 
 #: ../../../how-to/run-scripts.rst:38
 msgid "Pass arguments to Python"
-msgstr ""
+msgstr "將引數傳遞給 Python"
 
 #: ../../../how-to/run-scripts.rst:40
 msgid ""
@@ -128,6 +128,9 @@ msgid ""
 "fa721a17a326e551ede048c5088f9e0f/raw/"
 "6bdfbb6e9c1132b1c38fdd2f195d4a24c540c324/pipx-demo.py"
 msgstr ""
+"$ pipx run https://gist.githubusercontent.com/cs01/"
+"fa721a17a326e551ede048c5088f9e0f/raw/"
+"6bdfbb6e9c1132b1c38fdd2f195d4a24c540c324/pipx-demo.py"
 
 #: ../../../how-to/run-scripts.rst:78
 msgid "Run a script with dependencies (PEP 723)"
