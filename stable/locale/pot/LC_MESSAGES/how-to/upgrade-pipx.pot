@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:59+0000\n"
+"POT-Creation-Date: 2026-11-09 18:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,7 +56,7 @@ msgid "$ sudo dnf upgrade pipx"
 msgstr ""
 
 #: ../../../how-to/upgrade-pipx.rst:29
-msgid "Windows (Scoop):"
+msgid "Windows (`Scoop <https://scoop.sh/>`__):"
 msgstr ""
 
 #: ../../../how-to/upgrade-pipx.rst:31
@@ -111,14 +111,51 @@ msgid ""
 msgstr ""
 
 #: ../../../how-to/upgrade-pipx.rst:70
-msgid "Verify it"
+msgid "Respond to a distrusted certificate authority"
 msgstr ""
 
 #: ../../../how-to/upgrade-pipx.rst:72
-msgid "$ pipx --version"
+msgid ""
+"After the `eMudhra/emSign CA incident <https://discuss.python.org/t/"
+"information-for-python-users-regarding-emudhra-emsign-ca-certificate-"
+"security-incident/109576>`_, `pip <https://pip.pypa.io/>`__ 26.2.2 and "
+"`certifi <https://pypi.org/project/certifi/>`__ 2026.10.19 stopped trusting "
+"the compromised root. Upgrade pipx first. Under the pip backend every app "
+"borrows the shared pip, and pipx replaces a shared pip older than 26.2.2 the "
+"next time it installs, upgrades, reinstalls, injects or runs an app. To "
+"replace it now:"
 msgstr ""
 
 #: ../../../how-to/upgrade-pipx.rst:78
+msgid "$ pipx upgrade-shared"
+msgstr ""
+
+#: ../../../how-to/upgrade-pipx.rst:82
+msgid ""
+"Apps that depend on ``certifi`` (for example through ``requests``) carry "
+"their own copy. Upgrade it in each app that has one:"
+msgstr ""
+
+#: ../../../how-to/upgrade-pipx.rst:85
+msgid "$ pipx runpip APP install --upgrade \"certifi>=2026.10.19\""
+msgstr ""
+
+#: ../../../how-to/upgrade-pipx.rst:89
+msgid ""
+"Under the `uv <https://github.com/astral-sh/uv>`__ backend pipx runs the "
+"``uv`` from its ``uv`` extra, or the one on your ``PATH``; upgrade that "
+"``uv`` to 0.13.4 or later."
+msgstr ""
+
+#: ../../../how-to/upgrade-pipx.rst:94
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/upgrade-pipx.rst:96
+msgid "$ pipx --version"
+msgstr ""
+
+#: ../../../how-to/upgrade-pipx.rst:102
 msgid ""
 "Upgrading from a pre-0.15.0.0 pipx to 0.15.0.0 or later requires "
 "reinstalling your packages so they gain the persistent metadata files that "

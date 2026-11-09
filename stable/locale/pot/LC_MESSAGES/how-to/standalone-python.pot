@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:59+0000\n"
+"POT-Creation-Date: 2026-11-09 18:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,9 +42,8 @@ msgstr ""
 
 #: ../../../how-to/standalone-python.rst:36
 msgid ""
-"Naming ``--python`` yourself keeps the last word: pipx uses the interpreter "
-"you named and reports it, rather than overriding you when the package "
-"rejects it."
+"When you name ``--python`` yourself, pipx uses that interpreter and reports "
+"it, rather than overriding you when the package rejects it."
 msgstr ""
 
 #: ../../../how-to/standalone-python.rst:41
@@ -130,10 +129,13 @@ msgstr ""
 msgid ""
 "``interpreter upgrade`` moves every environment on a standalone build to the "
 "newest patch release of its minor version, including environments installed "
-"with an exact version such as ``--python 3.14.8``."
+"with an exact version such as ``--python 3.14.8``. If the package's newest "
+"release has a ``Requires-Python`` that rules out the new build, the command "
+"fails and leaves that environment where it was, rather than moving it to "
+"another Python."
 msgstr ""
 
-#: ../../../how-to/standalone-python.rst:88
+#: ../../../how-to/standalone-python.rst:90
 msgid ""
 "``--fetch-missing-python`` and ``PIPX_FETCH_MISSING_PYTHON`` still work but "
 "are deprecated aliases for ``--fetch-python=missing`` / "
@@ -141,15 +143,15 @@ msgid ""
 "``PIPX_FETCH_MISSING_PYTHON`` and ``PIPX_FETCH_PYTHON``."
 msgstr ""
 
-#: ../../../how-to/standalone-python.rst:94
+#: ../../../how-to/standalone-python.rst:96
 msgid "Verify it"
 msgstr ""
 
-#: ../../../how-to/standalone-python.rst:96
+#: ../../../how-to/standalone-python.rst:98
 msgid "$ pipx list"
 msgstr ""
 
-#: ../../../how-to/standalone-python.rst:100
+#: ../../../how-to/standalone-python.rst:102
 msgid ""
 "The environment lists the interpreter version pipx settled on. For how pipx "
 "resolves interpreters, see :doc:`../explanation/how-pipx-works`."

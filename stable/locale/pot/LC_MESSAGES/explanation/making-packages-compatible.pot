@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 1.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:59+0000\n"
+"POT-Creation-Date: 2026-11-09 18:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgid "Developing for pipx"
 msgstr ""
 
 #: ../../../explanation/making-packages-compatible.rst:9
-msgid "If you are a developer and want users to be able to run"
+msgid "To let your users run"
 msgstr ""
 
 #: ../../../explanation/making-packages-compatible.rst:11
@@ -35,10 +35,10 @@ msgstr ""
 
 #: ../../../explanation/making-packages-compatible.rst:15
 msgid ""
-"make sure you include ``scripts`` in your main table [#main-table]_ in "
-"``pyproject.toml`` or its legacy equivalents for ``setup.cfg`` and ``setup."
-"py``. pipx also exposes ``gui-scripts`` entry points, which are useful for "
-"GUI applications on Windows (they launch without opening a console window)."
+"include ``scripts`` in your main table [#main-table]_ in ``pyproject.toml`` "
+"or its legacy equivalents for ``setup.cfg`` and ``setup.py``. pipx also "
+"exposes ``gui-scripts`` entry points, which are useful for GUI applications "
+"on Windows (they launch without opening a console window)."
 msgstr ""
 
 #: ../../../explanation/making-packages-compatible.rst:0
@@ -130,13 +130,13 @@ msgstr ""
 
 #: ../../../explanation/making-packages-compatible.rst:108
 msgid ""
-"With this declaration, ``pipx run my-package`` invokes ``my_package.cli:"
-"main`` even if no console script named ``my-package`` exists. The `build "
-"<https://github.com/pypa/build>`_ package uses this pattern so that ``pipx "
-"run build`` works even though build's console script is named ``pyproject-"
-"build``. The uv backend hands ``pipx run build`` to ``uv tool run``, which "
-"reads console scripts only, so this needs ``--backend pip`` there (see :doc:"
-"`../how-to/use-uv-backend`)."
+"With this declaration, ``pipx run my-package`` invokes "
+"``my_package.cli:main`` even if no console script named ``my-package`` "
+"exists. The `build <https://github.com/pypa/build>`_ package uses this "
+"pattern so that ``pipx run build`` works even though ``build`` names its "
+"console script ``pyproject-build``. The uv backend hands ``pipx run build`` "
+"to ``uv tool run``, which reads console scripts only, so this needs ``--"
+"backend pip`` there (see :doc:`../how-to/use-uv-backend`)."
 msgstr ""
 
 #: ../../../explanation/making-packages-compatible.rst:115
@@ -159,8 +159,8 @@ msgid ""
 "\n"
 "def pipx_environment() -> str | None:\n"
 "    try:\n"
-"        metadata = json.loads((Path(sys.prefix) / \"pipx_metadata.json\")."
-"read_text(encoding=\"utf-8\"))\n"
+"        metadata = json.loads((Path(sys.prefix) / "
+"\"pipx_metadata.json\").read_text(encoding=\"utf-8\"))\n"
 "    except (json.JSONDecodeError, OSError):\n"
 "        return None\n"
 "    environment = metadata.get(\"environment\") if isinstance(metadata, "
@@ -224,17 +224,17 @@ msgstr ""
 
 #: ../../../explanation/making-packages-compatible.rst:176
 msgid ""
-"The ``data-files`` keyword is \"discouraged\" in the `setuptools "
-"documentation <https://setuptools.pypa.io/en/latest/userguide/"
-"pyproject_config.html#setuptools-specific-configuration>`_, but there is no "
-"alternative when ``man`` pages are a requirement."
+"The `setuptools documentation <https://setuptools.pypa.io/en/latest/"
+"userguide/pyproject_config.html#setuptools-specific-configuration>`_ calls "
+"the ``data-files`` keyword \"discouraged\", but it has no alternative when "
+"you need to ship ``man`` pages."
 msgstr ""
 
 #: ../../../explanation/making-packages-compatible.rst:0
 msgid "pdm-backend"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:182
+#: ../../../explanation/making-packages-compatible.rst:183
 msgid ""
 "# pyproject.toml\n"
 "[tool.pdm.build]\n"
@@ -246,18 +246,18 @@ msgid ""
 "]"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:193
+#: ../../../explanation/making-packages-compatible.rst:194
 msgid ""
-"The manual page ``manpage.1`` can then be read with ``man manpage`` after "
-"installing the package. For a real-world example, see `pycowsay's setup.py "
-"<https://github.com/cs01/pycowsay/blob/master/setup.py>`_."
+"After installing the package, ``man manpage`` opens ``manpage.1``. For a "
+"real-world example, see `pycowsay's setup.py <https://github.com/cs01/"
+"pycowsay/blob/master/setup.py>`_."
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:197
+#: ../../../explanation/making-packages-compatible.rst:198
 msgid "Shell completions"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:199
+#: ../../../explanation/making-packages-compatible.rst:200
 msgid ""
 "A package can ship the completion script for its own command the same way it "
 "ships a man page. pipx picks up the three directories a wheel installs "
@@ -266,61 +266,61 @@ msgid ""
 "leave with it."
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:207
+#: ../../../explanation/making-packages-compatible.rst:208
 msgid "Shipped by the package"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:208
+#: ../../../explanation/making-packages-compatible.rst:209
 msgid "Exposed to"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:209
+#: ../../../explanation/making-packages-compatible.rst:210
 msgid "Loaded by"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:210
+#: ../../../explanation/making-packages-compatible.rst:211
 msgid "``share/bash-completion/completions/``"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:211
+#: ../../../explanation/making-packages-compatible.rst:212
 msgid "``~/.local/share/bash-completion/completions/``"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:212
+#: ../../../explanation/making-packages-compatible.rst:213
 msgid "bash"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:213
+#: ../../../explanation/making-packages-compatible.rst:214
 msgid "``share/fish/vendor_completions.d/``"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:214
+#: ../../../explanation/making-packages-compatible.rst:215
 msgid "``~/.local/share/fish/vendor_completions.d/``"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:215
+#: ../../../explanation/making-packages-compatible.rst:216
 msgid "fish"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:216
+#: ../../../explanation/making-packages-compatible.rst:217
 msgid "``share/zsh/site-functions/``"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:217
+#: ../../../explanation/making-packages-compatible.rst:218
 msgid "``~/.local/share/zsh/site-functions/``"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:218
+#: ../../../explanation/making-packages-compatible.rst:219
 msgid "zsh (with the directory on ``fpath``)"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:220
+#: ../../../explanation/making-packages-compatible.rst:221
 msgid ""
 "Declare them through the data files of your build backend, exactly as with "
 "man pages:"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:222
+#: ../../../explanation/making-packages-compatible.rst:223
 msgid ""
 "setup(\n"
 "    name=\"your-tool\",\n"
@@ -328,28 +328,28 @@ msgid ""
 "        (\"share/bash-completion/completions\", [\"completions/your-"
 "tool\"]),\n"
 "        (\"share/zsh/site-functions\", [\"completions/_your-tool\"]),\n"
-"        (\"share/fish/vendor_completions.d\", [\"completions/your-tool."
-"fish\"]),\n"
+"        (\"share/fish/vendor_completions.d\", [\"completions/your-"
+"tool.fish\"]),\n"
 "    ],\n"
 ")"
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:233
+#: ../../../explanation/making-packages-compatible.rst:234
 msgid ""
 "See :doc:`../how-to/shell-completions` for how each shell loads these "
 "directories."
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:235
+#: ../../../explanation/making-packages-compatible.rst:236
 msgid ""
-"You can read more about entry points in the `setuptools quickstart <https://"
+"Read more about entry points in the `setuptools quickstart <https://"
 "setuptools.pypa.io/en/latest/userguide/quickstart.html#entry-points-and-"
 "automatic-script-creation>`_."
 msgstr ""
 
-#: ../../../explanation/making-packages-compatible.rst:240
+#: ../../../explanation/making-packages-compatible.rst:241
 msgid ""
-"This is often the ``[project]`` table, but it might be named differently. "
+"This is often the ``[project]`` table, but it can have a different name. "
 "Read more in the `PyPUG <https://packaging.python.org/en/latest/guides/"
 "writing-pyproject-toml/#writing-your-pyproject-toml>`_."
 msgstr ""
