@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:51+0000\n"
+"POT-Creation-Date: 2026-11-09 18:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,14 +33,15 @@ msgstr ""
 
 #: ../../../how-to/use-private-index.rst:11
 msgid ""
-"Pass ``--index-url`` directly, or forward pip options with ``--pip-args``:"
+"Pass ``--index-url`` to pipx, or forward `pip <https://pip.pypa.io/>`__ "
+"options with ``--pip-args``:"
 msgstr ""
 
 #: ../../../how-to/use-private-index.rst:13
 msgid ""
 "$ pipx install my-package --index-url https://my-index.example.com/simple/\n"
-"$ pipx install my-package --pip-args=\"--extra-index-url https://my-index."
-"example.com/simple/\""
+"$ pipx install my-package --pip-args=\"--extra-index-url https://my-"
+"index.example.com/simple/\""
 msgstr ""
 
 #: ../../../how-to/use-private-index.rst:18
@@ -51,78 +52,125 @@ msgstr ""
 
 #: ../../../how-to/use-private-index.rst:21
 msgid ""
-"$ pipx install my-package --pip-args=\"--index-url https://my-index.example."
-"com/simple/ --trusted-host my-index.example.com\""
+"$ pipx install my-package --pip-args=\"--index-url https://my-"
+"index.example.com/simple/ --trusted-host my-index.example.com\""
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:27
+#: ../../../how-to/use-private-index.rst:25
+msgid ""
+"pipx records these options and passes them again on ``pipx upgrade`` and "
+"``pipx reinstall``. A ``pipx runpip <venv> install`` that reinstalls the "
+"main package with index options (``--index-url``, ``--extra-index-url``, ``--"
+"find-links``, ``--trusted-host``, ``--no-index``, or uv's ``--default-"
+"index``, ``--index``, ``--index-strategy``, ``--allow-insecure-host``, ``--"
+"keyring-provider``) replaces the recorded ones with them; without index "
+"options the record stays. pipx resolves a relative ``--find-links`` (``-f``) "
+"path against the directory you ran ``runpip`` from and records the absolute "
+"path, so after ``pipx runpip my-package install --no-index -f ./wheels my-"
+"package`` a later upgrade or reinstall reads the same ``wheels`` directory "
+"from wherever you start it."
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:33
+msgid ""
+"Under the `uv <https://github.com/astral-sh/uv>`__ backend, pipx passes ``--"
+"index-url`` (``-i``) to uv as ``--default-index``, so it replaces a default "
+"index set through ``UV_DEFAULT_INDEX`` or a ``default = true`` ``[[index]]`` "
+"entry. uv still searches indexes added through ``UV_INDEX`` or other "
+"``[[index]]`` entries before it, as it does for its own ``--default-index``."
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:38
+msgid ""
+"pipx refuses an empty or whitespace-only index URL before it creates an "
+"environment, whether it comes from ``--index-url`` (``-i``) or from ``--"
+"index-url``, ``-i``, ``--extra-index-url``, ``--default-index`` or ``--"
+"index`` inside ``--pip-args``. An empty value usually means an unset "
+"variable, as in ``--index-url \"$INDEX_URL\"``, and uv reads it as the "
+"default index, so the package would come from `PyPI <https://pypi.org/>`__ "
+"instead of your index. Under the uv backend pipx also refuses an empty index "
+"recorded by an earlier install when ``upgrade``, ``reinstall`` or ``install-"
+"all`` replays it:"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:44
+msgid ""
+"$ pipx install my-package --pip-args=\"--index-url=$UNSET_VARIABLE\"\n"
+"--index-url is empty; pass the index URL or leave the option out"
+msgstr ""
+
+#: ../../../how-to/use-private-index.rst:51
 msgid "Set it for every command"
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:29
+#: ../../../how-to/use-private-index.rst:53
 msgid ""
 "Under the pip backend, pipx forwards ``PIP_*`` environment variables to "
 "every pip invocation, including shared-library upgrades. Set them in your "
 "shell profile or pip's own config file for a permanent default:"
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:32
+#: ../../../how-to/use-private-index.rst:56
 msgid ""
 "$ export PIP_INDEX_URL=https://my-index.example.com/simple/\n"
 "$ export PIP_TRUSTED_HOST=my-index.example.com\n"
 "$ pipx install my-private-package"
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:38
+#: ../../../how-to/use-private-index.rst:62
 msgid ""
 "See the `pip configuration docs <https://pip.pypa.io/en/stable/topics/"
 "configuration/>`_ for the config-file form. pipx always sets ``PIP_USER=0`` "
-"and drops ``PIP_TARGET`` so packages land in the venv. The uv backend "
-"ignores ``PIP_*``; use uv's own variables (for example ``UV_INDEX_URL``) or "
-"``--backend pip``."
+"and drops ``PIP_TARGET`` so packages land in the venv. For the same reason "
+"it removes pip's site-level file, ``pip.conf`` (``pip.ini`` on Windows) in "
+"the root of the venv, before it starts pip there: installed packages can "
+"place files in the venv root, so keep your settings in the user or global "
+"file. The uv backend ignores ``PIP_*``; use uv's own variables (for example "
+"``UV_INDEX_URL``) or ``--backend pip``."
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:44
+#: ../../../how-to/use-private-index.rst:70
 msgid "Install offline"
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:46
+#: ../../../how-to/use-private-index.rst:72
 msgid ""
 "Point pip at a local directory of wheels and stop it reaching the network:"
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:48
+#: ../../../how-to/use-private-index.rst:74
 msgid ""
 "$ pipx install my-package --pip-args=\"--no-index --find-links /path/to/"
 "wheels\""
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:52
+#: ../../../how-to/use-private-index.rst:78
 msgid ""
 "Pass ``--skip-maintenance`` to keep the bundled pip instead of downloading a "
 "shared-library upgrade during the install."
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:56
+#: ../../../how-to/use-private-index.rst:82
 msgid ""
 "Under the uv backend, ``pipx run`` translates only a subset of ``--pip-"
 "args``: ``--index-url`` (``-i``), ``--extra-index-url``, ``--find-links`` "
 "(``-f``), ``--trusted-host``, ``--no-binary``, ``--only-binary``, ``--pre``, "
-"``--upgrade`` (``-U``), and ``--no-cache-dir``. Any other flag raises an "
-"error rather than being silently dropped. Other commands pass ``--pip-args`` "
-"to ``uv pip install`` unchanged, so uv decides which flags it accepts. Use "
-"``--backend pip`` when you need a pip-only flag. See :doc:`use-uv-backend`."
+"``--upgrade`` (``-U``), and ``--no-cache-dir``. pipx raises an error for any "
+"other flag instead of dropping it. Other commands pass ``--pip-args`` to "
+"``uv pip install`` unchanged apart from ``--index-url`` (``-i``), so uv "
+"decides which flags it accepts. Use ``--backend pip`` when you need a pip-"
+"only flag. See :doc:`use-uv-backend`."
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:64
+#: ../../../how-to/use-private-index.rst:91
 msgid "Verify it"
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:66
+#: ../../../how-to/use-private-index.rst:93
 msgid "$ pipx list --short"
 msgstr ""
 
-#: ../../../how-to/use-private-index.rst:70
+#: ../../../how-to/use-private-index.rst:97
 msgid ""
 "The package installs at the version your index serves. For a private index "
 "that pipx must also use for its own shared libraries, set the ``PIP_*`` "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:51+0000\n"
+"POT-Creation-Date: 2026-11-09 18:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,7 +42,7 @@ msgid "Command"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:16
-msgid "ansible"
+msgid "`ansible <https://pypi.org/project/ansible/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:17
@@ -54,7 +54,7 @@ msgid "``pipx run ansible``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:19
-msgid "asciinema"
+msgid "`asciinema <https://pypi.org/project/asciinema/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:20
@@ -66,7 +66,7 @@ msgid "``pipx run asciinema``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:22
-msgid "black"
+msgid "`black <https://pypi.org/project/black/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:23
@@ -78,7 +78,7 @@ msgid "``pipx run black``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:25
-msgid "pybabel"
+msgid "`pybabel <https://pypi.org/project/babel/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:26
@@ -90,7 +90,7 @@ msgid "``pipx run --spec babel pybabel``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:28
-msgid "chardetect"
+msgid "`chardetect <https://pypi.org/project/chardet/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:29
@@ -102,7 +102,7 @@ msgid "``pipx run --spec chardet chardetect``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:31
-msgid "cookiecutter"
+msgid "`cookiecutter <https://pypi.org/project/cookiecutter/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:32
@@ -114,7 +114,7 @@ msgid "``pipx run cookiecutter``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:34
-msgid "flake8"
+msgid "`flake8 <https://pypi.org/project/flake8/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:35
@@ -126,7 +126,7 @@ msgid "``pipx run flake8``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:37
-msgid "gdbgui"
+msgid "`gdbgui <https://pypi.org/project/gdbgui/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:38
@@ -138,7 +138,7 @@ msgid "``pipx run gdbgui``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:40
-msgid "hatch"
+msgid "`hatch <https://pypi.org/project/hatch/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:41
@@ -150,7 +150,7 @@ msgid "``pipx run hatch``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:43
-msgid "ipython"
+msgid "`ipython <https://pypi.org/project/ipython/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:44
@@ -162,7 +162,7 @@ msgid "``pipx run ipython``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:46
-msgid "jupyter"
+msgid "`jupyter <https://pypi.org/project/jupyter/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:47
@@ -174,7 +174,7 @@ msgid "``pipx run jupyter``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:49
-msgid "pipenv"
+msgid "`pipenv <https://pypi.org/project/pipenv/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:50
@@ -186,7 +186,7 @@ msgid "``pipx run pipenv``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:52
-msgid "poetry"
+msgid "`poetry <https://pypi.org/project/poetry/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:53
@@ -198,7 +198,7 @@ msgid "``pipx run poetry``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:55
-msgid "pylint"
+msgid "`pylint <https://pypi.org/project/pylint/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:56
@@ -210,7 +210,7 @@ msgid "``pipx run pylint``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:58
-msgid "pyinstaller"
+msgid "`pyinstaller <https://pypi.org/project/pyinstaller/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:59
@@ -222,7 +222,7 @@ msgid "``pipx run pyinstaller``"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:61
-msgid "ruff"
+msgid "`ruff <https://pypi.org/project/ruff/>`_"
 msgstr ""
 
 #: ../../../reference/programs-to-try.rst:62

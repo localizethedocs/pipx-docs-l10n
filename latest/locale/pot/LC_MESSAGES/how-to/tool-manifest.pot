@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:51+0000\n"
+"POT-Creation-Date: 2026-11-09 18:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,10 +33,10 @@ msgstr ""
 
 #: ../../../how-to/tool-manifest.rst:11
 msgid ""
-"The manifest is a ``pipx.toml`` file. Each dependency group holds one PEP "
-"508 package requirement and names its pipx environment. ``project."
-"dependencies`` must be an empty list so each group resolves on its own; pipx "
-"rejects the manifest otherwise:"
+"The manifest is a ``pipx.toml`` file. Each dependency group holds one `PEP "
+"508 <https://peps.python.org/pep-0508/>`__ package requirement and names its "
+"pipx environment. ``project.dependencies`` must be an empty list so each "
+"group resolves on its own; pipx rejects the manifest otherwise:"
 msgstr ""
 
 #: ../../../how-to/tool-manifest.rst:15
@@ -69,16 +69,17 @@ msgid ""
 "dependencies``, ``include-resources-from``, ``expose``, or ``lock``. Use "
 "``include-resources-from = [\"PACKAGE\"]`` to select dependency resources; "
 "do not combine it with ``include-dependencies``. Relative ``lock`` paths "
-"start from the manifest directory. Put nab settings in ``tool.nab``."
+"start from the manifest directory. Put `nab <https://pypi.org/project/nab/"
+">`__ settings in ``tool.nab``."
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:42
+#: ../../../how-to/tool-manifest.rst:43
 msgid ""
 "Use the normalized package name plus its suffix as the environment name when "
 "a tool sets a suffix:"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:44
+#: ../../../how-to/tool-manifest.rst:45
 msgid ""
 "[dependency-groups]\n"
 "black-24 = [\"black==24.10.0\"]\n"
@@ -88,63 +89,77 @@ msgid ""
 "apps = [\"black\"]"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:53
+#: ../../../how-to/tool-manifest.rst:54
 msgid "Package requirements use PEP 508 syntax without environment markers."
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:57
+#: ../../../how-to/tool-manifest.rst:58
 msgid "Lock the manifest"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:59
+#: ../../../how-to/tool-manifest.rst:60
 msgid ""
-"`nab <https://pypi.org/project/nab/>`_ resolves each locked dependency group "
-"into a PEP 751 lock file. Install it, then generate the declared locks:"
+"``nab`` resolves each locked dependency group into a `PEP 751 <https://"
+"peps.python.org/pep-0751/>`__ lock file. Install it, then generate the "
+"declared locks:"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:62
+#: ../../../how-to/tool-manifest.rst:63
 msgid ""
 "$ pipx install nab\n"
 "$ pipx manifest lock ./pipx.toml"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:67
+#: ../../../how-to/tool-manifest.rst:68
 msgid ""
-"``pipx manifest lock`` passes the manifest to nab once per locked dependency "
-"group, and records that group as the lock's default so installers select it. "
-"Existing locks seed their replacements, and pipx overwrites the declared "
-"files only after every resolution succeeds. Entries without ``lock`` stay "
-"unlocked."
+"``pipx manifest lock`` passes the manifest to ``nab`` once per locked "
+"dependency group, and records that group as the lock's default so installers "
+"select it. Existing locks seed their replacements, and pipx overwrites the "
+"declared files only after every resolution succeeds. Entries without "
+"``lock`` stay unlocked. ``pipx manifest lock`` refuses to run when a "
+"``lock`` path resolves outside the manifest directory, through ``..``, "
+"``~``, an absolute path, or a symlink; ``pipx manifest sync`` still reads "
+"locks kept elsewhere."
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:73
+#: ../../../how-to/tool-manifest.rst:76
 msgid "Apply the manifest"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:75
+#: ../../../how-to/tool-manifest.rst:78
 msgid "$ pipx manifest sync ./pipx.toml"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:79
+#: ../../../how-to/tool-manifest.rst:82
 msgid ""
 "``sync`` installs, upgrades, or downgrades each declared tool. The backend "
 "resolves unlocked specs on each run; locked entries install from the "
-"artifacts in their named PEP 751 files. pipx restores an existing "
-"environment and its exposed resources when a tool fails to install or lacks "
-"a required app."
+"artifacts in their named PEP 751 files. Under the `pip <https://pip.pypa.io/"
+">`__ backend, a locked entry needs pip 26.1 or newer; run ``pipx upgrade-"
+"shared`` when pipx reports an older one."
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:83
+#: ../../../how-to/tool-manifest.rst:86
+msgid ""
+"pipx restores an existing environment and its exposed resources when a tool "
+"fails to install, lacks a required app, or the sync is interrupted. For an "
+"environment that already exists, ``sync`` keeps the installer and venv "
+"options recorded at install time, such as ``--index-url`` or ``--system-site-"
+"packages``, the same way ``pipx reinstall`` does, and keeps the apps, manual "
+"pages, and completions of its injected packages exposed."
+msgstr ""
+
+#: ../../../how-to/tool-manifest.rst:91
 msgid ""
 "Pass ``--prune`` to uninstall environments absent from the manifest. pipx "
 "skips pruning when any declared tool fails to sync:"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:86
+#: ../../../how-to/tool-manifest.rst:94
 msgid "$ pipx manifest sync ./pipx.toml --prune"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:90
+#: ../../../how-to/tool-manifest.rst:98
 msgid ""
 "Without ``--prune``, sync leaves your other pipx environments alone. Pass "
 "``--global`` (not available on Windows) or ``--backend`` after ``sync`` to "
@@ -152,14 +167,14 @@ msgid ""
 "manifest path you supply on the command line."
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:96
+#: ../../../how-to/tool-manifest.rst:104
 msgid "Verify it"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:98
+#: ../../../how-to/tool-manifest.rst:106
 msgid "$ pipx list --short"
 msgstr ""
 
-#: ../../../how-to/tool-manifest.rst:102
+#: ../../../how-to/tool-manifest.rst:110
 msgid "Each declared tool appears at the version its group resolved to."
 msgstr ""
