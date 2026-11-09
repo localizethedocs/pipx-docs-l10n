@@ -340,11 +340,11 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:113
 msgid "``pipx upgrade ruff``"
-msgstr ""
+msgstr "``pipx upgrade ruff``"
 
 #: ../../../explanation/comparisons.rst:114
 msgid "``uv tool upgrade ruff``"
-msgstr ""
+msgstr "``uv tool upgrade ruff``"
 
 #: ../../../explanation/comparisons.rst:115
 msgid "Upgrade all"
@@ -352,11 +352,11 @@ msgstr ""
 
 #: ../../../explanation/comparisons.rst:116
 msgid "``pipx upgrade-all``"
-msgstr ""
+msgstr "``pipx upgrade-all``"
 
 #: ../../../explanation/comparisons.rst:117
 msgid "``uv tool upgrade --all``"
-msgstr ""
+msgstr "``uv tool upgrade --all``"
 
 #: ../../../explanation/comparisons.rst:118
 msgid "List installed or outdated"

@@ -89,7 +89,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:49 ../../../how-to/troubleshoot.rst:301
 msgid "$ pipx health"
-msgstr ""
+msgstr "$ pipx health"
 
 #: ../../../how-to/troubleshoot.rst:53
 msgid ""
@@ -105,7 +105,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:59
 msgid "$ pipx repair"
-msgstr ""
+msgstr "$ pipx repair"
 
 #: ../../../how-to/troubleshoot.rst:63
 msgid ""
@@ -153,7 +153,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:91
 msgid "$ pipx reset"
-msgstr ""
+msgstr "$ pipx reset"
 
 #: ../../../how-to/troubleshoot.rst:95
 msgid ""
@@ -263,6 +263,8 @@ msgid ""
 "$ pipx runpip <package> cache dir\n"
 "$ pipx runpip <package> cache purge"
 msgstr ""
+"$ pipx runpip <package> cache dir\n"
+"$ pipx runpip <package> cache purge"
 
 #: ../../../how-to/troubleshoot.rst:165
 msgid ""
@@ -283,6 +285,8 @@ msgid ""
 "$ uv cache dir\n"
 "$ uv cache clean"
 msgstr ""
+"$ uv cache dir\n"
+"$ uv cache clean"
 
 #: ../../../how-to/troubleshoot.rst:178
 msgid "Log files"
@@ -365,7 +369,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:230
 msgid "``Cannot create ...: permission denied``"
-msgstr ""
+msgstr "``Cannot create ...: permission denied``"
 
 #: ../../../how-to/troubleshoot.rst:232
 msgid ""
@@ -391,7 +395,7 @@ msgstr ""
 
 #: ../../../how-to/troubleshoot.rst:244
 msgid "$ sudo apt install python3-venv python3-pip"
-msgstr ""
+msgstr "$ sudo apt install python3-venv python3-pip"
 
 #: ../../../how-to/troubleshoot.rst:248
 msgid ""
@@ -436,10 +440,12 @@ msgid ""
 "$ python3 -m venv test_venv\n"
 "$ test_venv/bin/python3 -m pip install <problem-package>"
 msgstr ""
+"$ python3 -m venv test_venv\n"
+"$ test_venv/bin/python3 -m pip install <problem-package>"
 
 #: ../../../how-to/troubleshoot.rst:276
 msgid "Windows:"
-msgstr ""
+msgstr "Windows："
 
 #: ../../../how-to/troubleshoot.rst:278
 msgid ""

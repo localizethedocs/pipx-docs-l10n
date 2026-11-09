@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../how-to/shell-completions.rst:9
 msgid "Enable pipx completion"
-msgstr ""
+msgstr "啟用 pipx 補全"
 
 #: ../../../how-to/shell-completions.rst:11
 msgid "Print the instructions for your shell and follow them:"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../../how-to/shell-completions.rst:13
 msgid "$ pipx completions"
-msgstr ""
+msgstr "$ pipx completions"
 
 #: ../../../how-to/shell-completions.rst:19
 msgid "Completions for installed apps"

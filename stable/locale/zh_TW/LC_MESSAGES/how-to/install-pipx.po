@@ -220,7 +220,7 @@ msgstr ""
 
 #: ../../../how-to/install-pipx.rst:130
 msgid "$ pipx ensurepath --prepend"
-msgstr ""
+msgstr "$ pipx ensurepath --prepend"
 
 #: ../../../how-to/install-pipx.rst:134
 msgid ""
@@ -301,6 +301,9 @@ msgid ""
 "$ pipx install pycowsay\n"
 "$ sudo pipx install --global pycowsay"
 msgstr ""
+"$ sudo /tmp/bootstrap/bin/pipx install --global pipx\n"
+"$ pipx install pycowsay\n"
+"$ sudo pipx install --global pycowsay"
 
 #: ../../../how-to/install-pipx.rst:189
 msgid "Install from source control"

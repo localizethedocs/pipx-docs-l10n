@@ -173,7 +173,7 @@ msgstr ""
 
 #: ../../../how-to/use-uv-backend.rst:98
 msgid "Cache layout"
-msgstr ""
+msgstr "快取配置"
 
 #: ../../../how-to/use-uv-backend.rst:100
 msgid ""
@@ -191,7 +191,7 @@ msgstr ""
 
 #: ../../../how-to/use-uv-backend.rst:109
 msgid "$ pipx environment --value PIPX_RESOLVED_BACKEND"
-msgstr ""
+msgstr "$ pipx environment --value PIPX_RESOLVED_BACKEND"
 
 #: ../../../how-to/use-uv-backend.rst:113
 msgid "It prints ``uv`` when pipx will use the uv backend for new venvs."

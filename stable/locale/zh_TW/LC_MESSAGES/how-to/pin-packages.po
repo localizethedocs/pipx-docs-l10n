@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../../how-to/pin-packages.rst:11
 msgid "$ pipx pin black"
-msgstr ""
+msgstr "$ pipx pin black"
 
 #: ../../../how-to/pin-packages.rst:15
 msgid ""
@@ -90,7 +90,7 @@ msgstr ""
 
 #: ../../../how-to/pin-packages.rst:38
 msgid "$ pipx list --pinned"
-msgstr ""
+msgstr "$ pipx list --pinned"
 
 #: ../../../how-to/pin-packages.rst:42
 msgid "Add ``--include-injected`` to also list pinned injected packages."

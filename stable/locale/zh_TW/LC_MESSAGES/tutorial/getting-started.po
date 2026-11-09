@@ -162,7 +162,7 @@ msgstr ""
 
 #: ../../../tutorial/getting-started.rst:115
 msgid "$ pipx upgrade pycowsay"
-msgstr ""
+msgstr "$ pipx upgrade pycowsay"
 
 #: ../../../tutorial/getting-started.rst:119
 msgid "Or upgrade everything at once:"
@@ -170,7 +170,7 @@ msgstr ""
 
 #: ../../../tutorial/getting-started.rst:121
 msgid "$ pipx upgrade-all"
-msgstr ""
+msgstr "$ pipx upgrade-all"
 
 #: ../../../tutorial/getting-started.rst:127
 msgid ""
