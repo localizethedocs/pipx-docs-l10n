@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipx 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-19 16:51+0000\n"
+"POT-Creation-Date: 2026-11-09 18:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,109 +25,132 @@ msgstr ""
 msgid ""
 "Run an app or a script in a temporary environment with ``pipx run``, without "
 "installing it first. pipx downloads the package, caches the environment, and "
-"runs the app. Under the uv backend, pipx hands packages to ``uv tool run`` "
-"and local scripts with inline metadata to ``uv run --script``, so uv's cache "
-"applies instead of pipx's."
+"runs the app. Under the `uv <https://github.com/astral-sh/uv>`__ backend, "
+"pipx hands packages to ``uv tool run`` and local scripts with inline "
+"metadata to ``uv run --script``. uv's cache applies to packages, while a "
+"script's environment stays in pipx's cache."
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:11
+#: ../../../how-to/run-scripts.rst:12
 msgid "Run a specific version"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:13
+#: ../../../how-to/run-scripts.rst:14
 msgid ""
-"The ``PACKAGE`` argument is a `requirement specifier <https://packaging."
-"python.org/en/latest/glossary/#term-Requirement-Specifier>`_, so you can pin "
-"versions, ranges, or extras:"
+"The ``PACKAGE`` argument is a `requirement specifier <https://"
+"packaging.python.org/en/latest/glossary/#term-Requirement-Specifier>`_, so "
+"you can pin versions, ranges, or extras:"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:17
+#: ../../../how-to/run-scripts.rst:18
 msgid ""
 "$ pipx run mpremote==1.20.0\n"
 "$ pipx run --spec esptool==4.6.2 esptool.py\n"
 "$ pipx run --spec 'esptool>=4.5' esptool.py"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:23
+#: ../../../how-to/run-scripts.rst:24
 msgid "Quote any specifier that contains ``>``, ``<``, or spaces."
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:27
+#: ../../../how-to/run-scripts.rst:28
 msgid "Add extra dependencies"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:29
+#: ../../../how-to/run-scripts.rst:30
 msgid ""
 "``--with PKG`` adds packages to the temporary environment alongside the app. "
 "Repeat it to add more. For a script, ``--with`` requires a ``# /// script`` "
 "metadata block; pipx adds the packages to its declared dependencies:"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:32
+#: ../../../how-to/run-scripts.rst:33
 msgid "$ pipx run --with requests --with rich my-script.py"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:38
-msgid "Pass arguments to Python"
+#: ../../../how-to/run-scripts.rst:37
+msgid ""
+"pipx resolves the ``--with`` packages together with the app, so ``--with`` "
+"can also pin or cap one of the app's own dependencies:"
 msgstr ""
 
 #: ../../../how-to/run-scripts.rst:40
+msgid "$ pipx run --with 'click<8.2' black --version"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:46
+msgid "Pass arguments to Python"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:48
 msgid ""
 "``--python-args ARGS`` forwards arguments to the interpreter that runs the "
 "app, rather than to the app itself:"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:42
+#: ../../../how-to/run-scripts.rst:50
 msgid "$ pipx run --python-args \"-X dev\" my-script.py"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:48
+#: ../../../how-to/run-scripts.rst:56
 msgid "Run from source control"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:50
+#: ../../../how-to/run-scripts.rst:58
 msgid ""
-"``pipx run`` accepts source-control URLs directly, with the same syntax as "
-"``pipx install`` (see :ref:`install-from-source-control`). Using ``black`` "
-"as an example:"
+"``pipx run`` accepts source-control URLs, with the same syntax as ``pipx "
+"install`` (see :ref:`install-from-source-control`). Using ``black`` as an "
+"example:"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:53
+#: ../../../how-to/run-scripts.rst:61
 msgid ""
 "$ pipx run git+https://github.com/psf/black.git\n"
 "$ pipx run git+https://github.com/psf/black.git@branch"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:58
+#: ../../../how-to/run-scripts.rst:66
 msgid ""
 "Use ``--spec`` when the executable name differs from the package name or "
 "when installing from an archive URL:"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:60
+#: ../../../how-to/run-scripts.rst:68
 msgid "$ pipx run --spec https://github.com/psf/black/archive/18.9b0.zip black"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:66
+#: ../../../how-to/run-scripts.rst:74
 msgid "Run from a URL"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:68
-msgid "You can run ``.py`` files hosted anywhere:"
-msgstr ""
-
-#: ../../../how-to/run-scripts.rst:70
+#: ../../../how-to/run-scripts.rst:76
 msgid ""
-"$ pipx run https://gist.githubusercontent.com/cs01/"
-"fa721a17a326e551ede048c5088f9e0f/"
-"raw/6bdfbb6e9c1132b1c38fdd2f195d4a24c540c324/pipx-demo.py"
-msgstr ""
-
-#: ../../../how-to/run-scripts.rst:78
-msgid "Run a script with dependencies (PEP 723)"
+"pipx downloads a script with Python's ``urllib``, which cannot send "
+"credentials embedded in an HTTP URL. ``pipx run`` and ``pipx install`` "
+"therefore refuse an ``http`` or ``https`` script URL with a ``user@`` or "
+"``user:password@`` part. Otherwise you can run ``.py`` files hosted anywhere:"
 msgstr ""
 
 #: ../../../how-to/run-scripts.rst:80
+msgid ""
+"$ pipx run https://gist.githubusercontent.com/cs01/"
+"fa721a17a326e551ede048c5088f9e0f/raw/"
+"6bdfbb6e9c1132b1c38fdd2f195d4a24c540c324/pipx-demo.py"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:84
+msgid ""
+"A script read from a URL or a named pipe has no directory of its own, so "
+"pipx starts it with ``python -P``: it cannot import modules from the "
+"directory you run ``pipx run`` in. The same holds for apps declared as "
+"``pipx.run`` entry points and for apps run with ``--python-args``."
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:92
+msgid "Run a script with dependencies (PEP 723)"
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:94
 msgid ""
 "A script can declare its own dependencies with `inline script metadata "
 "<https://packaging.python.org/en/latest/specifications/inline-script-"
@@ -135,7 +158,7 @@ msgid ""
 "packages before running:"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:84
+#: ../../../how-to/run-scripts.rst:98
 msgid ""
 "# test.py\n"
 "\n"
@@ -151,19 +174,31 @@ msgid ""
 "print(data[\"info\"][\"version\"])"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:99
+#: ../../../how-to/run-scripts.rst:113
 msgid ""
 "$ pipx run test.py pipx\n"
 "1.9.0"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:104
+#: ../../../how-to/run-scripts.rst:118
 msgid ""
 "pipx caches an environment keyed to the script's dependency list. Changing "
-"the dependencies builds a fresh one."
+"the dependencies builds a fresh one. Under the uv backend pipx keys a local "
+"script's environment to the script's path instead, and uv syncs the "
+"dependencies into it on each run. Under both backends a changed ``--"
+"python``, ``--pip-args`` or ``--cooldown`` also builds a fresh one, and ``--"
+"refresh`` rebuilds it."
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:106
+#: ../../../how-to/run-scripts.rst:123
+msgid ""
+"On Windows under the uv backend, a ``--refresh`` or ``--no-cache`` run of a "
+"script that another run is still executing leaves that run's environment "
+"alone: it builds a throwaway one for itself, and after ``--refresh`` the "
+"next run to find the cached environment idle rebuilds it."
+msgstr ""
+
+#: ../../../how-to/run-scripts.rst:127
 msgid ""
 "When the block sets ``requires-python``, pipx keeps the default Python if it "
 "satisfies the constraint and otherwise looks for an interpreter that does, "
@@ -172,15 +207,15 @@ msgid ""
 "follow this rule."
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:112
+#: ../../../how-to/run-scripts.rst:133
 msgid "Verify it"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:114
+#: ../../../how-to/run-scripts.rst:135
 msgid "$ pipx run pycowsay moo"
 msgstr ""
 
-#: ../../../how-to/run-scripts.rst:118
+#: ../../../how-to/run-scripts.rst:139
 msgid ""
 "A successful run prints the app's own output; nothing is left installed "
 "afterward."
