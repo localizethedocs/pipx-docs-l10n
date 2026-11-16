@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 1.18\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-19 16:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/manage-installed-apps.rst:3
+msgid "Manage installed apps"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:5
+msgid ""
+"List, upgrade, and remove the apps pipx manages, then confirm each change."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:9
+msgid "List apps"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:11
+#: ../../../how-to/manage-installed-apps.rst:99
+#: ../../../how-to/manage-installed-apps.rst:145
+msgid "$ pipx list"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:15
+msgid ""
+"The output shows each package version, its apps, and the environment paths. "
+"Narrow or reshape it:"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:17
+msgid "``pipx list --short`` prints package names and versions only."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:18
+msgid ""
+"``pipx list --include-injected`` also lists packages injected into each "
+"environment."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:19
+msgid "``pipx list --outdated`` lists environments with an available upgrade."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:20
+msgid "``pipx list --pinned`` lists pinned environments only."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:24
+msgid "Upgrade one"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:26
+msgid "$ pipx upgrade black"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:30
+msgid ""
+"Add ``--include-injected`` to upgrade injected packages alongside the main "
+"app. Pass ``--install`` to install the package spec when it is missing "
+"rather than error."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:33
+msgid ""
+"pipx exposes any apps, manual pages, and shell completions the new version "
+"adds, and removes the ones it no longer ships, so ``pipx list`` and "
+"``PIPX_BIN_DIR`` match the upgraded package. ``upgrade-all`` and ``pipx "
+"install --upgrade`` do the same."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:37
+#: ../../../how-to/manage-installed-apps.rst:65
+#: ../../../how-to/manage-installed-apps.rst:81
+#: ../../../how-to/manage-installed-apps.rst:97
+#: ../../../how-to/manage-installed-apps.rst:117
+#: ../../../how-to/manage-installed-apps.rst:143
+msgid "Verify:"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:39
+#: ../../../how-to/manage-installed-apps.rst:83
+#: ../../../how-to/manage-installed-apps.rst:119
+msgid "$ pipx list --short"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:45
+msgid "Upgrade all"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:47
+msgid "$ pipx upgrade-all"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:51
+msgid ""
+"Use ``--skip PKG ...`` to leave named environments untouched, and ``--"
+"include-injected`` to include injected packages. Pinned environments are "
+"skipped; see :doc:`pin-packages`."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:54
+msgid ""
+"pipx upgrades up to eight environments at once and prints their output in "
+"environment order, as a one-at-a-time run would. An app, manual page, or "
+"completion that several environments expose ends up with the same "
+"environment as in a one-at-a-time run. A failed environment does not stop "
+"the others. pip and uv cannot prompt for input, such as index credentials, "
+"during any pipx command other than ``pipx runpip``. Pass ``--verbose`` to "
+"upgrade them one at a time."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:59
+msgid ""
+"Ctrl-C, ``SIGTERM`` or ``SIGHUP`` stops pipx from starting more upgrades, "
+"and pipx finishes the ones already in progress before it exits, since an "
+"upgrade cut short leaves an environment with a mix of old and new files. "
+"Press Ctrl-C again to stop those too. pipx then reports each environment it "
+"stopped mid-upgrade, ``pipx list`` flags it, and the next ``pipx upgrade-"
+"all``, ``pipx upgrade`` or ``pipx reinstall`` of it reinstalls it from its "
+"metadata. With ``--verbose`` the first Ctrl-C already stops the running "
+"upgrade."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:67
+msgid "$ pipx list --outdated"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:73
+msgid "Uninstall one"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:75
+msgid "$ pipx uninstall black"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:79
+msgid ""
+"pipx deletes the environment and unlinks its apps, manual pages, and shell "
+"completions."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:89
+msgid "Uninstall all"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:91
+msgid "$ pipx uninstall-all"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:95
+msgid ""
+"Record what you have first with ``pipx list --short`` if you plan to "
+"reinstall later."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:105
+msgid "Reinstall one"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:107
+msgid ""
+"Rebuild an environment from its recorded metadata, keeping the same options "
+"as the original install. Reach for it after a Python upgrade or to repair a "
+"broken environment."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:110
+msgid "$ pipx reinstall black"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:114
+msgid ""
+"Pass ``--python`` to rebuild under another interpreter. ``pipx install --"
+"force`` keeps the environment's interpreter and ignores ``--python``."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:125
+msgid "Reinstall all"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:127
+msgid "$ pipx reinstall-all"
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:131
+msgid ""
+"Common after installing a new Python version so every app moves to it. Use "
+"``--python`` to target a specific interpreter and ``--skip PKG ...`` to "
+"exclude environments."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:134
+msgid ""
+"pipx rebuilds up to eight environments at once (fewer on machines with fewer "
+"CPUs) and holds back the output of each until the ones before it finish, so "
+"it reads the same as a one-at-a-time run. An app, manual page, or completion "
+"that several environments expose ends up with the same environment as in a "
+"one-at-a-time run. A failed environment does not stop the others. pip and uv "
+"cannot prompt for input, such as index credentials, during any pipx command "
+"other than ``pipx runpip``. Pass ``--verbose`` to rebuild them one at a time "
+"and watch the pip or uv output as it happens."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:140
+msgid ""
+"Ctrl-C, ``SIGTERM`` or ``SIGHUP`` stops the rebuilds in progress and "
+"restores each of those environments from its backup; the environments "
+"already rebuilt keep their new build."
+msgstr ""
+
+#: ../../../how-to/manage-installed-apps.rst:151
+msgid ""
+"To check environments without changing them, or to repair only the broken "
+"ones, see :ref:`repair-environments`."
+msgstr ""
