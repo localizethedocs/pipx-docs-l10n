@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-10-18 13:35:13 -0700",
-      "hash" : "bd0a54bc48aab9399d36f87d04308295bedc9a62",
-      "title" : "build(deps): bump astral-sh/setup-uv from 10.2.0 to 10.3.0 in the actions group (#2162)"
+      "date" : "2026-11-16 10:15:12 -0800",
+      "hash" : "8e509d9f8de055d79d7c0d9978388d05d902e700",
+      "title" : "\u2b06\ufe0f ci: bump github-workflows to 6.8.3 (#2469)"
     }
   },
   "type" : "branch",
