@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, pipx contributors
+# This file is distributed under the same license as the pipx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipx 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-19 16:51+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../how-to/pin-packages.rst:3
+msgid "Pin packages"
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:5
+msgid ""
+"Hold an installation at its current version so upgrades skip it until you "
+"unpin."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:9
+msgid "Pin it"
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:11
+msgid "$ pipx pin black"
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:15
+msgid ""
+"Pinned environments are skipped by ``pipx upgrade`` and ``pipx upgrade-"
+"all``, so the app and its dependencies keep their versions until you unpin. "
+"``pipx reinstall`` refuses a pinned environment, and ``pipx reinstall-all`` "
+"reports it as an error. ``pipx install --force`` and ``pipx inject --force`` "
+"keep a package pinned, even when they install a different version."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:20
+msgid ""
+"``pipx pin PACKAGE`` pins the main package and any injected packages in that "
+"environment."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:21
+msgid ""
+"``pipx pin PACKAGE --injected-only`` leaves the main package upgradable but "
+"pins every injected package."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:22
+msgid ""
+"``pipx pin PACKAGE --skip PKG_A PKG_B`` pins injected packages except the "
+"listed ones (implies ``--injected-only``)."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:23
+msgid ""
+"``pipx unpin PACKAGE`` unpins the main package and every pinned injected "
+"package in that environment."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:25
+msgid ""
+"Pass ``--output json`` to read the changed and skipped packages from a "
+"script, or ``--quiet`` to omit confirmations."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:29
+msgid ""
+"pipx pins the main package and injected packages, not individual transitive "
+"dependencies. Pinning the main package freezes its whole dependency set, "
+"because pipx skips ``pip install --upgrade`` for that environment. A package "
+"injected after ``pipx pin`` starts unpinned, so ``pipx upgrade --include-"
+"injected`` still upgrades it; run ``pipx pin PACKAGE`` again to pin it too. "
+"For how pipx records this metadata, see :doc:`../explanation/how-pipx-works`."
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:36
+msgid "Verify it"
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:38
+msgid "$ pipx list --pinned"
+msgstr ""
+
+#: ../../../how-to/pin-packages.rst:42
+msgid "Add ``--include-injected`` to also list pinned injected packages."
+msgstr ""
